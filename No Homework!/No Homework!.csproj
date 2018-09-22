@@ -269,11 +269,13 @@
     <Compile Include="Assets\GameSparks\Platforms\WebGL\WebGLWebSocket.cs" />
     <Compile Include="Assets\GameSparks\Platforms\WebSocketController.cs" />
     <Compile Include="Assets\GameSparks\TestUI\GameSparksTestUI.cs" />
-    <Compile Include="Assets\Scripts\Managers\AccountInfo.cs" />
-    <Compile Include="Assets\Scripts\Managers\DatabaseManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\GameSparksAuthService.cs" />
-    <Compile Include="Assets\Scripts\Managers\LoginManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Login\AccountInfo.cs" />
+    <Compile Include="Assets\Scripts\Managers\Login\DatabaseManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Login\GameSparksAuthService.cs" />
+    <Compile Include="Assets\Scripts\Managers\Login\LoginManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Login\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Singleplayer\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Singleplayer\Waypoints.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameFunctions.cs" />
   </ItemGroup>
