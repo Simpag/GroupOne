@@ -275,6 +275,7 @@
     <Compile Include="Assets\Scripts\Managers\Login\LoginManager.cs" />
     <Compile Include="Assets\Scripts\Managers\Login\UIManager.cs" />
     <Compile Include="Assets\Scripts\Singleplayer\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Singleplayer\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\Singleplayer\Waypoints.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameFunctions.cs" />
