@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour {
 
+    public static List<GameObject> aliveEnemies;
+
     [SerializeField]
     private Transform enemyPrefab;
     [SerializeField]
@@ -16,6 +18,11 @@ public class WaveSpawner : MonoBehaviour {
     private float countDown = 2f;
 
     private int waveIndex = 0;
+
+    private void Start()
+    {
+        aliveEnemies = new List<GameObject>();
+    }
 
     private void Update()
     {
@@ -43,6 +50,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void SpawnEnemie()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject _spawned = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation).gameObject;
+        aliveEnemies.Add(_spawned);
     }
 }
