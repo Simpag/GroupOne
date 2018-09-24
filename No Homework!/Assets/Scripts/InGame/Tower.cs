@@ -16,6 +16,8 @@ public class Tower : MonoBehaviour {
     [SerializeField]
     private float rotationSpeed = 10f;
 
+    public Color cantPlaceTint;
+
     [HideInInspector]
     public bool isActive = false;
     private float fireCountdown = 0;
@@ -28,6 +30,9 @@ public class Tower : MonoBehaviour {
     [SerializeField]
     private Transform firePoint;
 
+    public GameObject towerArea;
+    public Transform rangeView;
+
 
     [SerializeField]
     private float checkNewTargetInterval = 0.5f;
@@ -35,6 +40,7 @@ public class Tower : MonoBehaviour {
     private void Awake()
     {
         InvokeRepeating("UpdateTarget" , 0f, checkNewTargetInterval);
+        rangeView.localScale = new Vector3(range * 2, rangeView.localScale.y, range * 2);
     }
 
     private void Update()

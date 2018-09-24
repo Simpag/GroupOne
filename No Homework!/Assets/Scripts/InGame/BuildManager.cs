@@ -17,6 +17,8 @@ public class BuildManager : MonoBehaviour {
     [SerializeField]
     private LayerMask layerMask;
 
+    [HideInInspector]
+    public bool canBuild;
     private Vector3 locationToBuild;
     private Camera cam;
 
@@ -39,6 +41,7 @@ public class BuildManager : MonoBehaviour {
         }
 
         towerToBuild = null;
+        canBuild = true;
     }
 
     private void Update()
@@ -59,8 +62,7 @@ public class BuildManager : MonoBehaviour {
             }
             else
             {
-                followingTower.position = locationToBuild;
-                Debug.Log("Following");
+                FollowMouse();
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -77,13 +79,24 @@ public class BuildManager : MonoBehaviour {
 
     private void BuildTower()
     {
-        InGameShopManager.PurchasedTower(towerToBuild);
+        if (canBuild)
+        {
+            InGameShopManager.PurchasedTower(towerToBuild);
 
+            followingTower.position = locationToBuild;
+            Tower _towerComponent = followingTower.GetComponent<Tower>();
+            _towerComponent.isActive = true;
+            _towerComponent.rangeView.gameObject.SetActive(false);
+            _towerComponent.towerArea.GetComponent<TowerArea>().TowerPlaced();
+
+            //Reset variables
+            followingTower = null;
+            towerToBuild = null;
+        }
+    }
+
+    private void FollowMouse()
+    {
         followingTower.position = locationToBuild;
-        followingTower.GetComponent<Tower>().isActive = true;
-
-        //Reset variables
-        followingTower = null;
-        towerToBuild = null;
     }
 }

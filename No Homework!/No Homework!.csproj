@@ -276,6 +276,7 @@
     <Compile Include="Assets\Scripts\InGame\InGameShopItem.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameShopManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower.cs" />
+    <Compile Include="Assets\Scripts\InGame\TowerArea.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\InGame\Waypoints.cs" />
     <Compile Include="Assets\Scripts\MainMenu\Managers\GameSparksAuthService.cs" />
