@@ -53,15 +53,16 @@ public class Bullet : MonoBehaviour {
             DamageAOE();
         } else
         {
-            DamageEnemy(target);
+            DamageEnemy(target.gameObject);
         }
 
         Destroy(gameObject);
     }
 
-    private void DamageEnemy (Transform _enemy)
+    private void DamageEnemy (GameObject _enemy)
     {
-        Destroy(_enemy.gameObject);
+        WaveSpawner.KillEnemy(_enemy);
+        //Do this on the enemy instead later
     }
 
     private void DamageAOE ()
@@ -70,7 +71,7 @@ public class Bullet : MonoBehaviour {
 
         foreach (Collider _enemy in _collided)
         {
-            DamageEnemy(_enemy.transform);
+            DamageEnemy(_enemy.gameObject);
         }
     }
 }

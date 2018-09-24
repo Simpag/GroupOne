@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class InGameShopItem {
 
-	[SerializeField]
+    [SerializeField]
     private GameObject prefab;
     [SerializeField]
     private float cost;

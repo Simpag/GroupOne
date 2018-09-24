@@ -16,6 +16,7 @@ public class AccountInfo : MonoBehaviour {
         set { instance = value; }
     }
 
+    [Header("Account Info")]
     [SerializeField]
     private float? currency;
     [SerializeField]
@@ -46,6 +47,17 @@ public class AccountInfo : MonoBehaviour {
         set { currency = value; }
     }
 
+    [Header("In-Game Info")]
+    [SerializeField]
+    private float inGameCurrency;
+
+    public float InGameCurrency
+    {
+        get { return inGameCurrency; }
+        set { inGameCurrency = value; }
+    }
+
+
     //Create singleton
     private void Awake()
     {
@@ -58,7 +70,6 @@ public class AccountInfo : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        
     }
 
     public static void UpdateAccountInfo()

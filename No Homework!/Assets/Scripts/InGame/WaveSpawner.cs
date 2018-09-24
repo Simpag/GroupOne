@@ -41,16 +41,22 @@ public class WaveSpawner : MonoBehaviour {
 
         for (int i = 0; i < waveIndex; i++)
         {
-            SpawnEnemie();
+            SpawnEnemy();
             yield return new WaitForSeconds(spawnTimeDelay);
         }
 
         Debug.Log("Wave: " + waveIndex);
     }
 
-    private void SpawnEnemie()
+    private void SpawnEnemy()
     {
         GameObject _spawned = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation).gameObject;
         aliveEnemies.Add(_spawned);
+    }
+
+    public static void KillEnemy(GameObject _enemy)
+    {
+        aliveEnemies.Remove(_enemy);
+        Destroy(_enemy);
     }
 }

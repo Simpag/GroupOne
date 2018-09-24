@@ -272,15 +272,17 @@
     <Compile Include="Assets\Scripts\InGame\BuildManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Bullet.cs" />
     <Compile Include="Assets\Scripts\InGame\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\InGame\InGameManager.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameShopItem.cs" />
+    <Compile Include="Assets\Scripts\InGame\InGameShopManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\InGame\Waypoints.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\Managers\AccountInfo.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\Managers\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu\Managers\GameSparksAuthService.cs" />
     <Compile Include="Assets\Scripts\MainMenu\Managers\LoginManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Utillities\AccountInfo.cs" />
+    <Compile Include="Assets\Scripts\Utillities\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameFunctions.cs" />
   </ItemGroup>

@@ -16,6 +16,8 @@ public class Tower : MonoBehaviour {
     [SerializeField]
     private float rotationSpeed = 10f;
 
+    [HideInInspector]
+    public bool isActive = false;
     private float fireCountdown = 0;
 
     [Header("Drag-n-drop")]
@@ -37,7 +39,7 @@ public class Tower : MonoBehaviour {
 
     private void Update()
     {
-        if (target == null)
+        if (target == null || !isActive)
             return;
 
         //Look onto target
@@ -82,7 +84,8 @@ public class Tower : MonoBehaviour {
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
-        } else
+        }
+        else
         {
             target = null;
         }
