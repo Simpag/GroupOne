@@ -5,28 +5,33 @@ using UnityEngine;
 public class TowerRange : MonoBehaviour {
 
 	[SerializeField]
-	private string enemyTag = "enemy";
+	private string enemyTag = "Enemy";
 
     private Tower tower;
+
+    //Quick fix
+    GameObject currentTarget;
 
     private void Awake()
     {
         tower = GetComponentInParent<Tower>();
     }
 
-    private void OnTriggerEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag(enemyTag))
+        if (collision.gameObject.CompareTag(enemyTag) && currentTarget == null)
         {
 			tower.target = collision.transform;
+            currentTarget = collision.gameObject;
         }
     }
 
-    private void OnTriggerExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.CompareTag(enemyTag))
+        if (collision.gameObject.CompareTag(enemyTag) && collision.gameObject == currentTarget)
         {
             tower.target = null;
+            currentTarget = null;
         }
     }
 }

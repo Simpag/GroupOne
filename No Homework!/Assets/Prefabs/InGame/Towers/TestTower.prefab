@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 33767087305646678}
   - component: {fileID: 23647404709072228}
   - component: {fileID: 135908115409333342}
+  - component: {fileID: 114731394737948840}
   m_Layer: 0
   m_Name: RangeView
   m_TagString: Untagged
@@ -416,21 +417,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9484820b4bb05c844bc2c87b959df345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  fireRate: 2
+  towerType: 0
+  area: 1.4
   range: 10
   rotationSpeed: 10
-  area: 1.4
-  rangeTint: {r: 1, g: 0, b: 0, a: 0.11764706}
-  cantPlaceRangeTint: {r: 1, g: 0, b: 0, a: 0}
-  isActive: 0
+  towerArea: {fileID: 1439013549004866}
+  rangeView: {fileID: 4366698155748994}
+  rangeMaterial: {fileID: 2100000, guid: 01b03e2d690e0474390aec86416beb57, type: 2}
+  cantPlaceMaterial: {fileID: 2100000, guid: 6412fc3553a6c8843951e36ae2352e0b, type: 2}
   pivotPoint: {fileID: 4744386241757664}
   bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
     type: 2}
   firePoint: {fileID: 4479675179198608}
-  towerArea: {fileID: 1439013549004866}
-  rangeView: {fileID: 4366698155748994}
-  checkNewTargetInterval: 0.5
+  fireRate: 2
+  isActive: 0
+  target: {fileID: 0}
 --- !u!114 &114608196461530672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -442,6 +443,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d38d737017f8ac4e88c9181f18456a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerAreaTag: TowerArea
+--- !u!114 &114731394737948840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905999459385394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 356034934c3b4e24690e82a9f6cccd95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTag: Enemy
 --- !u!135 &135908115409333342
 SphereCollider:
   m_ObjectHideFlags: 1

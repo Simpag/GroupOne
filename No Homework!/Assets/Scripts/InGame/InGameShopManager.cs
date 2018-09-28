@@ -24,7 +24,6 @@ public class InGameShopManager : MonoBehaviour {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -35,7 +34,7 @@ public class InGameShopManager : MonoBehaviour {
 
     public static void PurchasedTower (InGameShopItem _bought)
     {
-        AccountInfo.Instance.InGameCurrency -= _bought.Cost;
+        PlayerStats.RemoveCash(_bought.Cost);
     }
 
     public void StartTowerSelectionButton(int _index)
@@ -50,7 +49,8 @@ public class InGameShopManager : MonoBehaviour {
 
     public void StartTowerSelection(InGameShopItem _tower)
     {
-        BuildManager.SelectTower(_tower);
+        if (PlayerStats.InGameCash >= _tower.Cost)
+            BuildManager.SelectTower(_tower);
     }
 
     private void SetupShopItems()

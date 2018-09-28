@@ -21,6 +21,7 @@ public class BuildManager : MonoBehaviour {
     public bool canBuild;
     private Vector3 locationToBuild;
     private Camera cam;
+    private bool towerSelected;
 
     void Start()
     {
@@ -33,20 +34,19 @@ public class BuildManager : MonoBehaviour {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
 
-        towerToBuild = null;
         canBuild = true;
+        towerSelected = false;
     }
 
     private void Update()
     {
-        if (towerToBuild != null)
+        if (towerSelected)
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -75,6 +75,7 @@ public class BuildManager : MonoBehaviour {
     public static void SelectTower(InGameShopItem _tower)
     {
         Instance.towerToBuild = _tower;
+        Instance.towerSelected = true;
     }
 
     private void BuildTower()
@@ -86,11 +87,12 @@ public class BuildManager : MonoBehaviour {
             followingTower.position = locationToBuild;
             Tower _towerComponent = followingTower.GetComponent<Tower>();
             _towerComponent.isActive = true;
-            _towerComponent.rangeView.gameObject.SetActive(false);
+            _towerComponent.rangeView.gameObject.GetComponent<MeshRenderer>().enabled = false;
 
             //Reset variables
             followingTower = null;
             towerToBuild = null;
+            towerSelected = false;
         }
     }
 

@@ -38,7 +38,6 @@ public class Tower : MonoBehaviour {
 	enum TowerType
 	{
 		bullet,
-		laset,
 		AOE
 	}
 

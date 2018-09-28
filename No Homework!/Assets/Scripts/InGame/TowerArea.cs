@@ -19,21 +19,31 @@ public class TowerArea : MonoBehaviour {
 		cantPlaceMaterial = tower.cantPlaceMaterial;
     }
 
-    private void OnTriggerEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag(towerAreaTag))
         {
 			rangeView.material = cantPlaceMaterial;
             BuildManager.Instance.canBuild = false;
         }
+        else if (collision.gameObject.tag == "CanPlaceTower")
+        {
+            rangeView.material = rangeMaterial;
+            BuildManager.Instance.canBuild = true;
+        }
     }
 
-    private void OnTriggerExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.CompareTag(towerAreaTag))
         {
 			rangeView.material = rangeMaterial;
             BuildManager.Instance.canBuild = true;
+        }
+        else if (collision.gameObject.tag == "CanPlaceTower")
+        {
+            rangeView.material = cantPlaceMaterial;
+            BuildManager.Instance.canBuild = false;
         }
     }
 }

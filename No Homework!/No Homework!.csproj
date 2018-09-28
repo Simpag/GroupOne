@@ -272,9 +272,9 @@
     <Compile Include="Assets\Scripts\InGame\BuildManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Bullet.cs" />
     <Compile Include="Assets\Scripts\InGame\EnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\InGame\InGameManager.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameShopItem.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameShopManager.cs" />
+    <Compile Include="Assets\Scripts\InGame\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower.cs" />
     <Compile Include="Assets\Scripts\InGame\TowerArea.cs" />
     <Compile Include="Assets\Scripts\InGame\TowerRange.cs" />
