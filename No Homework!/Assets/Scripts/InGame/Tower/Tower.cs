@@ -12,7 +12,9 @@ public class Tower : MonoBehaviour {
 	private float range = 10f;
 	[SerializeField]
 	private float rotationSpeed = 10f;
+    public TargetSetting targetSetting;
 
+    [Header("Drag-n-Drop")]
 	public GameObject towerArea;
 	public Transform rangeView;
 	public Material rangeMaterial;
@@ -29,17 +31,23 @@ public class Tower : MonoBehaviour {
     private float fireRate = 2f;
 
     [HideInInspector]
-    public bool isActive = false;
     private float fireCountdown = 0;
 
 	[Header("Just In-Game Info")]
 	public Transform target;
 
-	enum TowerType
+	private enum TowerType
 	{
 		bullet,
 		AOE
 	}
+
+    public enum TargetSetting
+    {
+        first,
+        last,
+        mostHealth
+    }
 
     private void Awake()
     {
@@ -49,7 +57,7 @@ public class Tower : MonoBehaviour {
 
     private void Update()
     {
-        if (target == null || !isActive)
+        if (target == null)
             return;
 
         //Look onto target
@@ -67,7 +75,9 @@ public class Tower : MonoBehaviour {
             Bullet _bullet = _bulletGO.GetComponent<Bullet>();
 
             if (_bullet != null)
+            {
                 _bullet.Seek(target);
+            }
 
             fireCountdown = 1 / fireRate;
         }
@@ -90,5 +100,16 @@ public class Tower : MonoBehaviour {
         Gizmos.DrawWireSphere(transform.position, range);
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, area/2);
+    }
+
+    public void MovingTower()
+    {
+        rangeView.GetComponent<TowerRange>().enabled = false;
+    }
+
+    public void PlacedTower()
+    {
+        rangeView.GetComponent<MeshRenderer>().enabled = false;
+        rangeView.GetComponent<TowerRange>().enabled = true;
     }
 }

@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour {
 	[Header("General Info")]
     [SerializeField]
     private float speed = 70f;
+    [SerializeField]
+    private float damage = 50f;
 	[SerializeField]
     private LayerMask EnemyLayer;
     [SerializeField]
@@ -27,8 +29,8 @@ public class Bullet : MonoBehaviour {
 
     private void Update()
     {
-        if (target == null)
-        {
+        if (target == null) //Target died
+        {            
             Destroy(gameObject);
             return;
         }
@@ -64,8 +66,7 @@ public class Bullet : MonoBehaviour {
 
     private void DamageEnemy (GameObject _enemy)
     {
-        WaveSpawner.KillEnemy(_enemy);
-        //Do this on the enemy instead later
+        _enemy.GetComponent<EnemyStats>().TakeDamage(damage);
     }
 
     private void DamageAOE ()

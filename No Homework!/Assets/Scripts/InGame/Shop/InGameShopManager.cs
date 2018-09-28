@@ -34,7 +34,7 @@ public class InGameShopManager : MonoBehaviour {
 
     public static void PurchasedTower (InGameShopItem _bought)
     {
-        PlayerStats.RemoveCash(_bought.Cost);
+        PlayerStats.RemoveCandyCurrency(_bought.Cost);
     }
 
     public void StartTowerSelectionButton(int _index)
@@ -49,8 +49,8 @@ public class InGameShopManager : MonoBehaviour {
 
     public void StartTowerSelection(InGameShopItem _tower)
     {
-        if (PlayerStats.InGameCash >= _tower.Cost)
-            BuildManager.SelectTower(_tower);
+        if (PlayerStats.CandyCurrency >= _tower.Cost)
+            BuildManager.SelectTowerToBuild(_tower);
     }
 
     private void SetupShopItems()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
+    private EnemyStats stats;
+
     [SerializeField]
     private float speed = 10f;
     [SerializeField]
@@ -14,6 +16,8 @@ public class EnemyMovement : MonoBehaviour {
 
     private void Start()
     {
+        stats = GetComponent<EnemyStats>();
+
         waypointIndex = 0;
         target = Waypoints.waypoints[waypointIndex];
     }
@@ -31,13 +35,19 @@ public class EnemyMovement : MonoBehaviour {
 
     private void GetNextWaypoint()
     {
-        if (waypointIndex >= Waypoints.waypoints.Length - 1) //If there are no more waypoints
+        if (waypointIndex >= Waypoints.waypoints.Length - 1) //If there are no more waypoints, enemy reached the end
         {
-            WaveSpawner.KillEnemy(this.gameObject);
+            ReachedEnd();
             return;
         }
 
         waypointIndex++;
         target = Waypoints.waypoints[waypointIndex];
+    }
+
+    private void ReachedEnd()
+    {
+        PlayerStats.AddHomework(stats.Homework);
+        stats.Died();
     }
 }

@@ -10,24 +10,22 @@ public class PlayerStats : MonoBehaviour {
         get { return instance; }
         set { instance = value; }
     }
-    
+
     [Header("In-Game Info")]
     [SerializeField]
     private int homework;
     [SerializeField]
-    private float inGameCash;
+    private float candyCurrency;
     [SerializeField]
     private float startingCash = 500f;
 
-    public int Homework
+    public static int Homework
     {
-        get { return homework; }
-        set { homework = value; }
+        get { return Instance.homework; }
     }
-    public static float InGameCash
+    public static float CandyCurrency
     {
-        get { return Instance.inGameCash; }
-        set { Instance.inGameCash = value; }
+        get { return Instance.candyCurrency; }
     }
 
     private void Awake()
@@ -41,16 +39,32 @@ public class PlayerStats : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        Instance.candyCurrency = startingCash;
     }
 
-    private void Start()
+    public static void RemoveCandyCurrency(float _amount)
     {
-        InGameCash = startingCash;
+        Instance.candyCurrency -= _amount;
+        InGameUIManager.UpdateCandyText();
     }
 
-    public static void RemoveCash(float _amount)
+    public static void AddCandyCurrency(float _amount)
     {
-        InGameCash -= _amount;
+        Instance.candyCurrency += _amount;
+        InGameUIManager.UpdateCandyText();
+    }
+
+    //public static void RemoveHomework(int _amount)
+    //{
+    //    Instance.homework -= _amount;
+    //    InGameUIManager.UpdateHomeworkText();
+    //}
+
+    public static void AddHomework(int _amount)
+    {
+        Instance.homework += _amount;
+        InGameUIManager.UpdateHomeworkText();
     }
 
 }

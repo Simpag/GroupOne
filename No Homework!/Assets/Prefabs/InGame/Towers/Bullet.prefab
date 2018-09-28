@@ -95,10 +95,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9efd49c2e529d439588765c8f20c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   speed: 70
+  damage: 25
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
   impactEffect: {fileID: 1383500702451552, guid: 94087bf8a1d1d0b458495dae4a95bd4b,
     type: 2}
+  AOE: -1
+  target: {fileID: 0}
+  sentFrom: {fileID: 0}
 --- !u!135 &135190800019937608
 SphereCollider:
   m_ObjectHideFlags: 1

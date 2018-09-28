@@ -11,17 +11,22 @@ public class BuildManager : MonoBehaviour {
         set { instance = value; }
     }
 
-    public InGameShopItem towerToBuild;
-    private Transform followingTower;
-
     [SerializeField]
     private LayerMask groundLayer;
+    [SerializeField]
+    private LayerMask towerLayer;
 
+    //Building variables
+    public InGameShopItem towerToBuild;
+    private Transform followingTower;
     [HideInInspector]
     public bool canBuild;
     private Vector3 locationToBuild;
     private Camera cam;
-    private bool towerSelected;
+    private bool towerSelectedToBuy;
+
+    //Tower info variables
+    private Tower towerInfo;
 
     void Start()
     {
@@ -41,12 +46,12 @@ public class BuildManager : MonoBehaviour {
         }
 
         canBuild = true;
-        towerSelected = false;
+        towerSelectedToBuy = false;
     }
 
     private void Update()
     {
-        if (towerSelected)
+        if (towerSelectedToBuy) //Building a tower
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -59,6 +64,7 @@ public class BuildManager : MonoBehaviour {
             if (followingTower == null)
             {
                 followingTower = Instantiate(towerToBuild.Prefab, locationToBuild, Quaternion.identity).transform;
+                followingTower.GetComponent<Tower>().MovingTower();
             }
             else
             {
@@ -70,12 +76,33 @@ public class BuildManager : MonoBehaviour {
                 BuildTower();
             }
         }
+        else //Tower info
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, 100f, towerLayer))
+                {
+                    towerInfo = hit.transform.GetComponentInParent<Tower>();
+                }
+
+                if (towerInfo != null)
+                {
+                    //Show tower info ui here
+                    Debug.Log(towerInfo.name);
+                }
+
+                towerInfo = null;
+            }
+        }
     }
 
-    public static void SelectTower(InGameShopItem _tower)
+    public static void SelectTowerToBuild(InGameShopItem _tower)
     {
         Instance.towerToBuild = _tower;
-        Instance.towerSelected = true;
+        Instance.towerSelectedToBuy = true;
     }
 
     private void BuildTower()
@@ -85,14 +112,12 @@ public class BuildManager : MonoBehaviour {
             InGameShopManager.PurchasedTower(towerToBuild);
 
             followingTower.position = locationToBuild;
-            Tower _towerComponent = followingTower.GetComponent<Tower>();
-            _towerComponent.isActive = true;
-            _towerComponent.rangeView.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            followingTower.GetComponent<Tower>().PlacedTower();
 
             //Reset variables
             followingTower = null;
             towerToBuild = null;
-            towerSelected = false;
+            towerSelectedToBuy = false;
         }
     }
 
