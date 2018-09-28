@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-    [SerializeField]
-    private Transform target;
-
+	[Header("General Info")]
     [SerializeField]
     private float speed = 70f;
-    [SerializeField]
-    private float AOE = -1f;
-
-    [SerializeField]
+	[SerializeField]
     private LayerMask EnemyLayer;
     [SerializeField]
     private GameObject impactEffect;
+	
+	[Header("AOE Tower")]
+    [SerializeField]
+    private float AOE = -1f;
+
+	[Header("In-game Info")]
+	[SerializeField]
+    private Transform target;
 
     public void Seek (Transform _target)
     {
@@ -48,7 +51,7 @@ public class Bullet : MonoBehaviour {
         GameObject _effect = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(_effect, impactEffect.GetComponent<ParticleSystem>().main.startLifetime.constant);
 
-        if (AOE > 0f)
+        if (AOE > 0)
         {
             DamageAOE();
         } else

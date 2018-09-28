@@ -4,34 +4,35 @@ using UnityEngine;
 
 public class TowerArea : MonoBehaviour {
 
+	[SerializeField]
+	private string towerAreaTag = "TowerArea";
     private Tower tower;
-    private Color startColor;
+    private Material rangeMaterial;
+	private Material cantPlaceMaterial;
+    private MeshRenderer rangeView;
 
     private void Awake()
     {
         tower = GetComponentInParent<Tower>();
-        startColor = tower.rangeView.GetComponent<MeshRenderer>().material.color;
+        rangeView = tower.rangeView.GetComponent<MeshRenderer>();
+		rangeMaterial = tower.rangeMaterial;
+		cantPlaceMaterial = tower.cantPlaceMaterial;
     }
 
-    public void TowerPlaced()
+    private void OnTriggerEnter(Collision collision)
     {
-        gameObject.GetComponent<Rigidbody>().isKinematic = true;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "TowerArea")
+        if (collision.gameObject.CompareTag(towerAreaTag))
         {
-            tower.rangeView.GetComponent<MeshRenderer>().material.color = tower.cantPlaceTint;
+			rangeView.material = cantPlaceMaterial;
             BuildManager.Instance.canBuild = false;
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collision collision)
     {
-        if (collision.gameObject.tag == "TowerArea")
+        if (collision.gameObject.CompareTag(towerAreaTag))
         {
-            tower.rangeView.GetComponent<MeshRenderer>().material.SetColor("_Color", startColor);
+			rangeView.material = rangeMaterial;
             BuildManager.Instance.canBuild = true;
         }
     }

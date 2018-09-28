@@ -15,7 +15,7 @@ public class BuildManager : MonoBehaviour {
     private Transform followingTower;
 
     [SerializeField]
-    private LayerMask layerMask;
+    private LayerMask groundLayer;
 
     [HideInInspector]
     public bool canBuild;
@@ -51,7 +51,7 @@ public class BuildManager : MonoBehaviour {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100f, layerMask))
+            if (Physics.Raycast(ray, out hit, 100f, groundLayer))
             {
                 locationToBuild = hit.point;
             }
@@ -87,7 +87,6 @@ public class BuildManager : MonoBehaviour {
             Tower _towerComponent = followingTower.GetComponent<Tower>();
             _towerComponent.isActive = true;
             _towerComponent.rangeView.gameObject.SetActive(false);
-            _towerComponent.towerArea.GetComponent<TowerArea>().TowerPlaced();
 
             //Reset variables
             followingTower = null;
