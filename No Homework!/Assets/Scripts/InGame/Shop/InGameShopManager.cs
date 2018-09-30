@@ -11,7 +11,7 @@ public class InGameShopManager : MonoBehaviour {
         set { instance = value; }
     }
 
-    public List<InGameShopItem> shopItems;
+    public List<InGameShopItemStats> shopItems;
 
     public enum TowerList
     {
@@ -32,7 +32,7 @@ public class InGameShopManager : MonoBehaviour {
 
     }
 
-    public static void PurchasedTower (InGameShopItem _bought)
+    public static void PurchasedTower (InGameShopItemStats _bought)
     {
         PlayerStats.RemoveCandyCurrency(_bought.Cost);
     }
@@ -47,7 +47,7 @@ public class InGameShopManager : MonoBehaviour {
         }
     }
 
-    public void StartTowerSelection(InGameShopItem _tower)
+    public void StartTowerSelection(InGameShopItemStats _tower)
     {
         if (PlayerStats.CandyCurrency >= _tower.Cost)
             BuildManager.SelectTowerToBuild(_tower);

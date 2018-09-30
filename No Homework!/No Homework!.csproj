@@ -274,7 +274,7 @@
     <Compile Include="Assets\Scripts\InGame\Enemy\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameUIManager.cs" />
     <Compile Include="Assets\Scripts\InGame\PlayerStats.cs" />
-    <Compile Include="Assets\Scripts\InGame\Shop\InGameShopItem.cs" />
+    <Compile Include="Assets\Scripts\InGame\Shop\InGameShopItemStats.cs" />
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\Bullet.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\Tower.cs" />

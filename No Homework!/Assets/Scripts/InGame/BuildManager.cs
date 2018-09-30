@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BuildManager : MonoBehaviour {
 
@@ -17,7 +18,7 @@ public class BuildManager : MonoBehaviour {
     private LayerMask towerLayer;
 
     //Building variables
-    public InGameShopItem towerToBuild;
+    public InGameShopItemStats towerToBuild;
     private Transform followingTower;
     [HideInInspector]
     public bool canBuild;
@@ -66,12 +67,11 @@ public class BuildManager : MonoBehaviour {
                 followingTower = Instantiate(towerToBuild.Prefab, locationToBuild, Quaternion.identity).transform;
                 followingTower.GetComponent<Tower>().MovingTower();
             }
-            else
+            else if (Input.GetMouseButton(0))
             {
                 FollowMouse();
             }
-
-            if (Input.GetMouseButtonDown(0))
+            else if (Input.GetMouseButtonUp(0))
             {
                 BuildTower();
             }
@@ -99,7 +99,7 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
-    public static void SelectTowerToBuild(InGameShopItem _tower)
+    public static void SelectTowerToBuild(InGameShopItemStats _tower)
     {
         Instance.towerToBuild = _tower;
         Instance.towerSelectedToBuy = true;
