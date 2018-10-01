@@ -11,7 +11,13 @@ public class InGameShopManager : MonoBehaviour {
         set { instance = value; }
     }
 
-    public List<InGameShopItemStats> shopItems;
+    [SerializeField]
+    private List<InGameShopItemStats> shopItems;
+    public static List<InGameShopItemStats> ShopItems
+    {
+        get { return Instance.shopItems; }
+    }
+
 
     public enum TowerList
     {
@@ -37,20 +43,14 @@ public class InGameShopManager : MonoBehaviour {
         PlayerStats.RemoveCandyCurrency(_bought.Cost);
     }
 
-    public void StartTowerSelectionButton(int _index)
-    {
-        switch (_index)
-        {
-            case (int)TowerList.test:
-                StartTowerSelection(shopItems[0]);
-                break;
-        }
-    }
-
-    public void StartTowerSelection(InGameShopItemStats _tower)
+    public static void StartTowerSelection(InGameShopItemStats _tower)
     {
         if (PlayerStats.CandyCurrency >= _tower.Cost)
             BuildManager.SelectTowerToBuild(_tower);
+        else
+        {
+            //not enought money
+        }
     }
 
     private void SetupShopItems()
