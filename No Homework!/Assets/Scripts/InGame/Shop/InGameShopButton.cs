@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class InGameShopButton : EventTrigger {
 
     private Image buttonImage;
+    public InGameShopItemStats stats;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class InGameShopButton : EventTrigger {
 
     public override void OnPointerDown(PointerEventData data)
     {
-        SelectTower(InGameShopManager.TowerList.test);
+        SelectTower(stats.Tower);
     }
 
     public override void OnPointerEnter(PointerEventData data)

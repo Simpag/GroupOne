@@ -6,18 +6,36 @@ using UnityEngine;
 public class InGameShopItemStats {
 
     [SerializeField]
-    private GameObject prefab;
+    private InGameShopManager.TowerList tower;
+    [SerializeField]
+    private GameObject towerPrefab;
+    [SerializeField]
+    private GameObject shopPrefab;
     [SerializeField]
     private float cost;
 
-    public GameObject Prefab
+    public InGameShopManager.TowerList Tower
     {
-        get { return prefab; }
+        get { return tower; }
+        set { tower = value; }
+    }
+    public GameObject TowerPrefab
+    {
+        get { return towerPrefab; }
+    }
+    public GameObject ShopPrefab
+    {
+        get { return shopPrefab; }
     }
     public float Cost
     {
         get { return cost; }
     }
 
-
+    //public void Setup (InGameShopItemStats _stat)
+    //{
+    //    this.tower = _stat.Tower;
+    //    this.prefab = _stat.Prefab;
+    //    this.cost = _stat.Cost;
+    //}
 }

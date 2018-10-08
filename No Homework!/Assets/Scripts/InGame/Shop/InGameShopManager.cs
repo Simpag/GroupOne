@@ -18,7 +18,6 @@ public class InGameShopManager : MonoBehaviour {
         get { return Instance.shopItems; }
     }
 
-
     public enum TowerList
     {
         test
@@ -36,6 +35,7 @@ public class InGameShopManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        SetupShopItems();
     }
 
     public static void PurchasedTower (InGameShopItemStats _bought)
@@ -56,5 +56,11 @@ public class InGameShopManager : MonoBehaviour {
     private void SetupShopItems()
     {
         //Gamesparks lateron
+        foreach (InGameShopItemStats _stat in shopItems)
+        {
+            GameObject _shopGo = Instantiate(_stat.ShopPrefab, this.transform);
+
+            _shopGo.GetComponent<InGameShopButton>().stats = _stat;
+        }
     }
 }

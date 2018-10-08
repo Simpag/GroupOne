@@ -284,9 +284,11 @@
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveStats.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\Waypoints.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\Managers\GameSparksAuthService.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\Managers\LoginManager.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\LoginMenu\Managers\GameSparksAuthService.cs" />
+    <Compile Include="Assets\Scripts\LoginMenu\Managers\LoginManager.cs" />
+    <Compile Include="Assets\Scripts\LoginMenu\Managers\LogInUIManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MainMenuManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MainMenuUiManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\AccountInfo.cs" />
     <Compile Include="Assets\Scripts\Utillities\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />

@@ -64,7 +64,7 @@ public class BuildManager : MonoBehaviour {
 
             if (followingTower == null)
             {
-                followingTower = Instantiate(towerToBuild.Prefab, locationToBuild, Quaternion.identity).transform;
+                followingTower = Instantiate(towerToBuild.TowerPrefab, locationToBuild, Quaternion.identity).transform;
                 followingTower.GetComponent<Tower>().MovingTower();
             }
             else if (Input.GetMouseButton(0))
