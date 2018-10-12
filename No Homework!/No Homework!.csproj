@@ -288,7 +288,8 @@
     <Compile Include="Assets\Scripts\LoginMenu\Managers\LoginManager.cs" />
     <Compile Include="Assets\Scripts\LoginMenu\Managers\LogInUIManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu\MainMenuManager.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\MainMenuUiManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\StoreItem.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\StoreManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\AccountInfo.cs" />
     <Compile Include="Assets\Scripts\Utillities\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />
