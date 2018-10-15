@@ -26,11 +26,11 @@ public class DatabaseManager : MonoBehaviour {
     }
 
     [SerializeField]
-    private List<StoreItem> storeItems;
-    public List<StoreItem> StoreItems
+    private List<StoreItemStats> storeItemStats;
+    public List<StoreItemStats> StoreItemStats
     {
-        get { return storeItems; }
-        set { storeItems = value; }
+        get { return storeItemStats; }
+        set { storeItemStats = value; }
     }
 
     //Singleton
@@ -63,15 +63,14 @@ public class DatabaseManager : MonoBehaviour {
         {
             if (_vgood.Tags.Contains(GameConstants.ITEM_STORE))
             {
-                Instance.StoreItems.Add(CreateStoreItem(_vgood));   //Save list of store items
-                Debug.Log("Added Item" + _vgood.Name);
+                Instance.StoreItemStats.Add(CreateStoreItem(_vgood));   //Save list of store items
             }
         }
     }
 
-    private static StoreItem CreateStoreItem(ListVirtualGoodsResponse._VirtualGood _item)
+    private static StoreItemStats CreateStoreItem(ListVirtualGoodsResponse._VirtualGood _item)
     {
-        StoreItem _sItem = new StoreItem();
+        StoreItemStats _sItem = new StoreItemStats();
 
         _sItem.Item = _item;
 

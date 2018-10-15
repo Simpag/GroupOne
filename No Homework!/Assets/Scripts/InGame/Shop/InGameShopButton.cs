@@ -31,7 +31,7 @@ public class InGameShopButton : EventTrigger {
 
     private void SelectTower(InGameShopManager.TowerList _tower)
     {
-        InGameShopManager.StartTowerSelection(InGameShopManager.ShopItems[(int)_tower]);
+        InGameShopManager.StartTowerSelection(InGameShopManager.Instance.allShopItems[(int)_tower]);
     }
 
     private void HighliteButton(bool highlite)

@@ -11,12 +11,16 @@ public class InGameShopManager : MonoBehaviour {
         set { instance = value; }
     }
 
+    [Header("Drag-n-Drop")]
     [SerializeField]
-    private List<InGameShopItemStats> shopItems;
-    public static List<InGameShopItemStats> ShopItems
-    {
-        get { return Instance.shopItems; }
-    }
+    private GameObject ShopPrefab;
+
+    [Header("Fill in the list with towers!")]
+    public List<InGameShopItemStats> allShopItems;
+
+    [Header("Don't touched, unlocked during game!")]
+    [SerializeField]
+    private List<InGameShopItemStats> unlockedShopItems;
 
     public enum TowerList
     {
@@ -49,18 +53,30 @@ public class InGameShopManager : MonoBehaviour {
             BuildManager.SelectTowerToBuild(_tower);
         else
         {
-            //not enought money
+            Debug.Log("not enought money");
         }
     }
 
     private void SetupShopItems()
     {
-        //Gamesparks lateron
-        foreach (InGameShopItemStats _stat in shopItems)
+        //Unlock towers
+        for (int i = 0; i < AccountInfo.Instance.Inventory.BaseData.Keys.Count; i++)
         {
-            GameObject _shopGo = Instantiate(_stat.ShopPrefab, this.transform);
+            foreach (InGameShopItemStats _igStats in allShopItems)
+            {
+                if (AccountInfo.Instance.Inventory.ContainsKey(_igStats.ShortCode))
+                {
+                    unlockedShopItems.Add(_igStats);
+                }
+            }
+        }
 
-            _shopGo.GetComponent<InGameShopButton>().stats = _stat;
+        //Instantiate towers to shop
+        foreach (InGameShopItemStats _stats in unlockedShopItems)
+        {
+            GameObject _shopGo = Instantiate(ShopPrefab, this.transform);
+
+            _shopGo.GetComponent<InGameShopButton>().stats = _stats;
         }
     }
 }

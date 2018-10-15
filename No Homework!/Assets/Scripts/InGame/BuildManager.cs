@@ -57,9 +57,10 @@ public class BuildManager : MonoBehaviour {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100f, groundLayer))
+            if (Physics.Raycast(ray, out hit, 1000f, groundLayer))
             {
                 locationToBuild = hit.point;
+                Debug.Log("hit");
             }
 
             if (followingTower == null)

@@ -75,7 +75,7 @@ public class AccountInfo : MonoBehaviour {
 
             Instance.UserId = response.UserId;
             Instance.DisplayName = response.DisplayName;
-            Instance.Currency = 0f; //response.Currencies.GetFloat(GameConstants.CURRENCY_CODE);
+            Instance.Currency = response.Currencies.GetFloat(GameConstants.CURRENCY_CANDY_COIN);
             Instance.Inventory = response.VirtualGoods;
         });
     }

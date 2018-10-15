@@ -6,14 +6,19 @@ using UnityEngine;
 public class InGameShopItemStats {
 
     [SerializeField]
+    private string shortCode;
+    [SerializeField]
     private InGameShopManager.TowerList tower;
     [SerializeField]
     private GameObject towerPrefab;
     [SerializeField]
-    private GameObject shopPrefab;
-    [SerializeField]
     private float cost;
 
+    public string ShortCode
+    {
+        get { return shortCode; }
+        set { shortCode = value; }
+    }
     public InGameShopManager.TowerList Tower
     {
         get { return tower; }
@@ -22,10 +27,6 @@ public class InGameShopItemStats {
     public GameObject TowerPrefab
     {
         get { return towerPrefab; }
-    }
-    public GameObject ShopPrefab
-    {
-        get { return shopPrefab; }
     }
     public float Cost
     {
