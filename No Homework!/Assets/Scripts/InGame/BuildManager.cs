@@ -24,7 +24,12 @@ public class BuildManager : MonoBehaviour {
     public bool canBuild;
     private Vector3 locationToBuild;
     private Camera cam;
-    private bool towerSelectedToBuy;
+    private bool towerIsSelected;
+
+    public bool TowerIsSelected
+    {
+        get { return towerIsSelected; }
+    }
 
     //Tower info variables
     private Tower towerInfo;
@@ -47,17 +52,17 @@ public class BuildManager : MonoBehaviour {
         }
 
         canBuild = true;
-        towerSelectedToBuy = false;
+        towerIsSelected = false;
     }
 
     private void Update()
     {
-        if (towerSelectedToBuy) //Building a tower
+        if (towerIsSelected) //Building a tower
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 1000f, groundLayer))
+            if (Physics.Raycast(ray, out hit, 100f, groundLayer))
             {
                 locationToBuild = hit.point;
                 Debug.Log("hit");
@@ -91,8 +96,7 @@ public class BuildManager : MonoBehaviour {
 
                 if (towerInfo != null)
                 {
-                    //Show tower info ui here
-                    Debug.Log(towerInfo.name);
+                    InGameUIManager.ShowTowerInfo(towerInfo);
                 }
 
                 towerInfo = null;
@@ -103,7 +107,7 @@ public class BuildManager : MonoBehaviour {
     public static void SelectTowerToBuild(InGameShopItemStats _tower)
     {
         Instance.towerToBuild = _tower;
-        Instance.towerSelectedToBuy = true;
+        Instance.towerIsSelected = true;
     }
 
     private void BuildTower()
@@ -118,7 +122,7 @@ public class BuildManager : MonoBehaviour {
             //Reset variables
             followingTower = null;
             towerToBuild = null;
-            towerSelectedToBuy = false;
+            towerIsSelected = false;
         }
     }
 

@@ -1,16 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class InGameUIManager : MonoBehaviour {
     private static InGameUIManager instance;
 
-    [Header("Drag-n-Drop")]
+    [Header("Banner")]
     [SerializeField]
     private Text homeworkText;
     [SerializeField]
     private Text candyText;
+
+    [Header("Shop")]
+    [SerializeField]
+    private GameObject shopView;
+    [SerializeField]
+    private GameObject showShotButton;
+
+    [Header("Tower Information")]
+    [SerializeField]
+    private GameObject towerInformationView;
+    [SerializeField]
+    private Text towerInformationName;
+    [SerializeField]
+    private Text towerInformationDescription;
 
     private void Awake()
     {
@@ -29,6 +44,21 @@ public class InGameUIManager : MonoBehaviour {
     {
         UpdateHomeworkText();
         UpdateCandyText();
+        showShotButton.SetActive(true);
+        shopView.SetActive(false);
+        towerInformationView.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !BuildManager.Instance.TowerIsSelected)
+        {
+            if (shopView.activeSelf)
+                ShowOrHideShop();
+
+            if (towerInformationView.activeSelf)
+                HideTowerInfo();
+        }
     }
 
     public static void UpdateHomeworkText ()
@@ -39,5 +69,36 @@ public class InGameUIManager : MonoBehaviour {
     public static void UpdateCandyText ()
     {
         instance.candyText.text = Mathf.RoundToInt(PlayerStats.CandyCurrency).ToString();
+    }
+
+    public void ShowOrHideShop()
+    {
+        if (shopView.activeSelf) //Hide
+        {
+            shopView.SetActive(false);
+            showShotButton.SetActive(true);
+        }
+        else //Show
+        {
+            showShotButton.SetActive(false);
+            shopView.SetActive(true);
+
+            HideTowerInfo();
+        }
+    }
+
+    public static void ShowTowerInfo (Tower _tower)
+    {
+        if (instance.shopView.activeSelf)
+            instance.ShowOrHideShop();
+
+        instance.towerInformationView.SetActive(true);
+        instance.towerInformationName.text = _tower.towerName;
+        instance.towerInformationDescription.text = _tower.towerDescription;
+    }
+
+    private void HideTowerInfo()
+    {
+        instance.towerInformationView.SetActive(false);
     }
 }

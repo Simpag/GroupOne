@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyMovement))]
 public class EnemyStats : MonoBehaviour {
 
 	[SerializeField]
@@ -26,10 +27,17 @@ public class EnemyStats : MonoBehaviour {
 
     [SerializeField]
     private List<Tower> seenByTower;
+    public List<Tower> SeenByTower
+    {
+        get { return seenByTower; }
+    }
+
+    private EnemyMovement movement;
 
     private void Awake()
     {
         seenByTower = new List<Tower>();
+        movement = GetComponent<EnemyMovement>();
     }
 
     public void TakeDamage (float _amount)
@@ -38,7 +46,7 @@ public class EnemyStats : MonoBehaviour {
 
         if (health <= 0)
         {
-            Died();
+            movement.Died(true);
         }
     }
 
@@ -46,19 +54,6 @@ public class EnemyStats : MonoBehaviour {
     {
         if (!seenByTower.Contains(_tower))
             seenByTower.Add(_tower);
-    }
-
-    public void Died()
-    {
-        PlayerStats.AddCandyCurrency(worth);
-
-        foreach (Tower _tower in seenByTower)
-        {
-            if (_tower != null)
-                _tower.rangeView.GetComponent<TowerRange>().RemoveEnemyFromEnemiesInRange(this.gameObject);
-        }
-
-        Destroy(this.gameObject);
     }
 
     public void RemoveSeenByTower(Tower _tower)

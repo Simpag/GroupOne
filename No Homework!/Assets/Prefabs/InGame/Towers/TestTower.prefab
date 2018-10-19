@@ -444,6 +444,8 @@ MonoBehaviour:
     type: 2}
   firePoint: {fileID: 4479675179198608}
   fireRate: 2
+  towerName: Test Tower
+  towerDescription: This is the description of Test Tower
   target: {fileID: 0}
 --- !u!114 &114608196461530672
 MonoBehaviour:

@@ -33,6 +33,10 @@ public class Tower : MonoBehaviour {
     [HideInInspector]
     private float fireCountdown = 0;
 
+    [Header("Information")]
+    public string towerName;
+    public string towerDescription;
+
 	[Header("Just In-Game Info")]
 	public Transform target;
 

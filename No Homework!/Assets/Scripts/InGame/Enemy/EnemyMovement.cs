@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyStats))]
 public class EnemyMovement : MonoBehaviour {
 
     private EnemyStats stats;
@@ -48,6 +49,20 @@ public class EnemyMovement : MonoBehaviour {
     private void ReachedEnd()
     {
         PlayerStats.AddHomework(stats.Homework);
-        stats.Died();
+        Died(false);
+    }
+
+    public void Died(bool _killed)
+    {
+        if (_killed)
+            PlayerStats.AddCandyCurrency(stats.Worth);
+
+        foreach (Tower _tower in stats.SeenByTower)
+        {
+            if (_tower != null)
+                _tower.rangeView.GetComponent<TowerRange>().RemoveEnemyFromEnemiesInRange(this.gameObject);
+        }
+
+        Destroy(this.gameObject);
     }
 }
