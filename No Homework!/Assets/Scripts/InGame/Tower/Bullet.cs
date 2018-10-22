@@ -5,26 +5,25 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
 	[Header("General Info")]
-    [SerializeField]
-    private float speed = 70f;
-    [SerializeField]
-    private float damage = 50f;
 	[SerializeField]
     private LayerMask EnemyLayer;
     [SerializeField]
     private GameObject impactEffect;
-	
-	[Header("AOE Tower")]
-    [SerializeField]
-    private float AOE = -1f;
 
 	[Header("In-game Info")]
 	[SerializeField]
     private Transform target;
 
-    public void Seek (Transform _target)
+    public float speed = 70f;
+    public float damage = 50f;
+    public float AOE = -1f; //Area of effect
+
+    public void Seek (Transform _target, float _speed, float _damage, float _AOE)
     {
         target = _target;
+        speed = _speed;
+        damage = _damage;
+        AOE = _AOE;
     }
 
     private void Update()

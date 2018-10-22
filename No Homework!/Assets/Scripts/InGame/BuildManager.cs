@@ -65,7 +65,6 @@ public class BuildManager : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 100f, groundLayer))
             {
                 locationToBuild = hit.point;
-                Debug.Log("hit");
             }
 
             if (followingTower == null)

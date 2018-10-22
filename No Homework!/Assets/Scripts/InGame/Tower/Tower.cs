@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Bullet))]
 public class Tower : MonoBehaviour {
     [Header("General Tower Properties")]
 	[SerializeField]
 	private TowerType towerType;
-	[SerializeField]
+    public int numberOfUpgrades = 1;
+    [SerializeField]
+    private float damage = 50f;
+    [SerializeField]
+    private float AOE = -1f; //Area of effect
+    [SerializeField]
+    private float bulletSpeed = 70f;
+    [SerializeField]
 	private float area = 1.4f;
 	[SerializeField]
 	private float range = 10f;
@@ -14,24 +22,37 @@ public class Tower : MonoBehaviour {
 	private float rotationSpeed = 10f;
     public TargetSetting targetSetting;
 
-    [Header("Drag-n-Drop")]
-	public GameObject towerArea;
+    [Header("General Setup")]
+    [SerializeField]
+    private GameObject standardMesh;
+    public GameObject towerArea;
 	public Transform rangeView;
-	public Material rangeMaterial;
-	public Material cantPlaceMaterial;
 	[SerializeField]
 	private Transform pivotPoint;
 	[SerializeField]
-	private GameObject bulletPrefab;
-	[SerializeField]
 	private Transform firePoint;
+	public Material rangeMaterial;
+	public Material cantPlaceMaterial;
+
+    [Header("Upgraded Setup")]
+    [SerializeField]
+    private GameObject upgradedMesh;
+    [SerializeField]
+    private float upgradedDamage = 75f;
+    [SerializeField]
+    private float upgradedBulletSpeed = 100f;
+    [SerializeField]
+    private float upgradedArea = 1.4f;
+    [SerializeField]
+    private float upgradedRange = 15f;
+    [SerializeField]
+    private float upgradedFireRate = 4f;
 
 	[Header("Bullet")]
     [SerializeField]
     private float fireRate = 2f;
-
-    [HideInInspector]
-    private float fireCountdown = 0;
+	[SerializeField]
+	private GameObject bulletPrefab;
 
     [Header("Information")]
     public string towerName;
@@ -39,6 +60,13 @@ public class Tower : MonoBehaviour {
 
 	[Header("Just In-Game Info")]
 	public Transform target;
+    [HideInInspector]
+    public InGameShopItemStats shopStats;
+    [HideInInspector]
+    public int towerLevel = 0;
+
+    private float fireCountdown = 0;
+    private Bullet bullet;
 
 	private enum TowerType
 	{
@@ -55,8 +83,7 @@ public class Tower : MonoBehaviour {
 
     private void Awake()
     {
-        rangeView.localScale = new Vector3(range * 2, rangeView.localScale.y, range * 2);
-        towerArea.transform.localScale = new Vector3(area, towerArea.transform.localScale.y, area);
+        Setup(true);
     }
 
     private void Update()
@@ -71,6 +98,20 @@ public class Tower : MonoBehaviour {
         Shoot();
     }
 
+    private void Setup(bool isStart)
+    {
+        rangeView.localScale = new Vector3(range * 2, rangeView.localScale.y, range * 2);
+        towerArea.transform.localScale = new Vector3(area, towerArea.transform.localScale.y, area);
+
+        if (isStart)
+        {
+            bullet = bulletPrefab.GetComponent<Bullet>();
+            bullet.speed = bulletSpeed;
+            bullet.damage = damage;
+            bullet.AOE = AOE;
+        }
+    }
+
     private void Shoot()
     {
         if (fireCountdown <= 0)
@@ -80,7 +121,7 @@ public class Tower : MonoBehaviour {
 
             if (_bullet != null)
             {
-                _bullet.Seek(target);
+                _bullet.Seek(target, bulletSpeed, damage, AOE);
             }
 
             fireCountdown = 1 / fireRate;
@@ -115,5 +156,21 @@ public class Tower : MonoBehaviour {
     {
         rangeView.GetComponent<MeshRenderer>().enabled = false;
         rangeView.GetComponent<TowerRange>().enabled = true;
+    }
+
+    public void UpgradeTower()
+    {
+        towerLevel++;
+        this.damage = upgradedDamage;
+        this.bulletSpeed = upgradedBulletSpeed;
+        this.range = upgradedRange;
+        this.fireRate = upgradedFireRate;
+        this.area = upgradedArea;
+
+        Setup(false);
+
+        //Replace the mesh
+        standardMesh.SetActive(false);
+        Instantiate(this.upgradedMesh, pivotPoint);
     }
 }

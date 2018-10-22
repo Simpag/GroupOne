@@ -9,6 +9,8 @@ public class InGameUIManager : MonoBehaviour {
 
     [Header("Banner")]
     [SerializeField]
+    private GameObject banner;
+    [SerializeField]
     private Text homeworkText;
     [SerializeField]
     private Text candyText;
@@ -26,6 +28,7 @@ public class InGameUIManager : MonoBehaviour {
     private Text towerInformationName;
     [SerializeField]
     private Text towerInformationDescription;
+    private Tower towerInfo;
 
     private void Awake()
     {
@@ -47,6 +50,7 @@ public class InGameUIManager : MonoBehaviour {
         showShotButton.SetActive(true);
         shopView.SetActive(false);
         towerInformationView.SetActive(false);
+        banner.SetActive(true);
     }
 
     private void Update()
@@ -87,8 +91,15 @@ public class InGameUIManager : MonoBehaviour {
         }
     }
 
+    public void UpgradeSelectedTower()
+    {
+        InGameShopManager.UpgradeTower(towerInfo);
+    }
+
     public static void ShowTowerInfo (Tower _tower)
     {
+        instance.towerInfo = _tower; //Save the selected Tower
+
         if (instance.shopView.activeSelf)
             instance.ShowOrHideShop();
 
@@ -100,5 +111,6 @@ public class InGameUIManager : MonoBehaviour {
     private void HideTowerInfo()
     {
         instance.towerInformationView.SetActive(false);
+        towerInfo = null;
     }
 }

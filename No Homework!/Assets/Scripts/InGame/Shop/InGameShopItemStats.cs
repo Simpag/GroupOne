@@ -13,6 +13,8 @@ public class InGameShopItemStats {
     private GameObject towerPrefab;
     [SerializeField]
     private float cost;
+    [SerializeField]
+    private float upgradeCost;
 
     public string ShortCode
     {
@@ -26,11 +28,16 @@ public class InGameShopItemStats {
     }
     public GameObject TowerPrefab
     {
-        get { return towerPrefab; }
+        //Set the shopstats then return the prefab with the stats
+        get { towerPrefab.GetComponent<Tower>().shopStats = this; return towerPrefab; }
     }
     public float Cost
     {
         get { return cost; }
+    }
+    public float UpgradeCost
+    {
+        get { return upgradeCost; }
     }
 
     //public void Setup (InGameShopItemStats _stat)
