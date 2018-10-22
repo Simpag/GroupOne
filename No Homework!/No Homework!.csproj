@@ -292,9 +292,11 @@
     <Compile Include="Assets\Scripts\MainMenu\StoreItemStats.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StoreManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\AccountInfo.cs" />
+    <Compile Include="Assets\Scripts\Utillities\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameFunctions.cs" />
+    <Compile Include="Assets\Scripts\Utillities\Sound.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GameSparks\Plugins\GameSparks.Api.XML" />

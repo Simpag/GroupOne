@@ -55,7 +55,10 @@ public class EnemyMovement : MonoBehaviour {
     public void Died(bool _killed)
     {
         if (_killed)
+        {
+            AudioManager.Instance.Play("EnemyKnockedSound");
             PlayerStats.AddCandyCurrency(stats.Worth);
+        }
 
         foreach (Tower _tower in stats.SeenByTower)
         {

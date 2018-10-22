@@ -116,6 +116,8 @@ public class Tower : MonoBehaviour {
     {
         if (fireCountdown <= 0)
         {
+            AudioManager.Instance.Play("TowerThrowSound");
+
             GameObject _bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Bullet _bullet = _bulletGO.GetComponent<Bullet>();
 

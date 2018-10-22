@@ -77,6 +77,7 @@ public class MainMenuManager : MonoBehaviour {
 
     public void StartGame()
     {
+        AudioManager.Instance.Stop("MainMenuMusic");
         SceneManager.LoadScene("SingleplayerScene");
     }
 }

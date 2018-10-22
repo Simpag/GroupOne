@@ -113,6 +113,8 @@ public class BuildManager : MonoBehaviour {
     {
         if (canBuild)
         {
+            AudioManager.Instance.Play("TowerPlacedSound");
+
             InGameShopManager.PurchasedTower(towerToBuild);
 
             followingTower.position = locationToBuild;
