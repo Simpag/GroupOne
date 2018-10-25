@@ -274,11 +274,13 @@
     <Compile Include="Assets\Scripts\InGame\Enemy\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameUIManager.cs" />
     <Compile Include="Assets\Scripts\InGame\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\InGame\Popup.cs" />
+    <Compile Include="Assets\Scripts\InGame\PopupManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopButton.cs" />
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopItemStats.cs" />
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopManager.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\Bullet.cs" />
-    <Compile Include="Assets\Scripts\InGame\Tower\Tower.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\TowerArea.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\TowerRange.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveSpawner.cs" />
