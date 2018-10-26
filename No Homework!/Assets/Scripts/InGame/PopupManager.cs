@@ -33,7 +33,7 @@ public class PopupManager : MonoBehaviour {
         popup.SetActive(false);
 
         Invoke("ShowNextPopup", 5);
-        Invoke("ShowNextPopup", 20);
+        Invoke("ShowNextPopup", 9);
         Invoke("ShowNextPopup", 50);
     }
 

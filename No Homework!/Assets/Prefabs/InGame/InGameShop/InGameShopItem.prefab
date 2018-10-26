@@ -67,10 +67,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 15
     m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5000
+  m_Text: 500
 --- !u!114 &114156815752711226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,10 +120,11 @@ MonoBehaviour:
   m_Delegates: []
   delegates: []
   stats:
+    shortCode: 
     tower: 0
     towerPrefab: {fileID: 0}
-    shopPrefab: {fileID: 0}
     cost: 0
+    upgradeCost: 0
 --- !u!222 &222332075287027446
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -144,15 +145,15 @@ RectTransform:
   m_GameObject: {fileID: 1116646363955892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224960713079955770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 138.43, y: 12.35}
-  m_SizeDelta: {x: 127.16, y: 254.29}
+  m_AnchoredPosition: {x: 2.2, y: 124}
+  m_SizeDelta: {x: -68.7, y: 267}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224960713079955770
 RectTransform:

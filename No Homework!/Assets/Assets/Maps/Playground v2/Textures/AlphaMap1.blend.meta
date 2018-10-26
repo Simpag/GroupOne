@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 4f7fd7713b98c674b88d3f5ec0114a2f
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bench_1
+    100004: Bench_2
+    100006: Bench_3
+    100008: Bench_4
+    100010: Bench_5
+    100012: Edges_
+    100014: Grass
+    100016: Path
+    100018: Sabd_Box_3_sand
+    100020: Sand_Box_1_sand
+    100022: Sand_box_2_Sand
+    100024: Sand_Box_Edges_2
+    100026: Sand_Box_Edges_3
+    100028: Sandbox_Edges_1
+    100030: School__Building_1_Wall
+    100032: School_Building_1
+    100034: School_Building_1_Roof
+    100036: School_Building_1_Window
+    100038: School_Building_2
+    100040: School_Building_2_Roof
+    100042: School_Building_2_Wall
+    100044: School_Building_2_Window
+    100046: School_Building_3
+    100048: School_Building_3_Roof
+    100050: School_Building_3_Wall
+    100052: School_Building_3_Window
+    400000: //RootNode
+    400002: Bench_1
+    400004: Bench_2
+    400006: Bench_3
+    400008: Bench_4
+    400010: Bench_5
+    400012: Edges_
+    400014: Grass
+    400016: Path
+    400018: Sabd_Box_3_sand
+    400020: Sand_Box_1_sand
+    400022: Sand_box_2_Sand
+    400024: Sand_Box_Edges_2
+    400026: Sand_Box_Edges_3
+    400028: Sandbox_Edges_1
+    400030: School__Building_1_Wall
+    400032: School_Building_1
+    400034: School_Building_1_Roof
+    400036: School_Building_1_Window
+    400038: School_Building_2
+    400040: School_Building_2_Roof
+    400042: School_Building_2_Wall
+    400044: School_Building_2_Window
+    400046: School_Building_3
+    400048: School_Building_3_Roof
+    400050: School_Building_3_Wall
+    400052: School_Building_3_Window
+    2100000: None__LightPlanks_jpg
+    2100002: None__Roof_jpg
+    2100004: unnamed
+    2100006: None__Glass_jpg
+    2100008: None__40263676-big-brown-wood-plank-wall-texture-background_jpg_005
+    2100010: None__40263676-big-brown-wood-plank-wall-texture-background_jpg_008
+    2100012: None__40263676-big-brown-wood-plank-wall-texture-background_jpg_007
+    2100014: None__40263676-big-brown-wood-plank-wall-texture-background_jpg_006
+    2100016: None__40263676-big-brown-wood-plank-wall-texture-background_jpg_009
+    2100018: None__40263676-big-brown-wood-plank-wall-texture-background_jpg_004
+    2100020: None__40263676-big-brown-wood-plank-wall-texture-background_jpg_003
+    2100022: None__40263676-big-brown-wood-plank-wall-texture-background_jpg_002
+    2100024: None__40263676-big-brown-wood-plank-wall-texture-background_jpg
+    2100026: None__Asphalt_jpg
+    2100028: None__Grass_jpg
+    2100030: None__DarkPlank_jpg
+    2100032: None__Sand_jpg
+    2100034: None__BenchPlank_jpg
+    2300000: Bench_1
+    2300002: Bench_2
+    2300004: Bench_3
+    2300006: Bench_4
+    2300008: Bench_5
+    2300010: Edges_
+    2300012: Grass
+    2300014: Path
+    2300016: Sabd_Box_3_sand
+    2300018: Sand_Box_1_sand
+    2300020: Sand_box_2_Sand
+    2300022: Sand_Box_Edges_2
+    2300024: Sand_Box_Edges_3
+    2300026: Sandbox_Edges_1
+    2300028: School__Building_1_Wall
+    2300030: School_Building_1
+    2300032: School_Building_1_Roof
+    2300034: School_Building_1_Window
+    2300036: School_Building_2
+    2300038: School_Building_2_Roof
+    2300040: School_Building_2_Wall
+    2300042: School_Building_2_Window
+    2300044: School_Building_3
+    2300046: School_Building_3_Roof
+    2300048: School_Building_3_Wall
+    2300050: School_Building_3_Window
+    3300000: Bench_1
+    3300002: Bench_2
+    3300004: Bench_3
+    3300006: Bench_4
+    3300008: Bench_5
+    3300010: Edges_
+    3300012: Grass
+    3300014: Path
+    3300016: Sabd_Box_3_sand
+    3300018: Sand_Box_1_sand
+    3300020: Sand_box_2_Sand
+    3300022: Sand_Box_Edges_2
+    3300024: Sand_Box_Edges_3
+    3300026: Sandbox_Edges_1
+    3300028: School__Building_1_Wall
+    3300030: School_Building_1
+    3300032: School_Building_1_Roof
+    3300034: School_Building_1_Window
+    3300036: School_Building_2
+    3300038: School_Building_2_Roof
+    3300040: School_Building_2_Wall
+    3300042: School_Building_2_Window
+    3300044: School_Building_3
+    3300046: School_Building_3_Roof
+    3300048: School_Building_3_Wall
+    3300050: School_Building_3_Window
+    4300000: School_Building_3_Wall
+    4300002: School_Building_3_Roof
+    4300004: School_Building_2_Wall
+    4300006: School_Building_2_Roof
+    4300008: School__Building_1_Wall
+    4300010: School_Building_1_Roof
+    4300012: School_Building_2_Window
+    4300014: School_Building_2
+    4300016: School_Building_1
+    4300018: School_Building_1_Window
+    4300020: School_Building_3_Window
+    4300022: Edges_
+    4300024: Path
+    4300026: Grass
+    4300028: Sand_Box_Edges_2
+    4300030: Sand_box_2_Sand
+    4300032: Sandbox_Edges_1
+    4300034: Sand_Box_1_sand
+    4300036: Sand_Box_Edges_3
+    4300038: Sabd_Box_3_sand
+    4300040: Bench_1
+    4300042: Bench_2
+    4300044: Bench_3
+    4300046: Bench_4
+    4300048: Bench_5
+    4300050: School_Building_3
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

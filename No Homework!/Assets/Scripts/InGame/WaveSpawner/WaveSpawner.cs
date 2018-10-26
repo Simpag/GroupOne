@@ -7,6 +7,8 @@ public class WaveSpawner : MonoBehaviour {
     private Transform enemyPrefab;
     [SerializeField]
     private Transform spawnPoint;
+    [SerializeField]
+    private float firstTimeBeforeSpawn;
 
     [SerializeField]
     private float algTimeBeforeStart;
@@ -18,10 +20,15 @@ public class WaveSpawner : MonoBehaviour {
     private int enemyIndex = 0;
 
     private bool isSpawning;
-    private float countDown = 2f;
+    private float countDown;
 
     [SerializeField]
     private WaveStats[] waves;
+
+    private void Awake()
+    {
+        countDown = firstTimeBeforeSpawn;
+    }
 
     private void Update()
     {
@@ -40,6 +47,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private IEnumerator SpawnWaveFromArray()
     {
+        AudioManager.Instance.Play("EndOfRoundSound");
         waveIndex++;
         isSpawning = true;
         enemyIndex = 0;
@@ -57,6 +65,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private IEnumerator SpawnWaveFromAlg()
     {
+        AudioManager.Instance.Play("EndOfRoundSound");
         //0.03x^2+2sin(x)+5
         waveIndex++;
         isSpawning = true;

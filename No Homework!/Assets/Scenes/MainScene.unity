@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -293,6 +293,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnemyKnockedSound
     clip: {fileID: 8300000, guid: 501493dcdde37ad479f2ead4f978b95d, type: 3}
+    volume: 0.15
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: EndOfRoundSound
+    clip: {fileID: 8300000, guid: a8d99d27cb3677c478711d4cc2703c43, type: 3}
     volume: 0.15
     volumeVariance: 0
     pitch: 1

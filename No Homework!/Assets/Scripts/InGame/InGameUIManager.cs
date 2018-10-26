@@ -28,6 +28,8 @@ public class InGameUIManager : MonoBehaviour {
     private Text towerInformationName;
     [SerializeField]
     private Text towerInformationDescription;
+    [SerializeField]
+    private Text towerUpgradeCost;
     private Tower towerInfo;
 
     private void Awake()
@@ -106,6 +108,7 @@ public class InGameUIManager : MonoBehaviour {
         instance.towerInformationView.SetActive(true);
         instance.towerInformationName.text = _tower.towerName;
         instance.towerInformationDescription.text = _tower.towerDescription;
+        instance.towerUpgradeCost.text = _tower.shopStats.UpgradeCost.ToString();
     }
 
     private void HideTowerInfo()
