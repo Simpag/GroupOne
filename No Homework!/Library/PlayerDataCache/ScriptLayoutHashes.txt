@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/simon/Desktop/Builds/Alex/Build.exe
+C:/Users/simon/Desktop/Builds/Normal/Build.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity

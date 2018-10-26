@@ -309,6 +309,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: InGameMusic
+    clip: {fileID: 8300000, guid: 6cc24481a20ce2c4dba8a2589a023a8c, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
 --- !u!4 &569252735
 Transform:
   m_ObjectHideFlags: 0

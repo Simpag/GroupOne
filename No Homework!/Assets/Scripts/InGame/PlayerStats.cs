@@ -41,6 +41,8 @@ public class PlayerStats : MonoBehaviour {
         }
 
         Instance.candyCurrency = startingCash;
+
+        AudioManager.Instance.Play("InGameMusic");
     }
 
     public static void RemoveCandyCurrency(float _amount)
