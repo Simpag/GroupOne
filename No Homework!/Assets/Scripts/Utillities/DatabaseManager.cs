@@ -59,6 +59,9 @@ public class DatabaseManager : MonoBehaviour {
     private static void OnUpdateDatabase()
     {
         Debug.Log("Updated Database");
+        if (Instance.VirtualGoods == null)
+            return;
+
         foreach (ListVirtualGoodsResponse._VirtualGood _vgood in Instance.VirtualGoods)
         {
             if (_vgood.Tags.Contains(GameConstants.ITEM_STORE))

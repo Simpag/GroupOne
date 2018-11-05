@@ -46,7 +46,7 @@ public class StoreItemStats {
     {
         get
         {
-            Debug.Log((float)item.CurrencyCosts.GetFloat(GameConstants.CURRENCY_CANDY_COIN));
+            //Debug.Log((float)item.CurrencyCosts.GetFloat(GameConstants.CURRENCY_CANDY_COIN));
             return (float)item.CurrencyCosts.GetFloat(GameConstants.CURRENCY_CANDY_COIN);
         }
     }

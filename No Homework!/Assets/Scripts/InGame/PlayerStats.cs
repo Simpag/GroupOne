@@ -67,6 +67,7 @@ public class PlayerStats : MonoBehaviour {
     {
         Instance.homework += _amount;
         InGameUIManager.UpdateHomeworkText();
+        HomeworkBar.UpdateHomeworkBar();
     }
 
 }
