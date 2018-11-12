@@ -49,7 +49,7 @@ public class StoreManager : MonoBehaviour {
 
         for (int i = 0; i < Instance.storeContent.childCount; i++)
         {
-            Destroy(Instance.storeContent.GetChild(i));
+            Destroy(Instance.storeContent.GetChild(i).gameObject);
         }
     }
 

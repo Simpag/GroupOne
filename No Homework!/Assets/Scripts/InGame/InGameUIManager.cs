@@ -109,11 +109,18 @@ public class InGameUIManager : MonoBehaviour {
         instance.towerInformationName.text = _tower.towerName;
         instance.towerInformationDescription.text = _tower.towerDescription;
         instance.towerUpgradeCost.text = _tower.shopStats.UpgradeCost.ToString();
+
+        instance.towerInfo.rangeView.GetComponent<MeshRenderer>().enabled = true; //Show the range of the tower
     }
 
     private void HideTowerInfo()
     {
         instance.towerInformationView.SetActive(false);
-        towerInfo = null;
+
+        if (instance.towerInfo == null)
+            return;
+
+        instance.towerInfo.rangeView.GetComponent<MeshRenderer>().enabled = false; //Show the range of the tower
+        instance.towerInfo = null;
     }
 }

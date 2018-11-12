@@ -32,7 +32,7 @@ public class BuildManager : MonoBehaviour {
     }
 
     //Tower info variables
-    private Tower towerInfo;
+    private Tower tower;
 
     void Start()
     {
@@ -81,7 +81,7 @@ public class BuildManager : MonoBehaviour {
                 BuildTower();
             }
         }
-        else //Tower info
+        else // Tower info
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -90,15 +90,15 @@ public class BuildManager : MonoBehaviour {
 
                 if (Physics.Raycast(ray, out hit, 100f, towerLayer))
                 {
-                    towerInfo = hit.transform.GetComponentInParent<Tower>();
+                    tower = hit.transform.GetComponentInParent<Tower>();
                 }
 
-                if (towerInfo != null)
+                if (tower != null)
                 {
-                    InGameUIManager.ShowTowerInfo(towerInfo);
+                    InGameUIManager.ShowTowerInfo(tower);
                 }
 
-                towerInfo = null;
+                tower = null;
             }
         }
     }

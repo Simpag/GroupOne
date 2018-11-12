@@ -140,7 +140,7 @@ public class Tower : MonoBehaviour {
         pivotPoint.rotation = Quaternion.Euler(pivotPoint.rotation.x, rotation.y, pivotPoint.rotation.z);
     }
 
-    //Show range of turret
+    //Show range of turret in editor
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
@@ -151,13 +151,14 @@ public class Tower : MonoBehaviour {
 
     public void MovingTower()
     {
-        rangeView.GetComponent<TowerRange>().enabled = false;
+        rangeView.GetComponent<TowerRange>().enabled = false; //Disable targeting
+        rangeView.GetComponent<MeshRenderer>().enabled = true; //Enable range view
     }
 
     public void PlacedTower()
     {
-        rangeView.GetComponent<MeshRenderer>().enabled = false;
-        rangeView.GetComponent<TowerRange>().enabled = true;
+        rangeView.GetComponent<MeshRenderer>().enabled = false; //Disable range view
+        rangeView.GetComponent<TowerRange>().enabled = true; //Enable targeting script
     }
 
     public void UpgradeTower()

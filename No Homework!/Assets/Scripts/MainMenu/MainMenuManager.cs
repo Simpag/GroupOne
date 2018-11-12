@@ -20,6 +20,9 @@ public class MainMenuManager : MonoBehaviour {
         set { instance = value; }
     }
 
+    [SerializeField]
+    private Animator anim;
+
     [Header("Menus")]
     [SerializeField]
     private GameObject mainMenu;
@@ -46,16 +49,14 @@ public class MainMenuManager : MonoBehaviour {
         switch (_menu)
         {
             case Menu.MainMenu:
-                mainMenu.SetActive(true);
-                storeMenu.SetActive(false);
+                anim.SetTrigger("FlipBoardFront");
 
                 StoreManager.HideStore();
                 AccountInfo.UpdateAccountInfo();
                 break;
 
             case Menu.StoreMenu:
-                mainMenu.SetActive(false);
-                storeMenu.SetActive(true);
+                anim.SetTrigger("FlipBoardBack");
 
                 StoreManager.ShowStore();
                 break;
