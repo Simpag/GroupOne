@@ -234,13 +234,13 @@
       <HintPath>Assets/GameSparks/Plugins/GameSparksRT.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/simon/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/Simon/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/simon/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/Simon/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/simon/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Simon/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -319,14 +319,15 @@
     <Compile Include="Assets\Scripts\InGame\Enemy\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\InGame\HomeworkBar.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameUIManager.cs" />
+    <Compile Include="Assets\Scripts\InGame\MulitplayerManager.cs" />
     <Compile Include="Assets\Scripts\InGame\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\InGame\Popup.cs" />
     <Compile Include="Assets\Scripts\InGame\PopupManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopButton.cs" />
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopItemStats.cs" />
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopManager.cs" />
-    <Compile Include="Assets\Scripts\InGame\Tower.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\Bullet.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower\Tower.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\TowerArea.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\TowerRange.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveSpawner.cs" />

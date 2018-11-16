@@ -12,4 +12,7 @@ public class GameConstants {
 
     //Game scenes
     public static string MAIN_MENU_SCENE = "MainScene";
+
+    //Multiplayer constants
+    public static string DEFAULT_MATCHMAKING_SHORTCODE = "DefaultMatch";
 }

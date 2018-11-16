@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using GameSparks.Api;
+using GameSparks.Api.Requests;
+using GameSparks.Api.Responses;
+using GameSparks.Core;
 
 public class BuildManager : MonoBehaviour {
 
@@ -11,6 +15,9 @@ public class BuildManager : MonoBehaviour {
         get { return instance; }
         set { instance = value; }
     }
+
+    [HideInInspector]
+    public bool isMultiplayer = false;
 
     [SerializeField]
     private LayerMask groundLayer;
@@ -25,6 +32,7 @@ public class BuildManager : MonoBehaviour {
     private Vector3 locationToBuild;
     private Camera cam;
     private bool towerIsSelected;
+    private float yLevel = 0f;
 
     public bool TowerIsSelected
     {
@@ -65,6 +73,7 @@ public class BuildManager : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 100f, groundLayer))
             {
                 locationToBuild = hit.point;
+                yLevel = hit.point.y;
             }
 
             if (followingTower == null)
@@ -90,7 +99,12 @@ public class BuildManager : MonoBehaviour {
 
                 if (Physics.Raycast(ray, out hit, 100f, towerLayer))
                 {
-                    tower = hit.transform.GetComponentInParent<Tower>();
+                    Tower _tower = hit.transform.GetComponentInParent<Tower>();
+
+                    if (_tower.isYours == true)
+                    {
+                        tower = _tower;
+                    }
                 }
 
                 if (tower != null)
@@ -114,8 +128,27 @@ public class BuildManager : MonoBehaviour {
         if (canBuild)
         {
             AudioManager.Instance.Play("TowerPlacedSound");
-
             InGameShopManager.PurchasedTower(towerToBuild);
+
+            if (isMultiplayer)
+            {
+                new LogChallengeEventRequest()
+                .SetChallengeInstanceId(MulitplayerManager.ChallengeId)
+                .SetEventKey("PlaceTower")
+                .SetEventAttribute("X", (long)locationToBuild.x)
+                .SetEventAttribute("Z", (long)locationToBuild.z)
+                .SetEventAttribute("TowerId", towerToBuild.TowerId)
+                .Send((response) =>
+                {
+                    if (response.HasErrors)
+                    {
+                        Debug.LogError(response.Errors);
+                        return;
+                    }
+
+                    GSData scriptData = response.ScriptData;
+                });
+            }
 
             followingTower.position = locationToBuild;
             followingTower.GetComponent<Tower>().PlacedTower();
@@ -125,6 +158,26 @@ public class BuildManager : MonoBehaviour {
             towerToBuild = null;
             towerIsSelected = false;
         }
+    }
+
+    public void BuildTowerPartner(string towerId, string x, string z)
+    {
+        AudioManager.Instance.Play("TowerPlacedSound");
+        GameObject _prefab = null;
+
+        //Find the right tower prefab based on towerId
+        foreach (InGameShopItemStats _stat in InGameShopManager.Instance.allShopItems)
+        {
+            if(_stat.TowerId == towerId)
+            {
+                _prefab = _stat.TowerPrefab;
+            }
+        }
+
+        //Instantiate partners tower
+        Transform _tower = Instantiate(_prefab, new Vector3(float.Parse(x), yLevel, float.Parse(z)), Quaternion.identity).transform;
+        _tower.GetComponent<Tower>().PlacedTower();
+        _tower.GetComponent<Tower>().isYours = false;
     }
 
     private void FollowMouse()
