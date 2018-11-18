@@ -38,6 +38,7 @@ public class StoreManager : MonoBehaviour {
             GameObject _sItem = Instantiate(Instance.storeItemPrefab, Instance.storeContent);
             StoreItemManager _sItemMan = _sItem.GetComponent<StoreItemManager>();
             _sItemMan.Stats = storeItemStats;
+            _sItemMan.Stats.Manager = _sItemMan;
             _sItemMan.UpdateItem();
         }
     }

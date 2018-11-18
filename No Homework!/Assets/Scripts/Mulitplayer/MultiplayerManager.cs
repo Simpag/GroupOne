@@ -53,13 +53,6 @@ public class MultiplayerManager : MonoBehaviour {
         GameSparks.Api.Messages.MatchFoundMessage.Listener += OnMatchFound;
     }
 
-    private void OnMatchFound(GameSparks.Api.Messages.MatchFoundMessage _message)
-    {
-        Debug.Log("Match Found!...");
-        sessionInfo = new RTSessionInfo(_message); // we'll store the match data until we need to create an RT session instance 
-        StartNewRTSession(sessionInfo);
-    }
-
     public void StartNewRTSession(RTSessionInfo _info)
     {
         Debug.Log("Creating New RT Session Instance...");
@@ -96,7 +89,7 @@ public class MultiplayerManager : MonoBehaviour {
     /// This will request a match between as many players you have set in the match.
     /// When the max number of players is found each player will receive the MatchFound message
     /// </summary>
-    public void FindPlayers()
+    public void RandomMatchMaking()
     {
         Debug.Log("Attempting Matchmaking...");
         new GameSparks.Api.Requests.MatchmakingRequest()
@@ -113,6 +106,13 @@ public class MultiplayerManager : MonoBehaviour {
 
 
     #region Callbacks
+
+    private void OnMatchFound(GameSparks.Api.Messages.MatchFoundMessage _message)
+    {
+        Debug.Log("Match Found!...");
+        sessionInfo = new RTSessionInfo(_message); // we'll store the match data until we need to create an RT session instance 
+        StartNewRTSession(sessionInfo);
+    }
 
     private void OnPlayerConnectedToGame(int _peerId)
     {

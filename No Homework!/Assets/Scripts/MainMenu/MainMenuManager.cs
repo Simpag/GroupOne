@@ -83,6 +83,6 @@ public class MainMenuManager : MonoBehaviour {
 
     public void PlayMultiplayer ()
     {
-        GameManager.StartGame(true);
+        MultiplayerManager.Instance.RandomMatchMaking();
     }
 }

@@ -6,11 +6,6 @@ public class GameFunctions {
 
     public static bool IsGamePaused = false;
 
-    //public static void OnPlayFaberror(PlayFabError error)
-    //{
-    //    Debug.LogError(error.GenerateErrorReport());
-    //}
-
     public static void PauseGame()
     {
         IsGamePaused = true;
