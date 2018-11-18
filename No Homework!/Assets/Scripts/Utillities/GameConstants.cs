@@ -5,14 +5,18 @@ using UnityEngine;
 public class GameConstants {
 
     //Item specific tags
-    public static string ITEM_STORE = "STOREITEM";
+    public const string ITEM_STORE = "STOREITEM";
 
     //Virtual Currencies
-    public static string CURRENCY_CANDY_COIN = "CC";
+    public const string CURRENCY_CANDY_COIN = "CC";
 
     //Game scenes
-    public static string MAIN_MENU_SCENE = "MainScene";
+    public const string MAIN_MENU_SCENE = "MainScene";
+    public const string GAME_SCENE = "GameScene";
 
     //Multiplayer constants
-    public static string DEFAULT_MATCHMAKING_SHORTCODE = "DefaultMatch";
+    public const string RANDOM_MATCHMAKING_SHORTCODE = "RandomMatchMaking";
+    public const int OPCODE_TOWER = 1;
+    public const uint PACKET_TOWER_ID = 1;
+    public const uint PACKET_TOWER_POSITION = 2;
 }

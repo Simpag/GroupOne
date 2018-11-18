@@ -6,6 +6,7 @@ using GameSparks.Api;
 using GameSparks.Api.Requests;
 using GameSparks.Api.Responses;
 using GameSparks.Core;
+using GameSparks.RT;
 
 public class BuildManager : MonoBehaviour {
 
@@ -15,9 +16,6 @@ public class BuildManager : MonoBehaviour {
         get { return instance; }
         set { instance = value; }
     }
-
-    [HideInInspector]
-    public bool isMultiplayer = false;
 
     [SerializeField]
     private LayerMask groundLayer;
@@ -32,7 +30,6 @@ public class BuildManager : MonoBehaviour {
     private Vector3 locationToBuild;
     private Camera cam;
     private bool towerIsSelected;
-    private float yLevel = 0f;
 
     public bool TowerIsSelected
     {
@@ -73,7 +70,6 @@ public class BuildManager : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 100f, groundLayer))
             {
                 locationToBuild = hit.point;
-                yLevel = hit.point.y;
             }
 
             if (followingTower == null)
@@ -130,24 +126,9 @@ public class BuildManager : MonoBehaviour {
             AudioManager.Instance.Play("TowerPlacedSound");
             InGameShopManager.PurchasedTower(towerToBuild);
 
-            if (isMultiplayer)
+            if (GameManager.IsMultiplayer)
             {
-                new LogChallengeEventRequest()
-                .SetChallengeInstanceId(MulitplayerManager.ChallengeId)
-                .SetEventKey("PlaceTower")
-                .SetEventAttribute("X", (long)locationToBuild.x)
-                .SetEventAttribute("Z", (long)locationToBuild.z)
-                .SetEventAttribute("TowerId", towerToBuild.TowerId)
-                .Send((response) =>
-                {
-                    if (response.HasErrors)
-                    {
-                        Debug.LogError(response.Errors);
-                        return;
-                    }
-
-                    GSData scriptData = response.ScriptData;
-                });
+                SendTowerToPartner(towerToBuild.TowerId, locationToBuild);
             }
 
             followingTower.position = locationToBuild;
@@ -160,7 +141,26 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
-    public void BuildTowerPartner(string towerId, string x, string z)
+    private void SendTowerToPartner(string towerId, Vector3 _position)
+    {
+        // for all RT-data we are sending, we use an instance of the RTData object //
+        // this is a disposable object, so we wrap it in this using statement to make sure it is returned to the pool //
+        using (RTData data = RTData.Get())
+        {
+            data.SetString(GameConstants.PACKET_TOWER_ID, towerId); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
+            data.SetVector3(GameConstants.PACKET_TOWER_POSITION, _position); // we are also going to send the time at which the user sent this message
+
+            Debug.Log("Sending tower data to partner");
+            // for this example we are sending RTData, but there are other methods for sending data we will look at later //
+            // the first parameter we use is the op-code. This is used to index the type of data being send, and so we can identify to ourselves which packet this is when it is received //
+            // the second parameter is the delivery intent. The intent we are using here is 'reliable', which means it will be send via TCP. This is because we aren't concerned about //
+            // speed when it comes to these chat messages, but we very much want to make sure the whole packet is received //
+            // the final parameter is the RTData object itself //
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_TOWER, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public void ReceivedTowerFromPartner(string towerId, Vector3 _position)
     {
         AudioManager.Instance.Play("TowerPlacedSound");
         GameObject _prefab = null;
@@ -175,7 +175,7 @@ public class BuildManager : MonoBehaviour {
         }
 
         //Instantiate partners tower
-        Transform _tower = Instantiate(_prefab, new Vector3(float.Parse(x), yLevel, float.Parse(z)), Quaternion.identity).transform;
+        Transform _tower = Instantiate(_prefab, _position, Quaternion.identity).transform;
         _tower.GetComponent<Tower>().PlacedTower();
         _tower.GetComponent<Tower>().isYours = false;
     }

@@ -14,6 +14,8 @@ public class InGameShopManager : MonoBehaviour {
     [Header("Drag-n-Drop")]
     [SerializeField]
     private GameObject ShopPrefab;
+    [SerializeField]
+    private Transform shopView;
 
     [Header("Fill in the list with towers!")]
     public List<InGameShopItemStats> allShopItems;
@@ -90,7 +92,7 @@ public class InGameShopManager : MonoBehaviour {
         //Instantiate towers to shop
         foreach (InGameShopItemStats _stats in unlockedShopItems)
         {
-            GameObject _shopGo = Instantiate(ShopPrefab, this.transform);
+            GameObject _shopGo = Instantiate(ShopPrefab, shopView);
 
             _shopGo.GetComponent<InGameShopButton>().stats = _stats;
         }
