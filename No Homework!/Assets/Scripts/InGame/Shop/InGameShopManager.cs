@@ -59,19 +59,21 @@ public class InGameShopManager : MonoBehaviour {
         }
     }
 
-    public static void UpgradeTower(Tower _info)
+    public static bool UpgradeTower(Tower _info)
     {
         if (_info == null || _info.towerLevel >= _info.numberOfUpgrades)
-            return;
+            return false;
 
         if (PlayerStats.CandyCurrency >= _info.shopStats.UpgradeCost)
         {
             _info.UpgradeTower();
             PlayerStats.RemoveCandyCurrency(_info.shopStats.Cost);
+            return true;
         }
         else
         {
             Debug.Log("Not enought money!");
+            return false;
         }
     }
 

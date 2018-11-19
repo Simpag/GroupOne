@@ -24,7 +24,8 @@ public class BuildManager : MonoBehaviour {
 
     //Building variables
     public InGameShopItemStats towerToBuild;
-    private Transform followingTower;
+    private Transform followingTowerTransform;
+    private Tower followingTower;
     [HideInInspector]
     public bool canBuild;
     private Vector3 locationToBuild;
@@ -72,10 +73,11 @@ public class BuildManager : MonoBehaviour {
                 locationToBuild = hit.point;
             }
 
-            if (followingTower == null)
+            if (followingTowerTransform == null)
             {
-                followingTower = Instantiate(towerToBuild.TowerPrefab, locationToBuild, Quaternion.identity).transform;
-                followingTower.GetComponent<Tower>().MovingTower();
+                followingTowerTransform = Instantiate(towerToBuild.TowerPrefab, locationToBuild, Quaternion.identity).transform;
+                followingTower = followingTowerTransform.GetComponent<Tower>();
+                followingTower.MovingTower();
             }
             else if (Input.GetMouseButton(0))
             {
@@ -119,6 +121,11 @@ public class BuildManager : MonoBehaviour {
         Instance.towerIsSelected = true;
     }
 
+    private void FollowMouse()
+    {
+        followingTowerTransform.position = locationToBuild;
+    }
+
     private void BuildTower()
     {
         if (canBuild)
@@ -128,26 +135,37 @@ public class BuildManager : MonoBehaviour {
 
             if (GameManager.IsMultiplayer)
             {
-                SendTowerToPartner(towerToBuild.TowerId, locationToBuild);
+                SendTowerToPartner(followingTower, locationToBuild);
             }
 
-            followingTower.position = locationToBuild;
-            followingTower.GetComponent<Tower>().PlacedTower();
+            followingTowerTransform.position = locationToBuild;
+            followingTower.PlacedTower();
 
             //Reset variables
-            followingTower = null;
+            followingTowerTransform = null;
             towerToBuild = null;
             towerIsSelected = false;
         }
     }
 
-    private void SendTowerToPartner(string towerId, Vector3 _position)
+    public void UpgradeTower(Tower _towerInfo)
+    {
+        bool _success = InGameShopManager.UpgradeTower(_towerInfo);
+        
+        if (_success)
+        {
+            SendTowerUpgradeToPartner(_towerInfo);
+        }
+    }
+
+    private void SendTowerToPartner(Tower _tower, Vector3 _position)
     {
         // for all RT-data we are sending, we use an instance of the RTData object //
         // this is a disposable object, so we wrap it in this using statement to make sure it is returned to the pool //
         using (RTData data = RTData.Get())
         {
-            data.SetString(GameConstants.PACKET_TOWER_ID, towerId); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
+            data.SetString(GameConstants.PACKET_TOWER_ID, _tower.shopStats.TowerId); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
+            data.SetString(GameConstants.PACKET_TOWER_GUID, _tower.towerGUID);
             data.SetVector3(GameConstants.PACKET_TOWER_POSITION, _position); // we are also going to send the time at which the user sent this message
 
             Debug.Log("Sending tower data to partner");
@@ -160,7 +178,18 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
-    public void ReceivedTowerFromPartner(string towerId, Vector3 _position)
+    private void SendTowerUpgradeToPartner(Tower _towerInfo)
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetString(GameConstants.PACKET_TOWER_GUID, _towerInfo.towerGUID);
+
+            Debug.Log("Sending tower data to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_TOWER_UPGRADE, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public void ReceivedTowerFromPartner(string _towerId, string _towerGUID, Vector3 _position)
     {
         AudioManager.Instance.Play("TowerPlacedSound");
         GameObject _prefab = null;
@@ -168,7 +197,7 @@ public class BuildManager : MonoBehaviour {
         //Find the right tower prefab based on towerId
         foreach (InGameShopItemStats _stat in InGameShopManager.Instance.allShopItems)
         {
-            if(_stat.TowerId == towerId)
+            if(_stat.TowerId == _towerId)
             {
                 _prefab = _stat.TowerPrefab;
             }
@@ -178,10 +207,11 @@ public class BuildManager : MonoBehaviour {
         Transform _tower = Instantiate(_prefab, _position, Quaternion.identity).transform;
         _tower.GetComponent<Tower>().PlacedTower();
         _tower.GetComponent<Tower>().isYours = false;
+        _tower.GetComponent<Tower>().towerGUID = _towerGUID;
     }
 
-    private void FollowMouse()
+    public void RecivedTowerUpdateFromPartner()
     {
-        followingTower.position = locationToBuild;
+        ---
     }
 }

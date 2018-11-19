@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Bullet))]
@@ -63,6 +64,7 @@ public class Tower : MonoBehaviour {
     public InGameShopItemStats shopStats;
     public int towerLevel = 0;
     public bool isYours = true;
+    public string towerGUID;
 
     private float fireCountdown = 0;
     private Bullet bullet;
@@ -108,6 +110,9 @@ public class Tower : MonoBehaviour {
             bullet.speed = bulletSpeed;
             bullet.damage = damage;
             bullet.AOE = AOE;
+
+            Guid tempGUID = new Guid();
+            towerGUID = tempGUID.ToString();
         }
     }
 

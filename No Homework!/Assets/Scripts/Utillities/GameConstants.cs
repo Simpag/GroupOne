@@ -17,6 +17,9 @@ public class GameConstants {
     //Multiplayer constants
     public const string RANDOM_MATCHMAKING_SHORTCODE = "RandomMatchMaking";
     public const int OPCODE_TOWER = 1;
+    public const int OPCODE_TOWER_UPGRADE = 2;
+
     public const uint PACKET_TOWER_ID = 1;
-    public const uint PACKET_TOWER_POSITION = 2;
+    public const uint PACKET_TOWER_GUID = 2;
+    public const uint PACKET_TOWER_POSITION = 3;
 }

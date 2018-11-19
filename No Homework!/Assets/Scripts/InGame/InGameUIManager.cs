@@ -95,7 +95,7 @@ public class InGameUIManager : MonoBehaviour {
 
     public void UpgradeSelectedTower()
     {
-        InGameShopManager.UpgradeTower(towerInfo);
+        BuildManager.Instance.UpgradeTower(towerInfo);
     }
 
     public static void ShowTowerInfo (Tower _tower)
