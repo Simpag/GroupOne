@@ -1,11 +1,10 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Simon/Documents/GitHub/GroupOne/No Homework!/Builds/2018-11-18/build1.exe
+C:/Users/simon/Documents/Github/GroupOne/No Homework!/Builds/2018-11-23/build2.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity
-Assets/Scenes/SingleplayerScene.unity
-Assets/Scenes/MultiplayerScene.unity
+Assets/Scenes/GameScene.unity
 SceneListEnd?
 771631af1709c5313084a460b790125a Assembly-CSharp.dll:.AudioManager
 ff7d9027154f0c043fc95529f3a7c9ac Assembly-CSharp.dll:.PlayerStats
@@ -23,7 +22,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GameSparks.Platforms.DefaultPlatform
-5da7c2b13ddb73cbd044db15779a70a1 Assembly-CSharp.dll:.InGameUIManager
+35a72df7c9aa8c0cfd0f025fbef96f5c Assembly-CSharp.dll:.InGameUIManager
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -122,6 +121,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 8b04f4e1e80017f3607c4085d9548946 Assembly-CSharp.dll:.EnemyStats
+6e01a115f7b0a6c4c71171869908f64f Assembly-CSharp.dll:.GameManager
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 a78356284fc9f4c96b11c280ff55f6ca Assembly-CSharp.dll:.StoreManager
@@ -131,7 +131,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 35ba2b931db07e48c0c091c6c625cbe8 Assembly-CSharp.dll:.HomeworkBar
-6abdee4b590cf1edb8d320906923f167 Assembly-CSharp.dll:.BuildManager
+cba4d5cbfeff015e4f45ce0127650eb2 Assembly-CSharp.dll:.BuildManager
 e50c796980e167224e252b33f59f6caf Assembly-CSharp.dll:.PopupManager
 5f2837072b4a0ffe0fd418300cc5b1ef Assembly-CSharp.dll:.TowerArea
 205965134a5874db410d674ebdf33ba7 Assembly-CSharp.dll:.ExampleWheelController
@@ -163,7 +163,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-edd06dc857f3005cf1aa89771442e795 Assembly-CSharp.dll:.Tower
+713b138d522e630aa72b24624d1e31a9 Assembly-CSharp.dll:.Tower
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -181,4 +181,4 @@ e7cc82fe8897044aa37890c5eb3bfb9f Assembly-CSharp.dll:.GameSparksUnity
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Waypoints
 c3c54033f0bb5b1d35ea2858e06a05b3 Assembly-CSharp.dll:.WaveSpawner
 c82b4f672e2c88fcc54d5131943c7bb1 Assembly-CSharp.dll:.GameSparksSettings
-6e01a115f7b0a6c4c71171869908f64f Assembly-CSharp.dll:.MultiplayerManager
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MultiplayerManager

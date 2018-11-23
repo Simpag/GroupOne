@@ -18,6 +18,8 @@ public class BuildManager : MonoBehaviour {
     }
 
     [SerializeField]
+    private Transform towerContainer;
+    [SerializeField]
     private LayerMask groundLayer;
     [SerializeField]
     private LayerMask towerLayer;
@@ -75,7 +77,7 @@ public class BuildManager : MonoBehaviour {
 
             if (followingTowerTransform == null)
             {
-                followingTowerTransform = Instantiate(towerToBuild.TowerPrefab, locationToBuild, Quaternion.identity).transform;
+                followingTowerTransform = Instantiate(towerToBuild.TowerPrefab, locationToBuild, Quaternion.identity, towerContainer).transform;
                 followingTower = followingTowerTransform.GetComponent<Tower>();
                 followingTower.MovingTower();
             }
@@ -189,10 +191,14 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
-    public void ReceivedTowerFromPartner(string _towerId, string _towerGUID, Vector3 _position)
+    public void ReceivedTowerFromPartner(RTPacket _packet)
     {
         AudioManager.Instance.Play("TowerPlacedSound");
         GameObject _prefab = null;
+
+        string _towerId = (string)_packet.Data.GetString(GameConstants.PACKET_TOWER_ID);
+        string _towerGUID = (string)_packet.Data.GetString(GameConstants.PACKET_TOWER_GUID);
+        Vector3 _position = (Vector3)_packet.Data.GetVector3(GameConstants.PACKET_TOWER_POSITION);
 
         //Find the right tower prefab based on towerId
         foreach (InGameShopItemStats _stat in InGameShopManager.Instance.allShopItems)
@@ -204,14 +210,25 @@ public class BuildManager : MonoBehaviour {
         }
 
         //Instantiate partners tower
-        Transform _tower = Instantiate(_prefab, _position, Quaternion.identity).transform;
+        Transform _tower = Instantiate(_prefab, _position, Quaternion.identity, towerContainer).transform;
         _tower.GetComponent<Tower>().PlacedTower();
         _tower.GetComponent<Tower>().isYours = false;
         _tower.GetComponent<Tower>().towerGUID = _towerGUID;
     }
 
-    public void RecivedTowerUpdateFromPartner()
+    public void RecivedTowerUpgradeFromPartner(RTPacket _packet)
     {
-        ---
+        string _guid = _packet.Data.GetString(GameConstants.PACKET_TOWER_GUID);
+
+        Tower[] _towers = towerContainer.GetComponentsInChildren<Tower>();
+
+        foreach (Tower _tower in _towers)
+        {
+            if (_tower.towerGUID == _guid)
+            {
+                _tower.UpgradeTower();
+                return;
+            }
+        }
     }
 }

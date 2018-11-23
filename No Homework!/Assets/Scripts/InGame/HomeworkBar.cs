@@ -29,7 +29,10 @@ public class HomeworkBar : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+    }
 
+    private void Start()
+    {
         UpdateHomeworkBar();
     }
 

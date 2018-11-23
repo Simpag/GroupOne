@@ -11,8 +11,6 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private GameObject banner;
     [SerializeField]
-    private Text homeworkText;
-    [SerializeField]
     private Text candyText;
 
     [Header("Shop")]
@@ -47,7 +45,7 @@ public class InGameUIManager : MonoBehaviour {
 
     private void Start()
     {
-        UpdateHomeworkText();
+        UpdateHomework();
         UpdateCandyText();
         showShotButton.SetActive(true);
         shopView.SetActive(false);
@@ -67,9 +65,9 @@ public class InGameUIManager : MonoBehaviour {
         }
     }
 
-    public static void UpdateHomeworkText ()
+    public static void UpdateHomework ()
     {
-        instance.homeworkText.text = PlayerStats.Homework.ToString();
+        HomeworkBar.UpdateHomeworkBar();
     }
 
     public static void UpdateCandyText ()

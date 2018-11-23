@@ -139,11 +139,11 @@ public class MultiplayerManager : MonoBehaviour {
         switch (_packet.OpCode)
         {
             case GameConstants.OPCODE_TOWER:
-                string _towerId = (string)_packet.Data.GetString(GameConstants.PACKET_TOWER_ID);
-                string _towerGUID = (string)_packet.Data.GetString(GameConstants.PACKET_TOWER_GUID);
-                Vector3 _pos = (Vector3)_packet.Data.GetVector3(GameConstants.PACKET_TOWER_POSITION);
+                BuildManager.Instance.ReceivedTowerFromPartner(_packet);
+                break;
 
-                BuildManager.Instance.ReceivedTowerFromPartner(_towerId, _towerGUID, _pos);
+            case GameConstants.OPCODE_TOWER_UPGRADE:
+                BuildManager.Instance.RecivedTowerUpgradeFromPartner(_packet);
                 break;
         }
     }

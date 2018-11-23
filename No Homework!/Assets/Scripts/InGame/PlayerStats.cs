@@ -57,17 +57,10 @@ public class PlayerStats : MonoBehaviour {
         InGameUIManager.UpdateCandyText();
     }
 
-    //public static void RemoveHomework(int _amount)
-    //{
-    //    Instance.homework -= _amount;
-    //    InGameUIManager.UpdateHomeworkText();
-    //}
-
     public static void AddHomework(int _amount)
     {
         Instance.homework += _amount;
-        InGameUIManager.UpdateHomeworkText();
-        HomeworkBar.UpdateHomeworkBar();
+        InGameUIManager.UpdateHomework();
     }
 
 }
