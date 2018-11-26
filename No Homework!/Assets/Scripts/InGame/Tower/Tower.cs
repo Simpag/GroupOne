@@ -111,7 +111,7 @@ public class Tower : MonoBehaviour {
             bullet.damage = damage;
             bullet.AOE = AOE;
 
-            Guid tempGUID = new Guid();
+            Guid tempGUID = Guid.NewGuid();
             towerGUID = tempGUID.ToString();
         }
     }

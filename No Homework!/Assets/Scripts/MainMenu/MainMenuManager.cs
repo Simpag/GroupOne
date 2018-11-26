@@ -40,8 +40,12 @@ public class MainMenuManager : MonoBehaviour {
             Destroy(this);
         }
         info = FindObjectOfType<AccountInfo>();
+    }
 
-        SwitchMenu(Menu.MainMenu);
+    private void Start()
+    {
+        StoreManager.HideStore();
+        AccountInfo.UpdateAccountInfo();
     }
 
     public void SwitchMenu(Menu _menu)

@@ -62,11 +62,17 @@ public class DatabaseManager : MonoBehaviour {
         if (Instance.VirtualGoods == null)
             return;
 
-        foreach (ListVirtualGoodsResponse._VirtualGood _vgood in Instance.VirtualGoods)
+        if (Instance.VirtualGoods != null)
         {
-            if (_vgood.Tags.Contains(GameConstants.ITEM_STORE))
+            foreach (ListVirtualGoodsResponse._VirtualGood _vgood in Instance.VirtualGoods)
             {
-                Instance.StoreItemStats.Add(CreateStoreItem(_vgood));   //Save list of store items
+                if (_vgood.Tags == null)
+                    break;
+
+                if (_vgood.Tags.Contains(GameConstants.ITEM_STORE))
+                {
+                    Instance.StoreItemStats.Add(CreateStoreItem(_vgood));   //Save list of store items
+                }
             }
         }
     }

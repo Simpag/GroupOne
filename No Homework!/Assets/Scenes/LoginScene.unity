@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210d3a386ef4f6d4caf94f1e837454a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClearPlayerPrefs: 1
+  ClearPlayerPrefs: 0
   LoginPanel: {fileID: 69889804}
   usernameInputField: {fileID: 1781360987}
   passwordInputField: {fileID: 1600432471}

@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/simon/Documents/Github/GroupOne/No Homework!/Builds/2018-11-23/build2.exe
+C:/Users/simon/Documents/Github/GroupOneBuilds/2018-11-26/Build.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity

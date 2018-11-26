@@ -154,7 +154,7 @@ public class BuildManager : MonoBehaviour {
     {
         bool _success = InGameShopManager.UpgradeTower(_towerInfo);
         
-        if (_success)
+        if (_success && GameManager.IsMultiplayer)
         {
             SendTowerUpgradeToPartner(_towerInfo);
         }
@@ -214,6 +214,8 @@ public class BuildManager : MonoBehaviour {
         _tower.GetComponent<Tower>().PlacedTower();
         _tower.GetComponent<Tower>().isYours = false;
         _tower.GetComponent<Tower>().towerGUID = _towerGUID;
+
+        //Debug.Log("Recived tower with GUID: " + _towerGUID);
     }
 
     public void RecivedTowerUpgradeFromPartner(RTPacket _packet)
@@ -228,6 +230,9 @@ public class BuildManager : MonoBehaviour {
             {
                 _tower.UpgradeTower();
                 return;
+            } else
+            {
+                Debug.Log("No tower found with GUID: " + _guid);
             }
         }
     }

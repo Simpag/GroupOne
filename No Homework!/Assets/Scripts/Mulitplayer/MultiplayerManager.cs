@@ -136,6 +136,8 @@ public class MultiplayerManager : MonoBehaviour {
 
     private void OnPacketReceived(RTPacket _packet)
     {
+        Debug.Log("Packet recived with code: " + _packet.OpCode.ToString());
+
         switch (_packet.OpCode)
         {
             case GameConstants.OPCODE_TOWER:
