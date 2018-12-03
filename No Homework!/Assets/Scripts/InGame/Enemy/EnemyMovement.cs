@@ -15,18 +15,23 @@ public class EnemyMovement : MonoBehaviour {
     private Transform target;
     private int waypointIndex;
 
+    private float distanceTraveled;
+    public float DistanceTraveled { get { return distanceTraveled; } }
+
     private void Start()
     {
         stats = GetComponent<EnemyStats>();
 
         waypointIndex = 0;
         target = Waypoints.waypoints[waypointIndex];
+        distanceTraveled = 0f;
     }
 
     private void Update()
     {
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        distanceTraveled += speed * Time.deltaTime;
 
         if (Vector3.Distance(transform.position, target.position) <= waypointMargin)
         {
@@ -63,7 +68,7 @@ public class EnemyMovement : MonoBehaviour {
         foreach (Tower _tower in stats.SeenByTower)
         {
             if (_tower != null)
-                _tower.rangeView.GetComponent<TowerRange>().RemoveEnemyFromEnemiesInRange(this.gameObject);
+                _tower.rangeView.GetComponent<TowerRange>().RemoveEnemyFromTargeting(this.gameObject);
         }
 
         Destroy(this.gameObject);
