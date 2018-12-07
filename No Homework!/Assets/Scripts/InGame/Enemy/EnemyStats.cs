@@ -50,7 +50,7 @@ public class EnemyStats : MonoBehaviour {
         }
     }
 
-    public void AddSeenByTower (Tower _tower)
+    public void AddSeenByTower(Tower _tower)
     {
         if (!seenByTower.Contains(_tower))
             seenByTower.Add(_tower);

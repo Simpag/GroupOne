@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour {
+    private static WaveSpawner instance;
+    public static WaveSpawner Instance
+    {
+        get { return instance; }
+        set { instance = value; }
+    }
+
     [SerializeField]
     private Transform enemyPrefab;
     [SerializeField]
@@ -21,13 +28,31 @@ public class WaveSpawner : MonoBehaviour {
 
     private bool isSpawning;
     private float countDown;
+    private int totalEnemiesSpawned;
+
+    [SerializeField]
+    public List<float> enemiesWalkDistance;
+    public static float GetEnemiesDistance(int _eIndex) { return Instance.enemiesWalkDistance[_eIndex]; }
+    public static void EnemieWalkDistanceToList(int _eIndex, float _distance) { if (Instance.enemiesWalkDistance.Count <= _eIndex) { Instance.enemiesWalkDistance.Add(_distance); } else { Instance.enemiesWalkDistance[_eIndex] = _distance; } }
+
 
     [SerializeField]
     private WaveStats[] waves;
 
     private void Awake()
     {
+        //Create singleton
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         countDown = firstTimeBeforeSpawn;
+        totalEnemiesSpawned = 0;
     }
 
     private void Update()
@@ -86,6 +111,7 @@ public class WaveSpawner : MonoBehaviour {
     private void SpawnEnemy(GameObject _prefab)
     {
         GameObject _spawned = Instantiate(_prefab, spawnPoint.position, spawnPoint.rotation);
-        _spawned.name = "Enemy " + enemyIndex.ToString();
+        _spawned.name = totalEnemiesSpawned.ToString();
+        totalEnemiesSpawned++;
     }
 }

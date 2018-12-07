@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour {
     private Transform target;
     private int waypointIndex;
 
+    private int lastDistanceUpdate;
     private float distanceTraveled;
     public float DistanceTraveled { get { return distanceTraveled; } }
 
@@ -25,6 +26,7 @@ public class EnemyMovement : MonoBehaviour {
         waypointIndex = 0;
         target = Waypoints.waypoints[waypointIndex];
         distanceTraveled = 0f;
+        lastDistanceUpdate = 0;
     }
 
     private void Update()
@@ -36,6 +38,12 @@ public class EnemyMovement : MonoBehaviour {
         if (Vector3.Distance(transform.position, target.position) <= waypointMargin)
         {
             GetNextWaypoint();
+        }
+
+        if (Mathf.CeilToInt(distanceTraveled) > lastDistanceUpdate)
+        {
+            lastDistanceUpdate = Mathf.CeilToInt(distanceTraveled);
+            WaveSpawner.EnemieWalkDistanceToList(int.Parse(gameObject.name), distanceTraveled);
         }
     }
 
@@ -68,7 +76,7 @@ public class EnemyMovement : MonoBehaviour {
         foreach (Tower _tower in stats.SeenByTower)
         {
             if (_tower != null)
-                _tower.rangeView.GetComponent<TowerRange>().RemoveEnemyFromTargeting(this.gameObject);
+                _tower.rangeView.GetComponent<TowerRange>().RemoveEnemyFromTargetList(this.gameObject);
         }
 
         Destroy(this.gameObject);

@@ -314,9 +314,12 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Scripts\InGame\AudioManager.cs" />
     <Compile Include="Assets\Scripts\InGame\BuildManager.cs" />
+    <Compile Include="Assets\Scripts\InGame\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\InGame\Enemy\EnemyStats.cs" />
+    <Compile Include="Assets\Scripts\InGame\GameManager.cs" />
     <Compile Include="Assets\Scripts\InGame\HomeworkBar.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameUIManager.cs" />
     <Compile Include="Assets\Scripts\InGame\PlayerStats.cs" />
@@ -342,11 +345,8 @@
     <Compile Include="Assets\Scripts\Mulitplayer\MultiplayerManager.cs" />
     <Compile Include="Assets\Scripts\Mulitplayer\RTSessionInfo.cs" />
     <Compile Include="Assets\Scripts\Utillities\AccountInfo.cs" />
-    <Compile Include="Assets\Scripts\Utillities\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\Utillities\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameFunctions.cs" />
-    <Compile Include="Assets\Scripts\Utillities\GameManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\Sound.cs" />
   </ItemGroup>
   <ItemGroup>
