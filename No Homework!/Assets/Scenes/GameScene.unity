@@ -1779,7 +1779,8 @@ MonoBehaviour:
   firstTimeBeforeSpawn: 15
   algTimeBeforeStart: 15
   algSpawnDelay: 0.4
-  waveIndex: 0
+  waveIndex: 50
+  enemiesWalkDistance: []
   waves:
   - timeBeforeStart: 10
     spawnDelay: 0.5

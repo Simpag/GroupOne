@@ -32,9 +32,13 @@ public class WaveSpawner : MonoBehaviour {
 
     [SerializeField]
     public List<float> enemiesWalkDistance;
-    public static float GetEnemiesDistance(int _eIndex) { return Instance.enemiesWalkDistance[_eIndex]; }
-    public static void EnemieWalkDistanceToList(int _eIndex, float _distance) { if (Instance.enemiesWalkDistance.Count <= _eIndex) { Instance.enemiesWalkDistance.Add(_distance); } else { Instance.enemiesWalkDistance[_eIndex] = _distance; } }
+    public static float GetEnemyDistance(int _eIndex) { return Instance.enemiesWalkDistance[_eIndex]; }
+    public static void EnemyWalkDistanceToList(int _eIndex, float _distance) { if (Instance.enemiesWalkDistance.Count <= _eIndex) { Instance.enemiesWalkDistance.Add(_distance); } else { Instance.enemiesWalkDistance[_eIndex] = _distance; } }
 
+    [SerializeField]
+    public List<float> enemiesHealth;
+    public static float GetEnemyHealth(int _eIndex) { return Instance.enemiesHealth[_eIndex]; }
+    public static void EnemyHealthToList(int _eIndex, float _health) { if (Instance.enemiesHealth.Count <= _eIndex) { Instance.enemiesHealth.Add(_health); } else { Instance.enemiesHealth[_eIndex] = _health; } }
 
     [SerializeField]
     private WaveStats[] waves;

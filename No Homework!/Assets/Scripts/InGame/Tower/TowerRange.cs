@@ -5,18 +5,26 @@ using System.Linq;
 
 public class TowerRange : MonoBehaviour {
 
+    private static TowerRange self;
+
 	[SerializeField]
 	private string enemyTag = "Enemy";
 
     [SerializeField]
-    private SortedDictionary<float*, Transform> targetList;
+    private SortedDictionary<float, Transform> targetDistanceList;
+    //[SerializeField]
+    //private SortedDictionary<float, Transform> targetHealthList;
 
     private Tower tower;
+    private int updateTargetList;
 
     private void Awake()
     {
         tower = GetComponentInParent<Tower>();
-        targetList = new SortedDictionary<float*, Transform>(); ;
+        targetDistanceList = new SortedDictionary<float, Transform>();
+        //targetHealthList = new SortedDictionary<float, Transform>();
+        self = this;
+        updateTargetList = 0;
     }
 
     //private void Update()
@@ -31,36 +39,30 @@ public class TowerRange : MonoBehaviour {
     {
         Transform _targetToSelect;
 
+        if (targetDistanceList.Count <= 0)
+            return;
+
         switch (tower.targetSetting)
         {
             case Tower.TargetSetting.first:
-                _targetToSelect = targetList.Values.First();
+                _targetToSelect = targetDistanceList.Values.Last();
 
-                Debug.Log("Selected Target: " + _targetToSelect.name);
+                //Debug.Log("Selected Target: " + _targetToSelect.name);
                 
                 SelectTarget(_targetToSelect);           
                 break;
 
             case Tower.TargetSetting.last: //works
-                _targetToSelect = targetList.Values.Last();
+                _targetToSelect = targetDistanceList.Values.First();
 
                 SelectTarget(_targetToSelect);
                 break;
 
-            case Tower.TargetSetting.mostHealth:
-                //float _mostHealth = -Mathf.Infinity;
-                //Transform _winnerTransform = null;
-                //foreach (GameObject _enemy in enemiesInRange)
-                //{
-                //    EnemyStats _e = _enemy.GetComponent<EnemyStats>();
-                //    if (_e.Health > _mostHealth)
-                //    {
-                //        _mostHealth = _e.Health;
-                //        _winnerTransform = _enemy.transform;
-                //    }
-                //}
-                //tower.target = _winnerTransform;
-                break;
+            //case Tower.TargetSetting.mostHealth:
+            //    _targetToSelect = targetHealthList.Values.Last();
+
+            //    SelectTarget(_targetToSelect);
+            //    break;
         }
     }
 
@@ -76,34 +78,37 @@ public class TowerRange : MonoBehaviour {
 
     private void AddEnemyToTargetList(GameObject _enemy)
     {
-        unsafe
-        {
-            float* _newTargetDistance = &WaveSpawner.Instance.enemiesWalkDistance[int.Parse(_enemy.name)];
+        float _newTargetDistance = WaveSpawner.Instance.enemiesWalkDistance[int.Parse(_enemy.name)];
+        float _newTargetHealth = WaveSpawner.Instance.enemiesHealth[int.Parse(_enemy.name)];
 
-            targetList.Add(_newTargetDistance, _enemy.transform); //Add enemy to target list
-        }
+        targetDistanceList.Add(_newTargetDistance, _enemy.transform); //Add enemy to target list
+        //targetHealthList.Add(_newTargetHealth, _enemy.transform);
+    }
 
+    private void UpdateEnemyInTargetList(GameObject _enemy)
+    {
+        float _lastEnemyDistanceKey = targetDistanceList.FirstOrDefault(x => x.Value == _enemy.transform).Key;
+        //float _lastEnemyHealthKey = targetHealthList.FirstOrDefault(x => x.Value == _enemy.transform).Key;
 
-        Debug.Log("Added");
+        float _newTargetDistance = WaveSpawner.Instance.enemiesWalkDistance[int.Parse(_enemy.name)];
+        //float _newTargetHealth = WaveSpawner.Instance.enemiesHealth[int.Parse(_enemy.name)];
 
-        foreach (Transform _tower in targetList.Values)
-        {
-            Debug.Log("List: " + _tower.name);
-        }
+        targetDistanceList.Remove(_lastEnemyDistanceKey); //Remove the last enemy distance
+        targetDistanceList.Add(_newTargetDistance, _enemy.transform);
+
+        //targetHealthList.Remove(_lastEnemyHealthKey);
+        //targetHealthList.Add(_newTargetHealth, _enemy.transform);
+
+        //Debug.Log("Replaced: " + _lastEnemyKey.ToString() + " With: " + _newTargetDistance.ToString());
     }
 
     public void RemoveEnemyFromTargetList(GameObject _enemyToRemove)
     {
-        float _removeKey = WaveSpawner.GetEnemiesDistance(int.Parse(_enemyToRemove.name));
+        float _distanceRemoveKey = targetDistanceList.FirstOrDefault(x => x.Value == _enemyToRemove.transform).Key;
+        //float _healthRemoveKey = targetHealthList.FirstOrDefault(x => x.Value == _enemyToRemove.transform).Key;
 
-        targetList.Remove(_removeKey);
-
-        Debug.Log("Removed");
-
-        foreach (Transform _tower in targetList.Values)
-        {
-            Debug.Log("RList: " + _tower.name);
-        }
+        targetDistanceList.Remove(_distanceRemoveKey);
+        //targetHealthList.Remove(_healthRemoveKey);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -115,6 +120,18 @@ public class TowerRange : MonoBehaviour {
             AddEnemyToTargetList(collision.gameObject);
 
             UpdateTarget();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (updateTargetList > 0 && other.gameObject.CompareTag(enemyTag))
+        {
+            UpdateEnemyInTargetList(other.gameObject);
+
+            UpdateTarget();
+
+            updateTargetList--;
         }
     }
 
@@ -131,5 +148,13 @@ public class TowerRange : MonoBehaviour {
 
             UpdateTarget();
         }
+    }
+
+    public static void UpdateTowerTargetList()
+    {
+        if (self == null)
+            return;
+
+        self.updateTargetList = self.targetDistanceList.Count + 1;
     }
 }

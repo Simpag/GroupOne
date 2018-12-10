@@ -19,6 +19,8 @@ public class EnemyMovement : MonoBehaviour {
     private float distanceTraveled;
     public float DistanceTraveled { get { return distanceTraveled; } }
 
+    private float lastHealthUpdate;
+
     private void Start()
     {
         stats = GetComponent<EnemyStats>();
@@ -27,6 +29,7 @@ public class EnemyMovement : MonoBehaviour {
         target = Waypoints.waypoints[waypointIndex];
         distanceTraveled = 0f;
         lastDistanceUpdate = 0;
+        lastHealthUpdate = 0;
     }
 
     private void Update()
@@ -43,7 +46,13 @@ public class EnemyMovement : MonoBehaviour {
         if (Mathf.CeilToInt(distanceTraveled) > lastDistanceUpdate)
         {
             lastDistanceUpdate = Mathf.CeilToInt(distanceTraveled);
-            WaveSpawner.EnemieWalkDistanceToList(int.Parse(gameObject.name), distanceTraveled);
+            WaveSpawner.EnemyWalkDistanceToList(int.Parse(gameObject.name), distanceTraveled);
+        }
+
+        if (lastHealthUpdate != stats.Health)
+        {
+            lastHealthUpdate = stats.Health;
+            WaveSpawner.EnemyHealthToList(int.Parse(gameObject.name), stats.Health);
         }
     }
 
