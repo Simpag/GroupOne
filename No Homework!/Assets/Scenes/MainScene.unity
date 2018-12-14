@@ -417,7 +417,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: TowerPlacedSound
-    clip: {fileID: 8300000, guid: 09ca02f3f6c221d4aafc297048d023a2, type: 3}
+    clip: {fileID: 8300000, guid: d038db1be3e8c45448b45b41b94a595b, type: 3}
     volume: 0.15
     volumeVariance: 0
     pitch: 1
@@ -434,7 +434,7 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: EnemyKnockedSound
+  - name: EnemyKnockSound
     clip: {fileID: 8300000, guid: 501493dcdde37ad479f2ead4f978b95d, type: 3}
     volume: 0.15
     volumeVariance: 0
@@ -455,6 +455,15 @@ MonoBehaviour:
   - name: InGameMusic
     clip: {fileID: 8300000, guid: 6cc24481a20ce2c4dba8a2589a023a8c, type: 3}
     volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: BossRoundSound
+    clip: {fileID: 0}
+    volume: 0.15
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0

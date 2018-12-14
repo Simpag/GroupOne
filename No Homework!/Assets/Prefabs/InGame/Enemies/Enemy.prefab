@@ -616,7 +616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homework: 5
   health: 100
-  worth: 25
+  worth: 20
   seenByTower: []
 --- !u!114 &114624791608399134
 MonoBehaviour:
@@ -631,3 +631,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   waypointMargin: 0.4
+  meshTransform: {fileID: 4228402236806568}
+  meshDirections:
+  - {x: 0, y: 0, z: 0}
+  - {x: -1, y: 180, z: 0}
+  - {x: 0, y: 270, z: 1}
+  - {x: -1, y: 90, z: -1}

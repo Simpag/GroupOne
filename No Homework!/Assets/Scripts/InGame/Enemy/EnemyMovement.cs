@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyStats))]
@@ -11,6 +13,12 @@ public class EnemyMovement : MonoBehaviour {
     private float speed = 10f;
     [SerializeField]
     private float waypointMargin = 0.4f;
+    [SerializeField]
+    private Transform meshTransform;
+
+    [Header("0:Right 1:Left 2:Up 3:Down")]
+    [SerializeField]
+    private Vector3[] meshDirections; 
 
     private Transform target;
     private int waypointIndex;
@@ -20,6 +28,7 @@ public class EnemyMovement : MonoBehaviour {
     public float DistanceTraveled { get { return distanceTraveled; } }
 
     private float lastHealthUpdate;
+    private Vector3 lastDir;
 
     private void Start()
     {
@@ -34,9 +43,18 @@ public class EnemyMovement : MonoBehaviour {
 
     private void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        Vector3 _dir = (target.position - transform.position).normalized;
+        transform.Translate(_dir * speed * Time.deltaTime, Space.World);
         distanceTraveled += speed * Time.deltaTime;
+
+        if (lastDir != _dir)
+        {
+            lastDir = _dir;
+
+            RotateEnemy(_dir);
+
+            Debug.Log("Updated dir");
+        }
 
         if (Vector3.Distance(transform.position, target.position) <= waypointMargin)
         {
@@ -53,6 +71,26 @@ public class EnemyMovement : MonoBehaviour {
         {
             lastHealthUpdate = stats.Health;
             WaveSpawner.EnemyHealthToList(int.Parse(gameObject.name), stats.Health);
+        }
+    }
+
+    private void RotateEnemy(Vector3 _dir)
+    {
+        if (Mathf.Round(_dir.x) == 1) //Right
+        {
+            meshTransform.rotation = Quaternion.Euler(meshDirections[0]);
+        }
+        else if (Mathf.Round(_dir.x) == -1) //Left
+        {
+            meshTransform.rotation = Quaternion.Euler(meshDirections[1]);
+        }
+        else if (Mathf.Round(_dir.z) == 1) //Up
+        {
+            meshTransform.rotation = Quaternion.Euler(meshDirections[2]);
+        }
+        else //Down
+        {
+            meshTransform.rotation = Quaternion.Euler(meshDirections[3]);
         }
     }
 
@@ -78,7 +116,7 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (_killed)
         {
-            AudioManager.Instance.Play("EnemyKnockedSound");
+            AudioManager.Instance.Play("EnemyKnockSound");
             PlayerStats.AddCandyCurrency(stats.Worth);
         }
 

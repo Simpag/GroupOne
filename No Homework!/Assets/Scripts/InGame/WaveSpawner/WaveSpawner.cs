@@ -61,7 +61,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update()
     {
-        if (countDown <= 0 && waveIndex < waves.Length)
+        if (countDown <= 0 && waveIndex < waves.Length - 1)
         {
             StartCoroutine(SpawnWaveFromArray());
         }
@@ -76,32 +76,41 @@ public class WaveSpawner : MonoBehaviour {
 
     private IEnumerator SpawnWaveFromArray()
     {
-        AudioManager.Instance.Play("EndOfRoundSound");
-        waveIndex++;
+        if (waves[waveIndex].isBossRound) //If its a boss round play bossround sound
+        {
+            AudioManager.Instance.Play("BossRoundSound");
+        }
+        else
+        {
+            AudioManager.Instance.Play("EndOfRoundSound"); //replace with round start sound later
+        }
+
         isSpawning = true;
         enemyIndex = 0;
-        countDown = waves[waveIndex-1].timeBeforeStart;
+        countDown = waves[waveIndex].timeBeforeStart;
 
-        for (int i = 0; i < waves[waveIndex-1].EnemyPrefabs.Length; i++)
+        for (int i = 0; i < waves[waveIndex].EnemyPrefabs.Length; i++)
         {
-            SpawnEnemy(waves[waveIndex-1].EnemyPrefabs[enemyIndex]);
+            SpawnEnemy(waves[waveIndex].EnemyPrefabs[enemyIndex]);
             enemyIndex++;
-            yield return new WaitForSeconds(waves[waveIndex-1].spawnDelay); // wait to spawn next enemy
+            yield return new WaitForSeconds(waves[waveIndex].spawnDelay); // wait to spawn next enemy
         }
 
         isSpawning = false;
+        waveIndex++;
     }
 
     private IEnumerator SpawnWaveFromAlg()
     {
-        AudioManager.Instance.Play("EndOfRoundSound");
+        AudioManager.Instance.Play("EndOfRoundSound"); //replace with round start sound later
+
         //0.03x^2+2sin(x)+5
         waveIndex++;
         isSpawning = true;
         enemyIndex = 0;
         countDown = algTimeBeforeStart;
 
-        int _amountOfEnemies = Mathf.RoundToInt((float)(0.03 * Mathf.Pow(waveIndex, 2) + Mathf.Sin(waveIndex) + 5));
+        int _amountOfEnemies = (int)(Mathf.RoundToInt((float)(0.03 * Mathf.Pow(waveIndex, 2) + Mathf.Sin(waveIndex) + 5)) * 2);
 
         for (int i = 0; i < _amountOfEnemies; i++)
         {

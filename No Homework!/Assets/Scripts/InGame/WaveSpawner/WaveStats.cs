@@ -8,5 +8,8 @@ public class WaveStats {
     public float timeBeforeStart;
     public float spawnDelay;
 
+    [Header("Boss-wave sound")]
+    public bool isBossRound;
+
     public GameObject[] EnemyPrefabs;
 }
