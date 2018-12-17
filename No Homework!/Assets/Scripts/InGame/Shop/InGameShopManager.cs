@@ -26,7 +26,8 @@ public class InGameShopManager : MonoBehaviour {
 
     public enum TowerList
     {
-        test
+        test,
+        FotballPlayer
     }
 
     private void Awake()
@@ -84,10 +85,10 @@ public class InGameShopManager : MonoBehaviour {
         {
             foreach (InGameShopItemStats _igStats in allShopItems)
             {
-                if (AccountInfo.Instance.Inventory.ContainsKey(_igStats.ShortCode))
-                {
+                //if (AccountInfo.Instance.Inventory.ContainsKey(_igStats.ShortCode)) XXXXXXXXXXXXXXXXXXXX
+                //{
                     unlockedShopItems.Add(_igStats);
-                }
+                //}
             }
         }
 

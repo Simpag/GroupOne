@@ -61,7 +61,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update()
     {
-        if (countDown <= 0 && waveIndex < waves.Length - 1)
+        if (countDown <= 0 && waveIndex < waves.Length)
         {
             StartCoroutine(SpawnWaveFromArray());
         }
@@ -78,10 +78,17 @@ public class WaveSpawner : MonoBehaviour {
     {
         if (waves[waveIndex].isBossRound) //If its a boss round play bossround sound
         {
+            AudioManager.Instance.Stop("InGameMusic");
             AudioManager.Instance.Play("BossRoundSound");
         }
         else
         {
+            if (AudioManager.Instance.isPlaying("BossRoundSound"))
+            {
+                AudioManager.Instance.Stop("BossRoundSound");
+                AudioManager.Instance.Play("InGameMusic");
+            }
+
             AudioManager.Instance.Play("EndOfRoundSound"); //replace with round start sound later
         }
 
@@ -102,6 +109,12 @@ public class WaveSpawner : MonoBehaviour {
 
     private IEnumerator SpawnWaveFromAlg()
     {
+        if (AudioManager.Instance.isPlaying("BossRoundSound"))
+        {
+            AudioManager.Instance.Stop("BossRoundSound");
+            AudioManager.Instance.Play("InGameMusic");
+        }
+
         AudioManager.Instance.Play("EndOfRoundSound"); //replace with round start sound later
 
         //0.03x^2+2sin(x)+5

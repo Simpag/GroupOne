@@ -8,10 +8,17 @@ public class InGameShopButton : EventTrigger {
 
     private Image buttonImage;
     public InGameShopItemStats stats;
+    private Text cost;
+
+    private void Awake()
+    {
+        cost = GetComponentInChildren<Text>();
+    }
 
     private void Start()
     {
         buttonImage = GetComponent<Image>();
+        cost.text = stats.Cost.ToString();
     }
 
     public override void OnPointerDown(PointerEventData data)

@@ -125,6 +125,7 @@ MonoBehaviour:
     towerPrefab: {fileID: 0}
     cost: 0
     upgradeCost: 0
+    towerId: 
 --- !u!222 &222332075287027446
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -152,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 2.2, y: 124}
+  m_AnchoredPosition: {x: 2.199997, y: 124}
   m_SizeDelta: {x: -68.7, y: 267}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224960713079955770

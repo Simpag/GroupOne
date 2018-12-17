@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/simon/Documents/Github/GroupOneBuilds/2018-11-26/Build.exe
+C:/Users/simon/Desktop/Builds/LowPoly/Build.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity
@@ -154,7 +154,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 5e81011c3344b8b9f63edd0f99d43556 Assembly-CSharp.dll:.AccountInfo
-1cf8ef52604b2c0b44c61071093907ab Assembly-CSharp.dll:.EnemyMovement
+ad9cd445a410a7c0ccd073b0e561e20d Assembly-CSharp.dll:.EnemyMovement
 650c1e412dac0323d37ae3023565f947 Assembly-CSharp.dll:.Popup
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 82760860e3f4b3f1acf05d4e555ba5bf UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -179,6 +179,6 @@ f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 e7cc82fe8897044aa37890c5eb3bfb9f Assembly-CSharp.dll:.GameSparksUnity
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Waypoints
-77ed424eea40cbb50f2a8f9faa5b2714 Assembly-CSharp.dll:.WaveSpawner
+8bf3a9f13493c487a353e91f7e57d8a1 Assembly-CSharp.dll:.WaveSpawner
 c82b4f672e2c88fcc54d5131943c7bb1 Assembly-CSharp.dll:.GameSparksSettings
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MultiplayerManager

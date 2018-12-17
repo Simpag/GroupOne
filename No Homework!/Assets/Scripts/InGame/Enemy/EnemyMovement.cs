@@ -52,8 +52,6 @@ public class EnemyMovement : MonoBehaviour {
             lastDir = _dir;
 
             RotateEnemy(_dir);
-
-            Debug.Log("Updated dir");
         }
 
         if (Vector3.Distance(transform.position, target.position) <= waypointMargin)

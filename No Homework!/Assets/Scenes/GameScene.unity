@@ -1787,25 +1787,54 @@ MonoBehaviour:
     spawnDelay: 0.5
     isBossRound: 0
     EnemyPrefabs:
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-  - timeBeforeStart: 10
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+  - timeBeforeStart: 12
     spawnDelay: 0.5
     isBossRound: 0
     EnemyPrefabs:
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
-    - {fileID: 1002742684273116, guid: a7c432a2638ab434d94d38440f37418d, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+  - timeBeforeStart: 15
+    spawnDelay: 0.5
+    isBossRound: 1
+    EnemyPrefabs:
+    - {fileID: 1106449266053988, guid: 9341571f33d4504408371800747c9ff7, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1841855275560420, guid: f72d47b0940d3344182c4975bb49d99c, type: 2}
+    - {fileID: 1106449266053988, guid: 9341571f33d4504408371800747c9ff7, type: 2}
 --- !u!4 &1131243697
 Transform:
   m_ObjectHideFlags: 0
@@ -2769,8 +2798,15 @@ MonoBehaviour:
     tower: 0
     towerPrefab: {fileID: 1716343027190860, guid: ecccea8eb04e5354389ce1bdf4b50c5b,
       type: 2}
-    cost: 250
-    upgradeCost: 200
+    cost: 300
+    upgradeCost: 250
+    towerId: 0
+  - shortCode: Store_FotbalPlayer_Item
+    tower: 1
+    towerPrefab: {fileID: 1751474608837356, guid: 2abe5907e00af934f825bf6774f48446,
+      type: 2}
+    cost: 600
+    upgradeCost: 550
     towerId: 0
   unlockedShopItems: []
 --- !u!4 &1799740963

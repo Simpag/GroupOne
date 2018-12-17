@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 19aca792893b8c740a428e4ed31f798b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BezierCircle.000
+    100002: BezierCircle.003
+    100004: Camera
+    100006: Cube.016
+    100008: footballLowPoly
+    100010: gootballHighPoly
+    100012: Lamp
+    100014: //RootNode
+    100016: religionHighPoly
+    100018: religionLowPoly
+    100020: Sphere
+    100022: subHighPoly
+    100024: subLowPoly
+    400000: BezierCircle.000
+    400002: BezierCircle.003
+    400004: Camera
+    400006: Cube.016
+    400008: footballLowPoly
+    400010: gootballHighPoly
+    400012: Lamp
+    400014: //RootNode
+    400016: religionHighPoly
+    400018: religionLowPoly
+    400020: Sphere
+    400022: subHighPoly
+    400024: subLowPoly
+    2000000: Camera
+    2100000: boots
+    2100002: redFabric
+    2100004: pantsFabric
+    2100006: skin.001
+    2100008: goldCross
+    2100010: silverChain
+    2100012: skin
+    2100014: silverChain.001
+    2100016: shoes
+    2100018: skin.002
+    2100020: blueGear.001
+    2100022: lightBlueGear.001
+    2100024: silverGear
+    2100026: gearFaceGuard
+    2100028: gearStrap
+    2100030: chinStrap
+    2100032: No Name
+    2100034: tie
+    2100036: skin.004
+    2100038: shirt
+    2100040: underShirt
+    2100042: shirtCollar
+    2100044: watchMetal
+    2100046: watchStrap
+    2100048: shoes.001
+    2100050: jeans
+    2100052: shoes.002
+    2100054: skin.003
+    2100056: blueGear.000
+    2100058: lightBlueGear.000
+    2100060: silverGear.001
+    2100062: gearFaceGuard.001
+    2100064: gearStrap.001
+    2100066: chinStrap.001
+    2100068: shoes.003
+    2100070: jeans.001
+    2100072: skin.006
+    2100074: shirt.001
+    2100076: underShirt.001
+    2100078: shirtCollar.001
+    2100080: watchMetal.001
+    2100082: watchStrap.001
+    2100084: skin.005
+    2100086: tie.001
+    2300000: BezierCircle.000
+    2300002: BezierCircle.003
+    2300004: Cube.016
+    2300006: footballLowPoly
+    2300008: gootballHighPoly
+    2300010: religionHighPoly
+    2300012: religionLowPoly
+    2300014: Sphere
+    2300016: subHighPoly
+    2300018: subLowPoly
+    3300000: BezierCircle.000
+    3300002: BezierCircle.003
+    3300004: Cube.016
+    3300006: footballLowPoly
+    3300008: gootballHighPoly
+    3300010: religionHighPoly
+    3300012: religionLowPoly
+    3300014: Sphere
+    3300016: subHighPoly
+    3300018: subLowPoly
+    4300000: religionLowPoly
+    4300002: BezierCircle.000
+    4300004: Sphere
+    4300006: BezierCircle.003
+    4300008: gootballHighPoly
+    4300010: Cube.016
+    4300012: religionHighPoly
+    4300014: subHighPoly
+    4300016: footballLowPoly
+    4300018: subLowPoly
+    10800000: Lamp
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
