@@ -11,6 +11,23 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1841855275560420}
   m_IsPrefabParent: 1
+--- !u!1 &1358972802125900
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4663023183436666}
+  - component: {fileID: 33434995260939786}
+  - component: {fileID: 23327147045007434}
+  m_Layer: 0
+  m_Name: subHighPoly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1550646249008136
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,23 +38,6 @@ GameObject:
   - component: {fileID: 4815851382411956}
   m_Layer: 9
   m_Name: Mesh
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1626689286011422
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4476979138213310}
-  - component: {fileID: 33262042384909356}
-  - component: {fileID: 23923054074992544}
-  m_Layer: 0
-  m_Name: subLowPoly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,15 +78,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4476979138213310
+--- !u!4 &4663023183436666
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626689286011422}
+  m_GameObject: {fileID: 1358972802125900}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 102.897095, y: 102.90697, z: 102.90697}
+  m_LocalPosition: {x: 0, y: 4.6, z: 0}
+  m_LocalScale: {x: 21.180058, y: 21.180058, z: 87.488815}
   m_Children: []
   m_Father: {fileID: 4815851382411956}
   m_RootOrder: 0
@@ -101,10 +101,53 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4476979138213310}
+  - {fileID: 4663023183436666}
   m_Father: {fileID: 4168897961749904}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23327147045007434
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358972802125900}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100034, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100036, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100038, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100040, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100042, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100044, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100046, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100012, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100048, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  - {fileID: 2100050, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23524238720206096
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -139,56 +182,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23923054074992544
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626689286011422}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100068, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100070, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100072, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100038, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100076, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100078, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100080, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100082, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100084, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  - {fileID: 2100086, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &33262042384909356
+--- !u!33 &33434995260939786
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626689286011422}
-  m_Mesh: {fileID: 4300018, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
+  m_GameObject: {fileID: 1358972802125900}
+  m_Mesh: {fileID: 4300014, guid: 19aca792893b8c740a428e4ed31f798b, type: 3}
 --- !u!33 &33846052644844880
 MeshFilter:
   m_ObjectHideFlags: 1
