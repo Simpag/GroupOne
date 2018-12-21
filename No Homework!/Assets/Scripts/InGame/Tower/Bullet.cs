@@ -14,9 +14,16 @@ public class Bullet : MonoBehaviour {
 	[SerializeField]
     private Transform target;
 
-    public float speed = 70f;
-    public float damage = 50f;
-    public float AOE = -1f; //Area of effect
+    private float speed;
+    private float damage;
+    private float AOE; //Area of effect
+
+    public void Setup(float _speed, float _damage, float _AOE)
+    {
+        speed = _speed;
+        damage = _damage;
+        AOE = _AOE; //Area of effect
+    }
 
     public void Seek (Transform _target, float _speed, float _damage, float _AOE)
     {

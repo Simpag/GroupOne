@@ -322,6 +322,8 @@
     <Compile Include="Assets\Scripts\InGame\GameManager.cs" />
     <Compile Include="Assets\Scripts\InGame\HomeworkBar.cs" />
     <Compile Include="Assets\Scripts\InGame\InGameUIManager.cs" />
+    <Compile Include="Assets\Scripts\InGame\Mulitplayer\MultiplayerManager.cs" />
+    <Compile Include="Assets\Scripts\InGame\Mulitplayer\RTSessionInfo.cs" />
     <Compile Include="Assets\Scripts\InGame\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\InGame\Popup.cs" />
     <Compile Include="Assets\Scripts\InGame\PopupManager.cs" />
@@ -342,8 +344,6 @@
     <Compile Include="Assets\Scripts\MainMenu\StoreItemManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StoreItemStats.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StoreManager.cs" />
-    <Compile Include="Assets\Scripts\Mulitplayer\MultiplayerManager.cs" />
-    <Compile Include="Assets\Scripts\Mulitplayer\RTSessionInfo.cs" />
     <Compile Include="Assets\Scripts\Utillities\AccountInfo.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameFunctions.cs" />

@@ -121,4 +121,17 @@ public class InGameUIManager : MonoBehaviour {
         instance.towerInfo.rangeView.GetComponent<MeshRenderer>().enabled = false; //Show the range of the tower
         instance.towerInfo = null;
     }
+
+    public void ChangeTowerTargetPriority()
+    {
+        if (towerInfo.targetSetting == Tower.TargetSetting.first)
+        {
+            towerInfo.targetSetting = Tower.TargetSetting.last;
+            Debug.Log("Last");
+        } else
+        {
+            towerInfo.targetSetting = Tower.TargetSetting.first;
+            Debug.Log("First");
+        }
+    }
 }

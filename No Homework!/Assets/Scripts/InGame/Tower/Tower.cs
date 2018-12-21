@@ -10,12 +10,6 @@ public class Tower : MonoBehaviour {
 	private TowerType towerType;
     public int numberOfUpgrades = 1;
     [SerializeField]
-    private float damage = 50f;
-    [SerializeField]
-    private float AOE = -1f; //Area of effect
-    [SerializeField]
-    private float bulletSpeed = 70f;
-    [SerializeField]
 	private float area = 1.4f;
 	[SerializeField]
 	private float range = 10f;
@@ -26,16 +20,28 @@ public class Tower : MonoBehaviour {
     [Header("General Setup")]
     [SerializeField]
     private GameObject standardMesh;
-    public GameObject towerArea;
-	public Transform rangeView;
 	[SerializeField]
 	private Transform pivotPoint;
 	[SerializeField]
 	private Transform firePoint;
+    public GameObject towerArea;
+	public Transform rangeView;
 	public Material rangeMaterial;
 	public Material cantPlaceMaterial;
 
-    [Header("Upgraded Setup")]
+	[Header("Stats")]
+    [SerializeField]
+    private float damage = 50f;
+    [SerializeField]
+    private float AOE = -1f; //Area of effect
+    [SerializeField]
+    private float bulletSpeed = 70f;
+    [SerializeField]
+    private float fireRate = 2f;
+	[SerializeField]
+	private GameObject bulletPrefab;
+
+    [Header("Upgraded Stats")]
     [SerializeField]
     private GameObject upgradedMesh;
     [SerializeField]
@@ -48,12 +54,6 @@ public class Tower : MonoBehaviour {
     private float upgradedRange = 15f;
     [SerializeField]
     private float upgradedFireRate = 4f;
-
-	[Header("Bullet")]
-    [SerializeField]
-    private float fireRate = 2f;
-	[SerializeField]
-	private GameObject bulletPrefab;
 
     [Header("Information")]
     public string towerName;
@@ -69,6 +69,8 @@ public class Tower : MonoBehaviour {
     private float fireCountdown = 0;
     private Bullet bullet;
 
+    private bool isActive = false;
+
 	private enum TowerType
 	{
 		bullet,
@@ -78,8 +80,8 @@ public class Tower : MonoBehaviour {
     public enum TargetSetting
     {
         first,
-        last,
-        mostHealth
+        last
+        //mostHealth
     }
 
     private void Awake()
@@ -89,7 +91,7 @@ public class Tower : MonoBehaviour {
 
     private void Update()
     {
-        if (target == null)
+        if (target == null || !isActive)
             return;
 
         //Look onto target
@@ -107,9 +109,7 @@ public class Tower : MonoBehaviour {
         if (isStart)
         {
             bullet = bulletPrefab.GetComponent<Bullet>();
-            bullet.speed = bulletSpeed;
-            bullet.damage = damage;
-            bullet.AOE = AOE;
+            bullet.Setup(bulletSpeed, damage, AOE);
 
             Guid tempGUID = Guid.NewGuid();
             towerGUID = tempGUID.ToString();
@@ -156,13 +156,13 @@ public class Tower : MonoBehaviour {
     public void MovingTower()
     {
         rangeView.GetComponent<TowerRange>().enabled = false; //Disable targeting
-        rangeView.GetComponent<MeshRenderer>().enabled = true; //Enable range view
+        isActive = false;
     }
 
     public void PlacedTower()
     {
         rangeView.GetComponent<MeshRenderer>().enabled = false; //Disable range view
-        rangeView.GetComponent<TowerRange>().enabled = true; //Enable targeting script
+        isActive = true;
     }
 
     public void UpgradeTower()

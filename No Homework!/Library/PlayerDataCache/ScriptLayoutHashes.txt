@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/simon/Desktop/Builds/LowPoly/Build.exe
+C:/Users/Simon/Desktop/New folder/Alphaish.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity
@@ -138,7 +138,7 @@ e50c796980e167224e252b33f59f6caf Assembly-CSharp.dll:.PopupManager
 3959f97670ad77b0258f5e80ebef1a72 Assembly-CSharp.dll:.LogInUIManager
 cbaf114f5d9ea061739f0378d97d2ebd Assembly-CSharp.dll:.LoginManager
 332a354d5637becf18022fcfac460362 Assembly-CSharp.dll:.StoreItemManager
-dfb043c98e0345a98a1ea8038afc765c Assembly-CSharp.dll:.Bullet
+16f21f0de5f4feefdcf8daeb36fc0604 Assembly-CSharp.dll:.Bullet
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -163,7 +163,7 @@ ad9cd445a410a7c0ccd073b0e561e20d Assembly-CSharp.dll:.EnemyMovement
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-713b138d522e630aa72b24624d1e31a9 Assembly-CSharp.dll:.Tower
+b79081f665c96c77dd05735b0157cef8 Assembly-CSharp.dll:.Tower
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
