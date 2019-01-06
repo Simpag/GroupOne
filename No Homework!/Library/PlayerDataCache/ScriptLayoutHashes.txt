@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Simon/Desktop/New folder/Alphaish.exe
+C:/Users/Simon/Desktop/New folder/build 2/Alphaish.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity
@@ -136,7 +136,7 @@ e50c796980e167224e252b33f59f6caf Assembly-CSharp.dll:.PopupManager
 5f2837072b4a0ffe0fd418300cc5b1ef Assembly-CSharp.dll:.TowerArea
 205965134a5874db410d674ebdf33ba7 Assembly-CSharp.dll:.ExampleWheelController
 3959f97670ad77b0258f5e80ebef1a72 Assembly-CSharp.dll:.LogInUIManager
-cbaf114f5d9ea061739f0378d97d2ebd Assembly-CSharp.dll:.LoginManager
+6386d1ecdf0821980a990e82d00cd435 Assembly-CSharp.dll:.LoginManager
 332a354d5637becf18022fcfac460362 Assembly-CSharp.dll:.StoreItemManager
 16f21f0de5f4feefdcf8daeb36fc0604 Assembly-CSharp.dll:.Bullet
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator

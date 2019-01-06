@@ -7,6 +7,8 @@ using GameSparks.Api.Responses;
 
 public class LoginManager : MonoBehaviour
 {
+    public Text debuggingtext;
+
     //Debug Flag to simulate a reset
     public bool ClearPlayerPrefs;
 
@@ -91,6 +93,8 @@ public class LoginManager : MonoBehaviour
 
     private void RememberMeAuth(string _auth)
     {
+        debuggingtext.text = "Trying To Start Remember Me Auth Process!";
+
         if (!_AuthService.RememberMe)
         {
             //Debug.Log("DON'T REMEMBER ME!"); //Debugging
@@ -115,6 +119,7 @@ public class LoginManager : MonoBehaviour
         if (_isAvailable && !_AuthService.RememberMe)
         {
             Debug.Log("Start Auth Process!");
+            debuggingtext.text = "Start Auth Process!";
             _AuthService.Authenticate();
             GameSparks.Core.GS.Instance.GameSparksAvailable = null;
             GameSparks.Core.GS.GameSparksAuthenticated = null;
@@ -122,6 +127,7 @@ public class LoginManager : MonoBehaviour
         else if (!_isAvailable)
         {
             Debug.Log("Can't authenticate!");
+            debuggingtext.text = "Can't authenticate!";
         }
     }
 

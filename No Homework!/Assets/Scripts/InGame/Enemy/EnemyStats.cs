@@ -25,18 +25,14 @@ public class EnemyStats : MonoBehaviour {
         get { return worth; }
     }
 
-    [SerializeField]
-    private List<Tower> seenByTower;
-    public List<Tower> SeenByTower
+    public EnemyMovement Movement
     {
-        get { return seenByTower; }
+        get { return movement; }
     }
-
     private EnemyMovement movement;
 
     private void Awake()
     {
-        seenByTower = new List<Tower>();
         movement = GetComponent<EnemyMovement>();
     }
 
@@ -48,17 +44,5 @@ public class EnemyStats : MonoBehaviour {
         {
             movement.Died(true);
         }
-    }
-
-    public void AddSeenByTower(Tower _tower)
-    {
-        if (!seenByTower.Contains(_tower))
-            seenByTower.Add(_tower);
-    }
-
-    public void RemoveSeenByTower(Tower _tower)
-    {
-        if (seenByTower.Contains(_tower))
-            seenByTower.Remove(_tower);
     }
 }

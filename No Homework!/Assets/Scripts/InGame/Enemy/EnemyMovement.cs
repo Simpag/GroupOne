@@ -23,11 +23,9 @@ public class EnemyMovement : MonoBehaviour {
     private Transform target;
     private int waypointIndex;
 
-    private int lastDistanceUpdate;
     private float distanceTraveled;
     public float DistanceTraveled { get { return distanceTraveled; } }
 
-    private float lastHealthUpdate;
     private Vector3 lastDir;
 
     private void Start()
@@ -37,8 +35,6 @@ public class EnemyMovement : MonoBehaviour {
         waypointIndex = 0;
         target = Waypoints.waypoints[waypointIndex];
         distanceTraveled = 0f;
-        lastDistanceUpdate = 0;
-        lastHealthUpdate = 0;
     }
 
     private void Update()
@@ -57,18 +53,6 @@ public class EnemyMovement : MonoBehaviour {
         if (Vector3.Distance(transform.position, target.position) <= waypointMargin)
         {
             GetNextWaypoint();
-        }
-
-        if (Mathf.CeilToInt(distanceTraveled) > lastDistanceUpdate)
-        {
-            lastDistanceUpdate = Mathf.CeilToInt(distanceTraveled);
-            WaveSpawner.EnemyWalkDistanceToList(int.Parse(gameObject.name), distanceTraveled);
-        }
-
-        if (lastHealthUpdate != stats.Health)
-        {
-            lastHealthUpdate = stats.Health;
-            WaveSpawner.EnemyHealthToList(int.Parse(gameObject.name), stats.Health);
         }
     }
 
@@ -116,12 +100,6 @@ public class EnemyMovement : MonoBehaviour {
         {
             AudioManager.Instance.Play("EnemyKnockSound");
             PlayerStats.AddCandyCurrency(stats.Worth);
-        }
-
-        foreach (Tower _tower in stats.SeenByTower)
-        {
-            if (_tower != null)
-                _tower.rangeView.GetComponent<TowerRange>().RemoveEnemyFromTargetList(this.gameObject);
         }
 
         Destroy(this.gameObject);

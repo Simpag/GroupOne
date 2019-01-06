@@ -2434,8 +2434,6 @@ MonoBehaviour:
   algTimeBeforeStart: 15
   algSpawnDelay: 0.4
   waveIndex: 0
-  enemiesWalkDistance: []
-  enemiesHealth: []
   waves:
   - timeBeforeStart: 10
     spawnDelay: 0.5
@@ -2876,6 +2874,7 @@ MonoBehaviour:
   towerLayer:
     serializedVersion: 2
     m_Bits: 1024
+  builtTowers: []
   towerToBuild:
     shortCode: 
     tower: 0
@@ -3764,13 +3763,13 @@ MonoBehaviour:
     cost: 300
     upgradeCost: 250
     towerId: 0
-  - shortCode: Store_FotbalPlayer_Item
+  - shortCode: Store_FootballPlayer_Item
     tower: 1
     towerPrefab: {fileID: 1751474608837356, guid: 2abe5907e00af934f825bf6774f48446,
       type: 2}
     cost: 600
     upgradeCost: 550
-    towerId: 0
+    towerId: 1
   unlockedShopItems: []
 --- !u!4 &1799740963
 Transform:

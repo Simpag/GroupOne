@@ -24,6 +24,8 @@ public class BuildManager : MonoBehaviour {
     [SerializeField]
     private LayerMask towerLayer;
 
+    public List<Tower> builtTowers;
+
     //Building variables
     public InGameShopItemStats towerToBuild;
     private Transform followingTowerTransform;
@@ -61,6 +63,7 @@ public class BuildManager : MonoBehaviour {
 
         canBuild = true;
         towerIsSelected = false;
+        builtTowers = new List<Tower>();
     }
 
     private void Update()
@@ -137,11 +140,13 @@ public class BuildManager : MonoBehaviour {
 
             if (GameManager.IsMultiplayer)
             {
-                SendTowerToPartner(followingTower, locationToBuild);
+                MultiplayerManager.SendTowerToPartner(followingTower, locationToBuild);
             }
 
             followingTowerTransform.position = locationToBuild;
             followingTower.PlacedTower();
+
+            builtTowers.Add(followingTower);
 
             //Reset variables
             followingTowerTransform = null;
@@ -156,84 +161,21 @@ public class BuildManager : MonoBehaviour {
         
         if (_success && GameManager.IsMultiplayer)
         {
-            SendTowerUpgradeToPartner(_towerInfo);
+            MultiplayerManager.SendTowerUpgradeToPartner(_towerInfo);
         }
     }
 
-    private void SendTowerToPartner(Tower _tower, Vector3 _position)
-    {
-        // for all RT-data we are sending, we use an instance of the RTData object //
-        // this is a disposable object, so we wrap it in this using statement to make sure it is returned to the pool //
-        using (RTData data = RTData.Get())
-        {
-            data.SetString(GameConstants.PACKET_TOWER_ID, _tower.shopStats.TowerId); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
-            data.SetString(GameConstants.PACKET_TOWER_GUID, _tower.towerGUID);
-            data.SetVector3(GameConstants.PACKET_TOWER_POSITION, _position); // we are also going to send the time at which the user sent this message
-
-            Debug.Log("Sending tower data to partner");
-            // for this example we are sending RTData, but there are other methods for sending data we will look at later //
-            // the first parameter we use is the op-code. This is used to index the type of data being send, and so we can identify to ourselves which packet this is when it is received //
-            // the second parameter is the delivery intent. The intent we are using here is 'reliable', which means it will be send via TCP. This is because we aren't concerned about //
-            // speed when it comes to these chat messages, but we very much want to make sure the whole packet is received //
-            // the final parameter is the RTData object itself //
-            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_TOWER, GameSparksRT.DeliveryIntent.RELIABLE, data);
-        }
-    }
-
-    private void SendTowerUpgradeToPartner(Tower _towerInfo)
-    {
-        using (RTData data = RTData.Get())
-        {
-            data.SetString(GameConstants.PACKET_TOWER_GUID, _towerInfo.towerGUID);
-
-            Debug.Log("Sending tower data to partner");
-            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_TOWER_UPGRADE, GameSparksRT.DeliveryIntent.RELIABLE, data);
-        }
-    }
-
-    public void ReceivedTowerFromPartner(RTPacket _packet)
+    public void BuildPartnerTower(GameObject _prefab, Vector3 _position, string _towerGUID)
     {
         AudioManager.Instance.Play("TowerPlacedSound");
-        GameObject _prefab = null;
 
-        string _towerId = (string)_packet.Data.GetString(GameConstants.PACKET_TOWER_ID);
-        string _towerGUID = (string)_packet.Data.GetString(GameConstants.PACKET_TOWER_GUID);
-        Vector3 _position = (Vector3)_packet.Data.GetVector3(GameConstants.PACKET_TOWER_POSITION);
-
-        //Find the right tower prefab based on towerId
-        foreach (InGameShopItemStats _stat in InGameShopManager.Instance.allShopItems)
-        {
-            if(_stat.TowerId == _towerId)
-            {
-                _prefab = _stat.TowerPrefab;
-            }
-        }
-
-        //Instantiate partners tower
         Transform _tower = Instantiate(_prefab, _position, Quaternion.identity, towerContainer).transform;
         _tower.GetComponent<Tower>().PlacedTower();
         _tower.GetComponent<Tower>().isYours = false;
         _tower.GetComponent<Tower>().towerGUID = _towerGUID;
 
+        builtTowers.Add(_tower.GetComponent<Tower>());
+
         //Debug.Log("Recived tower with GUID: " + _towerGUID);
-    }
-
-    public void RecivedTowerUpgradeFromPartner(RTPacket _packet)
-    {
-        string _guid = _packet.Data.GetString(GameConstants.PACKET_TOWER_GUID);
-
-        Tower[] _towers = towerContainer.GetComponentsInChildren<Tower>();
-
-        foreach (Tower _tower in _towers)
-        {
-            if (_tower.towerGUID == _guid)
-            {
-                _tower.UpgradeTower();
-                return;
-            } else
-            {
-                Debug.Log("No tower found with GUID: " + _guid);
-            }
-        }
     }
 }

@@ -22,7 +22,6 @@ public class StoreItemStats {
         set { manager = value; }
     }
 
-
     [SerializeField]
     public string Name
     {

@@ -80,8 +80,8 @@ public class Tower : MonoBehaviour {
     public enum TargetSetting
     {
         first,
-        last
-        //mostHealth
+        last,
+        mostHealth
     }
 
     private void Awake()

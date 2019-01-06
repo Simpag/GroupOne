@@ -10,128 +10,83 @@ public class TowerRange : MonoBehaviour {
 	[SerializeField]
 	private string enemyTag = "Enemy";
 
-    [SerializeField]
-    private SortedDictionary<float, Transform> targetDistanceList;
-    //[SerializeField]
-    //private SortedDictionary<float, Transform> targetHealthList;
-
     private Tower tower;
-    private int updateTargetList;
+    private EnemyStats currentTargetStats;
 
     private void Awake()
     {
         tower = GetComponentInParent<Tower>();
-        targetDistanceList = new SortedDictionary<float, Transform>();
-        //targetHealthList = new SortedDictionary<float, Transform>();
         self = this;
-        updateTargetList = 0;
     }
 
-    //private void Update()
-    //{
-    //    if (enemiesInRange.Count > 0)
-    //    {
-    //        selectTarget();
-    //    }
-    //}
-
-    private void UpdateTarget()
+    private void UpdateTarget(EnemyStats _enemy)
     {
-        Transform _targetToSelect;
-
-        if (targetDistanceList.Count <= 0)
-            return;
+        if (tower.target == null)
+            SelectTarget(_enemy);
 
         switch (tower.targetSetting)
         {
             case Tower.TargetSetting.first:
-                _targetToSelect = targetDistanceList.Values.Last();
-
-                //Debug.Log("Selected Target: " + _targetToSelect.name);
-                
-                SelectTarget(_targetToSelect);           
+                if (currentTargetStats.Movement.DistanceTraveled < _enemy.Movement.DistanceTraveled)
+                {
+                    SelectTarget(_enemy);
+                }         
                 break;
 
-            case Tower.TargetSetting.last: //works
-                _targetToSelect = targetDistanceList.Values.First();
-
-                SelectTarget(_targetToSelect);
+            case Tower.TargetSetting.last:
+                if (currentTargetStats.Movement.DistanceTraveled > _enemy.Movement.DistanceTraveled)
+                {
+                    SelectTarget(_enemy);
+                }
                 break;
 
-            //case Tower.TargetSetting.mostHealth:
-            //    _targetToSelect = targetHealthList.Values.Last();
-
-            //    SelectTarget(_targetToSelect);
-            //    break;
+            case Tower.TargetSetting.mostHealth:
+                //Select the target with the most health,
+                //or if two enemies have the same amount of health then choose
+                //the first one.
+                if (currentTargetStats.Health == _enemy.Health)
+                {
+                    if (currentTargetStats.Movement.DistanceTraveled < _enemy.Movement.DistanceTraveled)
+                    {
+                        SelectTarget(_enemy);
+                    }
+                }
+                else if (currentTargetStats.Health < _enemy.Health)
+                {
+                    SelectTarget(_enemy);
+                }
+                break;
         }
     }
 
-    private void SelectTarget(Transform _enemy)
+    private void SelectTarget(EnemyStats _enemy)
     {
-        tower.target = _enemy;
+        tower.target = _enemy.transform;
+        currentTargetStats = _enemy;
     }
 
     private void DeselectTarget()
     {
         tower.target = null;
-    }
-
-    private void AddEnemyToTargetList(GameObject _enemy)
-    {
-        float _newTargetDistance = WaveSpawner.Instance.enemiesWalkDistance[int.Parse(_enemy.name)];
-        float _newTargetHealth = WaveSpawner.Instance.enemiesHealth[int.Parse(_enemy.name)];
-
-        targetDistanceList.Add(_newTargetDistance, _enemy.transform); //Add enemy to target list
-        //targetHealthList.Add(_newTargetHealth, _enemy.transform);
-    }
-
-    private void UpdateEnemyInTargetList(GameObject _enemy)
-    {
-        float _lastEnemyDistanceKey = targetDistanceList.FirstOrDefault(x => x.Value == _enemy.transform).Key;
-        //float _lastEnemyHealthKey = targetHealthList.FirstOrDefault(x => x.Value == _enemy.transform).Key;
-
-        float _newTargetDistance = WaveSpawner.Instance.enemiesWalkDistance[int.Parse(_enemy.name)];
-        //float _newTargetHealth = WaveSpawner.Instance.enemiesHealth[int.Parse(_enemy.name)];
-
-        targetDistanceList.Remove(_lastEnemyDistanceKey); //Remove the last enemy distance
-        targetDistanceList.Add(_newTargetDistance, _enemy.transform);
-
-        //targetHealthList.Remove(_lastEnemyHealthKey);
-        //targetHealthList.Add(_newTargetHealth, _enemy.transform);
-
-        //Debug.Log("Replaced: " + _lastEnemyKey.ToString() + " With: " + _newTargetDistance.ToString());
-    }
-
-    public void RemoveEnemyFromTargetList(GameObject _enemyToRemove)
-    {
-        float _distanceRemoveKey = targetDistanceList.FirstOrDefault(x => x.Value == _enemyToRemove.transform).Key;
-        //float _healthRemoveKey = targetHealthList.FirstOrDefault(x => x.Value == _enemyToRemove.transform).Key;
-
-        targetDistanceList.Remove(_distanceRemoveKey);
-        //targetHealthList.Remove(_healthRemoveKey);
+        currentTargetStats = null;
     }
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag(enemyTag))
         {
-            collision.GetComponent<EnemyStats>().AddSeenByTower(tower);
-
-            AddEnemyToTargetList(collision.gameObject);
-
-            UpdateTarget();
+            if (tower.target != null)
+            {
+                UpdateTarget(collision.GetComponent<EnemyStats>());
+            }
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (updateTargetList > 0 && other.gameObject.CompareTag(enemyTag))
+        if (other.gameObject.CompareTag(enemyTag))
         {
-            UpdateEnemyInTargetList(other.gameObject);
-
-            UpdateTarget();
-
-            updateTargetList--;
+            UpdateTarget(other.GetComponent<EnemyStats>());
         }
     }
 
@@ -139,22 +94,8 @@ public class TowerRange : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag(enemyTag))
         {
-            collision.gameObject.GetComponent<EnemyStats>().RemoveSeenByTower(tower);
-
-            RemoveEnemyFromTargetList(collision.gameObject);
-
             if (collision.transform == tower.target) //If the target that exited is the current target, deselect it
                 DeselectTarget();
-
-            UpdateTarget();
         }
-    }
-
-    public static void UpdateTowerTargetList()
-    {
-        if (self == null)
-            return;
-
-        self.updateTargetList = self.targetDistanceList.Count + 1;
     }
 }
