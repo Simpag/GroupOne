@@ -129,7 +129,7 @@ public class MultiplayerManager : MonoBehaviour {
         if (_isReady)
         {
             Debug.Log("RT Session Connected...");
-            GameManager.StartGame(true); //Start multiplayer match
+            GameManager.StartGame(GameManager.Startmethod.multiplayer); //Start multiplayer match
         }
 
     }

@@ -159,14 +159,14 @@ public class GameSparksAuthService  {
             {
                 if (OnLoginSuccess != null)
                 {
-                    //report login result back to subscriber
-                    OnLoginSuccess.Invoke();
-					
 					Debug.Log("Player Authenticated");
 					if (RememberMe)
 						AuthType = Authtypes.UsernameAndPassword;
 
 					AccountInfo.UpdateAccountInfo();
+
+                    //report login result back to subscriber
+                    OnLoginSuccess.Invoke();
                 }
             }
             else

@@ -4,13 +4,16 @@ using UnityEngine.SceneManagement;
 using GameSparks.Api;
 using GameSparks.Api.Requests;
 using GameSparks.Api.Responses;
+using System.Collections;
 
 public class LoginManager : MonoBehaviour
 {
-    public Text debuggingtext;
-
     //Debug Flag to simulate a reset
     public bool ClearPlayerPrefs;
+
+    [Header("Settings")]
+    [SerializeField]
+    private float timeBeforeOffline;
 
     //Meta fields for objects in the UI
     [Header("Authentication")]
@@ -84,6 +87,8 @@ public class LoginManager : MonoBehaviour
         GameSparks.Core.GS.Instance.GameSparksAuthenticated += RememberMeAuth;
         GameSparks.Core.GS.Instance.GameSparksAvailable += StartAuth;
 
+        Invoke("connectionFailed", 5f);
+
         //Bind to UI buttons to perform actions when user interacts with the UI.
         LoginButton.onClick.AddListener(OnLoginButtonClicked);
         registerPanelButton.onClick.AddListener(OnRegisterPanelButtonClicked);
@@ -91,10 +96,16 @@ public class LoginManager : MonoBehaviour
         CancelRegisterButton.onClick.AddListener(OnCancelRegisterButtonClicked);
     }
 
+    private void connectionFailed()
+    {
+        if (!GameSparks.Core.GS.Available)
+        {
+            GameManager.PlayOffline();
+        }
+    }
+
     private void RememberMeAuth(string _auth)
     {
-        debuggingtext.text = "Trying To Start Remember Me Auth Process!";
-
         if (!_AuthService.RememberMe)
         {
             //Debug.Log("DON'T REMEMBER ME!"); //Debugging
@@ -105,6 +116,8 @@ public class LoginManager : MonoBehaviour
         //Debug.Log("Start RememberMe Auth Process!"); //Debugging
         if (!string.IsNullOrEmpty(_auth))
         {
+            CancelInvoke("connectionFailed");
+
             _AuthService.isAuthenticated = true;
             
             //Start the authentication process.
@@ -119,7 +132,8 @@ public class LoginManager : MonoBehaviour
         if (_isAvailable && !_AuthService.RememberMe)
         {
             Debug.Log("Start Auth Process!");
-            debuggingtext.text = "Start Auth Process!";
+            CancelInvoke("connectionFailed");
+
             _AuthService.Authenticate();
             GameSparks.Core.GS.Instance.GameSparksAvailable = null;
             GameSparks.Core.GS.GameSparksAuthenticated = null;
@@ -127,7 +141,6 @@ public class LoginManager : MonoBehaviour
         else if (!_isAvailable)
         {
             Debug.Log("Can't authenticate!");
-            debuggingtext.text = "Can't authenticate!";
         }
     }
 

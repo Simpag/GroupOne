@@ -15,9 +15,11 @@ public class InGameUIManager : MonoBehaviour {
 
     [Header("Shop")]
     [SerializeField]
+    private Animator shopAnim;
+    [SerializeField]
     private GameObject shopView;
     [SerializeField]
-    private GameObject showShotButton;
+    private GameObject showShopButton;
 
     [Header("Tower Information")]
     [SerializeField]
@@ -47,7 +49,7 @@ public class InGameUIManager : MonoBehaviour {
     {
         UpdateHomework();
         UpdateCandyText();
-        showShotButton.SetActive(true);
+        showShopButton.SetActive(true);
         shopView.SetActive(false);
         towerInformationView.SetActive(false);
         banner.SetActive(true);
@@ -79,13 +81,11 @@ public class InGameUIManager : MonoBehaviour {
     {
         if (shopView.activeSelf) //Hide
         {
-            shopView.SetActive(false);
-            showShotButton.SetActive(true);
+            shopAnim.SetTrigger("Hide");
         }
         else //Show
         {
-            showShotButton.SetActive(false);
-            shopView.SetActive(true);
+            shopAnim.SetTrigger("Show");
 
             HideTowerInfo();
         }
@@ -99,9 +99,6 @@ public class InGameUIManager : MonoBehaviour {
     public static void ShowTowerInfo (Tower _tower)
     {
         instance.towerInfo = _tower; //Save the selected Tower
-
-        if (instance.shopView.activeSelf)
-            instance.ShowOrHideShop();
 
         instance.towerInformationView.SetActive(true);
         instance.towerInformationName.text = _tower.towerName;
@@ -127,11 +124,10 @@ public class InGameUIManager : MonoBehaviour {
         if (towerInfo.targetSetting == Tower.TargetSetting.first)
         {
             towerInfo.targetSetting = Tower.TargetSetting.last;
-            Debug.Log("Last");
-        } else
+        }
+        else
         {
             towerInfo.targetSetting = Tower.TargetSetting.first;
-            Debug.Log("First");
         }
     }
 }

@@ -12,19 +12,35 @@ public class GameManager : MonoBehaviour {
         set { instance = value; }
     }
 
-    [SerializeField]
-    private bool isMultiplayer;
-    private bool isGameActive;
+    private Startmethod startmethod;
 
-    public static bool IsMultiplayer
-    {
-        get { return Instance.isMultiplayer; }
-    }
+    [SerializeField]
+    private bool isGameActive;
+    private bool offlineOverride = false;
+
     public static bool IsGameActive
     {
         get { return Instance.isGameActive; }
     }
+    public static bool IsMultiplayer
+    {
+        get { if (Instance.startmethod == Startmethod.multiplayer) { return true; } else { return false; } }
+    }
+    public static bool IsSingleplayer
+    {
+        get { if (Instance.startmethod == Startmethod.singleplayer) { return true; } else { return false; } }
+    }
+    public static bool IsOffline
+    {
+        get { if (Instance.startmethod == Startmethod.offline) { return true; } else { return false; } }
+    }
 
+    public enum Startmethod
+    {
+        singleplayer,
+        multiplayer,
+        offline
+    }
 
     //Singleton
     private void Awake()
@@ -40,17 +56,29 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public static void StartGame(bool _isMulti)
+    public static void StartGame(Startmethod _method)
     {
-        AudioManager.Instance.Stop("MainMenuMusic");
-        Instance.isMultiplayer = _isMulti;
-        SceneManager.LoadScene(GameConstants.GAME_SCENE);
+        Instance.startmethod = _method;
 
+        if (Instance.offlineOverride)
+            Instance.startmethod = Startmethod.offline;
+
+        AudioManager.Instance.Stop("MainMenuMusic");
         Instance.isGameActive = true;
+
+        SceneManager.LoadScene(GameConstants.GAME_SCENE);
     }
 
     public static void EndGame()
     {
         instance.isGameActive = false;
+    }
+
+    public static void PlayOffline()
+    {
+        Instance.offlineOverride = true;
+
+        //Show our next screen if we logged in successfully.
+        SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
     }
 }

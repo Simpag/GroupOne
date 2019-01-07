@@ -82,7 +82,7 @@ public class MainMenuManager : MonoBehaviour {
 
     public void PlaySingleplayer ()
     {
-        GameManager.StartGame(false);
+        GameManager.StartGame(GameManager.Startmethod.singleplayer);
     }
 
     public void PlayMultiplayer ()

@@ -80,15 +80,26 @@ public class InGameShopManager : MonoBehaviour {
 
     private void SetupShopItems()
     {
-        //Unlock towers
-        for (int i = 0; i < AccountInfo.Instance.Inventory.BaseData.Keys.Count; i++)
+        if (!GameManager.IsOffline)
+        {
+            //Unlock towers
+            for (int i = 0; i < AccountInfo.Instance.Inventory.BaseData.Keys.Count; i++)
+            {
+                foreach (InGameShopItemStats _igStats in allShopItems)
+                {
+                    //if (AccountInfo.Instance.Inventory.ContainsKey(_igStats.ShortCode)) XXXXXXXXXXXXXXXXXXXX
+                    //{
+                        if (!unlockedShopItems.Contains(_igStats))
+                            unlockedShopItems.Add(_igStats);
+                    //}
+                }
+            }
+        }
+        else //If its offline mode
         {
             foreach (InGameShopItemStats _igStats in allShopItems)
             {
-                //if (AccountInfo.Instance.Inventory.ContainsKey(_igStats.ShortCode)) XXXXXXXXXXXXXXXXXXXX
-                //{
-                    unlockedShopItems.Add(_igStats);
-                //}
+                unlockedShopItems.Add(_igStats);
             }
         }
 
