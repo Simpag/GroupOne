@@ -24,7 +24,7 @@ public class TowerRange : MonoBehaviour {
         if (tower.target == null)
             SelectTarget(_enemy);
 
-        switch (tower.targetSetting)
+        switch (tower.currentTargetSetting)
         {
             case Tower.TargetSetting.first:
                 if (currentTargetStats.Movement.DistanceTraveled < _enemy.Movement.DistanceTraveled)

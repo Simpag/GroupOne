@@ -892,6 +892,7 @@ MonoBehaviour:
   towerInformationView: {fileID: 132446299}
   towerInformationName: {fileID: 2054034329}
   towerInformationDescription: {fileID: 793695591}
+  towerTargetPriority: {fileID: 509731742}
   towerUpgradeCost: {fileID: 401616827}
 --- !u!114 &418931206
 MonoBehaviour:

@@ -331,8 +331,10 @@
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopItemStats.cs" />
     <Compile Include="Assets\Scripts\InGame\Shop\InGameShopManager.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\Bullet.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower\ThrowingStudent.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\Tower.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\TowerArea.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower\TowerAttributes.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\TowerRange.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveStats.cs" />
@@ -345,8 +347,10 @@
     <Compile Include="Assets\Scripts\MainMenu\StoreItemStats.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StoreManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\AccountInfo.cs" />
+    <Compile Include="Assets\Scripts\Utillities\DictionaryDrawer.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameConstants.cs" />
     <Compile Include="Assets\Scripts\Utillities\GameFunctions.cs" />
+    <Compile Include="Assets\Scripts\Utillities\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\Utillities\Sound.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -119,6 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4247681999216024}
   - component: {fileID: 114357347539434430}
+  - component: {fileID: 114214625229433322}
   m_Layer: 0
   m_Name: TestTower
   m_TagString: Untagged
@@ -680,6 +681,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &114214625229433322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716343027190860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a6b73d2389fa541a6f88b93b2d4444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114357347539434430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -692,21 +704,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerType: 0
+  allowedTargetSettings: 
+  currentTargetSetting: 0
   numberOfUpgrades: 1
-  damage: 50
-  AOE: -1
-  bulletSpeed: 70
   area: 1.6
   range: 10
   rotationSpeed: 10
-  targetSetting: 0
   standardMesh: {fileID: 1311523560391506}
-  towerArea: {fileID: 1439013549004866}
-  rangeView: {fileID: 4366698155748994}
   pivotPoint: {fileID: 4744386241757664}
   firePoint: {fileID: 4479675179198608}
+  towerArea: {fileID: 1439013549004866}
+  rangeView: {fileID: 4366698155748994}
   rangeMaterial: {fileID: 2100000, guid: 01b03e2d690e0474390aec86416beb57, type: 2}
   cantPlaceMaterial: {fileID: 2100000, guid: 6412fc3553a6c8843951e36ae2352e0b, type: 2}
+  damage: 50
+  AOE: -1
+  bulletSpeed: 70
+  fireRate: 2
+  bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
+    type: 2}
   upgradedMesh: {fileID: 1716343027190860, guid: 89234a7a6742df54ca9607300f3c10f4,
     type: 2}
   upgradedDamage: 75
@@ -714,9 +730,6 @@ MonoBehaviour:
   upgradedArea: 1.6
   upgradedRange: 12.5
   upgradedFireRate: 2.5
-  fireRate: 2
-  bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
-    type: 2}
   towerName: Test Tower
   towerDescription: This is the description of Test Tower
   target: {fileID: 0}

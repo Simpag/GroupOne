@@ -29,6 +29,8 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private Text towerInformationDescription;
     [SerializeField]
+    private Dropdown towerTargetPriority;
+    [SerializeField]
     private Text towerUpgradeCost;
     private Tower towerInfo;
 
@@ -100,12 +102,29 @@ public class InGameUIManager : MonoBehaviour {
     {
         instance.towerInfo = _tower; //Save the selected Tower
 
-        instance.towerInformationView.SetActive(true);
-        instance.towerInformationName.text = _tower.towerName;
-        instance.towerInformationDescription.text = _tower.towerDescription;
-        instance.towerUpgradeCost.text = _tower.shopStats.UpgradeCost.ToString();
+        instance.towerInformationView.SetActive(true); //Active the windows
+        instance.towerInformationName.text = _tower.towerName;  //Set the name of the tower
+        instance.towerInformationDescription.text = _tower.towerDescription;    //Set the description
+        instance.towerUpgradeCost.text = _tower.shopStats.UpgradeCost.ToString();   //Set the upgrade cost
+
+        instance.SetupTowerTargetPriority(_tower);
 
         instance.towerInfo.rangeView.GetComponent<MeshRenderer>().enabled = true; //Show the range of the tower
+    }
+
+    private void SetupTowerTargetPriority(Tower _tower)
+    {
+        towerTargetPriority.ClearOptions();
+        List<Dropdown.OptionData> _allowedTargetSettings = new List<Dropdown.OptionData>();
+
+        foreach (Tower.TargetSetting _ts in _tower.allowedTargetSettings)
+        {
+            _allowedTargetSettings.Add(new Dropdown.OptionData(_ts.ToString()));
+        }
+
+        towerTargetPriority.AddOptions(_allowedTargetSettings);
+
+        towerTargetPriority.value ----- //Använd detta och jämför med allowedTargetSettings. För att ändra tower target prio
     }
 
     private void HideTowerInfo()
@@ -121,13 +140,13 @@ public class InGameUIManager : MonoBehaviour {
 
     public void ChangeTowerTargetPriority()
     {
-        if (towerInfo.targetSetting == Tower.TargetSetting.first)
+        /*if (towerInfo.targetSetting == Tower.TargetSetting.first)
         {
             towerInfo.targetSetting = Tower.TargetSetting.last;
         }
         else
         {
             towerInfo.targetSetting = Tower.TargetSetting.first;
-        }
+        }*/
     }
 }

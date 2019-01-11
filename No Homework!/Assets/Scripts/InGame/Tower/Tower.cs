@@ -2,12 +2,23 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using System.Linq;
+using System.Diagnostics;
+using UnityEditor;
+
+/*[Serializable] public class TargetSettingDictionary : SerializableDictionary<Tower.TargetSetting, bool> { }
+[CustomPropertyDrawer(typeof(TargetSettingDictionary))]
+public class TargetSettingDictionaryDrawer : DictionaryDrawer<Tower.TargetSetting, bool> { }*/
 
 [RequireComponent(typeof(Bullet))]
 public class Tower : MonoBehaviour {
+
     [Header("General Tower Properties")]
 	[SerializeField]
 	private TowerType towerType;
+    [SerializeField]
+    public List<TargetSetting> allowedTargetSettings = new List<TargetSetting>();
+    public TargetSetting currentTargetSetting;
     public int numberOfUpgrades = 1;
     [SerializeField]
 	private float area = 1.4f;
@@ -15,7 +26,6 @@ public class Tower : MonoBehaviour {
 	private float range = 10f;
 	[SerializeField]
 	private float rotationSpeed = 10f;
-    public TargetSetting targetSetting;
 
     [Header("General Setup")]
     [SerializeField]
@@ -81,10 +91,11 @@ public class Tower : MonoBehaviour {
     {
         first,
         last,
-        mostHealth
+        mostHealth,
+        leastHealth
     }
 
-    private void Awake()
+    private void Start()
     {
         Setup(true);
     }
@@ -108,6 +119,11 @@ public class Tower : MonoBehaviour {
 
         if (isStart)
         {
+            if (allowedTargetSettings.Count < 1)
+                currentTargetSetting = TargetSetting.first;
+            else
+                currentTargetSetting = allowedTargetSettings.ElementAt(0);
+
             bullet = bulletPrefab.GetComponent<Bullet>();
             bullet.Setup(bulletSpeed, damage, AOE);
 
