@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyStats))]
-public class EnemyMovement : MonoBehaviour {
+[RequireComponent(typeof(TeacherStats))]
+public class TeacherMovement : MonoBehaviour {
 
-    private EnemyStats stats;
+    private TeacherStats stats;
 
-    [SerializeField]
-    private float speed = 10f;
     [SerializeField]
     private float waypointMargin = 0.4f;
     [SerializeField]
@@ -18,20 +16,21 @@ public class EnemyMovement : MonoBehaviour {
 
     [Header("0:Right 1:Left 2:Up 3:Down")]
     [SerializeField]
-    private Vector3[] meshDirections; 
+    private Vector3[] meshDirections;
 
+    private float speed;
     private Transform target;
     private int waypointIndex;
 
     private float distanceTraveled;
     public float DistanceTraveled { get { return distanceTraveled; } }
-
     private Vector3 lastDir;
 
     private void Start()
     {
-        stats = GetComponent<EnemyStats>();
+        stats = GetComponent<TeacherStats>();
 
+        speed = stats.Speed;
         waypointIndex = 0;
         target = Waypoints.waypoints[waypointIndex];
         distanceTraveled = 0f;
@@ -96,12 +95,6 @@ public class EnemyMovement : MonoBehaviour {
 
     public void Died(bool _killed)
     {
-        if (_killed)
-        {
-            AudioManager.Instance.Play("EnemyKnockSound");
-            PlayerStats.AddCandyCurrency(stats.Worth);
-        }
-
-        Destroy(this.gameObject);
+        stats.Teacher.Died(_killed);
     }
 }

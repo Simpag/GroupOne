@@ -14,6 +14,10 @@ public class GameConstants {
     public const string MAIN_MENU_SCENE = "MainScene";
     public const string GAME_SCENE = "GameScene";
 
+    //Game constants
+    public static string TEACHER_TAG = "Teacher";
+    public static string TOWER_AREA_TAG = "TowerArea";
+
     //Multiplayer constants
     public const string RANDOM_MATCHMAKING_SHORTCODE = "RandomMatchMaking";
     public const int OPCODE_TOWER = 1;

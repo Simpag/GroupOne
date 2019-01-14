@@ -29,10 +29,11 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private Text towerInformationDescription;
     [SerializeField]
-    private Dropdown towerTargetPriority;
+    private Dropdown towerTargetPriorityDropdown;
     [SerializeField]
     private Text towerUpgradeCost;
     private Tower towerInfo;
+    private List<Tower.TargetSetting> currentlyAllowedTargetSettings;
 
     private void Awake()
     {
@@ -114,17 +115,36 @@ public class InGameUIManager : MonoBehaviour {
 
     private void SetupTowerTargetPriority(Tower _tower)
     {
-        towerTargetPriority.ClearOptions();
+        towerTargetPriorityDropdown.ClearOptions();
         List<Dropdown.OptionData> _allowedTargetSettings = new List<Dropdown.OptionData>();
+        currentlyAllowedTargetSettings = new List<Tower.TargetSetting>();
 
         foreach (Tower.TargetSetting _ts in _tower.allowedTargetSettings)
         {
-            _allowedTargetSettings.Add(new Dropdown.OptionData(_ts.ToString()));
+            string _tsString = "";
+            switch(_ts)
+            {
+                case Tower.TargetSetting.first:
+                    _tsString = "First";
+                    break;
+                case Tower.TargetSetting.last:
+                    _tsString = "Last";
+                    break;
+                case Tower.TargetSetting.leastHealth:
+                    _tsString = "Least Health";
+                    break;
+                case Tower.TargetSetting.mostHealth:
+                    _tsString = "Most Health";
+                    break;
+            }
+
+            _allowedTargetSettings.Add(new Dropdown.OptionData(_tsString));
+            currentlyAllowedTargetSettings.Add(_ts);
         }
 
-        towerTargetPriority.AddOptions(_allowedTargetSettings);
+        towerTargetPriorityDropdown.AddOptions(_allowedTargetSettings);
 
-        towerTargetPriority.value ----- //Använd detta och jämför med allowedTargetSettings. För att ändra tower target prio
+        towerTargetPriorityDropdown.value = currentlyAllowedTargetSettings.IndexOf(_tower.currentTargetSetting);
     }
 
     private void HideTowerInfo()
@@ -138,15 +158,8 @@ public class InGameUIManager : MonoBehaviour {
         instance.towerInfo = null;
     }
 
-    public void ChangeTowerTargetPriority()
+    public void ChangedTowerTargetPriority()
     {
-        /*if (towerInfo.targetSetting == Tower.TargetSetting.first)
-        {
-            towerInfo.targetSetting = Tower.TargetSetting.last;
-        }
-        else
-        {
-            towerInfo.targetSetting = Tower.TargetSetting.first;
-        }*/
+        towerInfo.currentTargetSetting = currentlyAllowedTargetSettings[towerTargetPriorityDropdown.value];
     }
 }

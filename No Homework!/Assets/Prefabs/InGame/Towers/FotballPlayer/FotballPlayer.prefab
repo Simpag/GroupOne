@@ -394,21 +394,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerType: 0
+  allowedTargetSettings: 
+  currentTargetSetting: 0
+  canBeSlowed: 0
   numberOfUpgrades: 1
-  damage: 25
-  AOE: -1
-  bulletSpeed: 80
   area: 1.7
   range: 12
   rotationSpeed: 10
-  targetSetting: 0
   standardMesh: {fileID: 1961398410864966}
-  towerArea: {fileID: 1257759810825206}
-  rangeView: {fileID: 4514466811814944}
   pivotPoint: {fileID: 4879195960949382}
   firePoint: {fileID: 4931440830909476}
+  towerArea: {fileID: 1257759810825206}
+  rangeView: {fileID: 4514466811814944}
   rangeMaterial: {fileID: 2100000, guid: 01b03e2d690e0474390aec86416beb57, type: 2}
   cantPlaceMaterial: {fileID: 2100000, guid: 6412fc3553a6c8843951e36ae2352e0b, type: 2}
+  damage: 25
+  AOE: -1
+  bulletSpeed: 80
+  fireRate: 3
+  bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
+    type: 2}
   upgradedMesh: {fileID: 1716343027190860, guid: 89234a7a6742df54ca9607300f3c10f4,
     type: 2}
   upgradedDamage: 35
@@ -416,19 +421,16 @@ MonoBehaviour:
   upgradedArea: 1.7
   upgradedRange: 12.5
   upgradedFireRate: 4
-  fireRate: 3
-  bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
-    type: 2}
   towerName: Test Tower
   towerDescription: This is the description of Test Tower
   target: {fileID: 0}
   shopStats:
-    shortCode: Store_Test_Item
-    tower: 0
+    shortCode: Store_FootballPlayer_Item
+    tower: 1
     towerPrefab: {fileID: 1751474608837356}
-    cost: 250
-    upgradeCost: 200
-    towerId: 0
+    cost: 600
+    upgradeCost: 550
+    towerId: 1
   towerLevel: 0
   isYours: 1
   towerGUID: 
@@ -443,7 +445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 356034934c3b4e24690e82a9f6cccd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTag: Enemy
 --- !u!135 &135427412896419818
 SphereCollider:
   m_ObjectHideFlags: 1

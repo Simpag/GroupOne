@@ -7,11 +7,8 @@ public class TowerRange : MonoBehaviour {
 
     private static TowerRange self;
 
-	[SerializeField]
-	private string enemyTag = "Enemy";
-
     private Tower tower;
-    private EnemyStats currentTargetStats;
+    private TeacherStats currentTargetStats;
 
     private void Awake()
     {
@@ -19,7 +16,7 @@ public class TowerRange : MonoBehaviour {
         self = this;
     }
 
-    private void UpdateTarget(EnemyStats _enemy)
+    private void UpdateTarget(TeacherStats _enemy)
     {
         if (tower.target == null)
             SelectTarget(_enemy);
@@ -59,7 +56,7 @@ public class TowerRange : MonoBehaviour {
         }
     }
 
-    private void SelectTarget(EnemyStats _enemy)
+    private void SelectTarget(TeacherStats _enemy)
     {
         tower.target = _enemy.transform;
         currentTargetStats = _enemy;
@@ -73,26 +70,26 @@ public class TowerRange : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag(enemyTag))
+        if (collision.gameObject.CompareTag(GameConstants.TEACHER_TAG))
         {
             if (tower.target != null)
             {
-                UpdateTarget(collision.GetComponent<EnemyStats>());
+                UpdateTarget(collision.GetComponent<TeacherStats>());
             }
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag(enemyTag))
+        if (other.gameObject.CompareTag(GameConstants.TEACHER_TAG))
         {
-            UpdateTarget(other.GetComponent<EnemyStats>());
+            UpdateTarget(other.GetComponent<TeacherStats>());
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.CompareTag(enemyTag))
+        if (collision.gameObject.CompareTag(GameConstants.TEACHER_TAG))
         {
             if (collision.transform == tower.target) //If the target that exited is the current target, deselect it
                 DeselectTarget();

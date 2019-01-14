@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - TowerArea
-  - Enemy
   - CanPlaceTower
+  - Teacher
   layers:
   - Default
   - TransparentFX
@@ -17,7 +17,7 @@ TagManager:
   - 
   - 
   - Ground
-  - Enemy
+  - Teacher
   - Tower
   - 
   - 

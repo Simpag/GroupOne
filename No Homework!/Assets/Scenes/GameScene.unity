@@ -892,7 +892,7 @@ MonoBehaviour:
   towerInformationView: {fileID: 132446299}
   towerInformationName: {fileID: 2054034329}
   towerInformationDescription: {fileID: 793695591}
-  towerTargetPriority: {fileID: 509731742}
+  towerTargetPriorityDropdown: {fileID: 509731742}
   towerUpgradeCost: {fileID: 401616827}
 --- !u!114 &418931206
 MonoBehaviour:
@@ -1160,13 +1160,11 @@ MonoBehaviour:
     m_Options:
     - m_Text: First
       m_Image: {fileID: 0}
-    - m_Text: Last
-      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 418931205}
-        m_MethodName: ChangeTowerTargetPriority
+        m_MethodName: ChangedTowerTargetPriority
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

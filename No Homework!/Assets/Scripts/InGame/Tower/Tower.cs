@@ -16,16 +16,17 @@ public class Tower : MonoBehaviour {
     [Header("General Tower Properties")]
 	[SerializeField]
 	private TowerType towerType;
-    [SerializeField]
-    public List<TargetSetting> allowedTargetSettings = new List<TargetSetting>();
+    public List<TargetSetting> allowedTargetSettings;
     public TargetSetting currentTargetSetting;
-    public int numberOfUpgrades = 1;
     [SerializeField]
-	private float area = 1.4f;
+    private bool canBeSlowed;
+    public int numberOfUpgrades;
+    [SerializeField]
+	private float area;
 	[SerializeField]
-	private float range = 10f;
+	private float range;
 	[SerializeField]
-	private float rotationSpeed = 10f;
+	private float rotationSpeed;
 
     [Header("General Setup")]
     [SerializeField]
@@ -41,13 +42,13 @@ public class Tower : MonoBehaviour {
 
 	[Header("Stats")]
     [SerializeField]
-    private float damage = 50f;
+    private float damage;
     [SerializeField]
-    private float AOE = -1f; //Area of effect
+    private float AOE; //Area of effect
     [SerializeField]
-    private float bulletSpeed = 70f;
+    private float bulletSpeed;
     [SerializeField]
-    private float fireRate = 2f;
+    private float fireRate;
 	[SerializeField]
 	private GameObject bulletPrefab;
 
@@ -55,15 +56,15 @@ public class Tower : MonoBehaviour {
     [SerializeField]
     private GameObject upgradedMesh;
     [SerializeField]
-    private float upgradedDamage = 75f;
+    private float upgradedDamage;
     [SerializeField]
-    private float upgradedBulletSpeed = 100f;
+    private float upgradedBulletSpeed;
     [SerializeField]
-    private float upgradedArea = 1.4f;
+    private float upgradedArea;
     [SerializeField]
-    private float upgradedRange = 15f;
+    private float upgradedRange;
     [SerializeField]
-    private float upgradedFireRate = 4f;
+    private float upgradedFireRate;
 
     [Header("Information")]
     public string towerName;
@@ -78,6 +79,7 @@ public class Tower : MonoBehaviour {
 
     private float fireCountdown = 0;
     private Bullet bullet;
+    private float baseFireRate;
 
     private bool isActive = false;
 
@@ -129,6 +131,8 @@ public class Tower : MonoBehaviour {
 
             Guid tempGUID = Guid.NewGuid();
             towerGUID = tempGUID.ToString();
+
+            baseFireRate = fireRate;
         }
     }
 
@@ -195,5 +199,16 @@ public class Tower : MonoBehaviour {
         //Replace the mesh
         standardMesh.SetActive(false);
         Instantiate(this.upgradedMesh, pivotPoint);
+    }
+
+    public void Slow(float _amount)
+    {
+        if (canBeSlowed)
+            fireRate *= _amount;
+    }
+
+    public void RemoveSlow()
+    {
+        fireRate = baseFireRate;
     }
 }

@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114091982096978494}
   m_Layer: 9
   m_Name: SubTeacher
-  m_TagString: Enemy
+  m_TagString: Teacher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7f547620105c8ae42b3b59adbf543a99, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -234,10 +234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f3d324413264a4fac5104ece0e165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teacher: {fileID: 0}
   homework: 5
   health: 100
   worth: 20
-  seenByTower: []
+  speed: 10
 --- !u!114 &114948182005576176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,7 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2012be9dafd03f45902d8bd5ca68024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   waypointMargin: 0.4
   meshTransform: {fileID: 4815851382411956}
   meshDirections:

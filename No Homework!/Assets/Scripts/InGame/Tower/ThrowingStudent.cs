@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Tower))]
 [System.Serializable]
 public class ThrowingStudent : MonoBehaviour {
 

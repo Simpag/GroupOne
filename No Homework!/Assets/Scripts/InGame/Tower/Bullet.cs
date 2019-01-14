@@ -72,7 +72,7 @@ public class Bullet : MonoBehaviour {
 
     private void DamageEnemy (GameObject _enemy)
     {
-        _enemy.GetComponent<EnemyStats>().TakeDamage(damage);
+        _enemy.GetComponent<TeacherStats>().TakeDamage(damage);
     }
 
     private void DamageAOE ()
