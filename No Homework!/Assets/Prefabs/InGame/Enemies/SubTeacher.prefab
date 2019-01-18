@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 54295048536068460}
   - component: {fileID: 114948182005576176}
   - component: {fileID: 114091982096978494}
+  - component: {fileID: 114032480965499048}
   m_Layer: 9
   m_Name: SubTeacher
   m_TagString: Teacher
@@ -223,6 +224,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114032480965499048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1841855275560420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b3264518c92b54390c2a3a32b36fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114091982096978494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,6 +251,7 @@ MonoBehaviour:
   health: 100
   worth: 20
   speed: 10
+  ticketsForSpawning: 100
 --- !u!114 &114948182005576176
 MonoBehaviour:
   m_ObjectHideFlags: 1

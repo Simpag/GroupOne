@@ -5,15 +5,12 @@ using System.Linq;
 
 public class TowerRange : MonoBehaviour {
 
-    private static TowerRange self;
-
     private Tower tower;
     private TeacherStats currentTargetStats;
 
     private void Awake()
     {
         tower = GetComponentInParent<Tower>();
-        self = this;
     }
 
     private void UpdateTarget(TeacherStats _enemy)

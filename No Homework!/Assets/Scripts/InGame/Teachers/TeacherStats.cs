@@ -58,6 +58,7 @@ public class TeacherStats : MonoBehaviour {
     private void Awake()
     {
         movement = GetComponent<TeacherMovement>();
+        teacher = GetComponent<TeacherParent>();
     }
 
     public void TakeDamage (float _amount)

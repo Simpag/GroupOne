@@ -333,6 +333,7 @@
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\EconomicsTeacher.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\PrincipalTeacher.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\ReligionTeacher.cs" />
+    <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\SubstituteTeacher.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\TeacherMovement.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\TeacherParent.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\TeacherStats.cs" />
@@ -342,7 +343,6 @@
     <Compile Include="Assets\Scripts\InGame\Tower\TowerArea.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\TowerRange.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveSpawner.cs" />
-    <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveStats.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\Waypoints.cs" />
     <Compile Include="Assets\Scripts\LoginMenu\Managers\GameSparksAuthService.cs" />
     <Compile Include="Assets\Scripts\LoginMenu\Managers\LoginManager.cs" />
