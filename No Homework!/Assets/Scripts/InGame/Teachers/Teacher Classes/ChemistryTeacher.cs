@@ -15,7 +15,7 @@ public class ChemistryTeacher : TeacherParent {
     {
         if (other.CompareTag(GameConstants.TEACHER_TAG))
         {
-            Tower _tower = other.GetComponent<Tower>();
+            StudentStats _tower = other.GetComponent<StudentStats>();
 
             _tower.Slow(slowNerf / 100f);
         }
@@ -25,7 +25,7 @@ public class ChemistryTeacher : TeacherParent {
     {
         if (other.CompareTag(GameConstants.TEACHER_TAG))
         {
-            Tower _tower = other.GetComponent<Tower>();
+            StudentStats _tower = other.GetComponent<StudentStats>();
 
             _tower.RemoveSlow();
         }

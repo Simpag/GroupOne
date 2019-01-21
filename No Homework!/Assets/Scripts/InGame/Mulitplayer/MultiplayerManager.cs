@@ -140,11 +140,11 @@ public class MultiplayerManager : MonoBehaviour {
 
         switch (_packet.OpCode)
         {
-            case GameConstants.OPCODE_TOWER:
+            case GameConstants.OPCODE_STUDENT_BUILT:
                 Instance.ReceivedTowerFromPartner(_packet);
                 break;
 
-            case GameConstants.OPCODE_TOWER_UPGRADE:
+            case GameConstants.OPCODE_STUDENT_UPGRADE:
                 Instance.RecivedTowerUpgradeFromPartner(_packet);
                 break;
         }
@@ -153,15 +153,15 @@ public class MultiplayerManager : MonoBehaviour {
 
     #region Multiplayer
 
-    public static void SendTowerToPartner(Tower _tower, Vector3 _position)
+    public static void SendTowerToPartner(StudentStats _tower, Vector3 _position)
     {
         // for all RT-data we are sending, we use an instance of the RTData object //
         // this is a disposable object, so we wrap it in this using statement to make sure it is returned to the pool //
         using (RTData data = RTData.Get())
         {
-            data.SetString(GameConstants.PACKET_TOWER_ID, _tower.shopStats.TowerId); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
-            data.SetString(GameConstants.PACKET_TOWER_GUID, _tower.towerGUID);
-            data.SetVector3(GameConstants.PACKET_TOWER_POSITION, _position); // we are also going to send the time at which the user sent this message
+            data.SetString(GameConstants.PACKET_STUDENT_ID, _tower.shopStats.TowerId); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
+            data.SetString(GameConstants.PACKET_STUDENT_GUID, _tower.studentGUID);
+            data.SetVector3(GameConstants.PACKET_STUDENT_POSITION, _position); // we are also going to send the time at which the user sent this message
 
             Debug.Log("Sending tower data to partner");
             // for this example we are sending RTData, but there are other methods for sending data we will look at later //
@@ -169,18 +169,19 @@ public class MultiplayerManager : MonoBehaviour {
             // the second parameter is the delivery intent. The intent we are using here is 'reliable', which means it will be send via TCP. This is because we aren't concerned about //
             // speed when it comes to these chat messages, but we very much want to make sure the whole packet is received //
             // the final parameter is the RTData object itself //
-            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_TOWER, GameSparksRT.DeliveryIntent.RELIABLE, data);
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_STUDENT_BUILT, GameSparksRT.DeliveryIntent.RELIABLE, data);
         }
     }
 
-    public static void SendTowerUpgradeToPartner(Tower _towerInfo)
+    public static void SendTowerUpgradeToPartner(StudentStats _towerInfo, int _row)
     {
         using (RTData data = RTData.Get())
         {
-            data.SetString(GameConstants.PACKET_TOWER_GUID, _towerInfo.towerGUID);
+            data.SetString(GameConstants.PACKET_STUDENT_GUID, _towerInfo.studentGUID);
+            data.SetInt(GameConstants.PACKET_STUDENT_UPGRADE_ROW, _row);
 
             Debug.Log("Sending tower data to partner");
-            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_TOWER_UPGRADE, GameSparksRT.DeliveryIntent.RELIABLE, data);
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_STUDENT_UPGRADE, GameSparksRT.DeliveryIntent.RELIABLE, data);
         }
     }
 
@@ -189,9 +190,9 @@ public class MultiplayerManager : MonoBehaviour {
         AudioManager.Instance.Play("TowerPlacedSound");
         GameObject _prefab = null;
 
-        string _towerId = (string)_packet.Data.GetString(GameConstants.PACKET_TOWER_ID);
-        string _towerGUID = (string)_packet.Data.GetString(GameConstants.PACKET_TOWER_GUID);
-        Vector3 _position = (Vector3)_packet.Data.GetVector3(GameConstants.PACKET_TOWER_POSITION);
+        string _towerId = (string)_packet.Data.GetString(GameConstants.PACKET_STUDENT_ID);
+        string _towerGUID = (string)_packet.Data.GetString(GameConstants.PACKET_STUDENT_GUID);
+        Vector3 _position = (Vector3)_packet.Data.GetVector3(GameConstants.PACKET_STUDENT_POSITION);
 
         //Find the right tower prefab based on towerId
         foreach (InGameShopItemStats _stat in InGameShopManager.Instance.allShopItems)
@@ -208,13 +209,25 @@ public class MultiplayerManager : MonoBehaviour {
 
     private void RecivedTowerUpgradeFromPartner(RTPacket _packet)
     {
-        string _guid = _packet.Data.GetString(GameConstants.PACKET_TOWER_GUID);
+        string _guid = _packet.Data.GetString(GameConstants.PACKET_STUDENT_GUID);
 
-        foreach (Tower _tower in BuildManager.Instance.builtTowers)
+        foreach (StudentStats _tower in BuildManager.Instance.builtTowers)
         {
-            if (_tower.towerGUID == _guid)
+            if (_tower.studentGUID == _guid)
             {
-                _tower.UpgradeTower();
+                int? _row = _packet.Data.GetInt(GameConstants.PACKET_STUDENT_UPGRADE_ROW);
+                switch (_row)
+                {
+                    case 1:
+                        _tower.UpgradeRow1();
+                        break;
+                    case 2:
+                        _tower.UpgradeRow2();
+                        break;
+                    default:
+                        Debug.LogError("No upgrade row found");
+                        break;
+                }
                 return;
             }
             else

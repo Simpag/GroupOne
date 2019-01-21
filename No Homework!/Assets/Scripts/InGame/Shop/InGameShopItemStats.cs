@@ -12,9 +12,11 @@ public class InGameShopItemStats {
     [SerializeField]
     private GameObject towerPrefab;
     [SerializeField]
-    private float cost;
+    private float baseCost;
     [SerializeField]
-    private float upgradeCost;
+    private float[] upgradeRow1Cost;
+    [SerializeField]
+    private float[] upgradeRow2Cost;
     [SerializeField]
     private string towerId;
 
@@ -31,15 +33,19 @@ public class InGameShopItemStats {
     public GameObject TowerPrefab
     {
         //Set the shopstats then return the prefab with the stats
-        get { towerPrefab.GetComponent<Tower>().shopStats = this; return towerPrefab; }
+        get { towerPrefab.GetComponent<StudentStats>().shopStats = this; return towerPrefab; }
     }
-    public float Cost
+    public float BaseCost
     {
-        get { return cost; }
+        get { return baseCost; }
     }
-    public float UpgradeCost
+    public float[] UpgradeRow1Cost
     {
-        get { return upgradeCost; }
+        get { return upgradeRow1Cost; }
+    }
+    public float[] UpgradeRow2Cost
+    {
+        get { return upgradeRow2Cost; }
     }
     public string TowerId
     {

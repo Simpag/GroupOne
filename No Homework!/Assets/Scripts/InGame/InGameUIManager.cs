@@ -21,19 +21,19 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private GameObject showShopButton;
 
-    [Header("Tower Information")]
+    [Header("Student Information")]
     [SerializeField]
-    private GameObject towerInformationView;
+    private GameObject studentInformationView;
     [SerializeField]
-    private Text towerInformationName;
+    private Text studentInformationName;
     [SerializeField]
-    private Text towerInformationDescription;
+    private Text studentInformationDescription;
     [SerializeField]
-    private Dropdown towerTargetPriorityDropdown;
+    private Dropdown studentTargetPriorityDropdown;
     [SerializeField]
-    private Text towerUpgradeCost;
-    private Tower towerInfo;
-    private List<Tower.TargetSetting> currentlyAllowedTargetSettings;
+    private Text studentUpgradeCost;
+    private StudentStats currentStudentStats;
+    private List<StudentStats.TargetSetting> currentlyAllowedTargetSettings;
 
     private void Awake()
     {
@@ -54,7 +54,7 @@ public class InGameUIManager : MonoBehaviour {
         UpdateCandyText();
         showShopButton.SetActive(true);
         shopView.SetActive(false);
-        towerInformationView.SetActive(false);
+        studentInformationView.SetActive(false);
         banner.SetActive(true);
     }
 
@@ -65,7 +65,7 @@ public class InGameUIManager : MonoBehaviour {
             if (shopView.activeSelf)
                 ShowOrHideShop();
 
-            if (towerInformationView.activeSelf)
+            if (studentInformationView.activeSelf)
                 HideTowerInfo();
         }
     }
@@ -94,46 +94,51 @@ public class InGameUIManager : MonoBehaviour {
         }
     }
 
-    public void UpgradeSelectedTower()
+    public void UpgradeSelectedStudentRow1()
     {
-        BuildManager.Instance.UpgradeTower(towerInfo);
+        BuildManager.Instance.UpgradeStudentRow1(currentStudentStats);
     }
 
-    public static void ShowTowerInfo (Tower _tower)
+    public void UpgradeSelectedStudentRow2()
     {
-        instance.towerInfo = _tower; //Save the selected Tower
+        BuildManager.Instance.UpgradeStudentRow2(currentStudentStats);
+    }
 
-        instance.towerInformationView.SetActive(true); //Active the windows
-        instance.towerInformationName.text = _tower.towerName;  //Set the name of the tower
-        instance.towerInformationDescription.text = _tower.towerDescription;    //Set the description
-        instance.towerUpgradeCost.text = _tower.shopStats.UpgradeCost.ToString();   //Set the upgrade cost
+    public static void ShowTowerInfo (StudentStats _tower)
+    {
+        instance.currentStudentStats = _tower; //Save the selected Tower
+
+        instance.studentInformationView.SetActive(true); //Active the windows
+        instance.studentInformationName.text = _tower.studentName;  //Set the name of the tower
+        instance.studentInformationDescription.text = _tower.studentDescription;    //Set the description
+        instance.studentUpgradeCost.text = _tower.shopStats.UpgradeRow1Cost[0].ToString();   //Set the upgrade cost
 
         instance.SetupTowerTargetPriority(_tower);
 
-        instance.towerInfo.rangeView.GetComponent<MeshRenderer>().enabled = true; //Show the range of the tower
+        instance.currentStudentStats.rangeView.GetComponent<MeshRenderer>().enabled = true; //Show the range of the tower
     }
 
-    private void SetupTowerTargetPriority(Tower _tower)
+    private void SetupTowerTargetPriority(StudentStats _tower)
     {
-        towerTargetPriorityDropdown.ClearOptions();
+        studentTargetPriorityDropdown.ClearOptions();
         List<Dropdown.OptionData> _allowedTargetSettings = new List<Dropdown.OptionData>();
-        currentlyAllowedTargetSettings = new List<Tower.TargetSetting>();
+        currentlyAllowedTargetSettings = new List<StudentStats.TargetSetting>();
 
-        foreach (Tower.TargetSetting _ts in _tower.allowedTargetSettings)
+        foreach (StudentStats.TargetSetting _ts in _tower.allowedTargetSettings)
         {
             string _tsString = "";
             switch(_ts)
             {
-                case Tower.TargetSetting.first:
+                case StudentStats.TargetSetting.first:
                     _tsString = "First";
                     break;
-                case Tower.TargetSetting.last:
+                case StudentStats.TargetSetting.last:
                     _tsString = "Last";
                     break;
-                case Tower.TargetSetting.leastHealth:
+                case StudentStats.TargetSetting.leastHealth:
                     _tsString = "Least Health";
                     break;
-                case Tower.TargetSetting.mostHealth:
+                case StudentStats.TargetSetting.mostHealth:
                     _tsString = "Most Health";
                     break;
             }
@@ -142,24 +147,24 @@ public class InGameUIManager : MonoBehaviour {
             currentlyAllowedTargetSettings.Add(_ts);
         }
 
-        towerTargetPriorityDropdown.AddOptions(_allowedTargetSettings);
+        studentTargetPriorityDropdown.AddOptions(_allowedTargetSettings);
 
-        towerTargetPriorityDropdown.value = currentlyAllowedTargetSettings.IndexOf(_tower.currentTargetSetting);
+        studentTargetPriorityDropdown.value = currentlyAllowedTargetSettings.IndexOf(_tower.currentTargetSetting);
     }
 
     private void HideTowerInfo()
     {
-        instance.towerInformationView.SetActive(false);
+        instance.studentInformationView.SetActive(false);
 
-        if (instance.towerInfo == null)
+        if (instance.currentStudentStats == null)
             return;
 
-        instance.towerInfo.rangeView.GetComponent<MeshRenderer>().enabled = false; //Show the range of the tower
-        instance.towerInfo = null;
+        instance.currentStudentStats.rangeView.GetComponent<MeshRenderer>().enabled = false; //Show the range of the tower
+        instance.currentStudentStats = null;
     }
 
     public void ChangedTowerTargetPriority()
     {
-        towerInfo.currentTargetSetting = currentlyAllowedTargetSettings[towerTargetPriorityDropdown.value];
+        currentStudentStats.currentTargetSetting = currentlyAllowedTargetSettings[studentTargetPriorityDropdown.value];
     }
 }

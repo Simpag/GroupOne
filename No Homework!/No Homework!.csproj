@@ -338,10 +338,11 @@
     <Compile Include="Assets\Scripts\InGame\Teachers\TeacherParent.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\TeacherStats.cs" />
     <Compile Include="Assets\Scripts\InGame\Tower\Bullet.cs" />
-    <Compile Include="Assets\Scripts\InGame\Tower\ThrowingStudent.cs" />
-    <Compile Include="Assets\Scripts\InGame\Tower\Tower.cs" />
-    <Compile Include="Assets\Scripts\InGame\Tower\TowerArea.cs" />
-    <Compile Include="Assets\Scripts\InGame\Tower\TowerRange.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower\Student Classes\ThrowingStudent.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower\StudentArea.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower\StudentParent.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower\StudentRange.cs" />
+    <Compile Include="Assets\Scripts\InGame\Tower\StudentStats.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\InGame\WaveSpawner\Waypoints.cs" />
     <Compile Include="Assets\Scripts\LoginMenu\Managers\GameSparksAuthService.cs" />

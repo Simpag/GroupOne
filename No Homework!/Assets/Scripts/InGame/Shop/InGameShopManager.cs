@@ -47,12 +47,12 @@ public class InGameShopManager : MonoBehaviour {
 
     public static void PurchasedTower (InGameShopItemStats _bought)
     {
-        PlayerStats.RemoveCandyCurrency(_bought.Cost);
+        PlayerStats.RemoveCandyCurrency(_bought.BaseCost);
     }
 
     public static void StartTowerSelection(InGameShopItemStats _tower)
     {
-        if (PlayerStats.CandyCurrency >= _tower.Cost)
+        if (PlayerStats.CandyCurrency >= _tower.BaseCost)
             BuildManager.SelectTowerToBuild(_tower);
         else
         {
@@ -60,15 +60,35 @@ public class InGameShopManager : MonoBehaviour {
         }
     }
 
-    public static bool UpgradeTower(Tower _info)
+    public static bool UpgradeTower(StudentStats _info, int _row)
     {
-        if (_info == null || _info.towerLevel >= _info.numberOfUpgrades)
+        if (_info == null || !Instance.CanUpgradeRow(_info, _row) || _row > 2 || _row < 1)
             return false;
 
-        if (PlayerStats.CandyCurrency >= _info.shopStats.UpgradeCost)
+        float _currentRowUpgradeCost = float.MaxValue;
+
+        switch (_row)
         {
-            _info.UpgradeTower();
-            PlayerStats.RemoveCandyCurrency(_info.shopStats.Cost);
+            case 1:
+                _currentRowUpgradeCost = _info.shopStats.UpgradeRow1Cost[_info.Row1Level];
+                break;
+            case 2:
+                _currentRowUpgradeCost = _info.shopStats.UpgradeRow2Cost[_info.Row2Level];
+                break;
+        }
+
+        if (PlayerStats.CandyCurrency >= _currentRowUpgradeCost)
+        {
+            switch (_row)
+            {
+                case 1:
+                    _info.UpgradeRow1();
+                    break;
+                case 2:
+                    _info.UpgradeRow2();
+                    break;
+            }
+            PlayerStats.RemoveCandyCurrency(_currentRowUpgradeCost); // Fix this
             return true;
         }
         else
@@ -76,6 +96,28 @@ public class InGameShopManager : MonoBehaviour {
             Debug.Log("Not enought money!");
             return false;
         }
+    }
+
+    private bool CanUpgradeRow(StudentStats _info, int _row)
+    {
+        switch (_row)
+        {
+            case 1:
+                if (_info.Row2Level <= 1 && _row == 1 && _info.Row1Level < 3)
+                {
+                    return true;
+                }
+                break;
+            case 2:
+                if (_info.Row1Level <= 1 && _row == 2 && _info.Row2Level < 3)
+                {
+                    return true;
+                }
+                break;
+        }
+
+        Debug.LogError("Could not upgrade row: " + _row);
+        return false;
     }
 
     private void SetupShopItems()

@@ -16,14 +16,15 @@ public class GameConstants {
 
     //Game constants
     public static string TEACHER_TAG = "Teacher";
-    public static string TOWER_AREA_TAG = "TowerArea";
+    public static string STUDENT_AREA_TAG = "StudentArea";
 
     //Multiplayer constants
     public const string RANDOM_MATCHMAKING_SHORTCODE = "RandomMatchMaking";
-    public const int OPCODE_TOWER = 1;
-    public const int OPCODE_TOWER_UPGRADE = 2;
+    public const int OPCODE_STUDENT_BUILT = 1;
+    public const int OPCODE_STUDENT_UPGRADE = 2;
 
-    public const uint PACKET_TOWER_ID = 1;
-    public const uint PACKET_TOWER_GUID = 2;
-    public const uint PACKET_TOWER_POSITION = 3;
+    public const uint PACKET_STUDENT_ID = 1;
+    public const uint PACKET_STUDENT_GUID = 2;
+    public const uint PACKET_STUDENT_POSITION = 3;
+    public const uint PACKET_STUDENT_UPGRADE_ROW = 4;
 }

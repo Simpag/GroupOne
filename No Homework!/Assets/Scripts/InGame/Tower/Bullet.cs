@@ -59,7 +59,7 @@ public class Bullet : MonoBehaviour {
         GameObject _effect = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(_effect, impactEffect.GetComponent<ParticleSystem>().main.startLifetime.constant);
 
-        if (AOE > 0)
+        if (AOE != 0)
         {
             DamageAOE();
         } else

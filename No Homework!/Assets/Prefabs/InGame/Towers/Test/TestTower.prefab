@@ -89,8 +89,8 @@ GameObject:
   - component: {fileID: 114608196461530672}
   - component: {fileID: 54989066733239346}
   m_Layer: 10
-  m_Name: TowerArea
-  m_TagString: TowerArea
+  m_Name: StudentArea
+  m_TagString: StudentArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -703,35 +703,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9484820b4bb05c844bc2c87b959df345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: 0
-  allowedTargetSettings: 
+  studentType: 0
+  allowedTargetSettings: 000000000100000002000000
   currentTargetSetting: 0
-  numberOfUpgrades: 1
-  area: 1.6
-  range: 10
-  rotationSpeed: 10
-  standardMesh: {fileID: 1311523560391506}
+  canBeSlowed: 0
   pivotPoint: {fileID: 4744386241757664}
   firePoint: {fileID: 4479675179198608}
-  towerArea: {fileID: 1439013549004866}
+  studentArea: {fileID: 1439013549004866}
   rangeView: {fileID: 4366698155748994}
   rangeMaterial: {fileID: 2100000, guid: 01b03e2d690e0474390aec86416beb57, type: 2}
   cantPlaceMaterial: {fileID: 2100000, guid: 6412fc3553a6c8843951e36ae2352e0b, type: 2}
-  damage: 50
-  AOE: -1
-  bulletSpeed: 70
-  fireRate: 2
-  bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
-    type: 2}
-  upgradedMesh: {fileID: 1716343027190860, guid: 89234a7a6742df54ca9607300f3c10f4,
-    type: 2}
-  upgradedDamage: 75
-  upgradedBulletSpeed: 70
-  upgradedArea: 1.6
-  upgradedRange: 12.5
-  upgradedFireRate: 2.5
-  towerName: Test Tower
-  towerDescription: This is the description of Test Tower
+  baseStat:
+    mesh: {fileID: 1311523560391506}
+    damage: 35
+    bulletSpeed: 10
+    AOE: 0
+    area: 1.25
+    range: 8
+    fireRate: 10
+    rotationSpeed: 5
+    bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
+      type: 2}
+  row1Stats: []
+  row2Stats: []
+  studentName: Test Student
+  studentDescription: This is just a testing student
   target: {fileID: 0}
   shopStats:
     shortCode: Store_Test_Item
@@ -740,9 +736,10 @@ MonoBehaviour:
     cost: 250
     upgradeCost: 200
     towerId: 0
-  towerLevel: 0
   isYours: 1
-  towerGUID: 
+  studentGUID: 
+  row1Level: 0
+  row2Level: 0
 --- !u!114 &114608196461530672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -766,7 +763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 356034934c3b4e24690e82a9f6cccd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTag: Enemy
 --- !u!135 &135908115409333342
 SphereCollider:
   m_ObjectHideFlags: 1

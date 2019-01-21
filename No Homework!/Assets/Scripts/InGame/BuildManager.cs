@@ -24,12 +24,12 @@ public class BuildManager : MonoBehaviour {
     [SerializeField]
     private LayerMask towerLayer;
 
-    public List<Tower> builtTowers;
+    public List<StudentStats> builtTowers;
 
     //Building variables
     public InGameShopItemStats towerToBuild;
     private Transform followingTowerTransform;
-    private Tower followingTower;
+    private StudentStats followingTower;
     [HideInInspector]
     public bool canBuild;
     private Vector3 locationToBuild;
@@ -42,7 +42,7 @@ public class BuildManager : MonoBehaviour {
     }
 
     //Tower info variables
-    private Tower tower;
+    private StudentStats tower;
 
     void Start()
     {
@@ -63,7 +63,7 @@ public class BuildManager : MonoBehaviour {
 
         canBuild = true;
         towerIsSelected = false;
-        builtTowers = new List<Tower>();
+        builtTowers = new List<StudentStats>();
     }
 
     private void Update()
@@ -81,7 +81,7 @@ public class BuildManager : MonoBehaviour {
             if (followingTowerTransform == null)
             {
                 followingTowerTransform = Instantiate(towerToBuild.TowerPrefab, locationToBuild, Quaternion.identity, towerContainer).transform;
-                followingTower = followingTowerTransform.GetComponent<Tower>();
+                followingTower = followingTowerTransform.GetComponent<StudentStats>();
                 followingTower.MovingTower();
             }
             else if (Input.GetMouseButton(0))
@@ -102,7 +102,7 @@ public class BuildManager : MonoBehaviour {
 
                 if (Physics.Raycast(ray, out hit, 100f, towerLayer))
                 {
-                    Tower _tower = hit.transform.GetComponentInParent<Tower>();
+                    StudentStats _tower = hit.transform.GetComponentInParent<StudentStats>();
 
                     if (_tower.isYours == true)
                     {
@@ -155,13 +155,23 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
-    public void UpgradeTower(Tower _towerInfo)
+    public void UpgradeStudentRow1(StudentStats _towerInfo)
     {
-        bool _success = InGameShopManager.UpgradeTower(_towerInfo);
+        bool _success = InGameShopManager.UpgradeTower(_towerInfo, 1);
         
         if (_success && GameManager.IsMultiplayer)
         {
-            MultiplayerManager.SendTowerUpgradeToPartner(_towerInfo);
+            MultiplayerManager.SendTowerUpgradeToPartner(_towerInfo, 1);
+        }
+    }
+
+    public void UpgradeStudentRow2(StudentStats _towerInfo)
+    {
+        bool _success = InGameShopManager.UpgradeTower(_towerInfo, 2);
+
+        if (_success && GameManager.IsMultiplayer)
+        {
+            MultiplayerManager.SendTowerUpgradeToPartner(_towerInfo, 2);
         }
     }
 
@@ -170,11 +180,11 @@ public class BuildManager : MonoBehaviour {
         AudioManager.Instance.Play("TowerPlacedSound");
 
         Transform _tower = Instantiate(_prefab, _position, Quaternion.identity, towerContainer).transform;
-        _tower.GetComponent<Tower>().PlacedTower();
-        _tower.GetComponent<Tower>().isYours = false;
-        _tower.GetComponent<Tower>().towerGUID = _towerGUID;
+        _tower.GetComponent<StudentStats>().PlacedTower();
+        _tower.GetComponent<StudentStats>().isYours = false;
+        _tower.GetComponent<StudentStats>().studentGUID = _towerGUID;
 
-        builtTowers.Add(_tower.GetComponent<Tower>());
+        builtTowers.Add(_tower.GetComponent<StudentStats>());
 
         //Debug.Log("Recived tower with GUID: " + _towerGUID);
     }

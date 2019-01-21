@@ -890,11 +890,11 @@ MonoBehaviour:
   shopAnim: {fileID: 979301668}
   shopView: {fileID: 961877474}
   showShopButton: {fileID: 1866182367}
-  towerInformationView: {fileID: 132446299}
-  towerInformationName: {fileID: 2054034329}
-  towerInformationDescription: {fileID: 793695591}
-  towerTargetPriorityDropdown: {fileID: 509731742}
-  towerUpgradeCost: {fileID: 401616827}
+  studentInformationView: {fileID: 0}
+  studentInformationName: {fileID: 0}
+  studentInformationDescription: {fileID: 0}
+  studentTargetPriorityDropdown: {fileID: 0}
+  studentUpgradeCost: {fileID: 0}
 --- !u!114 &418931206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2983,8 +2983,9 @@ MonoBehaviour:
     shortCode: 
     tower: 0
     towerPrefab: {fileID: 0}
-    cost: 0
-    upgradeCost: 0
+    baseCost: 0
+    upgradeRow1Cost: []
+    upgradeRow2Cost: []
     towerId: 
   canBuild: 0
 --- !u!4 &1270874967
@@ -3517,7 +3518,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1796965157125280, guid: 4bdfd129f1cb83349a3ea05f87bdf718, type: 2}
       propertyPath: m_TagString
-      value: CanPlaceTower
+      value: CanPlaceStudent
       objectReference: {fileID: 0}
     - target: {fileID: 1919673321954570, guid: 4bdfd129f1cb83349a3ea05f87bdf718, type: 2}
       propertyPath: m_Layer
@@ -3529,11 +3530,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1951584117437178, guid: 4bdfd129f1cb83349a3ea05f87bdf718, type: 2}
       propertyPath: m_TagString
-      value: CanPlaceTower
+      value: CanPlaceStudent
       objectReference: {fileID: 0}
     - target: {fileID: 1546169692069174, guid: 4bdfd129f1cb83349a3ea05f87bdf718, type: 2}
       propertyPath: m_TagString
-      value: CanPlaceTower
+      value: CanPlaceStudent
       objectReference: {fileID: 0}
     - target: {fileID: 1546169692069174, guid: 4bdfd129f1cb83349a3ea05f87bdf718, type: 2}
       propertyPath: m_Layer
@@ -3545,7 +3546,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1302341478305448, guid: 4bdfd129f1cb83349a3ea05f87bdf718, type: 2}
       propertyPath: m_TagString
-      value: CanPlaceTower
+      value: CanPlaceStudent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bdfd129f1cb83349a3ea05f87bdf718, type: 2}
@@ -3864,15 +3865,29 @@ MonoBehaviour:
     tower: 0
     towerPrefab: {fileID: 1716343027190860, guid: ecccea8eb04e5354389ce1bdf4b50c5b,
       type: 2}
-    cost: 300
-    upgradeCost: 250
+    baseCost: 300
+    upgradeRow1Cost:
+    - 100
+    - 150
+    - 200
+    upgradeRow2Cost:
+    - 50
+    - 100
+    - 150
     towerId: 0
   - shortCode: Store_FootballPlayer_Item
     tower: 1
     towerPrefab: {fileID: 1751474608837356, guid: 2abe5907e00af934f825bf6774f48446,
       type: 2}
-    cost: 600
-    upgradeCost: 550
+    baseCost: 600
+    upgradeRow1Cost:
+    - 100
+    - 200
+    - 300
+    upgradeRow2Cost:
+    - 50
+    - 100
+    - 150
     towerId: 1
   unlockedShopItems: []
 --- !u!4 &1799740963
