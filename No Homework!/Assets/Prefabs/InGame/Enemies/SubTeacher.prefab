@@ -246,7 +246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f3d324413264a4fac5104ece0e165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teacher: {fileID: 0}
   homework: 5
   health: 100
   worth: 20

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameConstants {
 
+    //Student constants
+    public const int NUMBER_OF_UPGRADES = 3;
+
     //Item specific tags
     public const string ITEM_STORE = "STOREITEM";
 
@@ -23,7 +26,7 @@ public class GameConstants {
     public const int OPCODE_STUDENT_BUILT = 1;
     public const int OPCODE_STUDENT_UPGRADE = 2;
 
-    public const uint PACKET_STUDENT_ID = 1;
+    public const uint PACKET_STUDENT_SHORTCODE = 1;
     public const uint PACKET_STUDENT_GUID = 2;
     public const uint PACKET_STUDENT_POSITION = 3;
     public const uint PACKET_STUDENT_UPGRADE_ROW = 4;

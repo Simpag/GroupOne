@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(TeacherMovement))]
 public class TeacherStats : MonoBehaviour {
 
-    [SerializeField]
     private TeacherParent teacher;
 	[SerializeField]
     private int homework;
@@ -69,5 +68,15 @@ public class TeacherStats : MonoBehaviour {
         {
             movement.Died(true);
         }
+    }
+
+    public void SlowTeacher()
+    {
+
+    }
+
+    private void ReturnToNormalSpeed()
+    {
+
     }
 }

@@ -159,7 +159,7 @@ public class MultiplayerManager : MonoBehaviour {
         // this is a disposable object, so we wrap it in this using statement to make sure it is returned to the pool //
         using (RTData data = RTData.Get())
         {
-            data.SetString(GameConstants.PACKET_STUDENT_ID, _tower.shopStats.TowerId); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
+            data.SetString(GameConstants.PACKET_STUDENT_SHORTCODE, _tower.shopStats.ShortCode); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
             data.SetString(GameConstants.PACKET_STUDENT_GUID, _tower.studentGUID);
             data.SetVector3(GameConstants.PACKET_STUDENT_POSITION, _position); // we are also going to send the time at which the user sent this message
 
@@ -190,14 +190,14 @@ public class MultiplayerManager : MonoBehaviour {
         AudioManager.Instance.Play("TowerPlacedSound");
         GameObject _prefab = null;
 
-        string _towerId = (string)_packet.Data.GetString(GameConstants.PACKET_STUDENT_ID);
+        string _towerSC = (string)_packet.Data.GetString(GameConstants.PACKET_STUDENT_SHORTCODE);
         string _towerGUID = (string)_packet.Data.GetString(GameConstants.PACKET_STUDENT_GUID);
         Vector3 _position = (Vector3)_packet.Data.GetVector3(GameConstants.PACKET_STUDENT_POSITION);
 
         //Find the right tower prefab based on towerId
         foreach (InGameShopItemStats _stat in InGameShopManager.Instance.allShopItems)
         {
-            if (_stat.TowerId == _towerId)
+            if (_stat.ShortCode == _towerSC)
             {
                 _prefab = _stat.TowerPrefab;
             }

@@ -233,7 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f3d324413264a4fac5104ece0e165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teacher: {fileID: 0}
   homework: 10
   health: 150
   worth: 40
@@ -250,7 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2012be9dafd03f45902d8bd5ca68024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
   waypointMargin: 0.4
   meshTransform: {fileID: 4147702530572948}
   meshDirections:

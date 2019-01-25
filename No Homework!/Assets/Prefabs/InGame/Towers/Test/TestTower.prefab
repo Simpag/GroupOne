@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 4247681999216024}
   - component: {fileID: 114357347539434430}
   - component: {fileID: 114214625229433322}
+  - component: {fileID: 114405087588715490}
   m_Layer: 0
   m_Name: TestTower
   m_TagString: Untagged
@@ -703,7 +704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9484820b4bb05c844bc2c87b959df345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  studentType: 0
   allowedTargetSettings: 000000000100000002000000
   currentTargetSetting: 0
   canBeSlowed: 0
@@ -733,13 +733,24 @@ MonoBehaviour:
     shortCode: Store_Test_Item
     tower: 0
     towerPrefab: {fileID: 1716343027190860}
-    cost: 250
-    upgradeCost: 200
-    towerId: 0
+    baseCost: 0
+    upgradeRow1Cost: []
+    upgradeRow2Cost: []
   isYours: 1
   studentGUID: 
   row1Level: 0
   row2Level: 0
+--- !u!114 &114405087588715490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716343027190860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1916c9b2429e0ba4e9d08057fb5ef42f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114608196461530672
 MonoBehaviour:
   m_ObjectHideFlags: 1

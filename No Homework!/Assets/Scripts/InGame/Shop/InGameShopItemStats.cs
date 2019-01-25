@@ -17,8 +17,6 @@ public class InGameShopItemStats {
     private float[] upgradeRow1Cost;
     [SerializeField]
     private float[] upgradeRow2Cost;
-    [SerializeField]
-    private string towerId;
 
     public string ShortCode
     {
@@ -46,10 +44,6 @@ public class InGameShopItemStats {
     public float[] UpgradeRow2Cost
     {
         get { return upgradeRow2Cost; }
-    }
-    public string TowerId
-    {
-        get { return towerId; }
     }
 
     //public void Setup (InGameShopItemStats _stat)

@@ -103,13 +103,13 @@ public class InGameShopManager : MonoBehaviour {
         switch (_row)
         {
             case 1:
-                if (_info.Row2Level <= 1 && _row == 1 && _info.Row1Level < 3)
+                if (_info.Row2Level <= 1 && _row == 1 && _info.Row1Level < GameConstants.NUMBER_OF_UPGRADES)
                 {
                     return true;
                 }
                 break;
             case 2:
-                if (_info.Row1Level <= 1 && _row == 2 && _info.Row2Level < 3)
+                if (_info.Row1Level <= 1 && _row == 2 && _info.Row2Level < GameConstants.NUMBER_OF_UPGRADES)
                 {
                     return true;
                 }
