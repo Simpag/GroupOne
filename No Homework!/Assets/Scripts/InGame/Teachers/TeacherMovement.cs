@@ -18,7 +18,6 @@ public class TeacherMovement : MonoBehaviour {
     [SerializeField]
     private Vector3[] meshDirections;
 
-    private float speed;
     private Transform target;
     private int waypointIndex;
 
@@ -30,7 +29,6 @@ public class TeacherMovement : MonoBehaviour {
     {
         stats = GetComponent<TeacherStats>();
 
-        speed = stats.Speed;
         waypointIndex = 0;
         target = Waypoints.waypoints[waypointIndex];
         distanceTraveled = 0f;
@@ -39,8 +37,8 @@ public class TeacherMovement : MonoBehaviour {
     private void Update()
     {
         Vector3 _dir = (target.position - transform.position).normalized;
-        transform.Translate(_dir * speed * Time.deltaTime, Space.World);
-        distanceTraveled += speed * Time.deltaTime;
+        transform.Translate(_dir * stats.Speed * Time.deltaTime, Space.World);
+        distanceTraveled += stats.Speed * Time.deltaTime;
 
         if (lastDir != _dir)
         {

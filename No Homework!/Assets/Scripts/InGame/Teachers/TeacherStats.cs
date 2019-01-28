@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(TeacherMovement))]
 public class TeacherStats : MonoBehaviour {
 
-    private TeacherParent teacher;
 	[SerializeField]
     private int homework;
     [SerializeField]
@@ -43,21 +42,36 @@ public class TeacherStats : MonoBehaviour {
         set { ticketsForSpawning = value; }
     }
 
+    private TeacherParent teacher;
     public TeacherParent Teacher
     {
         get { return teacher; }
     }
+    private TeacherMovement movement;
     public TeacherMovement Movement
     {
         get { return movement; }
     }
-    private TeacherMovement movement;
 
+    private float normalSpeed = 0;
+    private float slowTimer = 0;
 
     private void Awake()
     {
         movement = GetComponent<TeacherMovement>();
         teacher = GetComponent<TeacherParent>();
+    }
+
+    private void Update()
+    {
+        if (normalSpeed != 0 && slowTimer <= 0)
+        {
+            ReturnToNormalSpeed();
+        }
+        else if (normalSpeed != 0)
+        {
+            slowTimer -= Time.deltaTime;
+        }
     }
 
     public void TakeDamage (float _amount)
@@ -70,13 +84,19 @@ public class TeacherStats : MonoBehaviour {
         }
     }
 
-    public void SlowTeacher()
+    public void SlowTeacher(float _amount, float _time)
     {
-
+        normalSpeed = speed;
+        speed *= 1 - _amount;
+        slowTimer = _time;
     }
 
     private void ReturnToNormalSpeed()
     {
-
+        if (normalSpeed != 0)
+        {
+            speed = normalSpeed;
+            normalSpeed = 0;
+        }
     }
 }

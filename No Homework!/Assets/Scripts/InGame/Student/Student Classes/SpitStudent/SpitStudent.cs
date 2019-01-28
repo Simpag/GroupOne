@@ -6,12 +6,4 @@ using UnityEngine;
 [System.Serializable]
 public class SpitStudent : StudentParent {
 
-    private StudentStats student;
-
-    private void Awake()
-    {
-        student = GetComponent<StudentStats>();
-    }
-
-
 }

@@ -119,8 +119,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4247681999216024}
   - component: {fileID: 114357347539434430}
-  - component: {fileID: 114214625229433322}
   - component: {fileID: 114405087588715490}
+  - component: {fileID: 114214625229433322}
   m_Layer: 0
   m_Name: TestTower
   m_TagString: Untagged
@@ -717,13 +717,15 @@ MonoBehaviour:
     mesh: {fileID: 1311523560391506}
     damage: 35
     bulletSpeed: 10
-    AOE: 0
     area: 1.25
     range: 8
     fireRate: 10
     rotationSpeed: 5
     bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
       type: 2}
+    AOERadius: 0
+    slowAmount: 0
+    slowDuration: 0
   row1Stats: []
   row2Stats: []
   studentName: Test Student
@@ -733,9 +735,15 @@ MonoBehaviour:
     shortCode: Store_Test_Item
     tower: 0
     towerPrefab: {fileID: 1716343027190860}
-    baseCost: 0
-    upgradeRow1Cost: []
-    upgradeRow2Cost: []
+    baseCost: 300
+    upgradeRow1Cost:
+    - 100
+    - 150
+    - 200
+    upgradeRow2Cost:
+    - 50
+    - 100
+    - 150
   isYours: 1
   studentGUID: 
   row1Level: 0
@@ -762,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d38d737017f8ac4e88c9181f18456a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerAreaTag: TowerArea
+  student: {fileID: 0}
 --- !u!114 &114731394737948840
 MonoBehaviour:
   m_ObjectHideFlags: 1

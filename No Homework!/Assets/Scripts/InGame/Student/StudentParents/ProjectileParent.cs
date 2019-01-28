@@ -6,7 +6,7 @@ public class ProjectileParent : MonoBehaviour {
 
 	[Header("General Info")]
 	[SerializeField]
-    protected LayerMask EnemyLayer;
+    protected LayerMask TeacherLayer;
     [SerializeField]
     protected GameObject impactEffect;
 
@@ -15,24 +15,20 @@ public class ProjectileParent : MonoBehaviour {
     protected Transform target;
 
     protected TeacherStats teacherTarget;
-    protected float speed;
-    protected float damage;
-    protected float AOE; //Area of effect
+    protected StudentStats.StudentStat currentStat;
 
-    public void Setup(float _speed, float _damage, float _AOE)
+    public virtual void Setup(StudentStats.StudentStat _stat)
     {
-        speed = _speed;
-        damage = _damage;
-        AOE = _AOE; //Area of effect
+        currentStat = _stat;
     }
 
-    public void Seek (Transform _target)
+    public virtual void Seek (Transform _target)
     {
         target = _target;
         teacherTarget = _target.GetComponent<TeacherStats>();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (target == null) //Target died
         {            
@@ -41,7 +37,7 @@ public class ProjectileParent : MonoBehaviour {
         }
 
         Vector3 dir = target.position - transform.position;
-        float distanceThisFrame = speed * Time.deltaTime;
+        float distanceThisFrame = currentStat.bulletSpeed * Time.deltaTime;
         
         if (dir.magnitude <= distanceThisFrame) //If the distance between the bullet and target is less than the distance the bullet will travel
         {
@@ -53,9 +49,9 @@ public class ProjectileParent : MonoBehaviour {
         transform.LookAt(target);
     }
 
-    private void HitTarget()
+    protected virtual void HitTarget()
     {
-        if (AOE != 0)
+        if (currentStat.AOERadius != 0)
         {
             DamageAOE();
         } else
@@ -71,7 +67,7 @@ public class ProjectileParent : MonoBehaviour {
         GameObject _effect = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(_effect, impactEffect.GetComponent<ParticleSystem>().main.startLifetime.constant);
         
-        _teacher.GetComponent<TeacherStats>().TakeDamage(damage);
+        _teacher.TakeDamage(currentStat.damage);
     }
 
     protected virtual void DamageAOE()
@@ -80,7 +76,7 @@ public class ProjectileParent : MonoBehaviour {
         GameObject _effect = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(_effect, impactEffect.GetComponent<ParticleSystem>().main.startLifetime.constant);
 
-        Collider[] _collided = Physics.OverlapSphere(transform.position, AOE, EnemyLayer);
+        Collider[] _collided = Physics.OverlapSphere(transform.position, currentStat.AOERadius, TeacherLayer);
 
         foreach (Collider _enemy in _collided)
         {

@@ -4,22 +4,15 @@ using UnityEngine;
 
 public class SpitBallProjectile : ProjectileParent {
 
-	protected override void DamageAOE()
+    protected override void DamageEnemy(TeacherStats _teacher)
     {
-        GameObject _effect = Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(_effect, impactEffect.GetComponent<ParticleSystem>().main.startLifetime.constant);
+        base.DamageEnemy(_teacher);
 
-        Collider[] _collided = Physics.OverlapSphere(transform.position, AOE, EnemyLayer);
-
-        foreach (Collider _enemy in _collided)
-        {
-            DamageEnemy(_enemy.GetComponent<TeacherStats>());
-        }
+        SlowTeacher(_teacher);
     }
 
-    private void SlowEnemy(TeacherStats _teacher)
+    private void SlowTeacher(TeacherStats _teacher)
     {
-
+        _teacher.SlowTeacher(currentStat.slowAmount / 100f, currentStat.slowDuration);
     }
-
 }

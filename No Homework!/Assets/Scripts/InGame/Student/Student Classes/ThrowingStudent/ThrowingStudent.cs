@@ -6,11 +6,4 @@ using UnityEngine;
 [System.Serializable]
 public class ThrowingStudent : StudentParent {
 
-    private StudentStats student;
-
-    private void Awake()
-    {
-        student = GetComponent<StudentStats>();
-    }
-
 }

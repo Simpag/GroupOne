@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using System.Linq;
-using System.Diagnostics;
-using UnityEditor;
 
 /*[Serializable] public class TargetSettingDictionary : SerializableDictionary<Tower.TargetSetting, bool> { }
 [CustomPropertyDrawer(typeof(TargetSettingDictionary))]
@@ -16,15 +14,28 @@ public class StudentStats : MonoBehaviour {
     [System.Serializable]
     public struct StudentStat
     {
+        [Header("Normal")]
         public GameObject mesh;
         public float damage;
         public float bulletSpeed;
-        public float AOERadius;
         public float area;
         public float range;
-        public float fireRate;
+        public float firerate;
         public float rotationSpeed;
         public GameObject bulletPrefab;
+
+        [Header("AOE")]
+        public float AOERadius;
+
+        [Header("Slow")]
+        public float slowAmount;
+        public float slowDuration;
+
+        [Header("Buff/Money Generation")]
+        public float moneyGeneration;
+        public float damageBuff;
+        public float rangeBuff;
+        public float firerateBuff;
     }
     public enum TargetSetting
     {
@@ -86,7 +97,9 @@ public class StudentStats : MonoBehaviour {
 
     private StudentStat currentStat;
     private ProjectileParent bullet;
-    private float baseFireRate;
+
+    private float normalFireRate = 0;
+    private float slowTimer = 0;
 
     private bool isActive = false;
 
@@ -104,6 +117,18 @@ public class StudentStats : MonoBehaviour {
         Setup(true);
     }
 
+    private void Update()
+    {
+        if (normalFireRate != 0 && slowTimer <= 0)
+        {
+            ReturnToNormalFireRate();
+        }
+        else if (normalFireRate != 0)
+        {
+            slowTimer -= Time.deltaTime;
+        }
+    }
+
     private void Setup(bool isStart)
     {
         rangeView.localScale = new Vector3(currentStat.range * 2, rangeView.localScale.y, currentStat.range * 2);
@@ -119,12 +144,10 @@ public class StudentStats : MonoBehaviour {
                 currentTargetSetting = allowedTargetSettings.ElementAt(0);
 
             bullet = baseStat.bulletPrefab.GetComponent<ProjectileParent>();
-            bullet.Setup(baseStat.bulletSpeed, baseStat.damage, baseStat.AOE);
+            bullet.Setup(baseStat);
 
             Guid tempGUID = Guid.NewGuid();
             studentGUID = tempGUID.ToString();
-
-            baseFireRate = 0;
 
             student = GetComponent<StudentParent>();
 
@@ -163,12 +186,9 @@ public class StudentStats : MonoBehaviour {
         Instantiate(row1Stats[row1Level - 1].mesh, pivotPoint);
 
         //Update the current stat
-        currentStat = row1Stats[row1Level - 1];
-        Setup(false);
+        AddStat(row1Stats[row1Level - 1]);
 
-        //Update bullet stats
-        bullet = currentStat.bulletPrefab.GetComponent<ProjectileParent>();
-        bullet.Setup(currentStat.bulletSpeed, currentStat.damage, currentStat.AOE);
+        UpdateSetups();
     }
 
     public void UpgradeRow2()
@@ -180,30 +200,51 @@ public class StudentStats : MonoBehaviour {
         Instantiate(row2Stats[row2Level - 1].mesh, pivotPoint);
 
         //Update the current stat
-        currentStat = row2Stats[row2Level - 1];
+        AddStat(row2Stats[row2Level - 1]);
+
+        UpdateSetups();
+    }
+
+    private void AddStat(StudentStat _stat)
+    {
+        currentStat.mesh = _stat.mesh;
+        currentStat.bulletPrefab = _stat.bulletPrefab;
+        currentStat.damage += _stat.damage;
+        currentStat.bulletSpeed += _stat.bulletSpeed;
+        currentStat.AOERadius += _stat.AOERadius;
+        currentStat.area += _stat.area;
+        currentStat.range += _stat.range;
+        currentStat.firerate += _stat.firerate;
+        currentStat.rotationSpeed += _stat.rotationSpeed;
+        currentStat.slowAmount += _stat.slowAmount;
+        currentStat.slowDuration += _stat.slowDuration;
+}
+
+    private void UpdateSetups()
+    {
         Setup(false);
 
         //Update bullet stats
         bullet = currentStat.bulletPrefab.GetComponent<ProjectileParent>();
-        bullet.Setup(currentStat.bulletSpeed, currentStat.damage, currentStat.AOE);
+        bullet.Setup(currentStat);
     }
 
-    public void Slow(float _amount, float _time)
+    public void SlowStudent(float _amount, float _time)
     {
-        if (canBeSlowed && baseFireRate == 0)
+        if (canBeSlowed && normalFireRate == 0)
         {
-            baseFireRate = currentStat.fireRate;
-            currentStat.fireRate *= _amount;
-            Invoke("RemoveSlow", _time);
+            normalFireRate = currentStat.firerate;
+            currentStat.firerate *= 1 - _amount;
+            slowTimer = _time;
         }
     }
 
-    private void RemoveSlow()
+    private void ReturnToNormalFireRate()
     {
-        if (baseFireRate != 0)
+        if (normalFireRate != 0)
         {
-            currentStat.fireRate = baseFireRate;
-            baseFireRate = 0;
+            currentStat.firerate = normalFireRate;
+            normalFireRate = 0;
         }
     }
 }

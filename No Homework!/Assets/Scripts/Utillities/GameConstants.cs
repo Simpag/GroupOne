@@ -18,8 +18,9 @@ public class GameConstants {
     public const string GAME_SCENE = "GameScene";
 
     //Game constants
-    public static string TEACHER_TAG = "Teacher";
-    public static string STUDENT_AREA_TAG = "StudentArea";
+    public const string TEACHER_TAG = "Teacher";
+    public const string STUDENT_AREA_TAG = "StudentArea";
+    public const string CAN_PLACE_STUDENT = "CanPlaceStudent";
 
     //Multiplayer constants
     public const string RANDOM_MATCHMAKING_SHORTCODE = "RandomMatchMaking";

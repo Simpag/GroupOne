@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(StudentStats))]
-public class StudentFiring : MonoBehaviour {
+public class StudentParent : MonoBehaviour {
 
-    private StudentStats stat;
-    private float fireCountdown = 0;
+    protected StudentStats stat;
+    protected float fireCountdown = 0;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         stat = GetComponent<StudentStats>();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (stat.target == null || !stat.IsActive)
             return;
@@ -25,7 +25,7 @@ public class StudentFiring : MonoBehaviour {
         Shoot();
     }
 
-    private void Shoot()
+    protected virtual void Shoot()
     {
         if (fireCountdown <= 0)
         {
@@ -39,17 +39,18 @@ public class StudentFiring : MonoBehaviour {
                 _bullet.Seek(stat.target);
             }
 
-            fireCountdown = 1 / stat.CurrentStat.fireRate;
+            fireCountdown = 1 / stat.CurrentStat.firerate;
         }
 
         fireCountdown -= Time.deltaTime;
     }
 
-    private void LockOn()
+    protected virtual void LockOn()
     {
         Vector3 dir = stat.target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(stat.PivotPoint.rotation, lookRotation, Time.deltaTime * stat.CurrentStat.rotationSpeed).eulerAngles;
         stat.PivotPoint.rotation = Quaternion.Euler(stat.PivotPoint.rotation.x, rotation.y, stat.PivotPoint.rotation.z);
     }
+
 }

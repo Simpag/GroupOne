@@ -6,28 +6,20 @@ using UnityEngine;
 public class ChemistryTeacher : TeacherParent {
 
     [Header("Dont forget to add a trigger collider")]
-    [Header("Buff amount (%)")]
+    [Header("Buff amount (%), time in s")]
     [SerializeField]
-    private float slowNerf = 100f;
+    private float slowNerf = 10f;
+    [SerializeField]
+    private float slowTime = 1f;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(GameConstants.TEACHER_TAG))
+        if (other.CompareTag(GameConstants.STUDENT_AREA_TAG))
         {
-            StudentStats _tower = other.GetComponent<StudentStats>();
+            StudentStats _student = other.GetComponent<StudentStats>();
 
-            _tower.Slow(slowNerf / 100f);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag(GameConstants.TEACHER_TAG))
-        {
-            StudentStats _tower = other.GetComponent<StudentStats>();
-
-            _tower.RemoveSlow();
+            _student.SlowStudent((slowNerf / 100f), slowTime);
         }
     }
 }

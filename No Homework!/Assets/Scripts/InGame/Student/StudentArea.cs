@@ -5,7 +5,6 @@ using UnityEngine;
 public class StudentArea : MonoBehaviour {
 
 	[SerializeField]
-	private string towerAreaTag = "TowerArea";
     private StudentStats student;
     private Material rangeMaterial;
 	private Material cantPlaceMaterial;
@@ -21,12 +20,12 @@ public class StudentArea : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag(towerAreaTag))
+        if (collision.gameObject.CompareTag(GameConstants.STUDENT_AREA_TAG))
         {
-			rangeView.material = cantPlaceMaterial;
+            rangeView.material = cantPlaceMaterial;
             BuildManager.Instance.canBuild = false;
         }
-        else if (collision.gameObject.tag == "CanPlaceTower")
+        else if (collision.gameObject.tag == GameConstants.CAN_PLACE_STUDENT)
         {
             rangeView.material = rangeMaterial;
             BuildManager.Instance.canBuild = true;
@@ -35,12 +34,12 @@ public class StudentArea : MonoBehaviour {
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.CompareTag(towerAreaTag))
+        if (collision.gameObject.CompareTag(GameConstants.STUDENT_AREA_TAG))
         {
 			rangeView.material = rangeMaterial;
             BuildManager.Instance.canBuild = true;
         }
-        else if (collision.gameObject.tag == "CanPlaceTower")
+        else if (collision.gameObject.tag == GameConstants.CAN_PLACE_STUDENT)
         {
             rangeView.material = cantPlaceMaterial;
             BuildManager.Instance.canBuild = false;
