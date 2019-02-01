@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 23053577860618374}
   - component: {fileID: 114608196461530672}
   - component: {fileID: 54989066733239346}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: StudentArea
   m_TagString: StudentArea
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 114357347539434430}
   - component: {fileID: 114405087588715490}
   - component: {fileID: 114214625229433322}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TestTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,13 +719,17 @@ MonoBehaviour:
     bulletSpeed: 10
     area: 1.25
     range: 8
-    fireRate: 10
+    firerate: 0
     rotationSpeed: 5
     bulletPrefab: {fileID: 1023274294102036, guid: 6d8c8035991741743b64b4646d2f9729,
       type: 2}
     AOERadius: 0
     slowAmount: 0
     slowDuration: 0
+    moneyGeneration: 0
+    damageBuff: 0
+    rangeBuff: 0
+    firerateBuff: 0
   row1Stats: []
   row2Stats: []
   studentName: Test Student

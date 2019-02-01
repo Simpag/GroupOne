@@ -201,6 +201,12 @@ public class StudentStats : MonoBehaviour {
 
         //Update the current stat
         AddStat(row2Stats[row2Level - 1]);
+    }
+
+    public void BuffStudent(float percentage)
+    {
+        currentStat.damage *= 1f + percentage;
+        currentStat.firerate *= 1f + percentage;
 
         UpdateSetups();
     }
@@ -218,7 +224,9 @@ public class StudentStats : MonoBehaviour {
         currentStat.rotationSpeed += _stat.rotationSpeed;
         currentStat.slowAmount += _stat.slowAmount;
         currentStat.slowDuration += _stat.slowDuration;
-}
+
+        UpdateSetups();
+    }
 
     private void UpdateSetups()
     {
