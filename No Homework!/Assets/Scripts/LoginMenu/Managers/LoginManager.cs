@@ -163,6 +163,8 @@ public class LoginManager : MonoBehaviour
         //Here we have choses what to do when AuthType is None.
         RegisterPanel.SetActive(false);
         LoginPanel.SetActive(true);
+
+        CancelInvoke("connectionFailed");
     }
 
     /// <summary>

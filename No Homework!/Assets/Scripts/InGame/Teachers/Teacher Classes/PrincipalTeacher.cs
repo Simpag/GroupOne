@@ -11,7 +11,8 @@ public class PrincipalTeacher : TeacherParent {
 
     public override void Died(bool _killed)
     {
-        StartCoroutine(WaveSpawner.Instance.SpawnTeachers(spawnBudget, transform.root));
+        StartCoroutine(WaveSpawner.Instance.SpawnTeachers(spawnBudget, transform.root, 0.1f));
+
         base.Died(_killed);
     }
 }

@@ -26,8 +26,11 @@ public class InGameShopManager : MonoBehaviour {
 
     public enum TowerList
     {
-        test,
-        FotballPlayer
+        ThrowingStudent,
+        SpitStudent,
+        SlingshotStudent,
+        NerdStudent,
+        FootballStudent
     }
 
     private void Awake()

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(TeacherMovement))]
 public class TeacherStats : MonoBehaviour {
 
 	[SerializeField]
@@ -60,6 +59,9 @@ public class TeacherStats : MonoBehaviour {
     {
         movement = GetComponent<TeacherMovement>();
         teacher = GetComponent<TeacherParent>();
+
+        if (teacher == null)
+            teacher = GetComponentInChildren<TeacherParent>();
     }
 
     private void Update()

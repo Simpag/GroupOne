@@ -121,7 +121,7 @@ public class WaveSpawner : MonoBehaviour {
         //0.03x^2+2sin(x)+5
         int _budget = (int)(Mathf.RoundToInt((float)(0.03 * Mathf.Pow(waveIndex, 2) + Mathf.Sin(waveIndex) + 5)) * 2) * 100;
 
-        StartCoroutine(SpawnTeachers(_budget, teacherContainer));
+        StartCoroutine(SpawnTeachers(_budget, teacherContainer, algSpawnDelay));
 
         waveIndex++;
     }
@@ -134,7 +134,7 @@ public class WaveSpawner : MonoBehaviour {
         }
     }
 
-    public IEnumerator SpawnTeachers(int _budget, Transform _container)
+    public IEnumerator SpawnTeachers(int _budget, Transform _container, float _delay)
     {
         isSpawning = true;
 
@@ -151,7 +151,7 @@ public class WaveSpawner : MonoBehaviour {
         for (int i = 0; i < _teachersToSpawn.Count; i++)
         {
             SpawnTeacher(_teachersToSpawn[i], _container); //Replace with enemy prefab lateron
-            yield return new WaitForSeconds(algSpawnDelay); // wait to spawn next enemy
+            yield return new WaitForSeconds(_delay); // wait to spawn next enemy
         }
 
         isSpawning = false;

@@ -6,18 +6,22 @@ using UnityEngine;
 [System.Serializable]
 public class NerdStudent : StudentParent {
 
-    [SerializeField]
-    private LayerMask StudentLayer;
-    [SerializeField]
-    private float buffAmount;
+    [Header("Needs some work")]
 
-    public void BuffTowers()
+    [Header("Dont forget to add a trigger collider")]
+  
+    public float buffAmount;
+
+    private bool placed = false;
+
+    protected override void Update()
     {
-        Collider[] _collided = Physics.OverlapSphere(transform.position, stat.CurrentStat.AOERadius, StudentLayer);
-
-        foreach (Collider _student in _collided)
+        if (stat.IsActive && !placed)
         {
-            _student.GetComponent<StudentStats>().BuffStudent(buffAmount);
+            placed = true;
+            stat.rangeView.gameObject.AddComponent<NerdStudentTrigger>();
         }
+
+        return;
     }
 }

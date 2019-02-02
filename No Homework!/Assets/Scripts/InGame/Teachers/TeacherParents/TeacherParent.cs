@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(TeacherStats))]
 public class TeacherParent : MonoBehaviour {
 
     protected TeacherStats stats;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         stats = GetComponent<TeacherStats>();
     }
@@ -22,6 +21,6 @@ public class TeacherParent : MonoBehaviour {
             Debug.Log("Normal Death");
         }
 
-        Destroy(this.gameObject);
+        Destroy(stats.gameObject);
     }
 }

@@ -38,12 +38,6 @@ public class ProjectileParent : MonoBehaviour {
 
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = currentStat.bulletSpeed * Time.deltaTime;
-        
-        if (dir.magnitude <= distanceThisFrame) //If the distance between the bullet and target is less than the distance the bullet will travel
-        {
-            HitTarget();
-            return;
-        }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
         transform.LookAt(target);
@@ -51,7 +45,7 @@ public class ProjectileParent : MonoBehaviour {
 
     protected virtual void HitTarget()
     {
-        if (currentStat.AOERadius != 0)
+        if (System.Math.Abs(currentStat.AOERadius) > Mathf.Epsilon)
         {
             DamageAOE();
         } else
@@ -81,6 +75,15 @@ public class ProjectileParent : MonoBehaviour {
         foreach (Collider _enemy in _collided)
         {
             DamageEnemy(_enemy.GetComponent<TeacherStats>());
+        }
+    }
+
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(GameConstants.TEACHER_TAG)) //If the distance between the bullet and target is less than the distance the bullet will travel
+        {
+            HitTarget();
+            return;
         }
     }
 }

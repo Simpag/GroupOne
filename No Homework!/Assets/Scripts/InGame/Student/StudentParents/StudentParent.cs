@@ -36,6 +36,7 @@ public class StudentParent : MonoBehaviour {
 
             if (_bullet != null)
             {
+                _bullet.Setup(stat.CurrentStat);
                 _bullet.Seek(stat.target);
             }
 

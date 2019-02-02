@@ -20,6 +20,7 @@ public class GameConstants {
     //Game constants
     public const string TEACHER_TAG = "Teacher";
     public const string STUDENT_AREA_TAG = "StudentArea";
+    public const string STUDENT_BUFF_AREA = "StudentBuffArea";
     public const string CAN_PLACE_STUDENT = "CanPlaceStudent";
 
     //Multiplayer constants

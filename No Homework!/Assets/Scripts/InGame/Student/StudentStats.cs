@@ -14,7 +14,8 @@ public class StudentStats : MonoBehaviour {
     [System.Serializable]
     public struct StudentStat
     {
-        [Header("Normal")]
+        [Header("Only fill in the stats that the student will use!")]
+        [Header("Normal Stats")]
         public GameObject mesh;
         public float damage;
         public float bulletSpeed;
@@ -24,14 +25,14 @@ public class StudentStats : MonoBehaviour {
         public float rotationSpeed;
         public GameObject bulletPrefab;
 
-        [Header("AOE")]
+        [Header("AOE Stats")]
         public float AOERadius;
 
-        [Header("Slow")]
+        [Header("Slow Stats")]
         public float slowAmount;
         public float slowDuration;
 
-        [Header("Buff/Money Generation")]
+        [Header("Buff/Money Generation Stats")]
         public float moneyGeneration;
         public float damageBuff;
         public float rangeBuff;
@@ -56,6 +57,8 @@ public class StudentStats : MonoBehaviour {
     public TargetSetting currentTargetSetting;
     [SerializeField]
     private bool canBeSlowed;
+    [SerializeField]
+    private bool canBeBuffed;
 
     [Header("General Setup")]
 	[SerializeField]
@@ -63,6 +66,7 @@ public class StudentStats : MonoBehaviour {
 	[SerializeField]
 	private Transform firePoint;
     public GameObject studentArea;
+    public GameObject studentBuffArea;
 	public Transform rangeView;
 	public Material rangeMaterial;
 	public Material cantPlaceMaterial;
@@ -71,6 +75,7 @@ public class StudentStats : MonoBehaviour {
     [SerializeField]
     private StudentStat baseStat;
 
+    [Header("These stats will be added to the base stat")]
     [Header("Row 1 Upgrades Stats")]
     [SerializeField]
     private StudentStat[] row1Stats;
@@ -94,7 +99,10 @@ public class StudentStats : MonoBehaviour {
     private int row1Level;
     [SerializeField]
     private int row2Level;
+    [SerializeField]
+    private float buffPercentage;
 
+    [SerializeField]
     private StudentStat currentStat;
     private ProjectileParent bullet;
 
@@ -108,7 +116,7 @@ public class StudentStats : MonoBehaviour {
     public int Row1Level { get { return row1Level; } }
     public int Row2Level { get { return row2Level; } }
     public Transform FirePoint { get { return firePoint; } }
-    public Transform PivotPoint { get { return PivotPoint; } }
+    public Transform PivotPoint { get { return pivotPoint; } }
     public StudentStat CurrentStat { get { return currentStat; } }
 
 
@@ -119,11 +127,11 @@ public class StudentStats : MonoBehaviour {
 
     private void Update()
     {
-        if (normalFireRate != 0 && slowTimer <= 0)
+        if (Math.Abs(normalFireRate) > Mathf.Epsilon && slowTimer <= 0)
         {
             ReturnToNormalFireRate();
         }
-        else if (normalFireRate != 0)
+        else if (Math.Abs(normalFireRate) > Mathf.Epsilon)
         {
             slowTimer -= Time.deltaTime;
         }
@@ -131,9 +139,6 @@ public class StudentStats : MonoBehaviour {
 
     private void Setup(bool isStart)
     {
-        rangeView.localScale = new Vector3(currentStat.range * 2, rangeView.localScale.y, currentStat.range * 2);
-        studentArea.transform.localScale = new Vector3(currentStat.area, studentArea.transform.localScale.y, currentStat.area);
-
         if (isStart)
         {
             currentStat = baseStat;
@@ -143,8 +148,10 @@ public class StudentStats : MonoBehaviour {
             else
                 currentTargetSetting = allowedTargetSettings.ElementAt(0);
 
-            bullet = baseStat.bulletPrefab.GetComponent<ProjectileParent>();
-            bullet.Setup(baseStat);
+            if (bullet != null)
+            {
+                bullet = baseStat.bulletPrefab.GetComponent<ProjectileParent>();
+            }
 
             Guid tempGUID = Guid.NewGuid();
             studentGUID = tempGUID.ToString();
@@ -153,7 +160,14 @@ public class StudentStats : MonoBehaviour {
 
             row1Level = 0;
             row2Level = 0;
+            buffPercentage = 0;
         }
+
+        rangeView.localScale = new Vector3(currentStat.range * 2, rangeView.localScale.y, currentStat.range * 2);
+        studentArea.transform.localScale = new Vector3(currentStat.area, studentArea.transform.localScale.y, currentStat.area);
+
+        if (studentBuffArea != null)
+            studentBuffArea.transform.localScale = new Vector3(currentStat.area, studentArea.transform.localScale.y, currentStat.area);
     }
 
     //Show range of turret in editor
@@ -163,18 +177,26 @@ public class StudentStats : MonoBehaviour {
         Gizmos.DrawWireSphere(transform.position, baseStat.range);
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, baseStat.area/2);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, baseStat.AOERadius);
     }
 
     public void MovingTower()
     {
-        rangeView.GetComponent<StudentRange>().enabled = false; //Disable targeting
+        rangeView.GetComponent<MeshRenderer>().enabled = true; //Disable targeting
         isActive = false;
+
+        if (studentBuffArea != null)
+            studentBuffArea.SetActive(false);
     }
 
     public void PlacedTower()
     {
         rangeView.GetComponent<MeshRenderer>().enabled = false; //Disable range view
         isActive = true;
+
+        if (studentBuffArea != null)
+            studentBuffArea.SetActive(true);
     }
 
     public void UpgradeRow1()
@@ -203,10 +225,28 @@ public class StudentStats : MonoBehaviour {
         AddStat(row2Stats[row2Level - 1]);
     }
 
-    public void BuffStudent(float percentage)
+    public void BuffStudent(float _percentage)
     {
-        currentStat.damage *= 1f + percentage;
-        currentStat.firerate *= 1f + percentage;
+        if (buffPercentage >= _percentage || !canBeBuffed)
+            return;
+
+        buffPercentage = _percentage;
+
+        currentStat.damage *= 1f + _percentage;
+        currentStat.firerate *= 1f + _percentage;
+
+        UpdateSetups();
+    }
+
+    public void DebuffStudent(float _percentage)
+    {
+        if (buffPercentage >= _percentage || !canBeBuffed)
+            return;
+
+        buffPercentage = 0;
+
+        currentStat.damage /= 1f + _percentage;
+        currentStat.firerate /= 1f + _percentage;
 
         UpdateSetups();
     }
@@ -234,22 +274,22 @@ public class StudentStats : MonoBehaviour {
 
         //Update bullet stats
         bullet = currentStat.bulletPrefab.GetComponent<ProjectileParent>();
-        bullet.Setup(currentStat);
     }
 
     public void SlowStudent(float _amount, float _time)
     {
-        if (canBeSlowed && normalFireRate == 0)
+        slowTimer = _time;
+
+        if (canBeSlowed && Math.Abs(normalFireRate) < Mathf.Epsilon)
         {
             normalFireRate = currentStat.firerate;
             currentStat.firerate *= 1 - _amount;
-            slowTimer = _time;
         }
     }
 
     private void ReturnToNormalFireRate()
     {
-        if (normalFireRate != 0)
+        if (Math.Abs(normalFireRate) > Mathf.Epsilon)
         {
             currentStat.firerate = normalFireRate;
             normalFireRate = 0;

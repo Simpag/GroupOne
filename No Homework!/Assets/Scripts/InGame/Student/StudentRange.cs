@@ -38,7 +38,7 @@ public class StudentRange : MonoBehaviour {
                 //Select the target with the most health,
                 //or if two enemies have the same amount of health then choose
                 //the first one.
-                if (currentTargetStats.Health == _enemy.Health)
+                if (System.Math.Abs(currentTargetStats.Health - _enemy.Health) < Mathf.Epsilon)
                 {
                     if (currentTargetStats.Movement.DistanceTraveled < _enemy.Movement.DistanceTraveled)
                     {
