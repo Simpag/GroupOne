@@ -18,7 +18,7 @@ public class InGameShopButton : EventTrigger {
     private void Start()
     {
         buttonImage = GetComponent<Image>();
-        cost.text = stats.Cost.ToString();
+        cost.text = stats.BaseCost.ToString();
     }
 
     public override void OnPointerDown(PointerEventData data)

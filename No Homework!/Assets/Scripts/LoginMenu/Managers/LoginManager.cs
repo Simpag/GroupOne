@@ -13,7 +13,7 @@ public class LoginManager : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField]
-    private float timeBeforeOffline;
+    private float timeBeforeOffline = 5f;
 
     //Meta fields for objects in the UI
     [Header("Authentication")]
@@ -87,7 +87,7 @@ public class LoginManager : MonoBehaviour
         GameSparks.Core.GS.Instance.GameSparksAuthenticated += RememberMeAuth;
         GameSparks.Core.GS.Instance.GameSparksAvailable += StartAuth;
 
-        Invoke("connectionFailed", 5f);
+        Invoke("connectionFailed", timeBeforeOffline);
 
         //Bind to UI buttons to perform actions when user interacts with the UI.
         LoginButton.onClick.AddListener(OnLoginButtonClicked);
@@ -163,6 +163,8 @@ public class LoginManager : MonoBehaviour
         //Here we have choses what to do when AuthType is None.
         RegisterPanel.SetActive(false);
         LoginPanel.SetActive(true);
+
+        CancelInvoke("connectionFailed");
     }
 
     /// <summary>

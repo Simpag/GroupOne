@@ -69,7 +69,7 @@ public class AccountInfo : MonoBehaviour {
         {
             if (response.HasErrors)
             {
-                Debug.LogError(response.Errors);
+                Debug.LogError(response.Errors.JSON);
                 return;
             }
 

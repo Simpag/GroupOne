@@ -7,7 +7,12 @@ public class PrincipalTeacher : TeacherParent {
 
     [Header("How much money the death spawner can spend")]
     [SerializeField]
-    private float money = 100;
+    private int spawnBudget = 100;
 
-    
+    public override void Died(bool _killed)
+    {
+        StartCoroutine(WaveSpawner.Instance.SpawnTeachers(spawnBudget, transform.root, 0.1f));
+
+        base.Died(_killed);
+    }
 }

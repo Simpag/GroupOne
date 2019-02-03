@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class ReligionTeacher : TeacherParent {
 
-    private void Awake()
-    {
-        
-    }
+ 
 }

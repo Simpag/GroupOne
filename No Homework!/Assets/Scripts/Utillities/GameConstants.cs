@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameConstants {
 
+    //Student constants
+    public const int NUMBER_OF_UPGRADES = 3;
+
     //Item specific tags
     public const string ITEM_STORE = "STOREITEM";
 
@@ -15,15 +18,18 @@ public class GameConstants {
     public const string GAME_SCENE = "GameScene";
 
     //Game constants
-    public static string TEACHER_TAG = "Teacher";
-    public static string TOWER_AREA_TAG = "TowerArea";
+    public const string TEACHER_TAG = "Teacher";
+    public const string STUDENT_AREA_TAG = "StudentArea";
+    public const string STUDENT_BUFF_AREA = "StudentBuffArea";
+    public const string CAN_PLACE_STUDENT = "CanPlaceStudent";
 
     //Multiplayer constants
     public const string RANDOM_MATCHMAKING_SHORTCODE = "RandomMatchMaking";
-    public const int OPCODE_TOWER = 1;
-    public const int OPCODE_TOWER_UPGRADE = 2;
+    public const int OPCODE_STUDENT_BUILT = 1;
+    public const int OPCODE_STUDENT_UPGRADE = 2;
 
-    public const uint PACKET_TOWER_ID = 1;
-    public const uint PACKET_TOWER_GUID = 2;
-    public const uint PACKET_TOWER_POSITION = 3;
+    public const uint PACKET_STUDENT_SHORTCODE = 1;
+    public const uint PACKET_STUDENT_GUID = 2;
+    public const uint PACKET_STUDENT_POSITION = 3;
+    public const uint PACKET_STUDENT_UPGRADE_ROW = 4;
 }

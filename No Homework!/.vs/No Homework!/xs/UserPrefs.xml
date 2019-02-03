@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{2ADE49D6-4EB6-E11B-90B9-E9ED40653014}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/Teachers/TeacherParents/TeacherParent.cs">
+    <Files>
+      <File FileName="Assets/Scripts/InGame/Teachers/TeacherMovement.cs" Line="96" Column="1" />
+      <File FileName="Assets/Scripts/InGame/Teachers/TeacherStats.cs" Line="64" Column="63" />
+      <File FileName="Assets/Scripts/InGame/Teachers/TeacherParents/TeacherParent.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/InGame/Teachers/Teacher Classes/ChemistryTeacher.cs" Line="15" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
