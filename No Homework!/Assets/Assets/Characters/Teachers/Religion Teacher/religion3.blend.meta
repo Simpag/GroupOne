@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: a0c475c02342c45919d34ac8c10787fb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BezierCircle_001
+    100002: Body_001
+    100004: Bone_004
+    100006: hand_L
+    100008: hand_R
+    100010: head_001
+    100012: lowerarm_L
+    100014: lowerarm_R
+    100016: Lowerfeet_L
+    100018: Lowerfeet_R
+    100020: Lowerleg_L
+    100022: Lowerleg_L_001
+    100024: Lowerleg_R
+    100026: Lowerleg_R_001
+    100028: Lowerspine
+    100030: Midspine
+    100032: neck
+    100034: NecklaceChain_001
+    100036: necklessChain
+    100038: necklessCross
+    100040: Pole_L
+    100042: Pull_R
+    100044: //RootNode
+    100046: Shoulder_L
+    100048: Shoulder_R
+    100050: Upperarm_L
+    100052: Upperarm_R
+    100054: Upperfeet_L
+    100056: Upperfeet_R
+    100058: Upperleg_L
+    100060: Upperleg_R
+    100062: Upperspine
+    400000: BezierCircle_001
+    400002: Body_001
+    400004: Bone_004
+    400006: hand_L
+    400008: hand_R
+    400010: head_001
+    400012: lowerarm_L
+    400014: lowerarm_R
+    400016: Lowerfeet_L
+    400018: Lowerfeet_R
+    400020: Lowerleg_L
+    400022: Lowerleg_L_001
+    400024: Lowerleg_R
+    400026: Lowerleg_R_001
+    400028: Lowerspine
+    400030: Midspine
+    400032: neck
+    400034: NecklaceChain_001
+    400036: necklessChain
+    400038: necklessCross
+    400040: Pole_L
+    400042: Pull_R
+    400044: //RootNode
+    400046: Shoulder_L
+    400048: Shoulder_R
+    400050: Upperarm_L
+    400052: Upperarm_R
+    400054: Upperfeet_L
+    400056: Upperfeet_R
+    400058: Upperleg_L
+    400060: Upperleg_R
+    400062: Upperspine
+    2100000: skin_003__skinLMAO_png_002
+    2100002: skin_003
+    2100004: redFabric
+    2100006: boots__bootLeaher_jpg_002
+    2100008: pantsFabric__jeansFabric_jpg_002
+    2100010: pantsFabric
+    2100012: skin_005__skinLMAO_png_002
+    2100014: redFabric__redFabric_jpg
+    2100016: silverChain_001__silverNecklaceChain_jpg
+    2100018: silverChain__silverNecklaceChain_jpg
+    2100020: goldCross__goldNecklaceCross_jpg
+    2300000: NecklaceChain_001
+    2300002: necklessChain
+    2300004: necklessCross
+    3300000: NecklaceChain_001
+    3300002: necklessChain
+    3300004: necklessCross
+    4300000: BezierCircle_001
+    4300002: head_001
+    4300004: NecklaceChain_001
+    4300006: necklessChain
+    4300008: necklessCross
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: BezierCircle_001
+    13700002: head_001
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -17,6 +17,10 @@ public class TeacherMovement : MonoBehaviour {
     [Header("0:Right 1:Left 2:Up 3:Down")]
     [SerializeField]
     private Vector3[] meshDirections;
+    [SerializeField]
+    private Animator anim;
+    [SerializeField]
+    private float animSpeedOffset = 1f;
 
     private Transform target;
     private int waypointIndex;
@@ -24,6 +28,7 @@ public class TeacherMovement : MonoBehaviour {
     private float distanceTraveled;
     public float DistanceTraveled { get { return distanceTraveled; } }
     private Vector3 lastDir;
+    private float newSpeed, lastSpeed, clipLength;
 
     private void Start()
     {
@@ -32,6 +37,11 @@ public class TeacherMovement : MonoBehaviour {
         waypointIndex = 0;
         target = Waypoints.waypoints[waypointIndex];
         distanceTraveled = 0f;
+
+        clipLength = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        newSpeed = (stats.Speed / clipLength) * animSpeedOffset;
+        anim.speed = newSpeed;
+        lastSpeed = newSpeed;
     }
 
     private void Update()
@@ -50,6 +60,14 @@ public class TeacherMovement : MonoBehaviour {
         if (Vector3.Distance(transform.position, target.position) <= waypointMargin)
         {
             GetNextWaypoint();
+        }
+
+        clipLength = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        newSpeed = (stats.Speed / clipLength) * animSpeedOffset;
+        if (Math.Abs(lastSpeed - newSpeed) > Mathf.Epsilon)
+        {
+            anim.speed = newSpeed;
+            lastSpeed = newSpeed;
         }
     }
 

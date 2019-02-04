@@ -110,6 +110,8 @@
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\ChemistryTeacher.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\ComputerScienceTeacher.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\EconomicsTeacher.cs" />
+    <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\HistoryTeacher.cs" />
+    <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\PETeacher.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\PrincipalTeacher.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\ReligionTeacher.cs" />
     <Compile Include="Assets\Scripts\InGame\Teachers\Teacher Classes\SubstituteTeacher.cs" />
