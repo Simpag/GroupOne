@@ -436,17 +436,17 @@ MonoBehaviour:
   cantPlaceMaterial: {fileID: 2100000, guid: 6412fc3553a6c8843951e36ae2352e0b, type: 2}
   baseStat:
     mesh: {fileID: 1311523560391506}
-    damage: 20
-    bulletSpeed: 12
+    damage: 15
+    bulletSpeed: 20
     area: 1.25
-    range: 8
-    firerate: 15
+    range: 5
+    firerate: 1
     rotationSpeed: 5
-    bulletPrefab: {fileID: 1023274294102036, guid: b870e883949514f3cb9e32844a29cd33,
+    bulletPrefab: {fileID: 1023274294102036, guid: bffb90b4f232f461ea9bb8c5a3721f1a,
       type: 3}
     AOERadius: 0
-    slowAmount: 0
-    slowDuration: 0
+    slowAmount: 20
+    slowDuration: 3
     moneyGeneration: 0
     damageBuff: 0
     rangeBuff: 0
@@ -454,53 +454,104 @@ MonoBehaviour:
   row1Stats:
   - mesh: {fileID: 1311523560391506}
     damage: 5
-    bulletSpeed: 2
+    bulletSpeed: 0
+    area: 0
+    range: 1
+    firerate: 0
+    rotationSpeed: 0
+    bulletPrefab: {fileID: 1023274294102036, guid: bffb90b4f232f461ea9bb8c5a3721f1a,
+      type: 3}
+    AOERadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    moneyGeneration: 0
+    damageBuff: 0
+    rangeBuff: 0
+    firerateBuff: 0
+  - mesh: {fileID: 1311523560391506}
+    damage: 10
+    bulletSpeed: 0
+    area: 0
+    range: 1.5
+    firerate: 0
+    rotationSpeed: 0
+    bulletPrefab: {fileID: 1023274294102036, guid: bffb90b4f232f461ea9bb8c5a3721f1a,
+      type: 3}
+    AOERadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    moneyGeneration: 0
+    damageBuff: 0
+    rangeBuff: 0
+    firerateBuff: 0
+  - mesh: {fileID: 1311523560391506}
+    damage: 15
+    bulletSpeed: 0
     area: 0
     range: 2
-    firerate: 2
+    firerate: 0
     rotationSpeed: 0
-    bulletPrefab: {fileID: 1023274294102036, guid: 74c5d93ccc12e4e2e99300cded51df19,
+    bulletPrefab: {fileID: 1023274294102036, guid: bffb90b4f232f461ea9bb8c5a3721f1a,
       type: 3}
-    AOERadius: 4
-    slowAmount: 50
-    slowDuration: 2
+    AOERadius: 0
+    slowAmount: 5
+    slowDuration: 0
     moneyGeneration: 0
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - mesh: {fileID: 0}
+  row2Stats:
+  - mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
     area: 0
     range: 0
     firerate: 0
     rotationSpeed: 0
-    bulletPrefab: {fileID: 0}
+    bulletPrefab: {fileID: 1023274294102036, guid: bffb90b4f232f461ea9bb8c5a3721f1a,
+      type: 3}
     AOERadius: 0
-    slowAmount: 0
-    slowDuration: 0
+    slowAmount: 5
+    slowDuration: 0.5
     moneyGeneration: 0
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - mesh: {fileID: 0}
+  - mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
     area: 0
     range: 0
     firerate: 0
     rotationSpeed: 0
-    bulletPrefab: {fileID: 0}
+    bulletPrefab: {fileID: 1023274294102036, guid: bffb90b4f232f461ea9bb8c5a3721f1a,
+      type: 3}
     AOERadius: 0
-    slowAmount: 0
-    slowDuration: 0
+    slowAmount: 5
+    slowDuration: 1
     moneyGeneration: 0
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  row2Stats: []
-  studentName: Throwing Student
-  studentDescription: This is just a throwing student
+  - mesh: {fileID: 1311523560391506}
+    damage: -10
+    bulletSpeed: 0
+    area: 0
+    range: 0
+    firerate: 0
+    rotationSpeed: 0
+    bulletPrefab: {fileID: 1023274294102036, guid: bffb90b4f232f461ea9bb8c5a3721f1a,
+      type: 3}
+    AOERadius: 0
+    slowAmount: 10
+    slowDuration: 1.5
+    moneyGeneration: 0
+    damageBuff: 0
+    rangeBuff: 0
+    firerateBuff: 0
+  studentName: Spit Student
+  studentDescription: "\u201CAt the cost of range the spitballer can slow down the
+    teachers!. Upgrades focuses on range or improving the slowing effect.\u201D "
   target: {fileID: 0}
   shopStats:
     shortCode: Store_Test_Item
@@ -519,7 +570,23 @@ MonoBehaviour:
   studentGUID: 
   row1Level: 0
   row2Level: 0
-  buffLevel: 0
+  buffPercentage: 0
+  currentStat:
+    mesh: {fileID: 0}
+    damage: 0
+    bulletSpeed: 0
+    area: 0
+    range: 0
+    firerate: 0
+    rotationSpeed: 0
+    bulletPrefab: {fileID: 0}
+    AOERadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    moneyGeneration: 0
+    damageBuff: 0
+    rangeBuff: 0
+    firerateBuff: 0
 --- !u!114 &4619323241641116057
 MonoBehaviour:
   m_ObjectHideFlags: 0
