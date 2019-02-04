@@ -16,5 +16,5 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__VFXView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
   - __PanelContainer__rootVisualContainer__VFXView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
   m_Values:
-  - '{"position":{"x":-94.90325164794922,"y":242.15724182128907,"z":0.0},"scale":{"x":0.37593701481819155,"y":0.37593701481819155,"z":1.0}}'
-  - '{"m_Version":21,"m_SelectedElementsArray":["301ee351-edf7-4ef4-8ea1-575fbda21d22","46d80e01-988e-4b7c-94a6-2d8ee648d35d","2551120d-27a0-4ba9-9b69-3aaddc1d6363","c6f6fc87-519c-441b-b5ce-e5790300a385","273927a5-1540-4aa1-b315-2075a3e6bb35","NodeID-24676","61dcc6f9-c074-4b24-ae61-ccab470288e1","NodeID-24636","NodeID-24632","a665e794-9ffd-4870-9dc5-f7ff7137d238","2d69de56-5287-4783-bd9a-bc3f376bee32","NodeID-24664","NodeID-24698","NodeID-24666","0c5623a7-03c8-4ae8-b0e9-69a9955a7861","ce23ba6e-f4a7-4497-95d4-cf17c863ebd0","e1291e91-dc73-4758-b31a-9abdd26b457e","271bf8d3-bfc5-4c70-a39b-cdfeb6b738e5","4ec4cba5-9812-4fd1-8eb2-873a5936bf12","01e39e22-c2ae-415e-a1f5-796342c686c4","f6f09a21-22f7-44e3-ab1c-d170e624ffbd"]}'
+  - '{"position":{"x":89.16549682617188,"y":153.63685607910157,"z":0.0},"scale":{"x":0.24718469381332398,"y":0.24718469381332398,"z":1.0}}'
+  - '{"m_Version":176,"m_SelectedElementsArray":["NodeID--111890"]}'
