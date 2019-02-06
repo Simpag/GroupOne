@@ -249,14 +249,14 @@ MonoBehaviour:
     damage: 0
     bulletSpeed: 0
     area: 1.25
-    range: 9
+    range: 5
     firerate: 0
     rotationSpeed: 5
     bulletPrefab: {fileID: 0}
     AOERadius: 0
     slowAmount: 0
     slowDuration: 0
-    moneyGeneration: 50
+    moneyGeneration: 150
     damageBuff: 10
     rangeBuff: 10
     firerateBuff: 10
@@ -265,18 +265,18 @@ MonoBehaviour:
     damage: 0
     bulletSpeed: 0
     area: 0
-    range: 3
+    range: 0
     firerate: 0
     rotationSpeed: 0
     bulletPrefab: {fileID: 0}
     AOERadius: 0
     slowAmount: 0
     slowDuration: 0
-    moneyGeneration: 0
+    moneyGeneration: 50
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - mesh: {fileID: 0}
+  - mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
     area: 0
@@ -287,11 +287,11 @@ MonoBehaviour:
     AOERadius: 0
     slowAmount: 0
     slowDuration: 0
-    moneyGeneration: 0
+    moneyGeneration: 100
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - mesh: {fileID: 0}
+  - mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
     area: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
     AOERadius: 0
     slowAmount: 0
     slowDuration: 0
-    moneyGeneration: 0
+    moneyGeneration: 150
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
@@ -353,7 +353,9 @@ MonoBehaviour:
     rangeBuff: 0
     firerateBuff: 0
   studentName: Nerd Student
-  studentDescription: This is the nerdiest of nerds.
+  studentDescription: "\u201CThe nerd doesn\u2019t fight any teachers but instead
+    he does home work, buffs other kids and gives money every round! Upgrades focuses
+    on buffing kids or money generation.\u201D"
   target: {fileID: 0}
   shopStats:
     shortCode: Store_NerdStudent_Item
@@ -372,7 +374,7 @@ MonoBehaviour:
   studentGUID: 
   row1Level: 0
   row2Level: 0
-  buffLevel: 0
+  buffPercentage: 0
   currentStat:
     mesh: {fileID: 0}
     damage: 0
@@ -402,7 +404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffAmount: 20
-  buffLevel: 1
 --- !u!1 &1884402945581702
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,6 +35,8 @@ public class InGameUIManager : MonoBehaviour {
     private StudentStats currentStudentStats;
     private List<StudentStats.TargetSetting> currentlyAllowedTargetSettings;
 
+    private float shopTimer = 0;
+
     private void Awake()
     {
         //Create singleton
@@ -68,6 +70,11 @@ public class InGameUIManager : MonoBehaviour {
             if (studentInformationView.activeSelf)
                 HideTowerInfo();
         }
+
+        if(shopTimer > 0)
+        {
+            shopTimer -= Time.deltaTime;
+        }
     }
 
     public static void UpdateHomework ()
@@ -82,6 +89,9 @@ public class InGameUIManager : MonoBehaviour {
 
     public void ShowOrHideShop()
     {
+        if (shopTimer > Mathf.Epsilon)
+            return;
+            
         if (shopView.activeSelf) //Hide
         {
             shopAnim.SetTrigger("Hide");
@@ -92,6 +102,8 @@ public class InGameUIManager : MonoBehaviour {
 
             HideTowerInfo();
         }
+
+        shopTimer = 0.5f;
     }
 
     public void UpgradeSelectedStudentRow1()

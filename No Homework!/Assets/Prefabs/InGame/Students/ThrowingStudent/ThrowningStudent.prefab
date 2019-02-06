@@ -437,7 +437,7 @@ MonoBehaviour:
   baseStat:
     mesh: {fileID: 1311523560391506}
     damage: 35
-    bulletSpeed: 10
+    bulletSpeed: 15
     area: 1.25
     range: 8
     firerate: 2
@@ -454,9 +454,41 @@ MonoBehaviour:
   row1Stats:
   - mesh: {fileID: 1311523560391506}
     damage: 5
+    bulletSpeed: 0
+    area: 0
+    range: 0
+    firerate: 1
+    rotationSpeed: 0
+    bulletPrefab: {fileID: 1023274294102036, guid: 24c0b7e09f03d4d99939e07d7a83564b,
+      type: 3}
+    AOERadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    moneyGeneration: 0
+    damageBuff: 0
+    rangeBuff: 0
+    firerateBuff: 0
+  - mesh: {fileID: 1311523560391506}
+    damage: 10
+    bulletSpeed: 0
+    area: 0
+    range: 0
+    firerate: 1
+    rotationSpeed: 0
+    bulletPrefab: {fileID: 1023274294102036, guid: 24c0b7e09f03d4d99939e07d7a83564b,
+      type: 3}
+    AOERadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    moneyGeneration: 0
+    damageBuff: 0
+    rangeBuff: 0
+    firerateBuff: 0
+  - mesh: {fileID: 1311523560391506}
+    damage: 0
     bulletSpeed: 2
     area: 0
-    range: 2
+    range: 0
     firerate: 2
     rotationSpeed: 0
     bulletPrefab: {fileID: 1023274294102036, guid: 24c0b7e09f03d4d99939e07d7a83564b,
@@ -468,14 +500,16 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - mesh: {fileID: 0}
+  row2Stats:
+  - mesh: {fileID: 1413778432566610}
     damage: 0
     bulletSpeed: 0
     area: 0
-    range: 0
+    range: 0.5
     firerate: 0
     rotationSpeed: 0
-    bulletPrefab: {fileID: 0}
+    bulletPrefab: {fileID: 1023274294102036, guid: 24c0b7e09f03d4d99939e07d7a83564b,
+      type: 3}
     AOERadius: 0
     slowAmount: 0
     slowDuration: 0
@@ -483,14 +517,15 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - mesh: {fileID: 0}
+  - mesh: {fileID: 1413778432566610}
     damage: 0
     bulletSpeed: 0
     area: 0
-    range: 0
+    range: 1
     firerate: 0
     rotationSpeed: 0
-    bulletPrefab: {fileID: 0}
+    bulletPrefab: {fileID: 1023274294102036, guid: 24c0b7e09f03d4d99939e07d7a83564b,
+      type: 3}
     AOERadius: 0
     slowAmount: 0
     slowDuration: 0
@@ -498,9 +533,25 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  row2Stats: []
+  - mesh: {fileID: 1413778432566610}
+    damage: 0
+    bulletSpeed: 0
+    area: 0
+    range: 2
+    firerate: 0
+    rotationSpeed: 0
+    bulletPrefab: {fileID: 1023274294102036, guid: 24c0b7e09f03d4d99939e07d7a83564b,
+      type: 3}
+    AOERadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    moneyGeneration: 0
+    damageBuff: 0
+    rangeBuff: 0
+    firerateBuff: 0
   studentName: Throwing Student
-  studentDescription: This is just a throwing student
+  studentDescription: "\u201C A kid that throws erasers at the teachers. Has Low damage
+    but low cost.\u201D Upgrades focuses on damage and range."
   target: {fileID: 0}
   shopStats:
     shortCode: Store_Test_Item
@@ -519,7 +570,7 @@ MonoBehaviour:
   studentGUID: 
   row1Level: 0
   row2Level: 0
-  buffLevel: 0
+  buffPercentage: 0
   currentStat:
     mesh: {fileID: 0}
     damage: 0
