@@ -13,6 +13,10 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private Text candyText;
 
+    [Header("On Screen")]
+    [SerializeField]
+    private GameObject nextWave;
+
     [Header("Shop")]
     [SerializeField]
     private Animator shopAnim;
@@ -31,12 +35,14 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private Dropdown studentTargetPriorityDropdown;
     [SerializeField]
-    private Text studentUpgradeCost;
+    private StudentInfoUpgradeButton[] row1UpgradeButtons;
+    [SerializeField]
+    private StudentInfoUpgradeButton[] row2UpgradeButtons;
     private StudentStats currentStudentStats;
     private List<StudentStats.TargetSetting> currentlyAllowedTargetSettings;
 
     private float shopTimer = 0;
-
+    
     private void Awake()
     {
         //Create singleton
@@ -58,10 +64,17 @@ public class InGameUIManager : MonoBehaviour {
         shopView.SetActive(false);
         studentInformationView.SetActive(false);
         banner.SetActive(true);
+        nextWave.SetActive(true);
     }
 
     private void Update()
     {
+        /*Very bunk, change */
+        if (studentInformationView.activeSelf == false && shopView.activeSelf == false)
+            nextWave.SetActive(true);
+        else
+            nextWave.SetActive(false);
+
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !BuildManager.Instance.TowerIsSelected)
         {
             if (shopView.activeSelf)
@@ -71,7 +84,28 @@ public class InGameUIManager : MonoBehaviour {
                 HideTowerInfo();
         }
 
-        if(shopTimer > 0)
+        if (currentStudentStats != null)
+        {
+            if (currentStudentStats.Row2Level <= 1 && currentStudentStats.Row1Level < GameConstants.NUMBER_OF_UPGRADES && PlayerStats.CandyCurrency >= currentStudentStats.shopStats.UpgradeRow1Cost[currentStudentStats.Row1Level])
+            {
+                row1UpgradeButtons[currentStudentStats.Row1Level].SetState(StudentInfoUpgradeButton.ButtonState.available);
+            }
+            else if (currentStudentStats.Row2Level <= 1 && currentStudentStats.Row1Level < GameConstants.NUMBER_OF_UPGRADES)
+            {
+                row1UpgradeButtons[currentStudentStats.Row1Level].SetState(StudentInfoUpgradeButton.ButtonState.locked);
+            }
+
+            if (currentStudentStats.Row1Level <= 1 && currentStudentStats.Row2Level < GameConstants.NUMBER_OF_UPGRADES && PlayerStats.CandyCurrency >= currentStudentStats.shopStats.UpgradeRow2Cost[currentStudentStats.Row2Level])
+            {
+                row2UpgradeButtons[currentStudentStats.Row2Level].SetState(StudentInfoUpgradeButton.ButtonState.available);
+            }
+            else if (currentStudentStats.Row1Level <= 1 && currentStudentStats.Row2Level < GameConstants.NUMBER_OF_UPGRADES)
+            {
+                row2UpgradeButtons[currentStudentStats.Row2Level].SetState(StudentInfoUpgradeButton.ButtonState.locked);
+            }
+        }
+
+        if (shopTimer > 0)
         {
             shopTimer -= Time.deltaTime;
         }
@@ -108,12 +142,18 @@ public class InGameUIManager : MonoBehaviour {
 
     public void UpgradeSelectedStudentRow1()
     {
-        BuildManager.Instance.UpgradeStudentRow1(currentStudentStats);
+        if (BuildManager.Instance.UpgradeStudentRow1(currentStudentStats))
+            row1UpgradeButtons[currentStudentStats.Row1Level - 1].SetState(StudentInfoUpgradeButton.ButtonState.bought);
+        else
+            row1UpgradeButtons[currentStudentStats.Row1Level].SetState(StudentInfoUpgradeButton.ButtonState.locked);
     }
 
     public void UpgradeSelectedStudentRow2()
     {
-        BuildManager.Instance.UpgradeStudentRow2(currentStudentStats);
+        if (BuildManager.Instance.UpgradeStudentRow2(currentStudentStats)) //If completed
+            row2UpgradeButtons[currentStudentStats.Row2Level - 1].SetState(StudentInfoUpgradeButton.ButtonState.bought);
+        else
+            row2UpgradeButtons[currentStudentStats.Row2Level].SetState(StudentInfoUpgradeButton.ButtonState.locked);
     }
 
     public static void ShowTowerInfo (StudentStats _tower)
@@ -123,10 +163,20 @@ public class InGameUIManager : MonoBehaviour {
         instance.studentInformationView.SetActive(true); //Active the windows
         instance.studentInformationName.text = _tower.studentName;  //Set the name of the tower
         instance.studentInformationDescription.text = _tower.studentDescription;    //Set the description
-        instance.studentUpgradeCost.text = _tower.shopStats.UpgradeRow1Cost[0].ToString();   //Set the upgrade cost
-
         instance.SetupTowerTargetPriority(_tower);
 
+        for (int i = 0; i < _tower.Row1Level; i++)
+        {
+            instance.row1UpgradeButtons[i].SetState(StudentInfoUpgradeButton.ButtonState.bought);
+        }
+
+        for (int i = 0; i < _tower.Row2Level; i++)
+        {
+            instance.row2UpgradeButtons[i].SetState(StudentInfoUpgradeButton.ButtonState.bought);
+
+        }
+
+        //Show image
         instance.currentStudentStats.rangeView.GetComponent<MeshRenderer>().enabled = true; //Show the range of the tower
     }
 

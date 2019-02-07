@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 114357347539434430}
   - component: {fileID: 4619323241641116057}
   m_Layer: 0
-  m_Name: SpitballStudent
+  m_Name: SpitStudent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,6 +557,7 @@ MonoBehaviour:
     shortCode: Store_Test_Item
     tower: 0
     towerPrefab: {fileID: 1716343027190860}
+    studentIcon: {fileID: 0}
     baseCost: 300
     upgradeRow1Cost:
     - 100

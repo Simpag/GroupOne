@@ -204,8 +204,8 @@ public class StudentStats : MonoBehaviour {
         row1Level++;
 
         //Replace the mesh
-        currentStat.mesh.SetActive(false);
-        Instantiate(row1Stats[row1Level - 1].mesh, pivotPoint);
+        //currentStat.mesh.SetActive(false);
+        //Instantiate(row1Stats[row1Level - 1].mesh, pivotPoint);
 
         //Update the current stat
         AddStat(row1Stats[row1Level - 1]);
@@ -218,8 +218,8 @@ public class StudentStats : MonoBehaviour {
         row2Level++;
 
         //Replace the mesh
-        currentStat.mesh.SetActive(false);
-        Instantiate(row2Stats[row2Level - 1].mesh, pivotPoint);
+        //currentStat.mesh.SetActive(false);
+        //Instantiate(row2Stats[row2Level - 1].mesh, pivotPoint);
 
         //Update the current stat
         AddStat(row2Stats[row2Level - 1]);
@@ -253,7 +253,7 @@ public class StudentStats : MonoBehaviour {
 
     private void AddStat(StudentStat _stat)
     {
-        currentStat.mesh = _stat.mesh;
+        //currentStat.mesh = _stat.mesh;
         currentStat.bulletPrefab = _stat.bulletPrefab;
         currentStat.damage += _stat.damage;
         currentStat.bulletSpeed += _stat.bulletSpeed;

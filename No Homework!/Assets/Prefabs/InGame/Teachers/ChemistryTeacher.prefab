@@ -58,6 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089c1c6497a5c924e8c9774395b8dba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 3097303182489222065, guid: 20d5f5f77005ed546820e6b8b90872d0,
+    type: 3}
   slowNerf: 10
   slowTime: 1
 --- !u!54 &7446138586952407877
@@ -193,8 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   homework: 10
-  health: 150
-  worth: 40
+  health: 200
+  worth: 200
   speed: 10
   ticketsForSpawning: 50
 --- !u!65 &4647486297599161217
@@ -268,6 +270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chemist animation
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 2da9c3388d4c1457e86a3b92b2212b30, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ec96395ad6ed944318130481b22b15cc, type: 2}
     - target: {fileID: 400002, guid: 2da9c3388d4c1457e86a3b92b2212b30, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -312,10 +318,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 2da9c3388d4c1457e86a3b92b2212b30, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ec96395ad6ed944318130481b22b15cc, type: 2}
     - target: {fileID: 13700000, guid: 2da9c3388d4c1457e86a3b92b2212b30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

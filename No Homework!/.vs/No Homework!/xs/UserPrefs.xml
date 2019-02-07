@@ -1,5 +1,9 @@
 ﻿<Properties StartupConfiguration="{2ADE49D6-4EB6-E11B-90B9-E9ED40653014}|">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/InGameUIManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/InGame/InGameUIManager.cs" Line="76" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />

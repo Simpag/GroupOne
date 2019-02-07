@@ -106,13 +106,13 @@ public class InGameShopManager : MonoBehaviour {
         switch (_row)
         {
             case 1:
-                if (_info.Row2Level <= 1 && _row == 1 && _info.Row1Level < GameConstants.NUMBER_OF_UPGRADES)
+                if ((_info.Row2Level <= 1 || _info.Row1Level < 1) && _info.Row1Level < GameConstants.NUMBER_OF_UPGRADES)
                 {
                     return true;
                 }
                 break;
             case 2:
-                if (_info.Row1Level <= 1 && _row == 2 && _info.Row2Level < GameConstants.NUMBER_OF_UPGRADES)
+                if ((_info.Row1Level <= 1 || _info.Row2Level < 1) && _info.Row2Level < GameConstants.NUMBER_OF_UPGRADES)
                 {
                     return true;
                 }
@@ -153,7 +153,7 @@ public class InGameShopManager : MonoBehaviour {
         {
             GameObject _shopGo = Instantiate(ShopPrefab, shopView);
 
-            _shopGo.GetComponent<InGameShopButton>().stats = _stats;
+            _shopGo.GetComponent<InGameShopButton>().stat = _stats;
         }
     }
 }

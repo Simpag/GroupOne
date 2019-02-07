@@ -155,7 +155,7 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
-    public void UpgradeStudentRow1(StudentStats _towerInfo)
+    public bool UpgradeStudentRow1(StudentStats _towerInfo)
     {
         bool _success = InGameShopManager.UpgradeTower(_towerInfo, 1);
         
@@ -163,9 +163,11 @@ public class BuildManager : MonoBehaviour {
         {
             MultiplayerManager.SendTowerUpgradeToPartner(_towerInfo, 1);
         }
+
+        return _success;
     }
 
-    public void UpgradeStudentRow2(StudentStats _towerInfo)
+    public bool UpgradeStudentRow2(StudentStats _towerInfo)
     {
         bool _success = InGameShopManager.UpgradeTower(_towerInfo, 2);
 
@@ -173,6 +175,8 @@ public class BuildManager : MonoBehaviour {
         {
             MultiplayerManager.SendTowerUpgradeToPartner(_towerInfo, 2);
         }
+
+        return _success;
     }
 
     public void BuildPartnerTower(GameObject _prefab, Vector3 _position, string _towerGUID)

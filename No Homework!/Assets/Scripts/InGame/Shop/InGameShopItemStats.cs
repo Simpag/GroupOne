@@ -12,6 +12,8 @@ public class InGameShopItemStats {
     [SerializeField]
     private GameObject towerPrefab;
     [SerializeField]
+    private Sprite studentIcon;
+    [SerializeField]
     private float baseCost;
     [SerializeField]
     private float[] upgradeRow1Cost;
@@ -32,6 +34,10 @@ public class InGameShopItemStats {
     {
         //Set the shopstats then return the prefab with the stats
         get { towerPrefab.GetComponent<StudentStats>().shopStats = this; return towerPrefab; }
+    }
+    public Sprite StudentIcon
+    {
+        get { return studentIcon; }
     }
     public float BaseCost
     {

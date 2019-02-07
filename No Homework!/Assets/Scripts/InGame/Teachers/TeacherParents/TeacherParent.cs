@@ -6,6 +6,9 @@ public class TeacherParent : MonoBehaviour {
 
     protected TeacherStats stats;
 
+    [SerializeField]
+    protected GameObject deathEffect;
+
     protected virtual void Awake()
     {
         stats = GetComponent<TeacherStats>();
@@ -17,6 +20,9 @@ public class TeacherParent : MonoBehaviour {
         {
             AudioManager.Instance.Play("EnemyKnockSound");
             PlayerStats.AddCandyCurrency(stats.Worth);
+
+            GameObject _effect = Instantiate(deathEffect, transform.position, transform.rotation);
+            Destroy(_effect, deathEffect.GetComponent<ParticleSystem>().main.startLifetime.constant);
 
             Debug.Log("Normal Death");
         }

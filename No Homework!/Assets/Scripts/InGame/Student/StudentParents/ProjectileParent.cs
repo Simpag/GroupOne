@@ -48,7 +48,8 @@ public class ProjectileParent : MonoBehaviour {
         if (System.Math.Abs(currentStat.AOERadius) > Mathf.Epsilon)
         {
             DamageAOE();
-        } else
+        } 
+        else
         {
             DamageEnemy(teacherTarget);
         }

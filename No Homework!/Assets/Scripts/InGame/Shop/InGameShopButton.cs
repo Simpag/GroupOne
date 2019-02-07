@@ -6,24 +6,23 @@ using UnityEngine.UI;
 
 public class InGameShopButton : EventTrigger {
 
-    private Image buttonImage;
-    public InGameShopItemStats stats;
+    private Image buttonImage, studentIcon;
+    public InGameShopItemStats stat;
     private Text cost;
-
-    private void Awake()
-    {
-        cost = GetComponentInChildren<Text>();
-    }
 
     private void Start()
     {
+        cost = GetComponentInChildren<Text>();
         buttonImage = GetComponent<Image>();
-        cost.text = stats.BaseCost.ToString();
+        studentIcon = transform.Find("StudentIcon").GetComponent<Image>();
+
+        cost.text = stat.BaseCost.ToString();
+        studentIcon.sprite = stat.StudentIcon;
     }
 
     public override void OnPointerDown(PointerEventData data)
     {
-        SelectTower(stats.Tower);
+        SelectTower(stat.Tower);
     }
 
     public override void OnPointerEnter(PointerEventData data)
@@ -38,7 +37,7 @@ public class InGameShopButton : EventTrigger {
 
     private void SelectTower(InGameShopManager.TowerList _tower)
     {
-        InGameShopManager.StartTowerSelection(InGameShopManager.Instance.allShopItems[(int)_tower]);
+        InGameShopManager.StartTowerSelection(stat);
     }
 
     private void HighliteButton(bool highlite)
