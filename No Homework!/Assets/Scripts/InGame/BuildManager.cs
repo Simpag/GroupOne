@@ -44,6 +44,8 @@ public class BuildManager : MonoBehaviour {
     //Tower info variables
     private StudentStats tower;
 
+    private float shopTimer;
+
     void Start()
     {
         cam = Camera.main;
@@ -68,6 +70,9 @@ public class BuildManager : MonoBehaviour {
 
     private void Update()
     {
+        if (shopTimer > 0) //this is very bunk
+            shopTimer -= Time.deltaTime;
+
         if (towerIsSelected) //Building a tower
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -83,6 +88,8 @@ public class BuildManager : MonoBehaviour {
                 followingTowerTransform = Instantiate(towerToBuild.TowerPrefab, locationToBuild, Quaternion.identity, towerContainer).transform;
                 followingTower = followingTowerTransform.GetComponent<StudentStats>();
                 followingTower.MovingTower();
+
+                shopTimer = 1f;
             }
             else if (Input.GetMouseButton(0))
             {
@@ -90,7 +97,19 @@ public class BuildManager : MonoBehaviour {
             }
             else if (Input.GetMouseButtonUp(0))
             {
-                BuildTower();
+                if (shopTimer <= 0) //This is very bunk
+                {
+                    BuildTower();
+                }
+                else
+                {
+                    //Reset variables
+                    Destroy(followingTowerTransform.gameObject);
+                    followingTowerTransform = null;
+                    towerToBuild = null;
+                    towerIsSelected = false;
+                }
+
             }
         }
         else // Tower info

@@ -16,6 +16,8 @@ public class InGameUIManager : MonoBehaviour {
     [Header("On Screen")]
     [SerializeField]
     private GameObject nextWave;
+    [SerializeField]
+    private Text waveIndex;
 
     [Header("Shop")]
     [SerializeField]
@@ -119,6 +121,11 @@ public class InGameUIManager : MonoBehaviour {
     public static void UpdateCandyText ()
     {
         instance.candyText.text = Mathf.RoundToInt(PlayerStats.CandyCurrency).ToString();
+    }
+
+    public static void UpdateWaveIndex()
+    {
+        instance.waveIndex.text = "Wave: " + WaveSpawner.Instance.WaveIndex.ToString();
     }
 
     public void ShowOrHideShop()

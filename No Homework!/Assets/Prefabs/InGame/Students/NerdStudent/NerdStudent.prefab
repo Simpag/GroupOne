@@ -249,7 +249,7 @@ MonoBehaviour:
     mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
-    area: 1.25
+    area: 4.91
     range: 5
     firerate: 0
     rotationSpeed: 5
@@ -733,7 +733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2377262087143084777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5933155514998014932}
@@ -1323,7 +1323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7161109243029367985}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 4.37, y: 0, z: 0.75}
+  m_LocalPosition: {x: 4.37, y: 0, z: -0.79999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7469661812962301902}

@@ -248,7 +248,7 @@ MonoBehaviour:
   baseStat:
     mesh: {fileID: 1311523560391506}
     damage: 40
-    bulletSpeed: 20
+    bulletSpeed: 30
     area: 1.25
     range: 9
     firerate: 2

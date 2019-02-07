@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour {
     public static void EndGame()
     {
         instance.isGameActive = false;
+        SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
     }
 
     public static void PlayOffline()

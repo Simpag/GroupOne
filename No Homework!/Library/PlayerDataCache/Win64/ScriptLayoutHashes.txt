@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-/Users/SimonsDator/Desktop/beta/beta/No Homework!.exe
+/Users/SimonsDator/Desktop/NoHomework/beta1.3/No Homework!.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity
@@ -39,7 +39,7 @@ af93f9c42e90877a9ba31e37adfd900c Unity.Postprocessing.Runtime.dll:UnityEngine.Re
 1f0602e7bad1e0a9cba31ce292eee8bb Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerVBox
 d2cfc5129c384df07dfdb8f71bca26b8 Assembly-CSharp.dll:.TeacherParent
 321dce969f1704d676527ee15a4ded1e Unity.VisualEffectGraph.Runtime.dll:UnityEngine.VFX.Utils.VFXRigidBodyCollisionEventBinder
-50f1596b160674331dd6db06b1d00b86 Assembly-CSharp.dll:.InGameUIManager
+2016f5e85d620eac9b3068bd40394917 Assembly-CSharp.dll:.InGameUIManager
 df234238698383141666442be576639b Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.RenderPipelineResources
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -169,7 +169,7 @@ ea768af7fe4ca0f18f65e30dd717c8dc Unity.RenderPipelines.HighDefinition.Runtime.dl
 7c7f9d590951f28bf7095fba988414f2 Assembly-CSharp.dll:.EconomicsTeacher
 5c2a2df122ff85322cd770df9892d754 Unity.VisualEffectGraph.Runtime.dll:UnityEngine.VFX.Utils.VFXPositionBinder
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.VisualEffectGraph.Runtime.dll:UnityEditor.VFX.VFXCustomSpawnerTest
-f8476ed0aba700bf012ce545f4089b7f Assembly-CSharp.dll:.HomeworkBar
+389769e468ef1a04d63c185c1045e9a6 Assembly-CSharp.dll:.HomeworkBar
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 d2cfc5129c384df07dfdb8f71bca26b8 Assembly-CSharp.dll:.SubstituteTeacher
 5e1eefcd5106de6c2e85908a3b2d3f04 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerToggle

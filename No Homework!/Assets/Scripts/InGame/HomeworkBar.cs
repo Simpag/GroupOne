@@ -13,10 +13,8 @@ public class HomeworkBar : MonoBehaviour {
     }
 
     public Image homeworkBar;
-
-    public int add = 0;
-
-    private float maxHomework = 250f;
+    
+    public float maxHomework = 250f;
 
     private void Awake()
     {
@@ -34,15 +32,6 @@ public class HomeworkBar : MonoBehaviour {
     private void Start()
     {
         UpdateHomeworkBar();
-    }
-
-    private void Update()
-    {
-        if (add != 0)
-        {
-            PlayerStats.AddHomework(add);
-            add = 0;
-        }
     }
 
     // Update is called once per frame
