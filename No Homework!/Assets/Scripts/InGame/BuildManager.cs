@@ -14,7 +14,6 @@ public class BuildManager : MonoBehaviour {
     public static BuildManager Instance
     {
         get { return instance; }
-        set { instance = value; }
     }
 
     [SerializeField]

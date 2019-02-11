@@ -71,13 +71,16 @@ public class WaveSpawner : MonoBehaviour {
 
     public void NextRound()
     {
+        if (isSpawning)
+            return;
+
         waveIndex++;
 
-        if (!isSpawning && waveIndex < waves.Length)
+        if (waveIndex < waves.Length)
         {
             StartCoroutine(SpawnWaveFromArray());
         }
-        else if (!isSpawning)
+        else
         {
             SpawnWaveFromAlg();
         }
