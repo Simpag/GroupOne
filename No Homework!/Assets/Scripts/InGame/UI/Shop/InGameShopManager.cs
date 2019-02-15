@@ -48,9 +48,14 @@ public class InGameShopManager : MonoBehaviour {
         SetupShopItems();
     }
 
-    public static void PurchasedTower (InGameShopItemStats _bought)
+    public static void PurchasedStudent(InGameShopItemStats _bought)
     {
         PlayerStats.RemoveCandyCurrency(_bought.BaseCost);
+    }
+
+    public static void SoldStudent(InGameShopItemStats _sold)
+    {
+        PlayerStats.AddCandyCurrency(_sold.SellWorth);
     }
 
     public static void StartTowerSelection(InGameShopItemStats _tower)
@@ -63,7 +68,7 @@ public class InGameShopManager : MonoBehaviour {
         }
     }
 
-    public static bool UpgradeTower(StudentStats _info, int _row)
+    public static bool UpgradeStudent(StudentStats _info, int _row)
     {
         if (_info == null || !Instance.CanUpgradeRow(_info, _row) || _row > 2 || _row < 1)
             return false;
@@ -85,9 +90,11 @@ public class InGameShopManager : MonoBehaviour {
             switch (_row)
             {
                 case 1:
+                    _info.shopStats.SellWorth += _info.shopStats.UpgradeRow1SellWorth[_info.Row1Level];
                     _info.UpgradeRow1();
                     break;
                 case 2:
+                    _info.shopStats.SellWorth += _info.shopStats.UpgradeRow2SellWorth[_info.Row2Level];
                     _info.UpgradeRow2();
                     break;
             }

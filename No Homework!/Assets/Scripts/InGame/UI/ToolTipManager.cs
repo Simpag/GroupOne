@@ -13,6 +13,8 @@ public class ToolTipManager : MonoBehaviour
 
     [SerializeField]
     private Text toolTipText;
+    [SerializeField]
+    private Canvas parentCanvas;
 
     private RectTransform rectTransform;
 
@@ -31,19 +33,39 @@ public class ToolTipManager : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
-    public void ShowToolTip(string _toolTipText, Vector2 _position)
+    public void Start()
     {
-        Debug.Log("Showed: " + _toolTipText);
+        Vector2 pos;
 
-        instance.gameObject.SetActive(true);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentCanvas.transform as RectTransform, Input.mousePosition,
+            parentCanvas.worldCamera,
+            out pos);
+    }
+
+    private void Update()
+    {
+        if (!toolTipText.gameObject.activeSelf)
+            return;
+
+        Vector2 movePos;
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentCanvas.transform as RectTransform,
+            Input.mousePosition, parentCanvas.worldCamera,
+            out movePos);
+
+        transform.position = parentCanvas.transform.TransformPoint(movePos);
+    }
+
+    public void ShowToolTip(string _toolTipText)
+    {
+        toolTipText.gameObject.SetActive(true);
         instance.toolTipText.text = _toolTipText;
-        instance.rectTransform.anchoredPosition = _position;
     }
 
     public void HideToolTip()
     {
-        Debug.Log("Hid tooltip");
-
-        instance.gameObject.SetActive(false);
+        toolTipText.gameObject.SetActive(false);
     }
 }
