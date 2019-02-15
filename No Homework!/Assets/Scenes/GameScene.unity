@@ -360,6 +360,7 @@ RectTransform:
   - {fileID: 1001503330}
   - {fileID: 494560422}
   - {fileID: 1265847259}
+  - {fileID: 1362707826}
   m_Father: {fileID: 418931202}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2887,7 +2888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &960107033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2904,8 +2905,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 7.6}
+  m_SizeDelta: {x: 0, y: -15.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960107034
 MonoBehaviour:
@@ -2933,14 +2934,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 87
-    m_Alignment: 0
+    m_MaxSize: 40
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Throwing Student
 --- !u!222 &960107035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4504,8 +4505,11 @@ MonoBehaviour:
     towerPrefab: {fileID: 0}
     studentIcon: {fileID: 0}
     baseCost: 0
+    sellWorth: 0
     upgradeRow1Cost: []
+    upgradeRow1SellWorth: []
     upgradeRow2Cost: []
+    upgradeRow2SellWorth: []
   canBuild: 0
 --- !u!4 &1270874967
 Transform:
@@ -4742,6 +4746,135 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322672505}
+  m_CullTransparentMesh: 0
+--- !u!1 &1362707825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1362707826}
+  - component: {fileID: 1362707829}
+  - component: {fileID: 1362707828}
+  - component: {fileID: 1362707827}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1362707826
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362707825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1852434526}
+  m_Father: {fileID: 132446300}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 286, y: 0}
+  m_SizeDelta: {x: 73.4, y: 148.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1362707827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362707825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1362707828}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 418931205}
+        m_MethodName: SellSelectedStudent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1362707828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362707825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1362707829
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362707825}
   m_CullTransparentMesh: 0
 --- !u!1 &1413854152
 GameObject:
@@ -5806,70 +5939,115 @@ MonoBehaviour:
       type: 3}
     studentIcon: {fileID: 21300000, guid: 8783b20e4ec4f41a7b22363b54154104, type: 3}
     baseCost: 300
+    sellWorth: 150
     upgradeRow1Cost:
     - 100
     - 150
     - 200
+    upgradeRow1SellWorth:
+    - 50
+    - 50
+    - 50
     upgradeRow2Cost:
     - 50
     - 100
     - 150
+    upgradeRow2SellWorth:
+    - 50
+    - 50
+    - 50
   - shortCode: Store_FootballStudent_Item
     tower: 4
     towerPrefab: {fileID: 1751474608837356, guid: 2abe5907e00af934f825bf6774f48446,
       type: 3}
     studentIcon: {fileID: 21300000, guid: bd3901d8de50a46658059b6813edca1e, type: 3}
     baseCost: 600
+    sellWorth: 300
     upgradeRow1Cost:
     - 100
     - 200
     - 300
+    upgradeRow1SellWorth:
+    - 50
+    - 50
+    - 50
     upgradeRow2Cost:
     - 50
     - 100
     - 150
+    upgradeRow2SellWorth:
+    - 50
+    - 50
+    - 50
   - shortCode: Store_NerdStudent_Item
     tower: 3
     towerPrefab: {fileID: 1716343027190860, guid: 88bb7bee3e7dd4ac7af3e83a78a5b0fc,
       type: 3}
     studentIcon: {fileID: 21300000, guid: 0f7fd834d53af4475bf058ca103fb5d1, type: 3}
     baseCost: 500
+    sellWorth: 250
     upgradeRow1Cost:
     - 100
     - 200
     - 300
+    upgradeRow1SellWorth:
+    - 50
+    - 50
+    - 50
     upgradeRow2Cost:
     - 50
     - 100
     - 150
+    upgradeRow2SellWorth:
+    - 50
+    - 50
+    - 50
   - shortCode: Store_SlingshotStudent_Item
     tower: 2
     towerPrefab: {fileID: 1716343027190860, guid: 4e56f3fb3079d4b888beeaac73ed79a6,
       type: 3}
     studentIcon: {fileID: 21300000, guid: 02dd76bf6eafd4f65aeb8b26b096c531, type: 3}
     baseCost: 700
+    sellWorth: 350
     upgradeRow1Cost:
     - 100
     - 200
     - 300
+    upgradeRow1SellWorth:
+    - 50
+    - 50
+    - 50
     upgradeRow2Cost:
     - 50
     - 100
     - 150
+    upgradeRow2SellWorth:
+    - 50
+    - 50
+    - 50
   - shortCode: Store_SpitballStudent_Item
     tower: 1
     towerPrefab: {fileID: 1716343027190860, guid: 5818dfab781ca47bba2b6bae8faa6a3d,
       type: 3}
     studentIcon: {fileID: 21300000, guid: f88de1f4712dc43b89cbb5780a497be7, type: 3}
     baseCost: 800
+    sellWorth: 400
     upgradeRow1Cost:
     - 100
     - 200
     - 300
+    upgradeRow1SellWorth:
+    - 50
+    - 50
+    - 50
     upgradeRow2Cost:
     - 50
     - 100
     - 150
+    upgradeRow2SellWorth:
+    - 50
+    - 50
+    - 50
   unlockedShopItems: []
 --- !u!4 &1799740963
 Transform:
@@ -6191,6 +6369,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844185320}
   m_CullTransparentMesh: 0
+--- !u!1 &1852434525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1852434526}
+  - component: {fileID: 1852434528}
+  - component: {fileID: 1852434527}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1852434526
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852434525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1362707826}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1852434527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852434525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Sell
+--- !u!222 &1852434528
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852434525}
+  m_CullTransparentMesh: 0
 --- !u!1 &1866182367
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,11 +6729,11 @@ RectTransform:
   m_Father: {fileID: 418931202}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 466, y: 150.2}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.43}
+  m_AnchorMax: {x: 0.5, y: 0.43}
+  m_AnchoredPosition: {x: 0, y: -0.09996033}
+  m_SizeDelta: {x: 466, y: 68.1}
+  m_Pivot: {x: 0.5, y: 0.000000074505806}
 --- !u!114 &1962339006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6490,6 +6747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolTipText: {fileID: 960107034}
+  parentCanvas: {fileID: 528985030}
 --- !u!1 &2015701181
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,8 +43,14 @@ public class InGameShopButton : EventTrigger {
     private void HighliteButton(bool highlite)
     {
         if (highlite)
+        {
+            ToolTipManager.Instance.ShowToolTip(stat.Name);
             buttonImage.CrossFadeAlpha(0.2f, 0.2f, false);
+        }
         else
+        {
+            ToolTipManager.Instance.HideToolTip();
             buttonImage.CrossFadeAlpha(1f, 0.2f, false);
+        }
     }
 }

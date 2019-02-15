@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-/Users/SimonsDator/Desktop/NoHomework/beta1.3/No Homework!.exe
+C:/Users/simon/Desktop/Builds/2019-02-15/No Homework!.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity
@@ -20,8 +20,8 @@ b13de7a0a457cb8e026d4237dc1b5797 Unity.Postprocessing.Runtime.dll:UnityEngine.Re
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GameSparksRTUnity
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
-8747051d8c53856e2def93af4f2a8b08 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
-c5d8c2663a1fd929fe8160c755998615 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
+780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
+bfe92276ffffff8b72df49ef40f0c1ea UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
 1b3bcc00907f1f74e346e850f93a79c2 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioPlayableAsset
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
@@ -37,6 +37,7 @@ e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventH
 af93f9c42e90877a9ba31e37adfd900c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.MotionBlur
 9ac327467393cb6c8045a2fd90ff67e2 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerPersistentCanvas
 1f0602e7bad1e0a9cba31ce292eee8bb Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerVBox
+768e0b2401d6f4fdefbb3f86c12c662e Assembly-CSharp.dll:.ToolTipText
 d2cfc5129c384df07dfdb8f71bca26b8 Assembly-CSharp.dll:.TeacherParent
 321dce969f1704d676527ee15a4ded1e Unity.VisualEffectGraph.Runtime.dll:UnityEngine.VFX.Utils.VFXRigidBodyCollisionEventBinder
 2016f5e85d620eac9b3068bd40394917 Assembly-CSharp.dll:.InGameUIManager
@@ -76,7 +77,8 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 f542c1afca5bb4022f91fdda19b8d622 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.DepthOfField
 7dbf450932234158be58ca2027563dcb Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerVector3
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
-31e8025909058e0bfd1715fab2b2d0b2 Assembly-CSharp.dll:.InGameShopManager
+0a433c4f4f7a132941d7ff06fefae0b2 Assembly-CSharp.dll:.ToolTipManager
+d67d73c54eaa487244a2e7736780a027 Assembly-CSharp.dll:.InGameShopManager
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -121,8 +123,8 @@ de565434bac5d1fe70917171145e9425 Unity.VisualEffectGraph.Runtime.dll:UnityEngine
 ce934b30e00db1993d96f9f8ba88dbe0 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.DecalProjectorComponent
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
-8747051d8c53856e2def93af4f2a8b08 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
-c5d8c2663a1fd929fe8160c755998615 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
+780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
+bfe92276ffffff8b72df49ef40f0c1ea UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
 1b3bcc00907f1f74e346e850f93a79c2 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioPlayableAsset
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
@@ -133,7 +135,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.VisualEffectGraph.Runtime.dll:UnityEditor.VFX.VFXCustomSpawnerSample
 7d1a3e12579b7bd0f94909057ffba8d0 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.CameraSwitcher
-39413d3a8c7a0387c672c893bdc2c53c Assembly-CSharp.dll:.InGameShopButton
+e07edee2e2167914c6b4e504ba438a82 Assembly-CSharp.dll:.InGameShopButton
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.StudentRange
 6fb778e6729b7f6c824fc6ecbfd6272f Assembly-CSharp.dll:.DatabaseManager
@@ -180,7 +182,7 @@ d2cfc5129c384df07dfdb8f71bca26b8 Assembly-CSharp.dll:.HistoryTeacher
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 7349ccdd9ac7c5928e2ec0d9e30ad93a Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.IndirectLightingController
 3f4caab043135399180be6a06ada0122 Assembly-CSharp.dll:.ComputerScienceTeacher
-dbfa5bdd68e07d6fe56421003aca4a77 Assembly-CSharp.dll:.BuildManager
+6c4bbe3a5cf4722a89565266d684c16b Assembly-CSharp.dll:.BuildManager
 04561ab2e3fdef92bfee231b02af44b2 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.ScreenSpaceRefraction
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SlingshotStudent
 e1bbf0ab858085e38fae6b12ebbdcd35 Unity.VisualEffectGraph.Runtime.dll:.VisualEffectActivationTrack
@@ -246,7 +248,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerFloatField
-2be368c35588518cb93bb17113f9e6a5 Assembly-CSharp.dll:.StudentStats
+a4154cd1d1c40ec813453c479d3c483e Assembly-CSharp.dll:.StudentStats
 df819f0bc77c8d047eca1df91bbaa90d Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerPanel
 0a3fa1a367fddc65eb32515029503334 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerButton
 931f489e44eadf809e9310429c99dde5 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension

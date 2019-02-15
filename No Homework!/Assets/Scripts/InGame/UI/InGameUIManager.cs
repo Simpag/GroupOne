@@ -147,6 +147,12 @@ public class InGameUIManager : MonoBehaviour {
         shopTimer = 0.5f;
     }
 
+    public void SellSelectedStudent()
+    {
+        BuildManager.Instance.SellStudent(currentStudentStats);
+        HideTowerInfo();
+    }
+
     public void UpgradeSelectedStudentRow1()
     {
         if (BuildManager.Instance.UpgradeStudentRow1(currentStudentStats))
