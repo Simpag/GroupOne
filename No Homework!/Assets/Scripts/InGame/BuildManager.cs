@@ -14,7 +14,6 @@ public class BuildManager : MonoBehaviour {
     public static BuildManager Instance
     {
         get { return instance; }
-        set { instance = value; }
     }
 
     [SerializeField]
@@ -155,7 +154,7 @@ public class BuildManager : MonoBehaviour {
         if (canBuild)
         {
             AudioManager.Instance.Play("TowerPlacedSound");
-            InGameShopManager.PurchasedTower(towerToBuild);
+            InGameShopManager.PurchasedStudent(towerToBuild);
 
             if (GameManager.IsMultiplayer)
             {
@@ -174,9 +173,16 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
+    public void SellStudent(StudentStats _stats)
+    {
+        Destroy(_stats.gameObject);
+
+        InGameShopManager.SoldStudent(_stats.shopStats);
+    }
+
     public bool UpgradeStudentRow1(StudentStats _towerInfo)
     {
-        bool _success = InGameShopManager.UpgradeTower(_towerInfo, 1);
+        bool _success = InGameShopManager.UpgradeStudent(_towerInfo, 1);
         
         if (_success && GameManager.IsMultiplayer)
         {
@@ -188,7 +194,7 @@ public class BuildManager : MonoBehaviour {
 
     public bool UpgradeStudentRow2(StudentStats _towerInfo)
     {
-        bool _success = InGameShopManager.UpgradeTower(_towerInfo, 2);
+        bool _success = InGameShopManager.UpgradeStudent(_towerInfo, 2);
 
         if (_success && GameManager.IsMultiplayer)
         {
