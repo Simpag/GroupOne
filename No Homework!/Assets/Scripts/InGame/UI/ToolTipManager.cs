@@ -15,8 +15,10 @@ public class ToolTipManager : MonoBehaviour
     private Text toolTipText;
     [SerializeField]
     private Canvas parentCanvas;
+    [SerializeField]
+    private RectTransform toolTipRect;
 
-    private RectTransform rectTransform;
+    private Vector2 offset;
 
     private void Awake()
     {
@@ -29,8 +31,6 @@ public class ToolTipManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        rectTransform = GetComponent<RectTransform>();
     }
 
     public void Start()
@@ -55,13 +55,27 @@ public class ToolTipManager : MonoBehaviour
             Input.mousePosition, parentCanvas.worldCamera,
             out movePos);
 
-        transform.position = parentCanvas.transform.TransformPoint(movePos);
+        if ((Screen.width - (movePos.x + offset.x * 2)) > 0)
+        {
+            //Inside screen space
+            transform.position = parentCanvas.transform.TransformPoint(movePos);
+        }
+        else
+        {
+            //Outside of screen space
+            transform.position = parentCanvas.transform.TransformPoint(new Vector2(Screen.width - offset.x * 4, movePos.y));
+        }
     }
 
     public void ShowToolTip(string _toolTipText)
     {
         toolTipText.gameObject.SetActive(true);
         instance.toolTipText.text = _toolTipText;
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentCanvas.transform as RectTransform,
+            (toolTipRect.rect.size), parentCanvas.worldCamera,
+            out offset);
     }
 
     public void HideToolTip()
