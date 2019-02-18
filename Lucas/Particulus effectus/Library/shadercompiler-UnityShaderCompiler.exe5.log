@@ -1,56 +1,5 @@
 Base path: C:/Program Files/Unity/Hub/Editor/2018.3.5f1/Editor/Data
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=28705 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=56813 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=42709 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=34513 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=42581 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=59293 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=32569 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=49913 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=14563 outsize=32497 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=27467 outsize=15773 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=27467 outsize=301 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=19561 outsize=13729 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=2595 outsize=2573 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=35447 outsize=34501 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=35447 outsize=32769 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=16724 outsize=7821 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=17177 outsize=6893 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=17177 outsize=7029 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=17177 outsize=6805 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=17177 outsize=8773 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=17177 outsize=7957 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=17177 outsize=8077 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=17177 outsize=9941 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=17177 outsize=10773 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=5057 outsize=8901 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4844 outsize=1769 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4200 outsize=1773 ok=1
+  api=4 insize=3509 outsize=1837 ok=1
+Cmd: initializeCompiler
