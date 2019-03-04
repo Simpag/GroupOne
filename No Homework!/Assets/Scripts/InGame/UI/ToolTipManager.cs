@@ -33,15 +33,15 @@ public class ToolTipManager : MonoBehaviour
         }
     }
 
-    public void Start()
-    {
-        Vector2 pos;
+    //public void Start()
+    //{
+    //    Vector2 pos;
 
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            parentCanvas.transform as RectTransform, Input.mousePosition,
-            parentCanvas.worldCamera,
-            out pos);
-    }
+    //    RectTransformUtility.ScreenPointToLocalPointInRectangle(
+    //        parentCanvas.transform as RectTransform, Input.mousePosition,
+    //        parentCanvas.worldCamera,
+    //        out pos);
+    //}
 
     private void Update()
     {
@@ -55,16 +55,13 @@ public class ToolTipManager : MonoBehaviour
             Input.mousePosition, parentCanvas.worldCamera,
             out movePos);
 
-        if ((Screen.width - (movePos.x + offset.x * 2)) > 0)
-        {
-            //Inside screen space
-            transform.position = parentCanvas.transform.TransformPoint(movePos);
+        if ((movePos.x + offset.x/2) >= Screen.width/2)
+        { 
+            //Outside of horizontal screen space
+            movePos.x = Screen.width/2 - offset.x/2;
         }
-        else
-        {
-            //Outside of screen space
-            transform.position = parentCanvas.transform.TransformPoint(new Vector2(Screen.width - offset.x * 4, movePos.y));
-        }
+
+        transform.position = parentCanvas.transform.TransformPoint(movePos);
     }
 
     public void ShowToolTip(string _toolTipText)
@@ -72,10 +69,7 @@ public class ToolTipManager : MonoBehaviour
         toolTipText.gameObject.SetActive(true);
         instance.toolTipText.text = _toolTipText;
 
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            parentCanvas.transform as RectTransform,
-            (toolTipRect.rect.size), parentCanvas.worldCamera,
-            out offset);
+        offset = toolTipRect.rect.size;
     }
 
     public void HideToolTip()
