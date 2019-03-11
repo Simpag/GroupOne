@@ -67,6 +67,7 @@
     <Compile Include="Assets\GameSparks\Editor\GameSparksRestWindow.cs" />
     <Compile Include="Assets\GameSparks\Editor\GameSparksSettingsEditor.cs" />
     <Compile Include="Assets\GameSparks\Editor\GameSparksUnityInspector.cs" />
+    <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>C:/Users/simon/Documents/Github/GroupOne/No Homework!/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>

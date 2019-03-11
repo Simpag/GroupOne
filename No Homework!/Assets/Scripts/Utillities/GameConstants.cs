@@ -27,9 +27,15 @@ public class GameConstants {
     public const string RANDOM_MATCHMAKING_SHORTCODE = "RandomMatchMaking";
     public const int OPCODE_STUDENT_BUILT = 1;
     public const int OPCODE_STUDENT_UPGRADE = 2;
+    public const int OPCODE_ROUND_END_INFO = 3;
+    public const int OPCODE_START_NEW_ROUND = 4;
+    public const int OPCODE_RANDOM_SEED = 5;
 
     public const uint PACKET_STUDENT_SHORTCODE = 1;
     public const uint PACKET_STUDENT_GUID = 2;
     public const uint PACKET_STUDENT_POSITION = 3;
     public const uint PACKET_STUDENT_UPGRADE_ROW = 4;
+    public const uint PACKET_ROUND_END_HOMEWORK = 5;
+    public const uint PACKET_RANDOM_SEED = 6;
+    public const uint PACKET_ROUND_INDEX = 7;
 }

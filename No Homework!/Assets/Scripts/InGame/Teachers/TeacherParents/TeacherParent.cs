@@ -27,6 +27,7 @@ public class TeacherParent : MonoBehaviour {
             Debug.Log("Normal Death");
         }
 
+        WaveSpawner.Instance.TeachersOnScreen--;
         Destroy(stats.gameObject);
     }
 }

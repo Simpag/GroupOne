@@ -43,11 +43,24 @@ public class WaveSpawner : MonoBehaviour {
     //Private variables
     private bool isSpawning;
     private int totalTeachersSpawned;
+    private int teachersOnScreen;
     private int ticketSum;
 
     public int WaveIndex
     {
         get { return waveIndex; }
+        set { waveIndex = value; }
+    }
+    public int TeachersOnScreen
+    {
+        get { return teachersOnScreen; }
+        set
+        {
+            teachersOnScreen = value;
+
+            if (teachersOnScreen <= 0 && GameManager.IsMultiplayer)
+                MultiplayerManager.SendRoundEndInformation(PlayerStats.Homework);
+        } 
     }
 
     private void Awake()
@@ -63,6 +76,7 @@ public class WaveSpawner : MonoBehaviour {
         }
 
         totalTeachersSpawned = 0;
+        teachersOnScreen = 0;
         ticketSum = 0;
         waveIndex = 0;
 
@@ -71,8 +85,11 @@ public class WaveSpawner : MonoBehaviour {
 
     public void NextRound()
     {
-        if (isSpawning)
+        if (isSpawning || !MultiplayerManager.Instance.IsPartnerRoundDone || teachersOnScreen > 0)
             return;
+
+        if (GameManager.IsMultiplayer)
+            MultiplayerManager.SendStartOfRound();
 
         waveIndex++;
 
@@ -195,5 +212,6 @@ public class WaveSpawner : MonoBehaviour {
         GameObject _spawned = Instantiate(_prefab, spawnPoint.position, spawnPoint.rotation, _container);
         _spawned.name = totalTeachersSpawned.ToString();
         totalTeachersSpawned++;
+        teachersOnScreen++;
     }
 }
