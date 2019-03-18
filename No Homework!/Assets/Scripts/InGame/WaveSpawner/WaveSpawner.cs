@@ -79,6 +79,7 @@ public class WaveSpawner : MonoBehaviour {
         teachersOnScreen = 0;
         ticketSum = 0;
         waveIndex = 0;
+        isSpawning = false;
 
         CalculateTicketSum();
     }

@@ -11,6 +11,18 @@ ModelImporter:
     100010: Cylinder_013
     100012: Cylinder_014
     100014: //RootNode
+    100016: Armature
+    100018: Cube_000
+    100020: Cube_001
+    100022: Cube_002
+    100024: Cube_003
+    100026: Cube_004
+    100028: Cube_005
+    100030: Cube_006
+    100032: Lower_L
+    100034: Lower_R
+    100036: Upper_L
+    100038: Upper_R
     400000: Cube_060
     400002: Cube_061
     400004: Cube_062
@@ -19,6 +31,18 @@ ModelImporter:
     400010: Cylinder_013
     400012: Cylinder_014
     400014: //RootNode
+    400016: Armature
+    400018: Cube_000
+    400020: Cube_001
+    400022: Cube_002
+    400024: Cube_003
+    400026: Cube_004
+    400028: Cube_005
+    400030: Cube_006
+    400032: Lower_L
+    400034: Lower_R
+    400036: Upper_L
+    400038: Upper_R
     2100000: unnamed
     2100002: Material_015
     2300000: Cube_060
@@ -28,6 +52,13 @@ ModelImporter:
     2300008: Cube_064
     2300010: Cylinder_013
     2300012: Cylinder_014
+    2300014: Cube_000
+    2300016: Cube_001
+    2300018: Cube_002
+    2300020: Cube_003
+    2300022: Cube_004
+    2300024: Cube_005
+    2300026: Cube_006
     3300000: Cube_060
     3300002: Cube_061
     3300004: Cube_062
@@ -35,6 +66,13 @@ ModelImporter:
     3300008: Cube_064
     3300010: Cylinder_013
     3300012: Cylinder_014
+    3300014: Cube_000
+    3300016: Cube_001
+    3300018: Cube_002
+    3300020: Cube_003
+    3300022: Cube_004
+    3300024: Cube_005
+    3300026: Cube_006
     4300000: Cube_060
     4300002: Cube_061
     4300004: Cube_062
@@ -42,8 +80,16 @@ ModelImporter:
     4300008: Cube_064
     4300010: Cylinder_013
     4300012: Cylinder_014
+    4300014: Cube_006
+    4300016: Cube_005
+    4300018: Cube_004
+    4300020: Cube_003
+    4300022: Cube_002
+    4300024: Cube_001
+    4300026: Cube_000
     7400000: Default Take
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -96,7 +142,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 0.5
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

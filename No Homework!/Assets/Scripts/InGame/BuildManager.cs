@@ -204,8 +204,21 @@ public class BuildManager : MonoBehaviour {
         return _success;
     }
 
-    public void BuildPartnerTower(GameObject _prefab, Vector3 _position, string _towerGUID)
+    public void BuildPartnerTower(GameObject _prefab, Vector3 _position, string _towerGUID, bool isHost)
     {
+        if (isHost)
+        {
+            Vector3 _pos = new Vector3(_position.x, _position.y + 10, _position.z);
+
+            if (Physics.Raycast(_pos, -Vector3.up, 50.0f, LayerMask.NameToLayer(GameConstants.STUDENT_AREA_TAG)))
+            {
+                //Student got placed ontop of another student
+                MultiplayerManager.SendWronglyPlacedStudent(_towerGUID);
+
+                return;
+            }
+        }
+
         AudioManager.Instance.Play("TowerPlacedSound");
 
         Transform _tower = Instantiate(_prefab, _position, Quaternion.identity, towerContainer).transform;
@@ -216,5 +229,11 @@ public class BuildManager : MonoBehaviour {
         builtTowers.Add(_tower.GetComponent<StudentStats>());
 
         //Debug.Log("Recived tower with GUID: " + _towerGUID);
+    }
+
+    public void WronglyPlacedTower(StudentStats _student)
+    {
+        PlayerStats.AddCandyCurrency(_student.shopStats.BaseCost);
+        Destroy(_student.gameObject);
     }
 }

@@ -137,12 +137,16 @@ public class MultiplayerManager : MonoBehaviour {
         {
             Debug.Log("RT Session Connected...");
 
-            if (sessionInfo.GetPlayerList.Find(x => x.id == AccountInfo.Instance.UserId).peerId == 0)
+            if (sessionInfo.GetPlayerList.Find(x => x.id == AccountInfo.Instance.UserId).peerId == 1)
                 isHost = true;
             else
                 isHost = false;
 
             Debug.Log("Host: " + isHost);
+            foreach (RTSessionInfo.RTPlayer player in sessionInfo.GetPlayerList)
+            {
+                Debug.Log(player.displayName + " id: " + player.peerId);
+            }
 
             GameManager.StartGame(GameManager.Startmethod.multiplayer); //Start multiplayer match
         }
@@ -173,6 +177,10 @@ public class MultiplayerManager : MonoBehaviour {
 
             case GameConstants.OPCODE_START_NEW_ROUND:
                 Instance.RecivedStartOfRound();
+                break;
+
+            case GameConstants.OPCODE_WRONGLY_PLACED_STUDENT:
+                Instance.ReceivedWronglyPlacedStudentFromPartner(_packet);
                 break;
         }
     }
@@ -244,6 +252,17 @@ public class MultiplayerManager : MonoBehaviour {
         }
     }
 
+    public static void SendWronglyPlacedStudent(string _guid)
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetString(GameConstants.PACKET_STUDENT_GUID, _guid);
+
+            Debug.Log("Sending tower data to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_WRONGLY_PLACED_STUDENT, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
     private void ReceivedTowerFromPartner(RTPacket _packet)
     {
         AudioManager.Instance.Play("TowerPlacedSound");
@@ -263,7 +282,7 @@ public class MultiplayerManager : MonoBehaviour {
         }
 
         //Instantiate partners tower
-        BuildManager.Instance.BuildPartnerTower(_prefab, _position, _towerGUID);
+        BuildManager.Instance.BuildPartnerTower(_prefab, _position, _towerGUID, isHost);
     }
 
     private void RecivedTowerUpgradeFromPartner(RTPacket _packet)
@@ -316,14 +335,31 @@ public class MultiplayerManager : MonoBehaviour {
 
     private void RecivedStartOfRound()
     {
-        isPartnerRoundDone = false;
         WaveSpawner.Instance.NextRound();
+        isPartnerRoundDone = false;
     }
 
     private void RecivedRandomSeed(RTPacket _packet)
     {
-        if (!isHost)
+        if (!isHost) //If the player is not the host, set the seed to the host seed
             Random.InitState((int)_packet.Data.GetInt(GameConstants.PACKET_RANDOM_SEED));
+    }
+
+    private void ReceivedWronglyPlacedStudentFromPartner(RTPacket _packet)
+    {
+        string _guid = _packet.Data.GetString(GameConstants.PACKET_STUDENT_GUID);
+
+        foreach (StudentStats _tower in BuildManager.Instance.builtTowers)
+        {
+            if (_tower.studentGUID == _guid)
+            {
+                BuildManager.Instance.WronglyPlacedTower(_tower);
+            }
+            else
+            {
+                Debug.Log("No tower found with GUID: " + _guid);
+            }
+        }
     }
 
     #endregion
