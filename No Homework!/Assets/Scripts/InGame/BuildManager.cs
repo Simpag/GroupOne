@@ -173,11 +173,12 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
-    public void SellStudent(StudentStats _stats)
+    public void SellStudent(StudentStats _stats, bool _recivedMoneyBack)
     {
         Destroy(_stats.gameObject);
 
-        InGameShopManager.SoldStudent(_stats.shopStats);
+        if (_recivedMoneyBack)
+            InGameShopManager.SoldStudent(_stats.shopStats);
     }
 
     public bool UpgradeStudentRow1(StudentStats _towerInfo)

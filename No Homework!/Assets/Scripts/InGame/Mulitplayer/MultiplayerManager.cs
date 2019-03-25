@@ -182,11 +182,21 @@ public class MultiplayerManager : MonoBehaviour {
             case GameConstants.OPCODE_WRONGLY_PLACED_STUDENT:
                 Instance.ReceivedWronglyPlacedStudentFromPartner(_packet);
                 break;
+
+            case GameConstants.OPCODE_SOLD_STUDENT:
+                Instance.ReceivedSoldStudent(_packet);
+                break;
         }
     }
     #endregion
 
     #region Multiplayer
+
+    public static void Disconnect()
+    {
+        Instance.GetRTSession.Disconnect();
+        GameManager.EndGame(false);
+    }
 
     public static void SendTowerToPartner(StudentStats _tower, Vector3 _position)
     {
@@ -263,6 +273,17 @@ public class MultiplayerManager : MonoBehaviour {
         }
     }
 
+    public static void SendSoldStudent(string _guid)
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetString(GameConstants.PACKET_STUDENT_GUID, _guid);
+
+            Debug.Log("Sending tower data to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_SOLD_STUDENT, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
     private void ReceivedTowerFromPartner(RTPacket _packet)
     {
         AudioManager.Instance.Play("TowerPlacedSound");
@@ -278,6 +299,7 @@ public class MultiplayerManager : MonoBehaviour {
             if (_stat.ShortCode == _towerSC)
             {
                 _prefab = _stat.TowerPrefab;
+                break;
             }
         }
 
@@ -354,6 +376,25 @@ public class MultiplayerManager : MonoBehaviour {
             if (_tower.studentGUID == _guid)
             {
                 BuildManager.Instance.WronglyPlacedTower(_tower);
+                return;
+            }
+            else
+            {
+                Debug.Log("No tower found with GUID: " + _guid);
+            }
+        }
+    }
+
+    private void ReceivedSoldStudent(RTPacket _packet)
+    {
+        string _guid = _packet.Data.GetString(GameConstants.PACKET_STUDENT_GUID);
+
+        foreach (StudentStats _tower in BuildManager.Instance.builtTowers)
+        {
+            if (_tower.studentGUID == _guid)
+            {
+                BuildManager.Instance.SellStudent(_tower, false);
+                return;
             }
             else
             {

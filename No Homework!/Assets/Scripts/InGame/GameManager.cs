@@ -69,10 +69,17 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(GameConstants.GAME_SCENE);
     }
 
-    public static void EndGame()
+    public static void EndGame(bool _won)
     {
-        instance.isGameActive = false;
-        SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
+        if (_won)
+        {
+
+        } 
+        else
+        {
+            instance.isGameActive = false;
+            SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
+        }
     }
 
     public static void PlayOffline()

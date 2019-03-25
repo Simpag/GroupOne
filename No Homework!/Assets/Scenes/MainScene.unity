@@ -432,6 +432,7 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     loop: 1
+    isSoundEffect: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: TowerPlacedSound
@@ -441,6 +442,7 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     loop: 0
+    isSoundEffect: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: TowerThrowSound
@@ -450,6 +452,7 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     loop: 0
+    isSoundEffect: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: EnemyKnockSound
@@ -459,6 +462,7 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     loop: 0
+    isSoundEffect: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: EndOfRoundSound
@@ -468,6 +472,7 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     loop: 0
+    isSoundEffect: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: InGameMusic
@@ -477,6 +482,7 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     loop: 1
+    isSoundEffect: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: BossRoundSound
@@ -486,6 +492,7 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     loop: 1
+    isSoundEffect: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
 --- !u!4 &569252735

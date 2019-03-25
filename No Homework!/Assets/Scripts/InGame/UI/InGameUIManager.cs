@@ -43,6 +43,16 @@ public class InGameUIManager : MonoBehaviour {
     private StudentStats currentStudentStats;
     private List<StudentStats.TargetSetting> currentlyAllowedTargetSettings;
 
+    [Header("Pause Menu")]
+    [SerializeField]
+    private GameObject pauseMenu;
+    [SerializeField]
+    private GameObject pauseButton;
+    [SerializeField]
+    private GameObject singleplayerBackground;
+    [SerializeField]
+    private GameObject multiplayerBackground;
+
     private float shopTimer = 0;
     
     private void Awake()
@@ -67,6 +77,14 @@ public class InGameUIManager : MonoBehaviour {
         studentInformationView.SetActive(false);
         banner.SetActive(true);
         nextWave.SetActive(true);
+        pauseMenu.SetActive(false);
+        multiplayerBackground.SetActive(false);
+        singleplayerBackground.SetActive(false);
+
+        if (GameManager.IsMultiplayer)
+            multiplayerBackground.SetActive(true);
+        else
+            singleplayerBackground.SetActive(true);
     }
 
     private void Update()
@@ -130,18 +148,23 @@ public class InGameUIManager : MonoBehaviour {
 
     public void ShowOrHideShop()
     {
+        if (GameFunctions.IsGamePaused)
+            return;
+
         if (shopTimer > Mathf.Epsilon)
             return;
             
         if (shopView.activeSelf) //Hide
         {
             shopAnim.SetTrigger("Hide");
+            pauseButton.SetActive(true);
         }
         else //Show
         {
             shopAnim.SetTrigger("Show");
 
             HideTowerInfo();
+            pauseButton.SetActive(false);
         }
 
         shopTimer = 0.5f;
@@ -149,7 +172,7 @@ public class InGameUIManager : MonoBehaviour {
 
     public void SellSelectedStudent()
     {
-        BuildManager.Instance.SellStudent(currentStudentStats);
+        BuildManager.Instance.SellStudent(currentStudentStats, true);
         HideTowerInfo();
     }
 
@@ -171,6 +194,9 @@ public class InGameUIManager : MonoBehaviour {
 
     public static void ShowTowerInfo (StudentStats _tower)
     {
+        if (GameFunctions.IsGamePaused)
+            return;
+
         instance.currentStudentStats = _tower; //Save the selected Tower
 
         instance.studentInformationView.SetActive(true); //Active the windows
@@ -229,6 +255,9 @@ public class InGameUIManager : MonoBehaviour {
 
     private void HideTowerInfo()
     {
+        if (GameFunctions.IsGamePaused)
+            return;
+
         instance.studentInformationView.SetActive(false);
 
         if (instance.currentStudentStats == null)
@@ -242,4 +271,44 @@ public class InGameUIManager : MonoBehaviour {
     {
         currentStudentStats.currentTargetSetting = currentlyAllowedTargetSettings[studentTargetPriorityDropdown.value];
     }
+
+    public void PauseOrResumeGame()
+    {
+        if (GameFunctions.IsGamePaused)
+        {
+            GameFunctions.PauseGame();
+            pauseMenu.SetActive(true);
+        }
+        else
+        {
+            GameFunctions.ResumeGame();
+            pauseMenu.SetActive(false);
+        }
+    }
+
+    public void RestartGame()
+    {
+        GameManager.StartGame(GameManager.Startmethod.singleplayer);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        GameManager.EndGame(false);
+    }
+
+    public void Disconnect()
+    {
+        MultiplayerManager.Disconnect();
+    }
+
+    public void MuteOrUnmuteMusic()
+    {
+        AudioManager.Instance.MuteOrUnmuteMusic();
+    }
+
+    public void MuteOrUnmuteSoundEffects()
+    {
+        AudioManager.Instance.MuteOrUnmuteSoundEffects();
+    }
 }
+

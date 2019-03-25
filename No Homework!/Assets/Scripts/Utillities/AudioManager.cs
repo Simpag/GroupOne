@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
-
 	public static AudioManager Instance;
 
 	public AudioMixerGroup mixerGroup;
@@ -13,6 +12,8 @@ public class AudioManager : MonoBehaviour
 	public Sound[] sounds;
 
     private List<Sound> soundsPlaying;
+    private bool isMusicMuted = false;
+    private bool isSoundEffectsMuted = false;
 
 	void Awake()
 	{
@@ -51,6 +52,9 @@ public class AudioManager : MonoBehaviour
 			Debug.LogWarning("Sound: " + _sound + " not found!");
 			return;
 		}
+
+        if (s.isSoundEffect && isSoundEffectsMuted)
+            return;
 
 		s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
 		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
@@ -93,6 +97,28 @@ public class AudioManager : MonoBehaviour
         } else
         {
             return false;
+        }
+    }
+
+    public void MuteOrUnmuteSoundEffects()
+    {
+        isSoundEffectsMuted = !isSoundEffectsMuted;
+    }
+
+    public void MuteOrUnmuteMusic()
+    {
+        foreach (Sound s in soundsPlaying)
+        {
+            if (isMusicMuted)
+            {
+                s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+                isMusicMuted = false;
+            }
+            else
+            {
+                s.source.volume = 0;
+                isMusicMuted = true;
+            }
         }
     }
 }
