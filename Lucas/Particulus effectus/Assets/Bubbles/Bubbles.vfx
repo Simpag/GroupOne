@@ -319,16 +319,13 @@ MonoBehaviour:
       y: 0
       width: 100
       height: 100
-    contents:
-    - model: {fileID: 8926484042661615093}
-      id: 0
-      isStickyNote: 0
+    contents: []
   stickyNoteInfos: []
   systemInfos: []
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: -0
+    x: 0
     y: -815
     width: 2355
     height: 2379
@@ -4058,7 +4055,6 @@ MonoBehaviour:
     attributes: []
   m_Direction: 1
   m_LinkedSlots:
-  - {fileID: 0}
   - {fileID: 8926484042661615096}
 --- !u!114 &8926484042661614824
 MonoBehaviour:
