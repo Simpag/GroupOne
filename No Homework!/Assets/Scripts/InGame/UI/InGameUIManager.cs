@@ -274,7 +274,7 @@ public class InGameUIManager : MonoBehaviour {
 
     public void PauseOrResumeGame()
     {
-        if (GameFunctions.IsGamePaused)
+        if (!GameFunctions.IsGamePaused)
         {
             GameFunctions.PauseGame();
             pauseMenu.SetActive(true);
@@ -288,6 +288,7 @@ public class InGameUIManager : MonoBehaviour {
 
     public void RestartGame()
     {
+        GameFunctions.ResumeGame();
         GameManager.StartGame(GameManager.Startmethod.singleplayer);
     }
 
