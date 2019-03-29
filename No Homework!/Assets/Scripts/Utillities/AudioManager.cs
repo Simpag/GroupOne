@@ -11,9 +11,12 @@ public class AudioManager : MonoBehaviour
 
 	public Sound[] sounds;
 
+    [SerializeField]
     private List<Sound> soundsPlaying;
-    private bool isMusicMuted = false;
-    private bool isSoundEffectsMuted = false;
+    [SerializeField]
+    private bool isMusicMuted;
+    [SerializeField]
+    private bool isSoundEffectsMuted;
 
 	void Awake()
 	{
@@ -27,6 +30,8 @@ public class AudioManager : MonoBehaviour
 		{
 			Instance = this;
 			DontDestroyOnLoad(gameObject);
+            isMusicMuted = false;
+            isSoundEffectsMuted = false;
 		}
 
 		foreach (Sound s in sounds)
@@ -53,14 +58,16 @@ public class AudioManager : MonoBehaviour
 			return;
 		}
 
-        if (s.isSoundEffect && isSoundEffectsMuted)
+        if ((s.isSoundEffect && isSoundEffectsMuted) || (isMusicMuted && !s.isSoundEffect))
             return;
 
 		s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
 		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
 		s.source.Play();
-        soundsPlaying.Add(s);
+
+        if (!s.isSoundEffect)
+            soundsPlaying.Add(s);
 
         //Debug.Log("Playing " + _sound);
 	}
@@ -107,18 +114,27 @@ public class AudioManager : MonoBehaviour
 
     public void MuteOrUnmuteMusic()
     {
+        int x = 0;
+        Debug.Log("Mute: " + isMusicMuted);
+
         foreach (Sound s in soundsPlaying)
         {
-            if (isMusicMuted)
+            if (s != null)
             {
-                s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-                isMusicMuted = false;
-            }
-            else
-            {
-                s.source.volume = 0;
-                isMusicMuted = true;
+                x++;
+                if (isMusicMuted)
+                {
+                    s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+                    isMusicMuted = false;
+                }
+                else
+                {
+                    s.source.volume = 0;
+                    isMusicMuted = true;
+                }
             }
         }
+
+        Debug.Log("Looped: " + x);
     }
 }
