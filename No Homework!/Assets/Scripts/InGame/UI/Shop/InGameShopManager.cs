@@ -139,11 +139,11 @@ public class InGameShopManager : MonoBehaviour {
             {
                 foreach (InGameShopItemStats _igStats in allShopItems)
                 {
-                    //if (AccountInfo.Instance.Inventory.ContainsKey(_igStats.ShortCode)) XXXXXXXXXXXXXXXXXXXX
-                    //{
+                    if (AccountInfo.Instance.Inventory.ContainsKey(_igStats.ShortCode))
+                    {
                         if (!unlockedShopItems.Contains(_igStats))
                             unlockedShopItems.Add(_igStats);
-                    //}
+                    }
                 }
             }
         }

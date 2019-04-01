@@ -52,6 +52,12 @@ public class InGameUIManager : MonoBehaviour {
     private GameObject singleplayerBackground;
     [SerializeField]
     private GameObject multiplayerBackground;
+    [SerializeField]
+    private Button[] musicButton;
+    [SerializeField]
+    private Button[] volumeButton;
+    [SerializeField]
+    private Sprite[] soundImages;
 
     private float shopTimer = 0;
     
@@ -294,6 +300,7 @@ public class InGameUIManager : MonoBehaviour {
 
     public void ReturnToMainMenu()
     {
+        GameFunctions.ResumeGame();
         GameManager.EndGame(false);
     }
 
@@ -305,11 +312,33 @@ public class InGameUIManager : MonoBehaviour {
     public void MuteOrUnmuteMusic()
     {
         AudioManager.Instance.MuteOrUnmuteMusic();
+
+        if (AudioManager.Instance.IsMusicMuted)
+        {
+            musicButton[0].image.sprite = soundImages[1];
+            musicButton[1].image.sprite = soundImages[1];
+        }
+        else
+        {
+            musicButton[0].image.sprite = soundImages[0];
+            musicButton[1].image.sprite = soundImages[0];
+        }
     }
 
     public void MuteOrUnmuteSoundEffects()
     {
         AudioManager.Instance.MuteOrUnmuteSoundEffects();
+
+        if (AudioManager.Instance.IsSoundEffectsMuted)
+        {
+            volumeButton[0].image.sprite = soundImages[3];
+            volumeButton[1].image.sprite = soundImages[3];
+        }
+        else
+        {
+            volumeButton[0].image.sprite = soundImages[2];
+            volumeButton[1].image.sprite = soundImages[2];
+        }
     }
 }
 

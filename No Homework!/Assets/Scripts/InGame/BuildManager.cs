@@ -88,7 +88,7 @@ public class BuildManager : MonoBehaviour {
                 followingTower = followingTowerTransform.GetComponent<StudentStats>();
                 followingTower.MovingTower();
 
-                shopTimer = 1f;
+                shopTimer = 0.25f;
             }
             else if (Input.GetMouseButton(0))
             {

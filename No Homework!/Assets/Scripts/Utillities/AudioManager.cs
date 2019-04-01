@@ -18,7 +18,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private bool isSoundEffectsMuted;
 
-	void Awake()
+    public bool IsMusicMuted { get { return isMusicMuted; } }
+    public bool IsSoundEffectsMuted { get { return isSoundEffectsMuted; } }
+
+    void Awake()
 	{
         soundsPlaying = new List<Sound>();
 
@@ -66,7 +69,7 @@ public class AudioManager : MonoBehaviour
 
 		s.source.Play();
 
-        if (!s.isSoundEffect)
+        if (!s.isSoundEffect && !soundsPlaying.Contains(s))
             soundsPlaying.Add(s);
 
         //Debug.Log("Playing " + _sound);

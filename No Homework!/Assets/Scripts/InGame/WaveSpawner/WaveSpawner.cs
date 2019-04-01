@@ -62,6 +62,7 @@ public class WaveSpawner : MonoBehaviour {
                 MultiplayerManager.SendRoundEndInformation(PlayerStats.Homework);
         } 
     }
+    public int NumberOfWaves { get { return waves.Length; } }
 
     private void Awake()
     {
