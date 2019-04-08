@@ -16,6 +16,7 @@ public class GameConstants {
     //Game scenes
     public const string MAIN_MENU_SCENE = "MainScene";
     public const string GAME_SCENE = "GameScene";
+    public const string PRE_GAME_SCENE = "PreGameScene";
 
     //Game constants
     public const string TEACHER_TAG = "Teacher";
@@ -32,6 +33,8 @@ public class GameConstants {
     public const int OPCODE_RANDOM_SEED = 5;
     public const int OPCODE_WRONGLY_PLACED_STUDENT = 6;
     public const int OPCODE_SOLD_STUDENT = 7;
+    public const int OPCODE_READY = 8;
+    public const int OPCODE_START_GAME = 9;
 
     public const uint PACKET_STUDENT_SHORTCODE = 1;
     public const uint PACKET_STUDENT_GUID = 2;

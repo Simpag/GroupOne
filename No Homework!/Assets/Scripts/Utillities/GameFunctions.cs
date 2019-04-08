@@ -10,13 +10,13 @@ public class GameFunctions {
     {
         IsGamePaused = true;
         Time.timeScale = 0f;
-        Debug.Log("Paused");
+        //Debug.Log("Paused");
     }
 
     public static void ResumeGame()
     {
         IsGamePaused = false;
         Time.timeScale = 1f;
-        Debug.Log("Resume");
+        //Debug.Log("Resume");
     }
 }

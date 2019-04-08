@@ -128,6 +128,7 @@
     <Compile Include="Assets\Scripts\MainMenu\StoreItemManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StoreItemStats.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StoreManager.cs" />
+    <Compile Include="Assets\Scripts\PreGame\PreGameManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\AccountInfo.cs" />
     <Compile Include="Assets\Scripts\Utillities\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Utillities\DatabaseManager.cs" />

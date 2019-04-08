@@ -87,6 +87,6 @@ public class MainMenuManager : MonoBehaviour {
 
     public void PlayMultiplayer ()
     {
-        MultiplayerManager.Instance.RandomMatchMaking();
+        SceneManager.LoadScene(GameConstants.PRE_GAME_SCENE);
     }
 }

@@ -117,14 +117,10 @@ public class AudioManager : MonoBehaviour
 
     public void MuteOrUnmuteMusic()
     {
-        int x = 0;
-        Debug.Log("Mute: " + isMusicMuted);
-
         foreach (Sound s in soundsPlaying)
         {
             if (s != null)
             {
-                x++;
                 if (isMusicMuted)
                 {
                     s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
@@ -137,7 +133,5 @@ public class AudioManager : MonoBehaviour
                 }
             }
         }
-
-        Debug.Log("Looped: " + x);
     }
 }

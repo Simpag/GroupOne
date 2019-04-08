@@ -118,7 +118,7 @@ public class InGameUIManager : MonoBehaviour {
             }
             else if (currentStudentStats.Row2Level <= 1 && currentStudentStats.Row1Level < GameConstants.NUMBER_OF_UPGRADES)
             {
-                row1UpgradeButtons[currentStudentStats.Row1Level].SetState(StudentInfoUpgradeButton.ButtonState.locked);
+                row1UpgradeButtons[currentStudentStats.Row1Level].SetState(StudentInfoUpgradeButton.ButtonState.unavailable);
             }
 
             if (currentStudentStats.Row1Level <= 1 && currentStudentStats.Row2Level < GameConstants.NUMBER_OF_UPGRADES && PlayerStats.CandyCurrency >= currentStudentStats.shopStats.UpgradeRow2Cost[currentStudentStats.Row2Level])
@@ -127,7 +127,17 @@ public class InGameUIManager : MonoBehaviour {
             }
             else if (currentStudentStats.Row1Level <= 1 && currentStudentStats.Row2Level < GameConstants.NUMBER_OF_UPGRADES)
             {
-                row2UpgradeButtons[currentStudentStats.Row2Level].SetState(StudentInfoUpgradeButton.ButtonState.locked);
+                row2UpgradeButtons[currentStudentStats.Row2Level].SetState(StudentInfoUpgradeButton.ButtonState.unavailable);
+            }
+
+            if (currentStudentStats.Row1Level > 1)
+            {
+                row2UpgradeButtons[1].SetState(StudentInfoUpgradeButton.ButtonState.locked);
+            }
+
+            if (currentStudentStats.Row2Level > 1)
+            {
+                row1UpgradeButtons[1].SetState(StudentInfoUpgradeButton.ButtonState.locked);
             }
         }
 

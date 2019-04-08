@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StudentInfoUpgradeButton : MonoBehaviour
 {
     [SerializeField]
-    private Image boughtImage, lockedImage;
+    private Image boughtImage, lockedImage, unavailableImage;
     [SerializeField]
     private ButtonState currentState;
 
@@ -21,7 +21,8 @@ public class StudentInfoUpgradeButton : MonoBehaviour
     {
         locked,
         bought,
-        available
+        available,
+        unavailable
     }
 
     private void OnEnable()
@@ -38,17 +39,26 @@ public class StudentInfoUpgradeButton : MonoBehaviour
             case ButtonState.available:
                 boughtImage.enabled = false;
                 lockedImage.enabled = false;
-                button.enabled = true;
 
+                button.enabled = true;
                 break;
             case ButtonState.bought:
                 boughtImage.enabled = true;
                 lockedImage.enabled = false;
+
                 button.enabled = false;
                 break;
             case ButtonState.locked:
                 boughtImage.enabled = false;
                 lockedImage.enabled = true;
+
+                button.enabled = false;
+                break;
+            case ButtonState.unavailable:
+                boughtImage.enabled = false;
+                lockedImage.enabled = false;
+                unavailableImage.enabled = true;
+
                 button.enabled = false;
                 break;
         }

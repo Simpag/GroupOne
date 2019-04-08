@@ -32,6 +32,7 @@ public class MultiplayerManager : MonoBehaviour {
     bool isHost, isPartnerRoundDone;
 
     public bool IsPartnerRoundDone { get { return isPartnerRoundDone; } }
+    public static bool IsHost { get { return instance.isHost; } }
 
     private void Awake()
     {
@@ -142,15 +143,10 @@ public class MultiplayerManager : MonoBehaviour {
             else
                 isHost = false;
 
-            Debug.Log("Host: " + isHost);
-            foreach (RTSessionInfo.RTPlayer player in sessionInfo.GetPlayerList)
-            {
-                Debug.Log(player.displayName + " id: " + player.peerId);
-            }
+            Debug.Log("Is Host: " + isHost);
 
-            GameManager.StartGame(GameManager.Startmethod.multiplayer); //Start multiplayer match
+            PreGameManager.Instance.FoundPartner();
         }
-
     }
 
     private void OnPacketReceived(RTPacket _packet)
@@ -159,6 +155,15 @@ public class MultiplayerManager : MonoBehaviour {
 
         switch (_packet.OpCode)
         {
+            //PreGame
+            case GameConstants.OPCODE_READY:
+                Instance.RecivedReadyFromPartner();
+                break;
+            case GameConstants.OPCODE_START_GAME:
+                Instance.RecivedStartGameFromPartner();
+                break;
+
+            //InGame
             case GameConstants.OPCODE_STUDENT_BUILT:
                 Instance.ReceivedTowerFromPartner(_packet);
                 break;
@@ -190,7 +195,39 @@ public class MultiplayerManager : MonoBehaviour {
     }
     #endregion
 
-    #region Multiplayer
+    #region PreGame Multiplayer
+
+    public static void SendReadyToPartner()
+    {
+        using (RTData data = RTData.Get())
+        {
+            Debug.Log("Sending ready statement to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_READY, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public static void SendGameStartToPartner()
+    {
+        using (RTData data = RTData.Get())
+        {
+            Debug.Log("Sending ready statement to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_START_GAME, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    private void RecivedReadyFromPartner()
+    {
+        PreGameManager.Instance.PartnerReady();
+    }
+
+    private void RecivedStartGameFromPartner()
+    {
+        PreGameManager.Instance.StartGame();
+    }
+
+    #endregion
+
+    #region InGame Multiplayer 
 
     public static void Disconnect()
     {
