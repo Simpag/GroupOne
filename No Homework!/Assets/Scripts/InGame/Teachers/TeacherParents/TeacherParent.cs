@@ -14,17 +14,32 @@ public class TeacherParent : MonoBehaviour {
         stats = GetComponent<TeacherStats>();
     }
 
-    public virtual void Died(bool _killed)
+    public virtual void Died(bool _killed, StudentStats _killedBy)
     {
         if (_killed)
         {
+            if (GameManager.IsMultiplayer)
+            {
+                if (_killedBy.isYours)
+                {
+                    PlayerStats.AddCandyCurrency(stats.Worth * 0.75f);
+                }
+                else
+                {
+                    PlayerStats.AddCandyCurrency(stats.Worth * 0.25f);
+                }
+            }
+            else
+            {
+                PlayerStats.AddCandyCurrency(stats.Worth);
+            }
+
             AudioManager.Instance.Play("EnemyKnockSound");
-            PlayerStats.AddCandyCurrency(stats.Worth);
 
             GameObject _effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(_effect, deathEffect.GetComponent<ParticleSystem>().main.startLifetime.constant);
 
-            Debug.Log("Normal Death");
+            //Debug.Log("Normal Death");
         }
 
         WaveSpawner.Instance.TeachersOnScreen--;

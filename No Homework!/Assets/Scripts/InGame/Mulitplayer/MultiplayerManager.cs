@@ -29,10 +29,12 @@ public class MultiplayerManager : MonoBehaviour {
         get { return sessionInfo; }
     }
 
-    bool isHost, isPartnerRoundDone;
+    private bool isHost, isPartnerRoundDone;
+    private string partnerName;
 
     public bool IsPartnerRoundDone { get { return isPartnerRoundDone; } }
     public static bool IsHost { get { return instance.isHost; } }
+    public string PartnerName { get { return partnerName; } }
 
     private void Awake()
     {
@@ -139,11 +141,17 @@ public class MultiplayerManager : MonoBehaviour {
             Debug.Log("RT Session Connected...");
 
             if (sessionInfo.GetPlayerList.Find(x => x.id == AccountInfo.Instance.UserId).peerId == 1)
+            {
                 isHost = true;
+            }
             else
+            {
                 isHost = false;
+            }
 
-            Debug.Log("Is Host: " + isHost);
+            partnerName = sessionInfo.GetPlayerList.Find(x => x.id != AccountInfo.Instance.UserId).displayName;
+
+            //Debug.Log("Is Host: " + isHost);
 
             PreGameManager.Instance.FoundPartner();
         }
@@ -190,6 +198,10 @@ public class MultiplayerManager : MonoBehaviour {
 
             case GameConstants.OPCODE_SOLD_STUDENT:
                 Instance.ReceivedSoldStudent(_packet);
+                break;
+
+            case GameConstants.OPCODE_SEND_MONEY:
+                Instance.ReceivedMoneyFromPartner(_packet);
                 break;
         }
     }
@@ -321,6 +333,17 @@ public class MultiplayerManager : MonoBehaviour {
         }
     }
 
+    public static void SendMoneyToPartner(float _amount)
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetFloat(GameConstants.PACKET_SEND_MONEY, _amount);
+
+            Debug.Log("Sending tower data to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_SEND_MONEY, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
     private void ReceivedTowerFromPartner(RTPacket _packet)
     {
         AudioManager.Instance.Play("TowerPlacedSound");
@@ -438,6 +461,12 @@ public class MultiplayerManager : MonoBehaviour {
                 Debug.Log("No tower found with GUID: " + _guid);
             }
         }
+    }
+
+    private void ReceivedMoneyFromPartner(RTPacket _packet)
+    {
+        float _amount = (float)_packet.Data.GetFloat(GameConstants.PACKET_SEND_MONEY);
+        PlayerStats.AddCandyCurrency(_amount);
     }
 
     #endregion

@@ -9,10 +9,10 @@ public class PrincipalTeacher : TeacherParent {
     [SerializeField]
     private int spawnBudget = 100;
 
-    public override void Died(bool _killed)
+    public override void Died(bool _killed, StudentStats _killedBy)
     {
         StartCoroutine(WaveSpawner.Instance.SpawnTeachers(spawnBudget, transform.root, 0.1f));
 
-        base.Died(_killed);
+        base.Died(_killed, _killedBy);
     }
 }

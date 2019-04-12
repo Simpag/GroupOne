@@ -34,12 +34,17 @@ public class GameManager : MonoBehaviour {
     {
         get { if (Instance.startmethod == Startmethod.offline) { return true; } else { return false; } }
     }
+    public static Startmethod Gamemode
+    {
+        get { return instance.startmethod; }
+    }
 
     public enum Startmethod
     {
         singleplayer,
         multiplayer,
-        offline
+        offline,
+        notset
     }
 
     //Singleton
@@ -54,11 +59,19 @@ public class GameManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        startmethod = Startmethod.notset;
     }
 
-    public static void StartGame(Startmethod _method)
+    public static void SetupGameMode(Startmethod _method)
     {
         Instance.startmethod = _method;
+    }
+
+    public static void StartGame()
+    {
+        if (Instance.startmethod == Startmethod.notset)
+            return;
 
         if (Instance.offlineOverride)
             Instance.startmethod = Startmethod.offline;
@@ -80,6 +93,8 @@ public class GameManager : MonoBehaviour {
             instance.isGameActive = false;
             SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
         }
+
+        instance.startmethod = Startmethod.notset;
     }
 
     public static void PlayOffline()

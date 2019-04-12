@@ -76,13 +76,13 @@ public class TeacherStats : MonoBehaviour {
         }
     }
 
-    public void TakeDamage (float _amount)
+    public void TakeDamage (float _amount, StudentStats _damagedBy)
     {
         health -= _amount;
 
         if (health <= 0)
         {
-            movement.Died(true);
+            movement.Died(true, _damagedBy);
         }
     }
 

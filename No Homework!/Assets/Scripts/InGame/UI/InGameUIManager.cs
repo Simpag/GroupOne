@@ -305,7 +305,7 @@ public class InGameUIManager : MonoBehaviour {
     public void RestartGame()
     {
         GameFunctions.ResumeGame();
-        GameManager.StartGame(GameManager.Startmethod.singleplayer);
+        GameManager.StartGame();
     }
 
     public void ReturnToMainMenu()

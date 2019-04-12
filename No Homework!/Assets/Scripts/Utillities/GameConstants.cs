@@ -35,6 +35,7 @@ public class GameConstants {
     public const int OPCODE_SOLD_STUDENT = 7;
     public const int OPCODE_READY = 8;
     public const int OPCODE_START_GAME = 9;
+    public const int OPCODE_SEND_MONEY = 10;
 
     public const uint PACKET_STUDENT_SHORTCODE = 1;
     public const uint PACKET_STUDENT_GUID = 2;
@@ -43,4 +44,5 @@ public class GameConstants {
     public const uint PACKET_ROUND_END_HOMEWORK = 5;
     public const uint PACKET_RANDOM_SEED = 6;
     public const uint PACKET_ROUND_INDEX = 7;
+    public const uint PACKET_SEND_MONEY = 8;
 }

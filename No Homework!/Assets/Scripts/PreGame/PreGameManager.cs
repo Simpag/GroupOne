@@ -13,6 +13,7 @@ public class PreGameManager : MonoBehaviour
 
     bool foundPartner;
     bool partnerReady;
+    bool isReady;
 
     private void Awake()
     {
@@ -29,30 +30,43 @@ public class PreGameManager : MonoBehaviour
 
         foundPartner = false;
         partnerReady = false;
+        isReady = false;
     }
 
     private void Start()
     {
-        LookForPartner();
+        if (GameManager.IsMultiplayer)
+            LookForPartner();
     }
 
     private void LookForPartner()
     {
+        //Make cool fanzy loading animation
         MultiplayerManager.Instance.RandomMatchMaking();
     }
 
     public void StartGame()
     {
-        if (!partnerReady || !foundPartner)
-            return;
+        if (GameManager.IsMultiplayer)
+        {
+            if (!partnerReady || !foundPartner || !isReady)
+                return;
 
-        if (MultiplayerManager.IsHost)
-            MultiplayerManager.SendGameStartToPartner();
-
-        GameManager.StartGame(GameManager.Startmethod.multiplayer); //Start multiplayer match
+            if (MultiplayerManager.IsHost)
+                MultiplayerManager.SendGameStartToPartner();
+        }
 
         partnerReady = false;
         foundPartner = false;
+        isReady = false;
+
+        GameManager.StartGame(); //Start match
+    }
+
+    public void ReadyUp()
+    {
+        isReady = true;
+        MultiplayerManager.SendReadyToPartner();
     }
 
     public void FoundPartner()

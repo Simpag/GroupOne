@@ -106,11 +106,11 @@ public class TeacherMovement : MonoBehaviour {
     private void ReachedEnd()
     {
         PlayerStats.AddHomework(stats.Homework);
-        Died(false);
+        Died(false, null);
     }
 
-    public void Died(bool _killed)
+    public void Died(bool _killed, StudentStats _killedBy)
     {
-        stats.Teacher.Died(_killed);
+        stats.Teacher.Died(_killed, _killedBy);
     }
 }
