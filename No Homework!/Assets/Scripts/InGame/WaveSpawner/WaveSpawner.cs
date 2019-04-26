@@ -64,6 +64,8 @@ public class WaveSpawner : MonoBehaviour {
     }
     public int NumberOfWaves { get { return waves.Length; } }
 
+    private bool noWaves = false;
+
     private void Awake()
     {
         //Create singleton
@@ -83,6 +85,15 @@ public class WaveSpawner : MonoBehaviour {
         isSpawning = false;
 
         CalculateTicketSum();
+    }
+
+    private void Update()
+    {
+        if (waveIndex >= waves.Length && !noWaves && !isSpawning && teachersOnScreen <= 0)
+        {
+            GameManager.EndGame(true);
+            noWaves = true;
+        }
     }
 
     public void NextRound()

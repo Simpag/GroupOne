@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class InGameUIManager : MonoBehaviour {
     private static InGameUIManager instance;
+    public static InGameUIManager Instance { get { return instance; } }
 
     [Header("Banner")]
     [SerializeField]
@@ -22,8 +23,6 @@ public class InGameUIManager : MonoBehaviour {
     [Header("Shop")]
     [SerializeField]
     private Animator shopAnim;
-    [SerializeField]
-    private GameObject shopView;
     [SerializeField]
     private GameObject showShopButton;
 
@@ -59,8 +58,13 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private Sprite[] soundImages;
 
+    [Header("Win")]
+    [SerializeField]
+    private Animator winAnim;
+
     private float shopTimer = 0;
-    
+    private bool shopOpen = false;
+
     private void Awake()
     {
         //Create singleton
@@ -79,7 +83,6 @@ public class InGameUIManager : MonoBehaviour {
         UpdateHomework();
         UpdateCandyText();
         showShopButton.SetActive(true);
-        shopView.SetActive(false);
         studentInformationView.SetActive(false);
         banner.SetActive(true);
         nextWave.SetActive(true);
@@ -96,14 +99,14 @@ public class InGameUIManager : MonoBehaviour {
     private void Update()
     {
         /*Very bunk, change */
-        if (studentInformationView.activeSelf == false && shopView.activeSelf == false)
+        if (studentInformationView.activeSelf == false && shopOpen == false)
             nextWave.SetActive(true);
         else
             nextWave.SetActive(false);
 
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !BuildManager.Instance.TowerIsSelected)
         {
-            if (shopView.activeSelf)
+            if (shopOpen)
                 ShowOrHideShop();
 
             if (studentInformationView.activeSelf)
@@ -147,12 +150,12 @@ public class InGameUIManager : MonoBehaviour {
         }
     }
 
-    public static void UpdateHomework ()
+    public static void UpdateHomework()
     {
         HomeworkBar.UpdateHomeworkBar();
     }
 
-    public static void UpdateCandyText ()
+    public static void UpdateCandyText()
     {
         instance.candyText.text = Mathf.RoundToInt(PlayerStats.CandyCurrency).ToString();
     }
@@ -169,11 +172,12 @@ public class InGameUIManager : MonoBehaviour {
 
         if (shopTimer > Mathf.Epsilon)
             return;
-            
-        if (shopView.activeSelf) //Hide
+
+        if (shopOpen) //Hide
         {
             shopAnim.SetTrigger("Hide");
             pauseButton.SetActive(true);
+            shopOpen = !shopOpen;
         }
         else //Show
         {
@@ -181,6 +185,7 @@ public class InGameUIManager : MonoBehaviour {
 
             HideTowerInfo();
             pauseButton.SetActive(false);
+            shopOpen = !shopOpen;
         }
 
         shopTimer = 0.5f;
@@ -208,7 +213,7 @@ public class InGameUIManager : MonoBehaviour {
             row2UpgradeButtons[currentStudentStats.Row2Level].SetState(StudentInfoUpgradeButton.ButtonState.locked);
     }
 
-    public static void ShowTowerInfo (StudentStats _tower)
+    public static void ShowTowerInfo(StudentStats _tower)
     {
         if (GameFunctions.IsGamePaused)
             return;
@@ -244,7 +249,7 @@ public class InGameUIManager : MonoBehaviour {
         foreach (StudentStats.TargetSetting _ts in _tower.allowedTargetSettings)
         {
             string _tsString = "";
-            switch(_ts)
+            switch (_ts)
             {
                 case StudentStats.TargetSetting.first:
                     _tsString = "First";
@@ -349,6 +354,17 @@ public class InGameUIManager : MonoBehaviour {
             volumeButton[0].image.sprite = soundImages[2];
             volumeButton[1].image.sprite = soundImages[2];
         }
+    }
+
+    public void ShowWinScreen()
+    {
+        winAnim.SetTrigger("show");
+    }
+
+    public void FreePlay()
+    {
+        winAnim.SetTrigger("hide");
+        GameFunctions.ResumeGame();
     }
 }
 

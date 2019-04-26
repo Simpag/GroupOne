@@ -86,15 +86,15 @@ public class GameManager : MonoBehaviour {
     {
         if (_won)
         {
-
+            InGameUIManager.Instance.ShowWinScreen();
+            //GameFunctions.PauseGame();
         } 
         else
         {
             instance.isGameActive = false;
+            instance.startmethod = Startmethod.notset;
             SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
         }
-
-        instance.startmethod = Startmethod.notset;
     }
 
     public static void PlayOffline()

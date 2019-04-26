@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.00030517578, y: 149}
-  m_SizeDelta: {x: -245.2, y: 122.6}
+  m_AnchoredPosition: {x: 0.000038146973, y: 29.46}
+  m_SizeDelta: {x: -11.1, y: 25.3}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &222926451586177192
 CanvasRenderer:
@@ -66,19 +66,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: 34f62e252c770b6478769f049651ba11, type: 3}
+    m_FontSize: 15
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 15
-    m_MaxSize: 200
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 500
+  m_Text: 5000
 --- !u!1 &1651374129298148
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4a76e95b628e449d895c0278e58a8fef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48dd447048ab16e4ea00d43da5da3030, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -170,13 +170,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   delegates: []
-  stats:
+  stat:
     shortCode: 
     tower: 0
     towerPrefab: {fileID: 0}
+    studentIcon: {fileID: 0}
     baseCost: 0
+    sellWorth: 0
     upgradeRow1Cost: []
+    upgradeRow1SellWorth: []
     upgradeRow2Cost: []
+    upgradeRow2SellWorth: []
 --- !u!1 &5600969593559968041
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,10 +213,10 @@ RectTransform:
   m_Father: {fileID: 224960713079955770}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: -150, y: 328.4}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -33.2}
+  m_SizeDelta: {x: 84, y: 58}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &9158970240494150275
 CanvasRenderer:
