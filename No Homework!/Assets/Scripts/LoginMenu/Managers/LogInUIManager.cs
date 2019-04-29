@@ -25,6 +25,8 @@ public class LogInUIManager : MonoBehaviour {
         set { instance = value; }
     }
 
+    public Button RESET;
+
     [Header("Banner")]
     [SerializeField]
     private Text coins;
