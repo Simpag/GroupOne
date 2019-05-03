@@ -444,8 +444,11 @@ MonoBehaviour:
     towerPrefab: {fileID: 1751474608837356}
     studentIcon: {fileID: 0}
     baseCost: 0
+    sellWorth: 0
     upgradeRow1Cost: []
+    upgradeRow1SellWorth: []
     upgradeRow2Cost: []
+    upgradeRow2SellWorth: []
   isYours: 1
   studentGUID: 
   row1Level: 0

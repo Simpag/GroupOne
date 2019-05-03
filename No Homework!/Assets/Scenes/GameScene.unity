@@ -1975,6 +1975,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: debfd5f3958413b4583cd028d874a17c, type: 3}
   - {fileID: 21300000, guid: f81b49848e3073c48b103d1478d6980d, type: 3}
   winAnim: {fileID: 2001556671}
+  gmAnim: {fileID: 1825964647}
+  wavesCleared: {fileID: 397473009}
+  moneySpent: {fileID: 982346360}
 --- !u!114 &418931206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9310,6 +9313,7 @@ MonoBehaviour:
   homework: 0
   candyCurrency: 0
   startingCash: 500
+  cashSpent: 0
 --- !u!4 &1940276577
 Transform:
   m_ObjectHideFlags: 0

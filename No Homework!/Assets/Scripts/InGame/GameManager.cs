@@ -93,7 +93,8 @@ public class GameManager : MonoBehaviour {
         {
             instance.isGameActive = false;
             instance.startmethod = Startmethod.notset;
-            SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
+            //SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
+            InGameUIManager.Instance.ShowGameOverScreen();
         }
     }
 

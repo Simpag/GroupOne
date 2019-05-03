@@ -209,8 +209,6 @@ public class StudentStats : MonoBehaviour {
 
         //Update the current stat
         AddStat(row1Stats[row1Level - 1]);
-
-        UpdateSetups();
     }
 
     public void UpgradeRow2()
@@ -253,7 +251,9 @@ public class StudentStats : MonoBehaviour {
 
     private void AddStat(StudentStat _stat)
     {
-        //currentStat.mesh = _stat.mesh;
+        currentStat.mesh.SetActive(false);
+        currentStat.mesh = _stat.mesh;
+        currentStat.mesh.SetActive(true);
         currentStat.bulletPrefab = _stat.bulletPrefab;
         currentStat.damage += _stat.damage;
         currentStat.bulletSpeed += _stat.bulletSpeed;

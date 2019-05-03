@@ -62,6 +62,14 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private Animator winAnim;
 
+    [Header("GameOver")]
+    [SerializeField]
+    private Animator gmAnim;
+    [SerializeField]
+    private Text wavesCleared;
+    [SerializeField]
+    private Text moneySpent;
+
     private float shopTimer = 0;
     private bool shopOpen = false;
 
@@ -359,6 +367,13 @@ public class InGameUIManager : MonoBehaviour {
     public void ShowWinScreen()
     {
         winAnim.SetTrigger("show");
+    }
+
+    public void ShowGameOverScreen()
+    {
+        gmAnim.SetTrigger("show");
+        moneySpent.text = PlayerStats.Instance.CashSpent.ToString();
+        wavesCleared.text = WaveSpawner.Instance.WaveIndex.ToString();
     }
 
     public void FreePlay()
