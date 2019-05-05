@@ -16,7 +16,13 @@ public class StudentParent : MonoBehaviour {
     protected virtual void Update()
     {
         if (stat.target == null || !stat.IsActive)
+        {
+            stat.UpdateState(StudentStats.State.idle);
             return;
+        }
+
+        //Change student state
+        stat.UpdateState(StudentStats.State.fire);
 
         //Look onto target
         LockOn();

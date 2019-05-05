@@ -20,6 +20,7 @@ public class NerdStudent : StudentParent {
         {
             placed = true;
             stat.rangeView.gameObject.AddComponent<NerdStudentTrigger>();
+            stat.UpdateState(StudentStats.State.fire);
         }
 
         return;

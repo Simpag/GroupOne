@@ -7,17 +7,23 @@ public class PreGameUIManager : MonoBehaviour
     [SerializeField]
     private GameObject startButton, readyButton;
     [SerializeField]
-    private Text username, partnername;
+    private Text usernameC, partnernameC, usernameS;
+    [SerializeField]
+    GameObject CoopScreen, SingleplayerScreen;
 
-    private void Awake()
+    public void Setup()
     {
         switch(GameManager.Gamemode)
         {
             case GameManager.Startmethod.singleplayer:
                 startButton.SetActive(true);
                 readyButton.SetActive(false);
-                username.enabled = true;
-                partnername.enabled = false;
+                usernameC.enabled = false;
+                partnernameC.enabled = false;
+                usernameS.enabled = true;
+
+                SingleplayerScreen.SetActive(true);
+                CoopScreen.SetActive(false);
                 break;
 
             case GameManager.Startmethod.multiplayer:
@@ -27,13 +33,17 @@ public class PreGameUIManager : MonoBehaviour
                     startButton.SetActive(false);
 
                 readyButton.SetActive(true);
-                username.enabled = true;
-                partnername.enabled = true;
+                usernameC.enabled = true;
+                partnernameC.enabled = true;
+                usernameS.enabled = false;
 
-                partnername.text = MultiplayerManager.Instance.PartnerName;
+                SingleplayerScreen.SetActive(false);
+                CoopScreen.SetActive(true);
+                partnernameC.text = MultiplayerManager.Instance.PartnerName;
                 break;
         }
 
-        username.text = AccountInfo.Instance.DisplayName;
+        usernameC.text = AccountInfo.Instance.DisplayName;
+        usernameS.text = AccountInfo.Instance.DisplayName;
     }
 }

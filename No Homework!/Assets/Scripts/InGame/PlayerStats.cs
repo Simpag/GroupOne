@@ -18,6 +18,14 @@ public class PlayerStats : MonoBehaviour {
     private float candyCurrency;
     [SerializeField]
     private float startingCash = 500f;
+    [SerializeField]
+    private float cashSpent;
+
+    public float CashSpent
+    {
+        get { return cashSpent; }
+    }
+
 
     public static int Homework
     {
@@ -48,6 +56,7 @@ public class PlayerStats : MonoBehaviour {
     public static void RemoveCandyCurrency(float _amount)
     {
         Instance.candyCurrency -= _amount;
+        Instance.cashSpent += _amount;
         InGameUIManager.UpdateCandyText();
     }
 

@@ -11,6 +11,8 @@ public class PreGameManager : MonoBehaviour
         set { instance = value; }
     }
 
+    public PreGameUIManager ui;
+
     bool foundPartner;
     bool partnerReady;
     bool isReady;
@@ -21,7 +23,6 @@ public class PreGameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this);
         }
         else
         {
@@ -37,6 +38,8 @@ public class PreGameManager : MonoBehaviour
     {
         if (GameManager.IsMultiplayer)
             LookForPartner();
+        else
+            ui.Setup();
     }
 
     private void LookForPartner()
@@ -72,6 +75,7 @@ public class PreGameManager : MonoBehaviour
     public void FoundPartner()
     {
         foundPartner = true;
+        ui.Setup();
     }
 
     public void PartnerReady()

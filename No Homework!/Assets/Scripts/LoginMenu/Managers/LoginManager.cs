@@ -8,6 +8,8 @@ using System.Collections;
 
 public class LoginManager : MonoBehaviour
 {
+    public Button RESET;
+    public Text debug;
     //Debug Flag to simulate a reset
     public bool ClearPlayerPrefs;
 
@@ -54,9 +56,7 @@ public class LoginManager : MonoBehaviour
         //If you want to clear playerprefs to re-login
         if (ClearPlayerPrefs)
         {
-            PlayerPrefs.DeleteAll();
-            _AuthService.ClearRememberMe();
-            _AuthService.AuthType = Authtypes.None;
+            ClearAllPlayerPrefs();
         }
 
         //Set our remember me button to our remembered state.
@@ -67,6 +67,15 @@ public class LoginManager : MonoBehaviour
         {
             _AuthService.RememberMe = toggle;
         });
+
+        debug.text = "awake";
+    }
+
+    public void ClearAllPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        _AuthService.ClearRememberMe();
+        _AuthService.AuthType = Authtypes.None;
     }
 
     public void Start()
@@ -94,14 +103,13 @@ public class LoginManager : MonoBehaviour
         registerPanelButton.onClick.AddListener(OnRegisterPanelButtonClicked);
         RegisterButton.onClick.AddListener(OnRegisterButtonClicked);
         CancelRegisterButton.onClick.AddListener(OnCancelRegisterButtonClicked);
+
+        debug.text = "start";
     }
 
     private void connectionFailed()
     {
-        if (!GameSparks.Core.GS.Available)
-        {
-            GameManager.PlayOffline();
-        }
+        GameManager.PlayOffline();
     }
 
     private void RememberMeAuth(string _auth)
@@ -129,9 +137,13 @@ public class LoginManager : MonoBehaviour
 
     private void StartAuth(bool _isAvailable)
     {
+        debug.text = "start auth";
+        debug.text += " isAvailbel: " + _isAvailable.ToString() + "  remember: " + _AuthService.RememberMe.ToString();
+
         if (_isAvailable && !_AuthService.RememberMe)
         {
             Debug.Log("Start Auth Process!");
+            debug.text = "Can authenticate";
             CancelInvoke("connectionFailed");
 
             _AuthService.Authenticate();
@@ -141,6 +153,7 @@ public class LoginManager : MonoBehaviour
         else if (!_isAvailable)
         {
             Debug.Log("Can't authenticate!");
+            debug.text = "Cant authenticate";
         }
     }
 
@@ -149,6 +162,8 @@ public class LoginManager : MonoBehaviour
     /// </summary>
     private void OnLoginSuccess()
     {
+        debug.text = "success";
+
         DatabaseManager.UpdateDatabase();
 
         //Show our next screen if we logged in successfully.

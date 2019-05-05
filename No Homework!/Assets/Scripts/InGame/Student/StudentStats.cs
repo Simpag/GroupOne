@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.Animations;
 using System.Linq;
 
 /*[Serializable] public class TargetSettingDictionary : SerializableDictionary<Tower.TargetSetting, bool> { }
@@ -14,6 +15,9 @@ public class StudentStats : MonoBehaviour {
     [System.Serializable]
     public struct StudentStat
     {
+        [Header("Animation Avatar")]
+        public Avatar avatar;
+
         [Header("Only fill in the stats that the student will use!")]
         [Header("Normal Stats")]
         public GameObject mesh;
@@ -38,12 +42,19 @@ public class StudentStats : MonoBehaviour {
         public float rangeBuff;
         public float firerateBuff;
     }
+
     public enum TargetSetting
     {
         first,
         last,
         mostHealth,
         leastHealth
+    }
+
+    public enum State
+    {
+        idle,
+        fire
     }
 
     private StudentParent student;
@@ -59,8 +70,12 @@ public class StudentStats : MonoBehaviour {
     private bool canBeSlowed;
     [SerializeField]
     private bool canBeBuffed;
+    [SerializeField]
+    private State currentState;
 
     [Header("General Setup")]
+    [SerializeField]
+    private Animator anim;
 	[SerializeField]
 	private Transform pivotPoint;
 	[SerializeField]
@@ -209,8 +224,6 @@ public class StudentStats : MonoBehaviour {
 
         //Update the current stat
         AddStat(row1Stats[row1Level - 1]);
-
-        UpdateSetups();
     }
 
     public void UpgradeRow2()
@@ -253,7 +266,10 @@ public class StudentStats : MonoBehaviour {
 
     private void AddStat(StudentStat _stat)
     {
-        //currentStat.mesh = _stat.mesh;
+        currentStat.avatar = _stat.avatar;
+        currentStat.mesh.SetActive(false);
+        currentStat.mesh = _stat.mesh;
+        currentStat.mesh.SetActive(true);
         currentStat.bulletPrefab = _stat.bulletPrefab;
         currentStat.damage += _stat.damage;
         currentStat.bulletSpeed += _stat.bulletSpeed;
@@ -272,8 +288,24 @@ public class StudentStats : MonoBehaviour {
     {
         Setup(false);
 
+        //Update animation layer
+        if (row1Level >= 3)
+        {
+            anim.SetLayerWeight(1, 1f);
+            anim.SetLayerWeight(2, 0f);
+        }
+        else if (row2Level >= 3)
+        {
+            anim.SetLayerWeight(1, 0f);
+            anim.SetLayerWeight(2, 1f);
+        }
+
+        anim.avatar = currentStat.avatar;
+        UpdateState(currentState);
+
         //Update bullet stats
-        bullet = currentStat.bulletPrefab.GetComponent<ProjectileParent>();
+        if (currentStat.bulletPrefab != null)
+            bullet = currentStat.bulletPrefab.GetComponent<ProjectileParent>();
     }
 
     public void SlowStudent(float _amount, float _time)
@@ -293,6 +325,25 @@ public class StudentStats : MonoBehaviour {
         {
             currentStat.firerate = normalFireRate;
             normalFireRate = 0;
+        }
+    }
+
+    public void UpdateState(State _state)
+    {
+        /*if (currentState == _state)
+            return;
+            */
+        currentState = _state;
+
+        switch (_state)
+        {
+            case State.idle:
+                anim.SetTrigger("idle");
+                break;
+
+            case State.fire:
+                anim.SetTrigger("fire");
+                break;
         }
     }
 }
