@@ -327,6 +327,11 @@ public class InGameUIManager : MonoBehaviour {
         GameManager.EndGame(false);
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     public void Disconnect()
     {
         MultiplayerManager.Disconnect();

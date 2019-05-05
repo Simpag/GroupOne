@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 4247681999216024}
   - component: {fileID: 114357347539434430}
   - component: {fileID: 1945153557}
+  - component: {fileID: 2978553780246125096}
   m_Layer: 0
   m_Name: NerdStudent
   m_TagString: Untagged
@@ -239,6 +240,8 @@ MonoBehaviour:
   currentTargetSetting: 0
   canBeSlowed: 0
   canBeBuffed: 0
+  currentState: 0
+  anim: {fileID: 2978553780246125096}
   pivotPoint: {fileID: 4744386241757664}
   firePoint: {fileID: 4479675179198608}
   studentArea: {fileID: 1439013549004866}
@@ -247,6 +250,7 @@ MonoBehaviour:
   rangeMaterial: {fileID: 2100000, guid: 01b03e2d690e0474390aec86416beb57, type: 2}
   cantPlaceMaterial: {fileID: 2100000, guid: 6412fc3553a6c8843951e36ae2352e0b, type: 2}
   baseStat:
+    avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
     mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
@@ -263,7 +267,8 @@ MonoBehaviour:
     rangeBuff: 10
     firerateBuff: 10
   row1Stats:
-  - mesh: {fileID: 1311523560391506}
+  - avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+    mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
     area: 0
@@ -276,9 +281,10 @@ MonoBehaviour:
     slowDuration: 0
     moneyGeneration: 0
     damageBuff: 0
-    rangeBuff: 0
+    rangeBuff: 1
     firerateBuff: 0
-  - mesh: {fileID: 1311523560391506}
+  - avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+    mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
     area: 0
@@ -291,9 +297,10 @@ MonoBehaviour:
     slowDuration: 0
     moneyGeneration: 0
     damageBuff: 0
-    rangeBuff: 0
+    rangeBuff: 1
     firerateBuff: 0
-  - mesh: {fileID: 8007391077954488686}
+  - avatar: {fileID: 9000000, guid: eddecb3f7197c2546a6ef4aa72875931, type: 3}
+    mesh: {fileID: 8007391077954488686}
     damage: 0
     bulletSpeed: 0
     area: 0
@@ -306,10 +313,11 @@ MonoBehaviour:
     slowDuration: 0
     moneyGeneration: 0
     damageBuff: 0
-    rangeBuff: 0
+    rangeBuff: 2
     firerateBuff: 0
   row2Stats:
-  - mesh: {fileID: 1311523560391506}
+  - avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+    mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
     area: 0
@@ -324,7 +332,8 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - mesh: {fileID: 1311523560391506}
+  - avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+    mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
     area: 0
@@ -339,7 +348,8 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - mesh: {fileID: 4844047813994368268}
+  - avatar: {fileID: 9000000, guid: 35181499ab9ecb74293060d63abead1b, type: 3}
+    mesh: {fileID: 4844047813994368268}
     damage: 0
     bulletSpeed: 0
     area: 0
@@ -356,7 +366,7 @@ MonoBehaviour:
     firerateBuff: 0
   studentName: Nerd Student
   studentDescription: "\u201CThe nerd doesn\u2019t fight any teachers but instead
-    he does home work, buffs other kids and gives money every round! Upgrades focuses
+    he does homework, buffs other kids and gives money every round! Upgrades focuses
     on buffing kids or money generation.\u201D"
   target: {fileID: 0}
   shopStats:
@@ -382,6 +392,7 @@ MonoBehaviour:
   row2Level: 0
   buffPercentage: 0
   currentStat:
+    avatar: {fileID: 0}
     mesh: {fileID: 0}
     damage: 0
     bulletSpeed: 0
@@ -410,6 +421,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffAmount: 20
+--- !u!95 &2978553780246125096
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716343027190860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+  m_Controller: {fileID: 9100000, guid: 02e7ead13996944b591d7a17e940350a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1884402945581702
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +707,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.48327836
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9500000, guid: 35181499ab9ecb74293060d63abead1b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 02e7ead13996944b591d7a17e940350a, type: 2}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 35181499ab9ecb74293060d63abead1b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35181499ab9ecb74293060d63abead1b, type: 3}
 --- !u!4 &1013896780669373033 stripped
 Transform:
@@ -752,7 +787,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.48327836
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: eddecb3f7197c2546a6ef4aa72875931, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eddecb3f7197c2546a6ef4aa72875931, type: 3}
 --- !u!4 &4063187088696782650 stripped
 Transform:
@@ -767,14 +803,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4284340564393352}
     m_Modifications:
-    - target: {fileID: 100064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
-      propertyPath: m_Name
-      value: NerdAnimation
-      objectReference: {fileID: 0}
-    - target: {fileID: 100064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -831,7 +859,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.48327836
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 100064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+      propertyPath: m_Name
+      value: NerdAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 100064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
 --- !u!4 &7862706522501141386 stripped
 Transform:

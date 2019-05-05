@@ -1,17 +1,43 @@
 ﻿<Properties StartupConfiguration="{2ADE49D6-4EB6-E11B-90B9-E9ED40653014}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/StudentInfoUpgradeButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/Student/StudentStats.cs">
     <Files>
       <File FileName="Assets/Scripts/InGame/WaveSpawner/WaveSpawner.cs" Line="75" Column="1" />
-      <File FileName="Assets/Scripts/InGame/BuildManager.cs" Line="107" Column="63" />
-      <File FileName="Assets/Scripts/InGame/InGameUIManager.cs" Line="128" Column="76" />
-      <File FileName="Assets/Scripts/InGame/HomeworkBar.cs" Line="17" Column="11" />
-      <File FileName="Assets/Scripts/InGame/GameManager.cs" Line="75" Column="63" />
-      <File FileName="Assets/Scripts/InGame/StudentInfoUpgradeButton.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/InGame/BuildManager.cs" Line="107" Column="52" />
+      <File FileName="Assets/Scripts/InGame/GameManager.cs" Line="75" Column="1" />
+      <File FileName="Assets/Scripts/InGame/UI/InGameUIManager.cs" Line="332" Column="28" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentParents/StudentParent.cs" Line="27" Column="27" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="290" Column="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentRange.cs" Line="59" Column="27" />
+      <File FileName="Assets/Scripts/InGame/Student/Student Classes/NerdStudent/NerdStudentTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/InGame/Student/Student Classes/NerdStudent/NerdStudent.cs" Line="24" Column="10" />
+      <File FileName="Assets/Scripts/PreGame/PreGameManager.cs" Line="24" Column="10" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="No Homework!" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="InGame" expanded="True">
+                  <Node name="Student" expanded="True">
+                    <Node name="Student Classes" expanded="True">
+                      <Node name="NerdStudent" expanded="True" />
+                    </Node>
+                    <Node name="StudentParents" expanded="True" />
+                    <Node name="StudentStats.cs" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="PreGame" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2e91cd57-35dd-403d-97ca-5fb405fc756e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
