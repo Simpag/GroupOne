@@ -1,705 +1,1562 @@
-Base path: C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data
+Base path: C:/Program Files/Unity/Hub/Editor/2018.3.11f1/Editor/Data
 Cmd: initializeCompiler
-Cmd: initializeCompiler
 Cmd: preprocessCompute
-  insize=4765 outsize=4767 ok=1
+  insize=4853 outsize=4855 ok=1
 Cmd: preprocessCompute
-  insize=3535 outsize=3537 ok=1
+  insize=4822 outsize=4824 ok=1
 Cmd: preprocess
-  insize=10115 outsize=429 ok=1
+  insize=8099 outsize=441 ok=1
 Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=4761 outsize=4763 ok=1
+  insize=4853 outsize=4855 ok=1
+Cmd: preprocessCompute
+  insize=5088 outsize=5090 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=4763 outsize=2269 ok=1
-Cmd: preprocessCompute
-  insize=3527 outsize=3529 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=3529 outsize=1541 ok=1
+  api=4 insize=5090 outsize=9073 ok=1
 Cmd: preprocess
-  insize=10111 outsize=428 ok=1
+  insize=8099 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=4861 outsize=4863 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4863 outsize=2313 ok=1
+Cmd: preprocessCompute
+  insize=5102 outsize=5104 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5104 outsize=9073 ok=1
+Cmd: preprocess
+  insize=8105 outsize=441 ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10018 outsize=3722 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=0 insize=7998 outsize=1870 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10018 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=1 insize=7998 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=1565 outsize=1457 ok=1
+  insize=1622 outsize=1624 ok=1
 Cmd: preprocessCompute
-  insize=4761 outsize=4763 ok=1
+  insize=4861 outsize=4863 ok=1
 Cmd: preprocessCompute
-  insize=3527 outsize=3529 ok=1
+  insize=5357 outsize=5359 ok=1
 Cmd: preprocess
-  insize=10335 outsize=429 ok=1
+  insize=8105 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1622 outsize=1624 ok=1
+Cmd: preprocessCompute
+  insize=4861 outsize=4863 ok=1
+Cmd: preprocessCompute
+  insize=5050 outsize=5052 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5052 outsize=9073 ok=1
+Cmd: preprocess
+  insize=8105 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1622 outsize=1624 ok=1
+Cmd: preprocessCompute
+  insize=4861 outsize=4863 ok=1
+Cmd: preprocessCompute
+  insize=3974 outsize=3976 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3976 outsize=1649 ok=1
+Cmd: preprocess
+  insize=8105 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1622 outsize=1624 ok=1
+Cmd: preprocessCompute
+  insize=4859 outsize=4861 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4861 outsize=2313 ok=1
+Cmd: preprocessCompute
+  insize=3970 outsize=3972 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3972 outsize=1649 ok=1
+Cmd: preprocess
+  insize=8103 outsize=441 ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10242 outsize=4214 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=0 insize=7996 outsize=1870 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10242 outsize=6058 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=1 insize=7996 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
-Cmd: preprocessCompute
-  insize=4761 outsize=4763 ok=1
-Cmd: preprocessCompute
-  insize=3527 outsize=3529 ok=1
-Cmd: preprocess
-  insize=10111 outsize=428 ok=1
-Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
-Cmd: preprocessCompute
-  insize=4761 outsize=4763 ok=1
-Cmd: preprocessCompute
-  insize=3527 outsize=3529 ok=1
+  insize=1622 outsize=1624 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=3529 outsize=1541 ok=1
+  api=4 insize=1624 outsize=1457 ok=1
+Cmd: preprocessCompute
+  insize=4859 outsize=4861 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4861 outsize=2313 ok=1
+Cmd: preprocessCompute
+  insize=3970 outsize=3972 ok=1
 Cmd: preprocess
-  insize=10111 outsize=429 ok=1
+  insize=8103 outsize=440 ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10018 outsize=3722 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=0 insize=7996 outsize=1870 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10018 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=1 insize=7996 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
+  insize=1622 outsize=1624 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=1565 outsize=1457 ok=1
+  api=4 insize=1624 outsize=1457 ok=1
 Cmd: preprocessCompute
-  insize=4761 outsize=4763 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4763 outsize=2269 ok=1
+  insize=4859 outsize=4861 ok=1
 Cmd: preprocessCompute
-  insize=3527 outsize=3529 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=3529 outsize=1541 ok=1
+  insize=3970 outsize=3972 ok=1
 Cmd: preprocess
-  insize=10111 outsize=429 ok=1
+  insize=8103 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1622 outsize=1624 ok=1
+Cmd: preprocessCompute
+  insize=4859 outsize=4861 ok=1
+Cmd: preprocessCompute
+  insize=3970 outsize=3972 ok=1
+Cmd: preprocess
+  insize=8103 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1622 outsize=1624 ok=1
+Cmd: preprocessCompute
+  insize=4859 outsize=4861 ok=1
+Cmd: preprocessCompute
+  insize=3970 outsize=3972 ok=1
+Cmd: preprocess
+  insize=8103 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1622 outsize=1624 ok=1
+Cmd: preprocessCompute
+  insize=5821 outsize=5823 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5823 outsize=2709 ok=1
+Cmd: preprocessCompute
+  insize=3970 outsize=3972 ok=1
+Cmd: preprocess
+  insize=8103 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1622 outsize=1624 ok=1
+Cmd: preprocessCompute
+  insize=5817 outsize=5819 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5819 outsize=2709 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3966 outsize=1649 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10018 outsize=3722 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=0 insize=7994 outsize=1870 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10018 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=1 insize=7994 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=5817 outsize=5819 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=5820 outsize=5822 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=1565 outsize=1457 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program with SHADOW_LOW USE_CLUSTERED_LIGHTLIST
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program with SHADOW_LOW USE_CLUSTERED_LIGHTLIST
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=18953 outsize=7030 kw=SHADOW_LOW USE_CLUSTERED_LIGHTLIST pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program with SHADOW_LOW USE_CLUSTERED_LIGHTLIST
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program with SHADOW_LOW USE_CLUSTERED_LIGHTLIST
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.high-definition/Runtime/Lighting/Shadow/HDShadowAlgorithms.hlsl(172): floating point division by zero\nCompiling Fragment program with SHADOW_LOW USE_CLUSTERED_LIGHTLIST
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=18953 outsize=68338 kw=SHADOW_LOW USE_CLUSTERED_LIGHTLIST pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 insize=5822 outsize=2877 ok=1
 Cmd: preprocessCompute
-  insize=4742 outsize=4744 ok=1
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=6503 outsize=6505 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=4744 outsize=1861 ok=1
+  api=4 insize=6505 outsize=4669 ok=1
 Cmd: preprocessCompute
-  insize=3527 outsize=3529 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10111 outsize=429 ok=1
+  insize=8101 outsize=441 ok=1
 Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=5560 outsize=5562 ok=1
-Cmd: preprocessCompute
-  insize=4765 outsize=4767 ok=1
-Cmd: preprocess
-  insize=18497 outsize=429 ok=1
-Cmd: preprocessCompute
-  insize=5813 outsize=5815 ok=1
-Cmd: preprocessCompute
-  insize=4982 outsize=4984 ok=1
-Cmd: preprocess
-  insize=10754 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=1564 outsize=1566 ok=1
-Cmd: preprocessCompute
-  insize=5518 outsize=5520 ok=1
-Cmd: preprocessCompute
-  insize=4769 outsize=4771 ok=1
-Cmd: preprocess
-  insize=19045 outsize=429 ok=1
-Cmd: preprocessCompute
-  insize=5636 outsize=5638 ok=1
-Cmd: preprocessCompute
-  insize=4943 outsize=4945 ok=1
-Cmd: preprocess
-  insize=10768 outsize=415 ok=1
-Cmd: preprocessCompute
-  insize=1564 outsize=1566 ok=1
-Cmd: preprocessCompute
-  insize=4761 outsize=4763 ok=1
-Cmd: preprocessCompute
-  insize=3527 outsize=3529 ok=1
-Cmd: preprocess
-  insize=10111 outsize=429 ok=1
-Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
-Cmd: preprocessCompute
-  insize=4761 outsize=4763 ok=1
-Cmd: preprocessCompute
-  insize=4125 outsize=4127 ok=1
+  insize=6588 outsize=6590 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=4127 outsize=1773 ok=1
+  api=4 insize=6590 outsize=4845 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10111 outsize=429 ok=1
+  insize=8101 outsize=441 ok=1
 Cmd: preprocessCompute
-  insize=1563 outsize=1565 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=5477 outsize=5479 ok=1
+  insize=6483 outsize=6485 ok=1
 Cmd: preprocessCompute
-  insize=4878 outsize=4880 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10593 outsize=416 ok=1
+  insize=8101 outsize=441 ok=1
 Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=6626 outsize=6628 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=6503 outsize=6505 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=5820 outsize=5822 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=7243 outsize=7245 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=5475 outsize=2549 ok=1
+  api=4 insize=7245 outsize=4705 ok=1
 Cmd: preprocessCompute
-  insize=4874 outsize=4876 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4876 outsize=2189 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10589 outsize=415 ok=1
+  insize=8401 outsize=440 ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10509 outsize=3842 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=0 insize=8294 outsize=2590 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10509 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=1 insize=8294 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=5476 outsize=5478 ok=1
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=7586 outsize=7588 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=5478 outsize=2729 ok=1
+  api=4 insize=7588 outsize=4801 ok=1
 Cmd: preprocessCompute
-  insize=4874 outsize=4876 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10589 outsize=415 ok=1
+  insize=8401 outsize=440 ok=1
 Cmd: preprocessCompute
-  insize=5475 outsize=5477 ok=1
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=6823 outsize=6825 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=5477 outsize=2845 ok=1
+  api=4 insize=6825 outsize=2977 ok=1
 Cmd: preprocessCompute
-  insize=4874 outsize=4876 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10589 outsize=415 ok=1
+  insize=8401 outsize=440 ok=1
 Cmd: preprocessCompute
-  insize=5476 outsize=5478 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=4874 outsize=4876 ok=1
+  insize=5820 outsize=5822 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10589 outsize=415 ok=1
+  insize=8101 outsize=441 ok=1
 Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=4874 outsize=4876 ok=1
-Cmd: preprocess
-  insize=10589 outsize=415 ok=1
-Cmd: preprocessCompute
-  insize=5519 outsize=5521 ok=1
+  insize=7223 outsize=7225 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=5521 outsize=2473 ok=1
+  api=4 insize=7225 outsize=4849 ok=1
 Cmd: preprocessCompute
-  insize=4874 outsize=4876 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10589 outsize=415 ok=1
+  insize=8401 outsize=440 ok=1
 Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=4874 outsize=4876 ok=1
-Cmd: preprocess
-  insize=10589 outsize=415 ok=1
-Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
+  insize=6467 outsize=6469 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=4791 outsize=2085 ok=1
-Cmd: preprocess
-  insize=10589 outsize=415 ok=1
+  api=4 insize=6469 outsize=3713 ok=1
 Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
-Cmd: preprocess
-  insize=11049 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10969 outsize=4346 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10969 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
-Cmd: preprocess
-  insize=11049 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10969 outsize=4346 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10969 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
-Cmd: preprocess
-  insize=10583 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10503 outsize=3806 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10503 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
-Cmd: preprocess
-  insize=10333 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10253 outsize=3774 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10253 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
-Cmd: preprocess
-  insize=10583 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
-Cmd: preprocess
-  insize=11049 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
-Cmd: preprocess
-  insize=10799 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10719 outsize=4314 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10719 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
-Cmd: preprocessCompute
-  insize=4789 outsize=4791 ok=1
-Cmd: preprocess
-  insize=11049 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=5251 outsize=5253 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=5253 outsize=2433 ok=1
+  api=4 insize=3966 outsize=1649 ok=1
+Cmd: preprocess
+  insize=8201 outsize=441 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8094 outsize=2146 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8094 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=2727 outsize=2729 ok=1
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=6610 outsize=6612 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=2729 outsize=1257 ok=1
+  api=4 insize=6612 outsize=3973 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10971 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at (158): floating point division by zero\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10891 outsize=1614 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10891 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  insize=8201 outsize=441 ok=1
 Cmd: preprocessCompute
-  insize=5473 outsize=5475 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=3973 outsize=3975 ok=1
+  insize=6994 outsize=6996 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=3975 outsize=1485 ok=1
-Cmd: preprocess
-  insize=11049 outsize=416 ok=1
+  api=4 insize=6996 outsize=4525 ok=1
 Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=5473 outsize=2549 ok=1
+  api=4 insize=3966 outsize=1649 ok=1
+Cmd: preprocess
+  insize=8301 outsize=441 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8194 outsize=2390 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8194 outsize=5910 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=7366 outsize=7368 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=3973 outsize=1485 ok=1
+  api=4 insize=7368 outsize=5109 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=11047 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10967 outsize=4346 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10967 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  insize=8401 outsize=440 ok=1
 Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=10970 outsize=415 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10890 outsize=4386 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10890 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=10967 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10887 outsize=4398 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10887 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=10970 outsize=415 ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11047 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11042 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10962 outsize=4386 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10962 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11102 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=11022 outsize=4434 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=11022 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11202 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=11122 outsize=4478 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=11122 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
+  insize=7251 outsize=7253 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=5473 outsize=2549 ok=1
+  api=4 insize=7253 outsize=4777 ok=1
 Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8401 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=7243 outsize=7245 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8401 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=5820 outsize=5822 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=7243 outsize=7245 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8401 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=5820 outsize=5822 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=6828 outsize=6830 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=3973 outsize=1485 ok=1
+  api=4 insize=6830 outsize=2953 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=11202 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=11122 outsize=4478 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=11122 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  insize=8401 outsize=440 ok=1
 Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
+  insize=5820 outsize=5822 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=11102 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=11022 outsize=4434 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=11022 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  insize=8101 outsize=441 ok=1
 Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11047 outsize=416 ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=10967 outsize=4346 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=10967 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11102 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11202 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11202 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=5518 outsize=5520 ok=1
-Cmd: preprocessCompute
-  insize=4769 outsize=4771 ok=1
-Cmd: preprocess
-  insize=19045 outsize=429 ok=1
-Cmd: preprocessCompute
-  insize=5636 outsize=5638 ok=1
-Cmd: preprocessCompute
-  insize=4943 outsize=4945 ok=1
-Cmd: preprocess
-  insize=10768 outsize=415 ok=1
-Cmd: preprocessCompute
-  insize=1564 outsize=1566 ok=1
-Cmd: preprocessCompute
-  insize=5471 outsize=5473 ok=1
-Cmd: preprocessCompute
-  insize=3971 outsize=3973 ok=1
-Cmd: preprocess
-  insize=11202 outsize=416 ok=1
-Cmd: preprocessCompute
-  insize=5284 outsize=5286 ok=1
-Cmd: preprocessCompute
-  insize=4010 outsize=4012 ok=1
+  insize=7246 outsize=7248 ok=1
 Cmd: compileComputeKernel
-  api=4 insize=4012 outsize=1461 ok=1
+  api=4 insize=7248 outsize=4705 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=11161 outsize=416 ok=1
+  insize=8401 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=5820 outsize=5822 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8101 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=7226 outsize=7228 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7228 outsize=4849 ok=1
+Cmd: preprocessCompute
+  insize=3964 outsize=3966 ok=1
+Cmd: preprocess
+  insize=8401 outsize=440 ok=1
+Cmd: preprocessCompute
+  insize=1621 outsize=1623 ok=1
+Cmd: preprocessCompute
+  insize=7224 outsize=7226 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7226 outsize=4849 ok=1
+Cmd: preprocessCompute
+  insize=3928 outsize=3930 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3930 outsize=1529 ok=1
+Cmd: preprocess
+  insize=8350 outsize=428 ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=11081 outsize=4442 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=0 insize=8256 outsize=2622 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
   error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=1 insize=11081 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  api=4 type=1 insize=8256 outsize=4154 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=5560 outsize=5562 ok=1
+  insize=7224 outsize=7226 ok=1
 Cmd: preprocessCompute
-  insize=4765 outsize=4767 ok=1
+  insize=3928 outsize=3930 ok=1
 Cmd: preprocess
-  insize=18497 outsize=429 ok=1
+  insize=14560 outsize=557 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=7857 outsize=2506 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=7857 outsize=466 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8379 outsize=2674 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8379 outsize=542 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=5813 outsize=5815 ok=1
+  insize=7226 outsize=7228 ok=1
 Cmd: preprocessCompute
-  insize=4982 outsize=4984 ok=1
+  insize=3964 outsize=3966 ok=1
 Cmd: preprocess
-  insize=10754 outsize=416 ok=1
+  insize=8402 outsize=436 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8300 outsize=2590 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8300 outsize=5858 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=1564 outsize=1566 ok=1
+  insize=1621 outsize=1623 ok=1
 Cmd: preprocessCompute
-  insize=5284 outsize=5286 ok=1
+  insize=7224 outsize=7226 ok=1
 Cmd: preprocessCompute
-  insize=4010 outsize=4012 ok=1
+  insize=3928 outsize=3930 ok=1
 Cmd: preprocess
-  insize=11161 outsize=416 ok=1
+  insize=14439 outsize=556 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=7737 outsize=2466 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=7737 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8259 outsize=2470 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8259 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=5560 outsize=5562 ok=1
+  insize=7221 outsize=7223 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7223 outsize=4717 ok=1
 Cmd: preprocessCompute
-  insize=4765 outsize=4767 ok=1
+  insize=3928 outsize=3930 ok=1
 Cmd: preprocess
-  insize=18497 outsize=429 ok=1
+  insize=14439 outsize=556 ok=1
 Cmd: preprocessCompute
-  insize=5813 outsize=5815 ok=1
+  insize=7227 outsize=7229 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7229 outsize=4717 ok=1
 Cmd: preprocessCompute
-  insize=4982 outsize=4984 ok=1
+  insize=3938 outsize=3940 ok=1
 Cmd: preprocess
-  insize=10754 outsize=416 ok=1
+  insize=14447 outsize=555 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=7741 outsize=2466 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=7741 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8263 outsize=2470 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8263 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: preprocessCompute
-  insize=1564 outsize=1566 ok=1
+  insize=7230 outsize=7232 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7232 outsize=4849 ok=1
 Cmd: preprocessCompute
-  insize=5518 outsize=5520 ok=1
-Cmd: preprocessCompute
-  insize=4769 outsize=4771 ok=1
+  insize=3938 outsize=3940 ok=1
 Cmd: preprocess
-  insize=19045 outsize=429 ok=1
+  insize=14447 outsize=555 ok=1
 Cmd: preprocessCompute
-  insize=5636 outsize=5638 ok=1
+  insize=7249 outsize=7251 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7251 outsize=4965 ok=1
 Cmd: preprocessCompute
-  insize=4943 outsize=4945 ok=1
+  insize=3938 outsize=3940 ok=1
 Cmd: preprocess
-  insize=10768 outsize=415 ok=1
+  insize=14447 outsize=555 ok=1
 Cmd: preprocessCompute
-  insize=1564 outsize=1566 ok=1
+  insize=7249 outsize=7251 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7251 outsize=4965 ok=1
 Cmd: preprocessCompute
-  insize=5518 outsize=5520 ok=1
-Cmd: preprocessCompute
-  insize=4769 outsize=4771 ok=1
+  insize=3938 outsize=3940 ok=1
 Cmd: preprocess
-  insize=19045 outsize=429 ok=1
+  insize=14447 outsize=555 ok=1
 Cmd: preprocessCompute
-  insize=5636 outsize=5638 ok=1
+  insize=7227 outsize=7229 ok=1
 Cmd: preprocessCompute
-  insize=4943 outsize=4945 ok=1
+  insize=3938 outsize=3940 ok=1
 Cmd: preprocess
-  insize=10768 outsize=415 ok=1
+  insize=14447 outsize=555 ok=1
 Cmd: preprocessCompute
-  insize=1564 outsize=1566 ok=1
+  insize=7993 outsize=7995 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7995 outsize=4537 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3940 outsize=1529 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=8950 outsize=8952 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=8952 outsize=5213 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=8087 outsize=8089 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=8089 outsize=4761 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=8087 outsize=8089 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=7341 outsize=7343 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7343 outsize=4761 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=5915 outsize=5917 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5917 outsize=2925 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=13847 outsize=555 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=7441 outsize=1746 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=7441 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=7963 outsize=1750 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=7963 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=8338 outsize=8340 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=8340 outsize=4761 ok=1
+Cmd: preprocessCompute
+  insize=6213 outsize=6215 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6215 outsize=1945 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=7741 outsize=2442 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=7741 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8263 outsize=2446 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8263 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=8423 outsize=8425 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=8425 outsize=4937 ok=1
+Cmd: preprocessCompute
+  insize=6213 outsize=6215 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6215 outsize=1917 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=8318 outsize=8320 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=8320 outsize=4941 ok=1
+Cmd: preprocessCompute
+  insize=6213 outsize=6215 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=8461 outsize=8463 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=8463 outsize=5165 ok=1
+Cmd: preprocessCompute
+  insize=6213 outsize=6215 ok=1
+Cmd: preprocess
+  insize=14447 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=5915 outsize=5917 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=13847 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=5915 outsize=5917 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=13847 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=6454 outsize=6456 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6456 outsize=3725 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=13847 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=6454 outsize=6456 ok=1
+Cmd: preprocessCompute
+  insize=4074 outsize=4076 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4076 outsize=1529 ok=1
+Cmd: preprocess
+  insize=13847 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=6454 outsize=6456 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=13847 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=6454 outsize=6456 ok=1
+Cmd: preprocessCompute
+  insize=4074 outsize=4076 ok=1
+Cmd: preprocess
+  insize=13847 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=6454 outsize=6456 ok=1
+Cmd: preprocessCompute
+  insize=3938 outsize=3940 ok=1
+Cmd: preprocess
+  insize=13847 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7260 outsize=3809 ok=1
+Cmd: preprocessCompute
+  insize=6091 outsize=6093 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6093 outsize=3577 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=7741 outsize=2466 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=7741 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8263 outsize=2470 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8263 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7167 outsize=7169 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7169 outsize=11009 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7113 outsize=7115 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7115 outsize=10905 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7480 outsize=7482 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7482 outsize=3849 ok=1
+Cmd: preprocessCompute
+  insize=7711 outsize=7713 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7113 outsize=7115 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7685 outsize=7687 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7113 outsize=7115 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7113 outsize=7115 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7450 outsize=7452 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7452 outsize=11053 ok=1
+Cmd: preprocess
+  insize=14447 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at Congratz.vfx(83): comma expression used where a vector constructor may have been intended
+  api=4 insize=7885 outsize=11081 ok=1
+Cmd: preprocess
+  insize=14447 outsize=553 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=7741 outsize=2466 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=7741 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8263 outsize=2470 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8263 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8192 outsize=2514 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8192 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8714 outsize=2518 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8714 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7245 outsize=7247 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7247 outsize=3769 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7245 outsize=7247 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7247 outsize=3785 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7242 outsize=7244 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7244 outsize=3657 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7485 outsize=7487 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7487 outsize=3897 ok=1
+Cmd: preprocessCompute
+  insize=7958 outsize=7960 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at Congratz.vfx(83): comma expression used where a vector constructor may have been intended
+  api=4 insize=7960 outsize=11081 ok=1
+Cmd: preprocess
+  insize=15427 outsize=555 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8274 outsize=2514 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8274 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8796 outsize=2518 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8796 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7469 outsize=7471 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7471 outsize=3709 ok=1
+Cmd: preprocessCompute
+  insize=7958 outsize=7960 ok=1
+Cmd: preprocess
+  insize=15427 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=7485 outsize=7487 ok=1
+Cmd: preprocessCompute
+  insize=7958 outsize=7960 ok=1
+Cmd: preprocess
+  insize=15427 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7492 outsize=7494 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7494 outsize=3821 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15267 outsize=560 ok=1
+Cmd: preprocess
+  insize=16171 outsize=543 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8592 outsize=4002 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8592 outsize=350 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=9372 outsize=4170 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=9372 outsize=398 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7888 outsize=7890 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7890 outsize=4521 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7264 outsize=7266 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7266 outsize=3765 ok=1
+Cmd: preprocessCompute
+  insize=7895 outsize=7897 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at Congratz.vfx(83): comma expression used where a vector constructor may have been intended
+  api=4 insize=7897 outsize=11065 ok=1
+Cmd: preprocess
+  insize=17694 outsize=555 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=9503 outsize=2514 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=9503 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=10023 outsize=2518 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=10023 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7264 outsize=7266 ok=1
+Cmd: preprocessCompute
+  insize=7895 outsize=7897 ok=1
+Cmd: preprocess
+  insize=17694 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=6928 outsize=6930 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6930 outsize=3321 ok=1
+Cmd: preprocessCompute
+  insize=7905 outsize=7907 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at Congratz.vfx(83): comma expression used where a vector constructor may have been intended
+  api=4 insize=7907 outsize=11065 ok=1
+Cmd: preprocess
+  insize=17690 outsize=555 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=9501 outsize=2514 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=9501 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=10021 outsize=2518 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=10021 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7264 outsize=7266 ok=1
+Cmd: preprocessCompute
+  insize=7895 outsize=7897 ok=1
+Cmd: preprocess
+  insize=17694 outsize=555 ok=1
+Cmd: preprocessCompute
+  insize=7264 outsize=7266 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7266 outsize=3709 ok=1
+Cmd: preprocessCompute
+  insize=8886 outsize=8888 ok=1
+Cmd: preprocess
+  insize=20255 outsize=556 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=10902 outsize=2522 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=10902 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=11422 outsize=2526 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=11422 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7264 outsize=7266 ok=1
+Cmd: preprocessCompute
+  insize=8886 outsize=8888 ok=1
+Cmd: preprocess
+  insize=18537 outsize=555 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=9984 outsize=2522 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=9984 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=10504 outsize=2526 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=10504 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7260 outsize=3809 ok=1
+Cmd: preprocessCompute
+  insize=8670 outsize=8672 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at Congratz.vfx(86): comma expression used where a vector constructor may have been intended
+  api=4 insize=8672 outsize=12761 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7258 outsize=7260 ok=1
+Cmd: preprocessCompute
+  insize=7883 outsize=7885 ok=1
+Cmd: preprocess
+  insize=15263 outsize=556 ok=1
+Cmd: preprocessCompute
+  insize=7165 outsize=7167 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7167 outsize=3309 ok=1
+Cmd: preprocessCompute
+  insize=7881 outsize=7883 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at Congratz.vfx(77): comma expression used where a vector constructor may have been intended
+  api=4 insize=7883 outsize=10029 ok=1
+Cmd: preprocess
+  insize=15223 outsize=555 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8129 outsize=2466 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8129 outsize=282 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=8651 outsize=2470 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(112): 'SAMPLE_DEPTH_TEXTURE' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  error: 1 plat 4 at Packages/com.unity.render-pipelines.core/ShaderLibrary/API/D3D11.hlsl(113): 'SAMPLE_DEPTH_TEXTURE_LOD' : macro redefinition\nCompiling Fragment program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=8651 outsize=426 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=7165 outsize=7167 ok=1
+Cmd: preprocessCompute
+  insize=7881 outsize=7883 ok=1
+Cmd: preprocess
+  insize=15223 outsize=555 ok=1

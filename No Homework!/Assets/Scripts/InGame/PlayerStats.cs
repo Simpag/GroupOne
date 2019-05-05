@@ -61,6 +61,21 @@ public class PlayerStats : MonoBehaviour {
     {
         Instance.homework += _amount;
         InGameUIManager.UpdateHomework();
+
+        if (Instance.homework >= HomeworkBar.Instance.maxHomework)
+        {
+            GameManager.EndGame(false);
+        }
     }
 
+    public static void SetHomework(int _amount)
+    {
+        Instance.homework = _amount;
+        InGameUIManager.UpdateHomework();
+
+        if (Instance.homework >= HomeworkBar.Instance.maxHomework)
+        {
+            GameManager.EndGame(false);
+        }
+    }
 }

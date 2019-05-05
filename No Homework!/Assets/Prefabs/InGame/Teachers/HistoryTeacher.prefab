@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   homework: 10
-  health: 150
+  health: 115
   worth: 40
   speed: 10
   ticketsForSpawning: 50
@@ -193,6 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc45df76722d24a148357033aecf1559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 3097303182489222065, guid: 20d5f5f77005ed546820e6b8b90872d0,
+    type: 3}
 --- !u!1001 &9183819363812704536
 PrefabInstance:
   m_ObjectHideFlags: 0

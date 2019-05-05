@@ -82,11 +82,13 @@ public class MainMenuManager : MonoBehaviour {
 
     public void PlaySingleplayer ()
     {
-        GameManager.StartGame(GameManager.Startmethod.singleplayer);
+        GameManager.SetupGameMode(GameManager.Startmethod.singleplayer);
+        SceneManager.LoadScene(GameConstants.PRE_GAME_SCENE);
     }
 
     public void PlayMultiplayer ()
     {
-        MultiplayerManager.Instance.RandomMatchMaking();
+        GameManager.SetupGameMode(GameManager.Startmethod.multiplayer);
+        SceneManager.LoadScene(GameConstants.PRE_GAME_SCENE);
     }
 }

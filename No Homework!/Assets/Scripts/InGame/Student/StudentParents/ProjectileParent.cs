@@ -16,10 +16,12 @@ public class ProjectileParent : MonoBehaviour {
 
     protected TeacherStats teacherTarget;
     protected StudentStats.StudentStat currentStat;
+    protected StudentStats student;
 
-    public virtual void Setup(StudentStats.StudentStat _stat)
+    public virtual void Setup(StudentStats.StudentStat _stat, StudentStats _stats)
     {
         currentStat = _stat;
+        student = _stats;
     }
 
     public virtual void Seek (Transform _target)
@@ -48,7 +50,8 @@ public class ProjectileParent : MonoBehaviour {
         if (System.Math.Abs(currentStat.AOERadius) > Mathf.Epsilon)
         {
             DamageAOE();
-        } else
+        } 
+        else
         {
             DamageEnemy(teacherTarget);
         }
@@ -61,7 +64,7 @@ public class ProjectileParent : MonoBehaviour {
         GameObject _effect = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(_effect, impactEffect.GetComponent<ParticleSystem>().main.startLifetime.constant);
         
-        _teacher.TakeDamage(currentStat.damage);
+        _teacher.TakeDamage(currentStat.damage, student);
     }
 
     protected virtual void DamageAOE()

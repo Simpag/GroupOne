@@ -14,7 +14,6 @@ public class BuildManager : MonoBehaviour {
     public static BuildManager Instance
     {
         get { return instance; }
-        set { instance = value; }
     }
 
     [SerializeField]
@@ -44,6 +43,8 @@ public class BuildManager : MonoBehaviour {
     //Tower info variables
     private StudentStats tower;
 
+    private float shopTimer;
+
     void Start()
     {
         cam = Camera.main;
@@ -68,6 +69,9 @@ public class BuildManager : MonoBehaviour {
 
     private void Update()
     {
+        if (shopTimer > 0) //this is very bunk
+            shopTimer -= Time.deltaTime;
+
         if (towerIsSelected) //Building a tower
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -83,6 +87,8 @@ public class BuildManager : MonoBehaviour {
                 followingTowerTransform = Instantiate(towerToBuild.TowerPrefab, locationToBuild, Quaternion.identity, towerContainer).transform;
                 followingTower = followingTowerTransform.GetComponent<StudentStats>();
                 followingTower.MovingTower();
+
+                shopTimer = 0.25f;
             }
             else if (Input.GetMouseButton(0))
             {
@@ -90,7 +96,19 @@ public class BuildManager : MonoBehaviour {
             }
             else if (Input.GetMouseButtonUp(0))
             {
-                BuildTower();
+                if (shopTimer <= 0) //This is very bunk
+                {
+                    BuildTower();
+                }
+                else
+                {
+                    //Reset variables
+                    Destroy(followingTowerTransform.gameObject);
+                    followingTowerTransform = null;
+                    towerToBuild = null;
+                    towerIsSelected = false;
+                }
+
             }
         }
         else // Tower info
@@ -136,7 +154,7 @@ public class BuildManager : MonoBehaviour {
         if (canBuild)
         {
             AudioManager.Instance.Play("TowerPlacedSound");
-            InGameShopManager.PurchasedTower(towerToBuild);
+            InGameShopManager.PurchasedStudent(towerToBuild);
 
             if (GameManager.IsMultiplayer)
             {
@@ -155,28 +173,53 @@ public class BuildManager : MonoBehaviour {
         }
     }
 
-    public void UpgradeStudentRow1(StudentStats _towerInfo)
+    public void SellStudent(StudentStats _stats, bool _recivedMoneyBack)
     {
-        bool _success = InGameShopManager.UpgradeTower(_towerInfo, 1);
+        Destroy(_stats.gameObject);
+
+        if (_recivedMoneyBack)
+            InGameShopManager.SoldStudent(_stats.shopStats);
+    }
+
+    public bool UpgradeStudentRow1(StudentStats _towerInfo)
+    {
+        bool _success = InGameShopManager.UpgradeStudent(_towerInfo, 1);
         
         if (_success && GameManager.IsMultiplayer)
         {
             MultiplayerManager.SendTowerUpgradeToPartner(_towerInfo, 1);
         }
+
+        return _success;
     }
 
-    public void UpgradeStudentRow2(StudentStats _towerInfo)
+    public bool UpgradeStudentRow2(StudentStats _towerInfo)
     {
-        bool _success = InGameShopManager.UpgradeTower(_towerInfo, 2);
+        bool _success = InGameShopManager.UpgradeStudent(_towerInfo, 2);
 
         if (_success && GameManager.IsMultiplayer)
         {
             MultiplayerManager.SendTowerUpgradeToPartner(_towerInfo, 2);
         }
+
+        return _success;
     }
 
-    public void BuildPartnerTower(GameObject _prefab, Vector3 _position, string _towerGUID)
+    public void BuildPartnerTower(GameObject _prefab, Vector3 _position, string _towerGUID, bool isHost)
     {
+        if (isHost)
+        {
+            Vector3 _pos = new Vector3(_position.x, _position.y + 10, _position.z);
+
+            if (Physics.Raycast(_pos, -Vector3.up, 50.0f, LayerMask.NameToLayer(GameConstants.STUDENT_AREA_TAG)))
+            {
+                //Student got placed ontop of another student
+                MultiplayerManager.SendWronglyPlacedStudent(_towerGUID);
+
+                return;
+            }
+        }
+
         AudioManager.Instance.Play("TowerPlacedSound");
 
         Transform _tower = Instantiate(_prefab, _position, Quaternion.identity, towerContainer).transform;
@@ -187,5 +230,11 @@ public class BuildManager : MonoBehaviour {
         builtTowers.Add(_tower.GetComponent<StudentStats>());
 
         //Debug.Log("Recived tower with GUID: " + _towerGUID);
+    }
+
+    public void WronglyPlacedTower(StudentStats _student)
+    {
+        PlayerStats.AddCandyCurrency(_student.shopStats.BaseCost);
+        Destroy(_student.gameObject);
     }
 }

@@ -29,10 +29,10 @@ public class EconomicsTeacher : TeacherParent {
         }
     }
 
-    public override void Died(bool _killed)
+    public override void Died(bool _killed, StudentStats _killedBy)
     {
         StopCoroutine("MoneyOverTime");
 
-        base.Died(_killed);
+        base.Died(_killed, _killedBy);
     }
 }

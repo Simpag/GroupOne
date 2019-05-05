@@ -29,6 +29,13 @@ public class MultiplayerManager : MonoBehaviour {
         get { return sessionInfo; }
     }
 
+    private bool isHost, isPartnerRoundDone;
+    private string partnerName;
+
+    public bool IsPartnerRoundDone { get { return isPartnerRoundDone; } }
+    public static bool IsHost { get { return instance.isHost; } }
+    public string PartnerName { get { return partnerName; } }
+
     private void Awake()
     {
         //Create singleton
@@ -41,6 +48,9 @@ public class MultiplayerManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        isHost = true;
+        isPartnerRoundDone = true;
     }
 
     private void Start()
@@ -129,9 +139,22 @@ public class MultiplayerManager : MonoBehaviour {
         if (_isReady)
         {
             Debug.Log("RT Session Connected...");
-            GameManager.StartGame(GameManager.Startmethod.multiplayer); //Start multiplayer match
-        }
 
+            if (sessionInfo.GetPlayerList.Find(x => x.id == AccountInfo.Instance.UserId).peerId == 1)
+            {
+                isHost = true;
+            }
+            else
+            {
+                isHost = false;
+            }
+
+            partnerName = sessionInfo.GetPlayerList.Find(x => x.id != AccountInfo.Instance.UserId).displayName;
+
+            //Debug.Log("Is Host: " + isHost);
+
+            PreGameManager.Instance.FoundPartner();
+        }
     }
 
     private void OnPacketReceived(RTPacket _packet)
@@ -140,6 +163,15 @@ public class MultiplayerManager : MonoBehaviour {
 
         switch (_packet.OpCode)
         {
+            //PreGame
+            case GameConstants.OPCODE_READY:
+                Instance.RecivedReadyFromPartner();
+                break;
+            case GameConstants.OPCODE_START_GAME:
+                Instance.RecivedStartGameFromPartner();
+                break;
+
+            //InGame
             case GameConstants.OPCODE_STUDENT_BUILT:
                 Instance.ReceivedTowerFromPartner(_packet);
                 break;
@@ -147,11 +179,73 @@ public class MultiplayerManager : MonoBehaviour {
             case GameConstants.OPCODE_STUDENT_UPGRADE:
                 Instance.RecivedTowerUpgradeFromPartner(_packet);
                 break;
+
+            case GameConstants.OPCODE_RANDOM_SEED:
+                Instance.RecivedRandomSeed(_packet);
+                break;
+
+            case GameConstants.OPCODE_ROUND_END_INFO:
+                Instance.RecivedRoundEndInfo(_packet);
+                break;
+
+            case GameConstants.OPCODE_START_NEW_ROUND:
+                Instance.RecivedStartOfRound();
+                break;
+
+            case GameConstants.OPCODE_WRONGLY_PLACED_STUDENT:
+                Instance.ReceivedWronglyPlacedStudentFromPartner(_packet);
+                break;
+
+            case GameConstants.OPCODE_SOLD_STUDENT:
+                Instance.ReceivedSoldStudent(_packet);
+                break;
+
+            case GameConstants.OPCODE_SEND_MONEY:
+                Instance.ReceivedMoneyFromPartner(_packet);
+                break;
         }
     }
     #endregion
 
-    #region Multiplayer
+    #region PreGame Multiplayer
+
+    public static void SendReadyToPartner()
+    {
+        using (RTData data = RTData.Get())
+        {
+            Debug.Log("Sending ready statement to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_READY, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public static void SendGameStartToPartner()
+    {
+        using (RTData data = RTData.Get())
+        {
+            Debug.Log("Sending ready statement to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_START_GAME, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    private void RecivedReadyFromPartner()
+    {
+        PreGameManager.Instance.PartnerReady();
+    }
+
+    private void RecivedStartGameFromPartner()
+    {
+        PreGameManager.Instance.StartGame();
+    }
+
+    #endregion
+
+    #region InGame Multiplayer 
+
+    public static void Disconnect()
+    {
+        Instance.GetRTSession.Disconnect();
+        GameManager.EndGame(false);
+    }
 
     public static void SendTowerToPartner(StudentStats _tower, Vector3 _position)
     {
@@ -185,6 +279,71 @@ public class MultiplayerManager : MonoBehaviour {
         }
     }
 
+    public static void SendRoundEndInformation(int _homework)
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetInt(GameConstants.PACKET_ROUND_END_HOMEWORK, _homework);
+            data.SetInt(GameConstants.PACKET_ROUND_INDEX, WaveSpawner.Instance.WaveIndex);
+
+            Debug.Log("Sending end round");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_ROUND_END_INFO, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public static void SendStartOfRound()
+    {
+        using (RTData data = RTData.Get())
+        {
+            Debug.Log("Sending start round");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_START_NEW_ROUND, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public static void SendRandomSeed()
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetInt(GameConstants.PACKET_RANDOM_SEED, Random.seed);
+
+            Debug.Log("Sending seed");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_RANDOM_SEED, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public static void SendWronglyPlacedStudent(string _guid)
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetString(GameConstants.PACKET_STUDENT_GUID, _guid);
+
+            Debug.Log("Sending tower data to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_WRONGLY_PLACED_STUDENT, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public static void SendSoldStudent(string _guid)
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetString(GameConstants.PACKET_STUDENT_GUID, _guid);
+
+            Debug.Log("Sending tower data to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_SOLD_STUDENT, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
+    public static void SendMoneyToPartner(float _amount)
+    {
+        using (RTData data = RTData.Get())
+        {
+            data.SetFloat(GameConstants.PACKET_SEND_MONEY, _amount);
+
+            Debug.Log("Sending tower data to partner");
+            MultiplayerManager.Instance.GetRTSession.SendData(GameConstants.OPCODE_SEND_MONEY, GameSparksRT.DeliveryIntent.RELIABLE, data);
+        }
+    }
+
     private void ReceivedTowerFromPartner(RTPacket _packet)
     {
         AudioManager.Instance.Play("TowerPlacedSound");
@@ -200,11 +359,12 @@ public class MultiplayerManager : MonoBehaviour {
             if (_stat.ShortCode == _towerSC)
             {
                 _prefab = _stat.TowerPrefab;
+                break;
             }
         }
 
         //Instantiate partners tower
-        BuildManager.Instance.BuildPartnerTower(_prefab, _position, _towerGUID);
+        BuildManager.Instance.BuildPartnerTower(_prefab, _position, _towerGUID, isHost);
     }
 
     private void RecivedTowerUpgradeFromPartner(RTPacket _packet)
@@ -235,6 +395,78 @@ public class MultiplayerManager : MonoBehaviour {
                 Debug.Log("No tower found with GUID: " + _guid);
             }
         }
+    }
+
+    private void RecivedRoundEndInfo(RTPacket _packet)
+    {
+        int _partnerHomework = (int)_packet.Data.GetInt(GameConstants.PACKET_ROUND_END_HOMEWORK);
+        int _partnerRound = (int)_packet.Data.GetInt(GameConstants.PACKET_ROUND_INDEX);
+
+        isPartnerRoundDone = true;
+
+        if (_partnerHomework < PlayerStats.Homework)
+        {
+            PlayerStats.SetHomework(_partnerHomework);
+        }
+
+        if (_partnerRound < WaveSpawner.Instance.WaveIndex)
+        {
+            WaveSpawner.Instance.WaveIndex = _partnerRound;
+        }
+    }
+
+    private void RecivedStartOfRound()
+    {
+        WaveSpawner.Instance.NextRound();
+        isPartnerRoundDone = false;
+    }
+
+    private void RecivedRandomSeed(RTPacket _packet)
+    {
+        if (!isHost) //If the player is not the host, set the seed to the host seed
+            Random.InitState((int)_packet.Data.GetInt(GameConstants.PACKET_RANDOM_SEED));
+    }
+
+    private void ReceivedWronglyPlacedStudentFromPartner(RTPacket _packet)
+    {
+        string _guid = _packet.Data.GetString(GameConstants.PACKET_STUDENT_GUID);
+
+        foreach (StudentStats _tower in BuildManager.Instance.builtTowers)
+        {
+            if (_tower.studentGUID == _guid)
+            {
+                BuildManager.Instance.WronglyPlacedTower(_tower);
+                return;
+            }
+            else
+            {
+                Debug.Log("No tower found with GUID: " + _guid);
+            }
+        }
+    }
+
+    private void ReceivedSoldStudent(RTPacket _packet)
+    {
+        string _guid = _packet.Data.GetString(GameConstants.PACKET_STUDENT_GUID);
+
+        foreach (StudentStats _tower in BuildManager.Instance.builtTowers)
+        {
+            if (_tower.studentGUID == _guid)
+            {
+                BuildManager.Instance.SellStudent(_tower, false);
+                return;
+            }
+            else
+            {
+                Debug.Log("No tower found with GUID: " + _guid);
+            }
+        }
+    }
+
+    private void ReceivedMoneyFromPartner(RTPacket _packet)
+    {
+        float _amount = (float)_packet.Data.GetFloat(GameConstants.PACKET_SEND_MONEY);
+        PlayerStats.AddCandyCurrency(_amount);
     }
 
     #endregion

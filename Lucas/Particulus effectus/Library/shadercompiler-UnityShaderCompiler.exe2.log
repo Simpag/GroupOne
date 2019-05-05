@@ -1,4 +1,7 @@
-Base path: C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data
+Base path: C:/Program Files/Unity/Hub/Editor/2018.3.11f1/Editor/Data
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  api=4 insize=5286 outsize=2205 ok=1
+  api=4 insize=3972 outsize=1649 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at Congratz.vfx(86): comma expression used where a vector constructor may have been intended
+  api=4 insize=8888 outsize=11017 ok=1

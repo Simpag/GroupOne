@@ -43,7 +43,28 @@ public class WaveSpawner : MonoBehaviour {
     //Private variables
     private bool isSpawning;
     private int totalTeachersSpawned;
+    private int teachersOnScreen;
     private int ticketSum;
+
+    public int WaveIndex
+    {
+        get { return waveIndex; }
+        set { waveIndex = value; }
+    }
+    public int TeachersOnScreen
+    {
+        get { return teachersOnScreen; }
+        set
+        {
+            teachersOnScreen = value;
+
+            if (teachersOnScreen <= 0 && GameManager.IsMultiplayer)
+                MultiplayerManager.SendRoundEndInformation(PlayerStats.Homework);
+        } 
+    }
+    public int NumberOfWaves { get { return waves.Length; } }
+
+    private bool noWaves = false;
 
     private void Awake()
     {
@@ -58,28 +79,49 @@ public class WaveSpawner : MonoBehaviour {
         }
 
         totalTeachersSpawned = 0;
+        teachersOnScreen = 0;
         ticketSum = 0;
         waveIndex = 0;
+        isSpawning = false;
 
         CalculateTicketSum();
     }
 
+    private void Update()
+    {
+        if (waveIndex >= waves.Length && !noWaves && !isSpawning && teachersOnScreen <= 0)
+        {
+            GameManager.EndGame(true);
+            noWaves = true;
+        }
+    }
+
     public void NextRound()
     {
-        if (!isSpawning && waveIndex < waves.Length)
+        if (isSpawning || !MultiplayerManager.Instance.IsPartnerRoundDone || teachersOnScreen > 0)
+            return;
+
+        if (GameManager.IsMultiplayer)
+            MultiplayerManager.SendStartOfRound();
+
+        waveIndex++;
+
+        if (waveIndex < waves.Length)
         {
             StartCoroutine(SpawnWaveFromArray());
         }
-        else if (!isSpawning)
+        else
         {
             SpawnWaveFromAlg();
         }
+
+        InGameUIManager.UpdateWaveIndex();
     }
 
     private IEnumerator SpawnWaveFromArray()
     {
         //Play the wave start sound
-        if (waves[waveIndex].isBossRound) //If its a boss round play bossround sound
+        if (waves[waveIndex-1].isBossRound) //If its a boss round play bossround sound
         {
             AudioManager.Instance.Stop("InGameMusic");
             AudioManager.Instance.Play("BossRoundSound");
@@ -98,14 +140,13 @@ public class WaveSpawner : MonoBehaviour {
         //Spawn enemies
         isSpawning = true;
 
-        for (int i = 0; i < waves[waveIndex].TeacherPrefabs.Length; i++)
+        for (int i = 0; i < waves[waveIndex-1].TeacherPrefabs.Length; i++)
         {
-            SpawnTeacher(waves[waveIndex].TeacherPrefabs[i], teacherContainer);
-            yield return new WaitForSeconds(waves[waveIndex].spawnDelay); // wait to spawn next enemy
+            SpawnTeacher(waves[waveIndex-1].TeacherPrefabs[i], teacherContainer);
+            yield return new WaitForSeconds(waves[waveIndex-1].spawnDelay); // wait to spawn next enemy
         }
 
         isSpawning = false;
-        waveIndex++;
     }
 
     private void SpawnWaveFromAlg()
@@ -119,11 +160,9 @@ public class WaveSpawner : MonoBehaviour {
         AudioManager.Instance.Play("EndOfRoundSound"); //replace with round start sound later
 
         //0.03x^2+2sin(x)+5
-        int _budget = (int)(Mathf.RoundToInt((float)(0.03 * Mathf.Pow(waveIndex, 2) + Mathf.Sin(waveIndex) + 5)) * 2) * 100;
+        int _budget = (Mathf.RoundToInt(0.03f * Mathf.Pow(waveIndex, 2) + 2f * Mathf.Sin(waveIndex) + 5) * 100);
 
         StartCoroutine(SpawnTeachers(_budget, teacherContainer, algSpawnDelay));
-
-        waveIndex++;
     }
 
     private void CalculateTicketSum()
@@ -186,5 +225,6 @@ public class WaveSpawner : MonoBehaviour {
         GameObject _spawned = Instantiate(_prefab, spawnPoint.position, spawnPoint.rotation, _container);
         _spawned.name = totalTeachersSpawned.ToString();
         totalTeachersSpawned++;
+        teachersOnScreen++;
     }
 }
