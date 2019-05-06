@@ -1,12 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using GameSparks.Api;
-using GameSparks.Api.Requests;
-using GameSparks.Api.Responses;
-using GameSparks.Core;
-using GameSparks.RT;
 
 public class BuildManager : MonoBehaviour {
 
@@ -16,6 +10,8 @@ public class BuildManager : MonoBehaviour {
         get { return instance; }
     }
 
+    [SerializeField]
+    private float buildDelay = 0.25f;
     [SerializeField]
     private Transform towerContainer;
     [SerializeField]
@@ -34,6 +30,7 @@ public class BuildManager : MonoBehaviour {
     private Vector3 locationToBuild;
     private Camera cam;
     private bool towerIsSelected;
+    private bool buying;
 
     public bool TowerIsSelected
     {
@@ -64,6 +61,7 @@ public class BuildManager : MonoBehaviour {
 
         canBuild = true;
         towerIsSelected = false;
+        buying = false;
         builtTowers = new List<StudentStats>();
     }
 
@@ -88,27 +86,31 @@ public class BuildManager : MonoBehaviour {
                 followingTower = followingTowerTransform.GetComponent<StudentStats>();
                 followingTower.MovingTower();
 
-                shopTimer = 0.25f;
+                shopTimer = buildDelay;
             }
             else if (Input.GetMouseButton(0))
             {
                 FollowMouse();
+
+                if (!buying)
+                {
+                    InGameUIManager.Instance.StartBuyingStudent();
+                    buying = true;
+                }
             }
             else if (Input.GetMouseButtonUp(0))
             {
                 if (shopTimer <= 0) //This is very bunk
                 {
-                    BuildTower();
+                    if (TrashButton.Cancel)
+                        CancelTowerBuild();
+                    else
+                        BuildTower();
                 }
                 else
                 {
-                    //Reset variables
-                    Destroy(followingTowerTransform.gameObject);
-                    followingTowerTransform = null;
-                    towerToBuild = null;
-                    towerIsSelected = false;
+                    CancelTowerBuild();
                 }
-
             }
         }
         else // Tower info
@@ -144,6 +146,18 @@ public class BuildManager : MonoBehaviour {
         Instance.towerIsSelected = true;
     }
 
+    private void CancelTowerBuild()
+    {
+        //Reset variables
+        Destroy(followingTowerTransform.gameObject);
+        followingTowerTransform = null;
+        towerToBuild = null;
+        towerIsSelected = false;
+
+        InGameUIManager.Instance.StopBuyingStudent();
+        buying = false;
+    }
+
     private void FollowMouse()
     {
         followingTowerTransform.position = locationToBuild;
@@ -170,6 +184,13 @@ public class BuildManager : MonoBehaviour {
             followingTowerTransform = null;
             towerToBuild = null;
             towerIsSelected = false;
+
+            InGameUIManager.Instance.StopBuyingStudent();
+            buying = false;
+        }
+        else
+        {
+            CancelTowerBuild();
         }
     }
 

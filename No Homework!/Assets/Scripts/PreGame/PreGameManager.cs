@@ -70,6 +70,7 @@ public class PreGameManager : MonoBehaviour
     {
         isReady = true;
         MultiplayerManager.SendReadyToPartner();
+        ui.ColorReady(true);
     }
 
     public void FoundPartner()
@@ -81,5 +82,6 @@ public class PreGameManager : MonoBehaviour
     public void PartnerReady()
     {
         partnerReady = true;
+        ui.ColorPartnerReady(true);
     }
 }

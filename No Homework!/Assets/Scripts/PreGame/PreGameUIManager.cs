@@ -5,37 +5,28 @@ using UnityEngine;
 public class PreGameUIManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject startButton, readyButton;
-    [SerializeField]
     private Text usernameC, partnernameC, usernameS;
     [SerializeField]
-    GameObject CoopScreen, SingleplayerScreen;
+    GameObject CoopScreen, SingleplayerScreen, startButtonC;
+    [SerializeField]
+    Image readyImageC, partnerReadyImageC;
+    [SerializeField]
+    Sprite whiteReady, greenReady;
 
     public void Setup()
     {
         switch(GameManager.Gamemode)
         {
             case GameManager.Startmethod.singleplayer:
-                startButton.SetActive(true);
-                readyButton.SetActive(false);
-                usernameC.enabled = false;
-                partnernameC.enabled = false;
-                usernameS.enabled = true;
-
                 SingleplayerScreen.SetActive(true);
                 CoopScreen.SetActive(false);
                 break;
 
             case GameManager.Startmethod.multiplayer:
                 if (MultiplayerManager.IsHost)
-                    startButton.SetActive(true);
+                    startButtonC.SetActive(true);
                 else
-                    startButton.SetActive(false);
-
-                readyButton.SetActive(true);
-                usernameC.enabled = true;
-                partnernameC.enabled = true;
-                usernameS.enabled = false;
+                    startButtonC.SetActive(false);
 
                 SingleplayerScreen.SetActive(false);
                 CoopScreen.SetActive(true);
@@ -45,5 +36,29 @@ public class PreGameUIManager : MonoBehaviour
 
         usernameC.text = AccountInfo.Instance.DisplayName;
         usernameS.text = AccountInfo.Instance.DisplayName;
+    }
+
+    public void ColorReady(bool _ready)
+    {
+        if (_ready)
+        {
+            readyImageC.sprite = greenReady;
+        }
+        else
+        {
+            readyImageC.sprite = whiteReady;
+        }
+    }
+
+    public void ColorPartnerReady(bool _ready)
+    {
+        if (_ready)
+        {
+            partnerReadyImageC.sprite = greenReady;
+        }
+        else
+        {
+            partnerReadyImageC.sprite = whiteReady;
+        }
     }
 }

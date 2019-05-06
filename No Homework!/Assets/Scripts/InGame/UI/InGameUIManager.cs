@@ -8,12 +8,6 @@ public class InGameUIManager : MonoBehaviour {
     private static InGameUIManager instance;
     public static InGameUIManager Instance { get { return instance; } }
 
-    [Header("Banner")]
-    [SerializeField]
-    private GameObject banner;
-    [SerializeField]
-    private Text candyText;
-
     [Header("On Screen")]
     [SerializeField]
     private GameObject nextWave;
@@ -25,6 +19,10 @@ public class InGameUIManager : MonoBehaviour {
     private Animator shopAnim;
     [SerializeField]
     private GameObject showShopButton;
+    [SerializeField]
+    private GameObject shopContainer;
+    [SerializeField]
+    private Text candyText;
 
     [Header("Student Information")]
     [SerializeField]
@@ -71,7 +69,7 @@ public class InGameUIManager : MonoBehaviour {
     private Text moneySpent;
 
     private float shopTimer = 0;
-    private bool shopOpen = false;
+    //private bool shopOpen = false;
 
     private void Awake()
     {
@@ -92,7 +90,6 @@ public class InGameUIManager : MonoBehaviour {
         UpdateCandyText();
         showShopButton.SetActive(true);
         studentInformationView.SetActive(false);
-        banner.SetActive(true);
         nextWave.SetActive(true);
         pauseMenu.SetActive(false);
         multiplayerBackground.SetActive(false);
@@ -107,15 +104,15 @@ public class InGameUIManager : MonoBehaviour {
     private void Update()
     {
         /*Very bunk, change */
-        if (studentInformationView.activeSelf == false && shopOpen == false)
+        if (studentInformationView.activeSelf == false && shopContainer.activeSelf == false)
             nextWave.SetActive(true);
         else
             nextWave.SetActive(false);
 
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !BuildManager.Instance.TowerIsSelected)
         {
-            if (shopOpen)
-                ShowOrHideShop();
+            if (shopContainer.activeSelf)
+                ShowOrHideShop(false);
 
             if (studentInformationView.activeSelf)
                 HideTowerInfo();
@@ -173,7 +170,7 @@ public class InGameUIManager : MonoBehaviour {
         instance.waveIndex.text = "Wave: " + WaveSpawner.Instance.WaveIndex.ToString();
     }
 
-    public void ShowOrHideShop()
+    public void ShowOrHideShop(bool _show)
     {
         if (GameFunctions.IsGamePaused)
             return;
@@ -181,11 +178,11 @@ public class InGameUIManager : MonoBehaviour {
         if (shopTimer > Mathf.Epsilon)
             return;
 
-        if (shopOpen) //Hide
+        if (!_show) //Hide
         {
             shopAnim.SetTrigger("Hide");
             pauseButton.SetActive(true);
-            shopOpen = !shopOpen;
+            //shopOpen = !shopOpen;
         }
         else //Show
         {
@@ -193,10 +190,21 @@ public class InGameUIManager : MonoBehaviour {
 
             HideTowerInfo();
             pauseButton.SetActive(false);
-            shopOpen = !shopOpen;
+            //shopOpen = !shopOpen;
         }
 
         shopTimer = 0.5f;
+    }
+
+    public void StartBuyingStudent()
+    {
+        shopAnim.SetTrigger("ShowBuying");
+    }
+
+    public void StopBuyingStudent()
+    {
+        shopAnim.SetTrigger("HideBuying");
+        pauseButton.SetActive(true);
     }
 
     public void SellSelectedStudent()
