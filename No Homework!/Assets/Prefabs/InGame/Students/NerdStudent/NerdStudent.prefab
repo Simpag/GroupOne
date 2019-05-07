@@ -240,6 +240,7 @@ MonoBehaviour:
   currentTargetSetting: 0
   canBeSlowed: 0
   canBeBuffed: 0
+  antiImmune: 0
   currentState: 0
   anim: {fileID: 2978553780246125096}
   pivotPoint: {fileID: 4744386241757664}
@@ -256,7 +257,7 @@ MonoBehaviour:
     bulletSpeed: 0
     area: 3.5
     range: 6
-    firerate: 0
+    firerate: 1
     rotationSpeed: 5
     bulletPrefab: {fileID: 0}
     AOERadius: 0
@@ -369,6 +370,7 @@ MonoBehaviour:
     he does homework, buffs other kids and gives money every round! Upgrades focuses
     on buffing kids or money generation.\u201D"
   target: {fileID: 0}
+  targetStats: {fileID: 0}
   shopStats:
     shortCode: Store_NerdStudent_Item
     tower: 3
@@ -803,6 +805,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4284340564393352}
     m_Modifications:
+    - target: {fileID: 100064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+      propertyPath: m_Name
+      value: NerdAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 100064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -858,14 +868,6 @@ PrefabInstance:
     - target: {fileID: 400064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.48327836
-      objectReference: {fileID: 0}
-    - target: {fileID: 100064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
-      propertyPath: m_Name
-      value: NerdAnimation
-      objectReference: {fileID: 0}
-    - target: {fileID: 100064, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}

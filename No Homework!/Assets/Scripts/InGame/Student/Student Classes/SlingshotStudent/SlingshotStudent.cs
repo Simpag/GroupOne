@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(StudentStats))]
-[RequireComponent(typeof(BoxCollider))]
 [System.Serializable]
 public class SlingshotStudent : StudentParent {
 
@@ -23,6 +22,9 @@ public class SlingshotStudent : StudentParent {
     {
         if (_row == 2)
         {
+            Watergun _temp = dmgBox.gameObject.AddComponent<Watergun>();
+            _temp.stat = stat;
+
             dmgBox.size = new Vector3(dmgBox.size.x, dmgBox.size.y, stat.CurrentStat.range);
             dmgBox.center = new Vector3(dmgBox.center.x, dmgBox.center.y, stat.CurrentStat.range / 2f);
         }
@@ -33,6 +35,7 @@ public class SlingshotStudent : StudentParent {
         if (stat.target == null || !stat.IsActive)
         {
             stat.UpdateState(StudentStats.State.idle);
+            firing = false;
 
             if (stat.Row2Level >= 3)
                 StopShooting();
@@ -40,16 +43,19 @@ public class SlingshotStudent : StudentParent {
         }
 
         //Change student state
-        stat.UpdateState(StudentStats.State.fire);
+        if (!firing)
+        {
+            stat.UpdateState(StudentStats.State.fire);
+            firing = true;
+        }
 
         //Look onto target
         LockOn();
 
-        //Shot target
-        Shoot();
+        fireCountdown -= Time.deltaTime;
     }
 
-    protected override void Shoot()
+    public override void Shoot()
     {
         if (stat.Row2Level >= 3)
         {
@@ -66,16 +72,5 @@ public class SlingshotStudent : StudentParent {
     {
         dmgBox.enabled = false;
         waterParticle.SetActive(false);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (stat.Row2Level < 3)
-            return;
-
-        if (other.CompareTag(GameConstants.TEACHER_TAG))
-        {
-            stat.targetStats.TakeDamage(stat.CurrentStat.damage, stat);
-        }
     }
 }

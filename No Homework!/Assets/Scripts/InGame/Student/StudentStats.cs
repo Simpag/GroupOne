@@ -190,6 +190,27 @@ public class StudentStats : MonoBehaviour {
 
         if (studentBuffArea != null)
             studentBuffArea.transform.localScale = new Vector3(currentStat.area, studentArea.transform.localScale.y, currentStat.area);
+            
+        //Update animation layer
+        anim.avatar = currentStat.avatar;
+        anim.speed = currentStat.firerate;
+
+        if (row1Level >= 3)
+        {
+            anim.SetLayerWeight(anim.GetLayerIndex("Row1"), 1f);
+            anim.SetLayerWeight(anim.GetLayerIndex("Row2"), 0f);
+
+            student.MaxUpgrade(1);
+        }
+        else if (row2Level >= 3)
+        {
+            anim.SetLayerWeight(anim.GetLayerIndex("Row1"), 0f);
+            anim.SetLayerWeight(anim.GetLayerIndex("Row2"), 1f);
+
+            student.MaxUpgrade(2);
+        }
+
+        UpdateState(currentState);
     }
 
     //Show range of turret in editor
@@ -294,25 +315,6 @@ public class StudentStats : MonoBehaviour {
     private void UpdateSetups()
     {
         Setup(false);
-
-        //Update animation layer
-        if (row1Level >= 3)
-        {
-            anim.SetLayerWeight(1, 1f);
-            anim.SetLayerWeight(2, 0f);
-
-            student.MaxUpgrade(1);
-        }
-        else if (row2Level >= 3)
-        {
-            anim.SetLayerWeight(1, 0f);
-            anim.SetLayerWeight(2, 1f);
-
-            student.MaxUpgrade(2);
-        }
-
-        anim.avatar = currentStat.avatar;
-        UpdateState(currentState);
 
         //Update bullet stats
         if (currentStat.bulletPrefab != null)

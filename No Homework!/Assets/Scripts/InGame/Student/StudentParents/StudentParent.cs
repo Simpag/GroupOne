@@ -7,6 +7,7 @@ public class StudentParent : MonoBehaviour {
 
     protected StudentStats stat;
     protected float fireCountdown = 0;
+    protected bool firing = false;
 
     protected virtual void Awake()
     {
@@ -18,20 +19,24 @@ public class StudentParent : MonoBehaviour {
         if (stat.target == null || !stat.IsActive)
         {
             stat.UpdateState(StudentStats.State.idle);
+            firing = false;
             return;
         }
 
         //Change student state
-        stat.UpdateState(StudentStats.State.fire);
+        if (!firing)
+        {
+            stat.UpdateState(StudentStats.State.fire);
+            firing = true;
+        }
 
         //Look onto target
         LockOn();
 
-        //Shot target
-        Shoot();
+        fireCountdown -= Time.deltaTime;
     }
 
-    protected virtual void Shoot()
+    public virtual void Shoot()
     {
         if (fireCountdown <= 0)
         {
@@ -48,8 +53,6 @@ public class StudentParent : MonoBehaviour {
 
             fireCountdown = 1 / stat.CurrentStat.firerate;
         }
-
-        fireCountdown -= Time.deltaTime;
     }
 
     protected virtual void LockOn()

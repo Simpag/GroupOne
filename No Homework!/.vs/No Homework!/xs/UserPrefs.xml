@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{2ADE49D6-4EB6-E11B-90B9-E9ED40653014}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/SlingshotStudent.cs">
     <Files>
-      <File FileName="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/SlingshotStudent.cs" Line="27" Column="104" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentParents/ProjectileParent.cs" Line="64" Column="9" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentParents/StudentParent.cs" Line="63" Column="13" NotebookId="1" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="311" Column="35" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/SlingshotStudent.cs" Line="54" Column="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentParents/StudentParent.cs" Line="38" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="295" Column="37" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentRange.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/Watergun.cs" Line="46" Column="66" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentParents/ProjectileParent.cs" Line="44" Column="45" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,6 +17,7 @@
                 <Node name="InGame" expanded="True">
                   <Node name="Student" expanded="True">
                     <Node name="Student Classes" expanded="True">
+                      <Node name="NerdStudent" expanded="True" />
                       <Node name="SlingshotStudent" expanded="True">
                         <Node name="SlingshotStudent.cs" selected="True" />
                       </Node>
@@ -32,7 +35,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eb7fe250-391f-432f-b34d-2a8c13c8a685" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="32dd0fcd-b761-4828-9d0e-9cb0a6bc24d8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

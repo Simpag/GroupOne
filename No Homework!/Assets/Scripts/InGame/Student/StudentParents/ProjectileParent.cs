@@ -41,6 +41,7 @@ public class ProjectileParent : MonoBehaviour {
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = currentStat.bulletSpeed * Time.deltaTime;
 
+        dir.Set(dir.x, dir.y + 0.5f, dir.z);
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
         transform.LookAt(target);
     }

@@ -9361,7 +9361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homework: 0
   candyCurrency: 0
-  startingCash: 500
+  startingCash: 50000
   cashSpent: 0
 --- !u!4 &1940276577
 Transform:
