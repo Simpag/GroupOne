@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class TeacherStats : MonoBehaviour {
 
-	[SerializeField]
+    [SerializeField]
+    private bool immune;
+    public bool Immune
+    {
+        get { return immune; }
+    }
+    [SerializeField]
     private int homework;
     [SerializeField]
     private float health;

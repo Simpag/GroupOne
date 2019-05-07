@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f3d324413264a4fac5104ece0e165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immune: 0
   homework: 10
   health: 125
   worth: 40
@@ -202,17 +203,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4147702530572948}
     m_Modifications:
-    - target: {fileID: 100044, guid: 7765a91f1b01045c78f72126a07213ff, type: 3}
-      propertyPath: m_Name
-      value: Religion animations
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: 7765a91f1b01045c78f72126a07213ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: 7765a91f1b01045c78f72126a07213ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: 7765a91f1b01045c78f72126a07213ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -249,6 +246,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: 7765a91f1b01045c78f72126a07213ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: 7765a91f1b01045c78f72126a07213ff, type: 3}
+      propertyPath: m_Name
+      value: Religion animations
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 7765a91f1b01045c78f72126a07213ff, type: 3}
       propertyPath: m_Controller

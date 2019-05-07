@@ -56,6 +56,12 @@ public class PlayerStats : MonoBehaviour {
     public static void RemoveCandyCurrency(float _amount)
     {
         Instance.candyCurrency -= _amount;
+
+        if (Instance.candyCurrency < 0)
+        {
+            Instance.candyCurrency = 0;
+        }
+
         Instance.cashSpent += _amount;
         InGameUIManager.UpdateCandyText();
     }

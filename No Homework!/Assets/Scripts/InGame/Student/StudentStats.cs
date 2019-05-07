@@ -71,6 +71,12 @@ public class StudentStats : MonoBehaviour {
     [SerializeField]
     private bool canBeBuffed;
     [SerializeField]
+    private bool antiImmune;
+    public bool AntiImmune
+    {
+        get { return antiImmune; }
+    }
+    [SerializeField]
     private State currentState;
 
     [Header("General Setup")]
@@ -106,6 +112,7 @@ public class StudentStats : MonoBehaviour {
 
 	[Header("Just In-Game Info")]
 	public Transform target;
+    public TeacherStats targetStats;
     public InGameShopItemStats shopStats;
     public bool isYours = true;
     public string studentGUID;
@@ -293,11 +300,15 @@ public class StudentStats : MonoBehaviour {
         {
             anim.SetLayerWeight(1, 1f);
             anim.SetLayerWeight(2, 0f);
+
+            student.MaxUpgrade(1);
         }
         else if (row2Level >= 3)
         {
             anim.SetLayerWeight(1, 0f);
             anim.SetLayerWeight(2, 1f);
+
+            student.MaxUpgrade(2);
         }
 
         anim.avatar = currentStat.avatar;

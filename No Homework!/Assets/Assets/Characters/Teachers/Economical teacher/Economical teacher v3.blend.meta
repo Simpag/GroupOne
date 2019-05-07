@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 34d184e85998f4ca9a2e6ef91677169f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature_001
+    100002: Cube_019
+    100004: Cube_021
+    100006: Cube_022
+    100008: Cube_024
+    100010: Cube_041
+    100012: Cylinder_003
+    100014: Cylinder_008
+    100016: //RootNode
+    100018: Hand_L
+    100020: Hand_R
+    100022: Hand_R_001
+    100024: Head
+    100026: LowerArm_L
+    100028: LowerArm_R
+    100030: Lowerbody
+    100032: LowerFeet_L
+    100034: LowerFeet_R
+    100036: LowerLeg_L
+    100038: LowerLeg_R
+    100040: Midbody
+    100042: Neck
+    100044: Plane
+    100046: Plane_005
+    100048: Pole_L
+    100050: Pole_R
+    100052: Pull_L
+    100054: Pull_R
+    100056: Shoulder_L
+    100058: Shoulder_R
+    100060: Sphere
+    100062: UpperArm_L
+    100064: UpperArm_R
+    100066: Upperbody
+    100068: UpperFeet_L
+    100070: UpperFeet_R
+    100072: UpperLeg_L
+    100074: UpperLeg_R
+    400000: Armature_001
+    400002: Cube_019
+    400004: Cube_021
+    400006: Cube_022
+    400008: Cube_024
+    400010: Cube_041
+    400012: Cylinder_003
+    400014: Cylinder_008
+    400016: //RootNode
+    400018: Hand_L
+    400020: Hand_R
+    400022: Hand_R_001
+    400024: Head
+    400026: LowerArm_L
+    400028: LowerArm_R
+    400030: Lowerbody
+    400032: LowerFeet_L
+    400034: LowerFeet_R
+    400036: LowerLeg_L
+    400038: LowerLeg_R
+    400040: Midbody
+    400042: Neck
+    400044: Plane
+    400046: Plane_005
+    400048: Pole_L
+    400050: Pole_R
+    400052: Pull_L
+    400054: Pull_R
+    400056: Shoulder_L
+    400058: Shoulder_R
+    400060: Sphere
+    400062: UpperArm_L
+    400064: UpperArm_R
+    400066: Upperbody
+    400068: UpperFeet_L
+    400070: UpperFeet_R
+    400072: UpperLeg_L
+    400074: UpperLeg_R
+    2100000: Material_006
+    2100002: unnamed
+    2300000: Sphere
+    3300000: Sphere
+    4300000: Sphere
+    4300002: Cube_019
+    4300004: Cube_021
+    4300006: Cube_022
+    4300008: Cube_024
+    4300010: Cube_041
+    4300012: Cylinder_008
+    4300014: Plane
+    4300016: Plane_005
+    4300018: Cylinder_003
+    7400000: Default Take
+    7400002: EconomicTeacherWalk
+    9500000: //RootNode
+    13700000: Cube_019
+    13700002: Cube_021
+    13700004: Cube_022
+    13700006: Cube_024
+    13700008: Cube_041
+    13700010: Cylinder_003
+    13700012: Cylinder_008
+    13700014: Plane
+    13700016: Plane_005
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.9
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

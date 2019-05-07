@@ -1,0 +1,362 @@
+fileFormatVersion: 2
+guid: b155b9383f7df42b5b2601779d563a0c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone_004
+    100002: Cube_061
+    100004: hand_L
+    100006: hand_R
+    100008: Handle
+    100010: lowerarm_L
+    100012: lowerarm_R
+    100014: Lowerfeet_L
+    100016: Lowerfeet_R
+    100018: Lowerleg_L
+    100020: Lowerleg_R
+    100022: Lowerspine
+    100024: mag_001
+    100026: mag_002
+    100028: mag_004
+    100030: Midspine
+    100032: neck
+    100034: nerf_gun
+    100036: Nerfgun
+    100038: //RootNode
+    100040: Pole_L
+    100042: projectileNerfGun_001
+    100044: Pull_R
+    100046: Shoulder_L
+    100048: Shoulder_R
+    100050: Spine_000
+    100052: Supportleg_L
+    100054: Supportleg_R
+    100056: Upperarm_L
+    100058: Upperarm_R
+    100060: Upperfeet_L
+    100062: Upperfeet_R
+    100064: Upperleg_L
+    100066: Upperleg_R
+    100068: Upperspine
+    400000: Bone_004
+    400002: Cube_061
+    400004: hand_L
+    400006: hand_R
+    400008: Handle
+    400010: lowerarm_L
+    400012: lowerarm_R
+    400014: Lowerfeet_L
+    400016: Lowerfeet_R
+    400018: Lowerleg_L
+    400020: Lowerleg_R
+    400022: Lowerspine
+    400024: mag_001
+    400026: mag_002
+    400028: mag_004
+    400030: Midspine
+    400032: neck
+    400034: nerf_gun
+    400036: Nerfgun
+    400038: //RootNode
+    400040: Pole_L
+    400042: projectileNerfGun_001
+    400044: Pull_R
+    400046: Shoulder_L
+    400048: Shoulder_R
+    400050: Spine_000
+    400052: Supportleg_L
+    400054: Supportleg_R
+    400056: Upperarm_L
+    400058: Upperarm_R
+    400060: Upperfeet_L
+    400062: Upperfeet_R
+    400064: Upperleg_L
+    400066: Upperleg_R
+    400068: Upperspine
+    2100000: Material_015
+    2100002: orangePlastic_001__orangePlastic_jpg_001
+    2100004: bulletBlue__plasticBlue_jpg
+    2100006: bulletOrange__orangeBullet_jpg
+    2100008: grayPlastic
+    2100010: bluePlastic__plasticBlue_jpg
+    2100012: orangePlastic__orangePlastic_jpg
+    2100014: orangePlastic
+    2100016: grayPlastic__grayPlastic_jpg
+    2100018: orangePlastic__grayPlastic_jpg
+    2100020: orangePlastic__plasticBlue_jpg
+    2100022: bulletBlue_002__plasticBlue_jpg_002
+    2100024: bulletOrange_002__orangeBullet_jpg_001
+    4300000: Cube_061
+    4300002: mag_001
+    4300004: mag_002
+    4300006: mag_004
+    4300008: nerf_gun
+    4300010: projectileNerfGun_001
+    7400000: Default Take
+    7400002: NerfGun
+    7400004: Planethrow_004
+    7400006: Spit_001
+    7400008: Walking_002
+    7400010: NerfGun (1)
+    9500000: //RootNode
+    13700000: Cube_061
+    13700002: mag_001
+    13700004: mag_002
+    13700006: mag_004
+    13700008: nerf_gun
+    13700010: projectileNerfGun_001
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 74
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NerfGun
+      takeName: NerfGun
+      firstFrame: 0
+      lastFrame: 73
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Planethrow_004
+      takeName: Planethrow_004
+      firstFrame: 0
+      lastFrame: 134
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Spit_001
+      takeName: Spit_001
+      firstFrame: 0
+      lastFrame: 54
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walking_002
+      takeName: Walking_002
+      firstFrame: 0
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NerfGun (1)
+      takeName: NerfGun
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.5
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

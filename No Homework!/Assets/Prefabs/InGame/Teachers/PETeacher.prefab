@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f3d324413264a4fac5104ece0e165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immune: 0
   homework: 10
   health: 100
   worth: 75
@@ -212,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: 9e20a8e66588d4e83942f597bc7835ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: 9e20a8e66588d4e83942f597bc7835ae, type: 3}
       propertyPath: m_LocalPosition.z
