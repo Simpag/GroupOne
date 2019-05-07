@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: e7dde31f4bd9c414c9b9f9902b2a1411
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature_001
+    100002: Bottomrope
+    100004: Circle
+    100006: Cube_013
+    100008: Cube_014
+    100010: Cube_015
+    100012: Cube_017
+    100014: Cube_018
+    100016: Cube_020
+    100018: Cube_023
+    100020: Hand_L
+    100022: Hand_R
+    100024: Head
+    100026: //RootNode
+    100028: Knut
+    100030: LowerArm_L
+    100032: LowerArm_R
+    100034: LowerBody
+    100036: LowerFeet_L
+    100038: LowerFeet_R
+    100040: LowerLeg_L
+    100042: LowerLeg_R
+    100044: MidBody
+    100046: Midrope
+    100048: Neck
+    100050: Pole_L
+    100052: Pole_R
+    100054: Pull_L
+    100056: Pull_R
+    100058: Shoulder_L
+    100060: Shoulder_R
+    100062: Toprope
+    100064: UpperArm_L
+    100066: UpperArm_R
+    100068: UpperFeet_L
+    100070: UpperFeet_R
+    100072: UpperLeg_L
+    100074: UpperLeg_R
+    100076: UpperMid
+    100078: Watch
+    400000: Armature_001
+    400002: Bottomrope
+    400004: Circle
+    400006: Cube_013
+    400008: Cube_014
+    400010: Cube_015
+    400012: Cube_017
+    400014: Cube_018
+    400016: Cube_020
+    400018: Cube_023
+    400020: Hand_L
+    400022: Hand_R
+    400024: Head
+    400026: //RootNode
+    400028: Knut
+    400030: LowerArm_L
+    400032: LowerArm_R
+    400034: LowerBody
+    400036: LowerFeet_L
+    400038: LowerFeet_R
+    400040: LowerLeg_L
+    400042: LowerLeg_R
+    400044: MidBody
+    400046: Midrope
+    400048: Neck
+    400050: Pole_L
+    400052: Pole_R
+    400054: Pull_L
+    400056: Pull_R
+    400058: Shoulder_L
+    400060: Shoulder_R
+    400062: Toprope
+    400064: UpperArm_L
+    400066: UpperArm_R
+    400068: UpperFeet_L
+    400070: UpperFeet_R
+    400072: UpperLeg_L
+    400074: UpperLeg_R
+    400076: UpperMid
+    400078: Watch
+    2100000: unnamed
+    2100002: Material_008
+    4300000: Cube_013
+    4300002: Circle
+    4300004: Cube_014
+    4300006: Cube_015
+    4300008: Cube_017
+    4300010: Cube_018
+    4300012: Cube_020
+    4300014: Cube_023
+    7400000: Default Take
+    7400002: HypnoTeacherWalk
+    9500000: //RootNode
+    13700000: Circle
+    13700002: Cube_013
+    13700004: Cube_014
+    13700006: Cube_015
+    13700008: Cube_017
+    13700010: Cube_018
+    13700012: Cube_020
+    13700014: Cube_023
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.9
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

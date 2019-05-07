@@ -15,6 +15,9 @@ public class StudentRange : MonoBehaviour {
 
     private void UpdateTarget(TeacherStats _enemy)
     {
+        if (_enemy.Immune && !student.AntiImmune)
+            return;
+
         if (student.target == null)
             SelectTarget(_enemy);
 
@@ -56,6 +59,7 @@ public class StudentRange : MonoBehaviour {
     private void SelectTarget(TeacherStats _enemy)
     {
         student.target = _enemy.transform;
+        student.targetStats = _enemy;
         currentTargetStats = _enemy;
     }
 

@@ -83,7 +83,7 @@ public class ProjectileParent : MonoBehaviour {
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(GameConstants.TEACHER_TAG)) //If the distance between the bullet and target is less than the distance the bullet will travel
+        if (other.CompareTag(GameConstants.TEACHER_TAG)) 
         {
             HitTarget();
             return;

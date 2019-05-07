@@ -60,4 +60,9 @@ public class StudentParent : MonoBehaviour {
         stat.PivotPoint.rotation = Quaternion.Euler(stat.PivotPoint.rotation.x, rotation.y, stat.PivotPoint.rotation.z);
     }
 
+    public virtual void MaxUpgrade(int _row)
+    {
+        return;
+    }
+
 }

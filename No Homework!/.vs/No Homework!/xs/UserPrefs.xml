@@ -1,16 +1,10 @@
 ﻿<Properties StartupConfiguration="{2ADE49D6-4EB6-E11B-90B9-E9ED40653014}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/Student/StudentStats.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/SlingshotStudent.cs">
     <Files>
-      <File FileName="Assets/Scripts/InGame/WaveSpawner/WaveSpawner.cs" Line="75" Column="1" />
-      <File FileName="Assets/Scripts/InGame/BuildManager.cs" Line="107" Column="52" />
-      <File FileName="Assets/Scripts/InGame/GameManager.cs" Line="75" Column="1" />
-      <File FileName="Assets/Scripts/InGame/UI/InGameUIManager.cs" Line="332" Column="28" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentParents/StudentParent.cs" Line="27" Column="27" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="290" Column="1" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentRange.cs" Line="59" Column="27" />
-      <File FileName="Assets/Scripts/InGame/Student/Student Classes/NerdStudent/NerdStudentTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/InGame/Student/Student Classes/NerdStudent/NerdStudent.cs" Line="24" Column="10" />
-      <File FileName="Assets/Scripts/PreGame/PreGameManager.cs" Line="24" Column="10" />
+      <File FileName="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/SlingshotStudent.cs" Line="27" Column="104" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentParents/ProjectileParent.cs" Line="64" Column="9" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentParents/StudentParent.cs" Line="63" Column="13" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="311" Column="35" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,13 +15,14 @@
                 <Node name="InGame" expanded="True">
                   <Node name="Student" expanded="True">
                     <Node name="Student Classes" expanded="True">
-                      <Node name="NerdStudent" expanded="True" />
+                      <Node name="SlingshotStudent" expanded="True">
+                        <Node name="SlingshotStudent.cs" selected="True" />
+                      </Node>
+                      <Node name="SpitStudent" expanded="True" />
                     </Node>
                     <Node name="StudentParents" expanded="True" />
-                    <Node name="StudentStats.cs" selected="True" />
                   </Node>
                 </Node>
-                <Node name="PreGame" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -37,7 +32,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2e91cd57-35dd-403d-97ca-5fb405fc756e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eb7fe250-391f-432f-b34d-2a8c13c8a685" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: e06ca3139aee9474c9e862b1edfbb399
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature_001
+    100002: Cube_025
+    100004: Cube_027
+    100006: Cube_033
+    100008: Cube_037
+    100010: Cylinder_009
+    100012: Hand_L
+    100014: Hand_R
+    100016: Head
+    100018: LowerArm_L
+    100020: LowerArm_R
+    100022: Lowerbody
+    100024: LowerFeet_L
+    100026: LowerFeet_R
+    100028: LowerLeg_L
+    100030: LowerLeg_R
+    100032: //RootNode
+    100034: Midbody
+    100036: Neck
+    100038: Pole_L
+    100040: Pole_R
+    100042: Pull_L
+    100044: Pull_R
+    100046: Shoulder_L
+    100048: Shoulder_R
+    100050: Sphere
+    100052: UpperArm_L
+    100054: UpperArm_R
+    100056: Upperbody
+    100058: UpperFeet_L
+    100060: UpperFeet_R
+    100062: UpperLeg_L
+    100064: UpperLeg_R
+    400000: Armature_001
+    400002: Cube_025
+    400004: Cube_027
+    400006: Cube_033
+    400008: Cube_037
+    400010: Cylinder_009
+    400012: Hand_L
+    400014: Hand_R
+    400016: Head
+    400018: LowerArm_L
+    400020: LowerArm_R
+    400022: Lowerbody
+    400024: LowerFeet_L
+    400026: LowerFeet_R
+    400028: LowerLeg_L
+    400030: LowerLeg_R
+    400032: //RootNode
+    400034: Midbody
+    400036: Neck
+    400038: Pole_L
+    400040: Pole_R
+    400042: Pull_L
+    400044: Pull_R
+    400046: Shoulder_L
+    400048: Shoulder_R
+    400050: Sphere
+    400052: UpperArm_L
+    400054: UpperArm_R
+    400056: Upperbody
+    400058: UpperFeet_L
+    400060: UpperFeet_R
+    400062: UpperLeg_L
+    400064: UpperLeg_R
+    2100000: unnamed
+    2100002: Material_004
+    2300000: Sphere
+    3300000: Sphere
+    4300000: Sphere
+    4300002: Cube_025
+    4300004: Cube_027
+    4300006: Cube_033
+    4300008: Cube_037
+    4300010: Cylinder_009
+    7400000: Default Take
+    7400002: MathWalk
+    9500000: //RootNode
+    13700000: Cube_025
+    13700002: Cube_027
+    13700004: Cube_033
+    13700006: Cube_037
+    13700008: Cylinder_009
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.9
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
