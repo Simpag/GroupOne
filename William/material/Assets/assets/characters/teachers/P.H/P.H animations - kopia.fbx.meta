@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: 65c6267f794240844a068acd68a26f71
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cube.017
+    100002: Cube.018
+    100004: hand.L
+    100006: hand.L_end
+    100008: hand.R
+    100010: hand.R_end
+    100012: Head
+    100014: Head_end
+    100016: lowerarm.L
+    100018: lowerarm.R
+    100020: Lowerfeet.L
+    100022: Lowerfeet.L_end
+    100024: Lowerfeet.R
+    100026: Lowerfeet.R_end
+    100028: Lowerleg.L
+    100030: Lowerleg.L.001
+    100032: Lowerleg.L_end
+    100034: Lowerleg.R
+    100036: Lowerleg.R.001
+    100038: Lowerleg.R_end
+    100040: Lowerspine
+    100042: Midspine
+    100044: neck
+    100046: //RootNode
+    100048: Point
+    100050: Point.001
+    100052: Point.002
+    100054: Point.003
+    100056: Pole.L
+    100058: Pole.L_end
+    100060: Pull.R
+    100062: Pull.R_end
+    100064: Shoulder.L
+    100066: Shoulder.R
+    100068: Sphere
+    100070: Spine.000
+    100072: Upperarm.L
+    100074: Upperarm.R
+    100076: Upperfeet.L
+    100078: Upperfeet.R
+    100080: Upperleg.L
+    100082: Upperleg.R
+    100084: Upperspine
+    400000: Cube.017
+    400002: Cube.018
+    400004: hand.L
+    400006: hand.L_end
+    400008: hand.R
+    400010: hand.R_end
+    400012: Head
+    400014: Head_end
+    400016: lowerarm.L
+    400018: lowerarm.R
+    400020: Lowerfeet.L
+    400022: Lowerfeet.L_end
+    400024: Lowerfeet.R
+    400026: Lowerfeet.R_end
+    400028: Lowerleg.L
+    400030: Lowerleg.L.001
+    400032: Lowerleg.L_end
+    400034: Lowerleg.R
+    400036: Lowerleg.R.001
+    400038: Lowerleg.R_end
+    400040: Lowerspine
+    400042: Midspine
+    400044: neck
+    400046: //RootNode
+    400048: Point
+    400050: Point.001
+    400052: Point.002
+    400054: Point.003
+    400056: Pole.L
+    400058: Pole.L_end
+    400060: Pull.R
+    400062: Pull.R_end
+    400064: Shoulder.L
+    400066: Shoulder.R
+    400068: Sphere
+    400070: Spine.000
+    400072: Upperarm.L
+    400074: Upperarm.R
+    400076: Upperfeet.L
+    400078: Upperfeet.R
+    400080: Upperleg.L
+    400082: Upperleg.R
+    400084: Upperspine
+    2100000: redFabric
+    2100002: skin
+    2100004: blueGear
+    2100006: yellowFabric
+    2100008: shoes
+    2100010: redFabric.001
+    2300000: Sphere
+    3300000: Sphere
+    4300000: Sphere
+    4300002: Cube.017
+    4300004: Cube.018
+    7400000: Spine.000|Cube.017Action
+    7400002: Spine.000|Run
+    9500000: //RootNode
+    10800000: Point
+    10800002: Point.001
+    10800004: Point.002
+    10800006: Point.003
+    13700000: Cube.017
+    13700002: Cube.018
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blueGear
+    second: {fileID: 2100000, guid: 4e5d143887f441542b315e696d44fad9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redFabric
+    second: {fileID: 2100000, guid: cf549bab9dc82c743b1df69c57391967, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redFabric.001
+    second: {fileID: 2100000, guid: f5ecc24edfcf79e4bb93646cd9a8ff1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoes
+    second: {fileID: 2100000, guid: 92d067bd9fc92a94680c6fbd6fe39d45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skin
+    second: {fileID: 2100000, guid: eeed2330276ab234aa9d0d3dc80d1587, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellowFabric
+    second: {fileID: 2100000, guid: 48babb88373fe4c498c5db4f5d38a7ca, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
