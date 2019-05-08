@@ -39,7 +39,15 @@ public class StoreManager : MonoBehaviour {
             StoreItemManager _sItemMan = _sItem.GetComponent<StoreItemManager>();
             _sItemMan.Stats = storeItemStats;
             _sItemMan.Stats.Manager = _sItemMan;
-            _sItemMan.UpdateItem();
+
+            if (AccountInfo.Instance.Inventory.ContainsKey(storeItemStats.ShortCode))
+            {
+                _sItemMan.UpdateItem(true);
+            }
+            else
+            {
+                _sItemMan.UpdateItem(false);
+            }
         }
     }
 
@@ -75,7 +83,7 @@ public class StoreManager : MonoBehaviour {
     {
         Debug.Log("Successfully bought" + _stats.Name);
 
-        _stats.Manager.UpdateItem();
+        _stats.Manager.UpdateItem(true);
         AccountInfo.UpdateAccountInfo();
     }
 }

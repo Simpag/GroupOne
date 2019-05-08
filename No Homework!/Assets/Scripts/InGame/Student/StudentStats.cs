@@ -15,8 +15,9 @@ public class StudentStats : MonoBehaviour {
     [System.Serializable]
     public struct StudentStat
     {
-        [Header("Animation Avatar")]
-        public Avatar avatar;
+        [Header("Animation")]
+        //public Avatar avatar;
+        public Animator anim;
 
         [Header("Only fill in the stats that the student will use!")]
         [Header("Normal Stats")]
@@ -80,8 +81,6 @@ public class StudentStats : MonoBehaviour {
     private State currentState;
 
     [Header("General Setup")]
-    [SerializeField]
-    private Animator anim;
 	[SerializeField]
 	private Transform pivotPoint;
 	[SerializeField]
@@ -111,6 +110,8 @@ public class StudentStats : MonoBehaviour {
     public string studentDescription;
 
 	[Header("Just In-Game Info")]
+    [SerializeField]
+    private Animator anim;
 	public Transform target;
     public TeacherStats targetStats;
     public InGameShopItemStats shopStats;
@@ -192,20 +193,20 @@ public class StudentStats : MonoBehaviour {
             studentBuffArea.transform.localScale = new Vector3(currentStat.area, studentArea.transform.localScale.y, currentStat.area);
             
         //Update animation layer
-        anim.avatar = currentStat.avatar;
+        anim = currentStat.anim;
         anim.speed = currentStat.firerate;
 
         if (row1Level >= 3)
         {
-            anim.SetLayerWeight(anim.GetLayerIndex("Row1"), 1f);
-            anim.SetLayerWeight(anim.GetLayerIndex("Row2"), 0f);
+            //anim.SetLayerWeight(anim.GetLayerIndex("Row1"), 1f);
+            //anim.SetLayerWeight(anim.GetLayerIndex("Row2"), 0f);
 
             student.MaxUpgrade(1);
         }
         else if (row2Level >= 3)
         {
-            anim.SetLayerWeight(anim.GetLayerIndex("Row1"), 0f);
-            anim.SetLayerWeight(anim.GetLayerIndex("Row2"), 1f);
+            //anim.SetLayerWeight(anim.GetLayerIndex("Row1"), 0f);
+            //anim.SetLayerWeight(anim.GetLayerIndex("Row2"), 1f);
 
             student.MaxUpgrade(2);
         }
@@ -294,7 +295,7 @@ public class StudentStats : MonoBehaviour {
 
     private void AddStat(StudentStat _stat)
     {
-        currentStat.avatar = _stat.avatar;
+        currentStat.anim = _stat.anim;
         currentStat.mesh.SetActive(false);
         currentStat.mesh = _stat.mesh;
         currentStat.mesh.SetActive(true);

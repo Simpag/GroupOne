@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4284340564393352}
+  - component: {fileID: 1105189555888227283}
   m_Layer: 0
   m_Name: MeshDefault
   m_TagString: Untagged
@@ -31,6 +32,25 @@ Transform:
   m_Father: {fileID: 4744386241757664}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1105189555888227283
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311523560391506}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3ce3ef37ece74c24fb4f22942112213e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1439013549004866
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +219,6 @@ GameObject:
   - component: {fileID: 4247681999216024}
   - component: {fileID: 114357347539434430}
   - component: {fileID: 1945153557}
-  - component: {fileID: 2978553780246125096}
   m_Layer: 0
   m_Name: NerdStudent
   m_TagString: Untagged
@@ -242,7 +261,6 @@ MonoBehaviour:
   canBeBuffed: 0
   antiImmune: 0
   currentState: 0
-  anim: {fileID: 2978553780246125096}
   pivotPoint: {fileID: 4744386241757664}
   firePoint: {fileID: 4479675179198608}
   studentArea: {fileID: 1439013549004866}
@@ -251,7 +269,7 @@ MonoBehaviour:
   rangeMaterial: {fileID: 2100000, guid: 01b03e2d690e0474390aec86416beb57, type: 2}
   cantPlaceMaterial: {fileID: 2100000, guid: 6412fc3553a6c8843951e36ae2352e0b, type: 2}
   baseStat:
-    avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+    anim: {fileID: 1105189555888227283}
     mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
@@ -268,7 +286,7 @@ MonoBehaviour:
     rangeBuff: 10
     firerateBuff: 10
   row1Stats:
-  - avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+  - anim: {fileID: 1105189555888227283}
     mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
@@ -284,7 +302,7 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 1
     firerateBuff: 0
-  - avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+  - anim: {fileID: 1105189555888227283}
     mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
@@ -300,7 +318,7 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 1
     firerateBuff: 0
-  - avatar: {fileID: 9000000, guid: eddecb3f7197c2546a6ef4aa72875931, type: 3}
+  - anim: {fileID: 1848550730688866963}
     mesh: {fileID: 8007391077954488686}
     damage: 0
     bulletSpeed: 0
@@ -317,7 +335,7 @@ MonoBehaviour:
     rangeBuff: 2
     firerateBuff: 0
   row2Stats:
-  - avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+  - anim: {fileID: 1105189555888227283}
     mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
@@ -333,7 +351,7 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
+  - anim: {fileID: 1105189555888227283}
     mesh: {fileID: 1311523560391506}
     damage: 0
     bulletSpeed: 0
@@ -349,7 +367,7 @@ MonoBehaviour:
     damageBuff: 0
     rangeBuff: 0
     firerateBuff: 0
-  - avatar: {fileID: 9000000, guid: 35181499ab9ecb74293060d63abead1b, type: 3}
+  - anim: {fileID: 5761694725135899365}
     mesh: {fileID: 4844047813994368268}
     damage: 0
     bulletSpeed: 0
@@ -369,6 +387,7 @@ MonoBehaviour:
   studentDescription: "\u201CThe nerd doesn\u2019t fight any teachers but instead
     he does homework, buffs other kids and gives money every round! Upgrades focuses
     on buffing kids or money generation.\u201D"
+  anim: {fileID: 0}
   target: {fileID: 0}
   targetStats: {fileID: 0}
   shopStats:
@@ -394,7 +413,7 @@ MonoBehaviour:
   row2Level: 0
   buffPercentage: 0
   currentStat:
-    avatar: {fileID: 0}
+    anim: {fileID: 0}
     mesh: {fileID: 0}
     damage: 0
     bulletSpeed: 0
@@ -423,25 +442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffAmount: 20
---- !u!95 &2978553780246125096
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716343027190860}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: dd47193706b67fa4baebc69193a8aa26, type: 3}
-  m_Controller: {fileID: 9100000, guid: 02e7ead13996944b591d7a17e940350a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1884402945581702
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,6 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554061450416141071}
+  - component: {fileID: 5761694725135899365}
   m_Layer: 0
   m_Name: MeshComputer
   m_TagString: Untagged
@@ -611,6 +612,25 @@ Transform:
   m_Father: {fileID: 4744386241757664}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5761694725135899365
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4844047813994368268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 35181499ab9ecb74293060d63abead1b, type: 3}
+  m_Controller: {fileID: 9100000, guid: bf8737d16ae0a024cae66eae623d05e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8007391077954488686
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6016348010039541212}
+  - component: {fileID: 1848550730688866963}
   m_Layer: 0
   m_Name: MeshCalculator
   m_TagString: Untagged
@@ -642,6 +663,25 @@ Transform:
   m_Father: {fileID: 4744386241757664}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1848550730688866963
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007391077954488686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: eddecb3f7197c2546a6ef4aa72875931, type: 3}
+  m_Controller: {fileID: 9100000, guid: a0e2b48c91a246942b6137c634a232a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1013896780669243603
 PrefabInstance:
   m_ObjectHideFlags: 0

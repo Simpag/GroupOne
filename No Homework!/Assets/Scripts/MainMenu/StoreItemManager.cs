@@ -15,14 +15,36 @@ public class StoreItemManager : MonoBehaviour {
 
     [SerializeField]
     private Text costText;
+    [SerializeField]
+    private GameObject locked;
+    private bool owned;
+
+    private void Start()
+    {
+        locked.SetActive(false);
+    }
 
     public void BuyItem ()
     {
-        StoreManager.BuyItem(Stats);
+        if (!owned)
+            StoreManager.BuyItem(Stats);
     }
 
-    public void UpdateItem()
+    public void UpdateItem(bool _own)
     {
-        costText.text = Stats.Cost.ToString();
+        owned = _own;
+
+        if (_own)
+        {
+            costText.text = "Owned";
+        }
+        else
+        {
+            costText.text = Stats.Cost.ToString();
+            locked.SetActive(true);
+        }
+
+        if (AccountInfo.Instance.Currency >= stats.Cost)
+            locked.SetActive(false);
     }
 }

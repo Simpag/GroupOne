@@ -167,7 +167,7 @@ public class InGameUIManager : MonoBehaviour {
 
     public static void UpdateWaveIndex()
     {
-        instance.waveIndex.text = "Wave: " + WaveSpawner.Instance.WaveIndex.ToString();
+        instance.waveIndex.text = WaveSpawner.Instance.WaveIndex.ToString();
     }
 
     public void ShowOrHideShop(bool _show)
@@ -380,6 +380,7 @@ public class InGameUIManager : MonoBehaviour {
     public void ShowWinScreen()
     {
         winAnim.SetTrigger("show");
+        pauseButton.SetActive(false);
     }
 
     public void ShowGameOverScreen()
