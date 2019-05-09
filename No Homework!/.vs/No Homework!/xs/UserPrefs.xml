@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{2ADE49D6-4EB6-E11B-90B9-E9ED40653014}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/SlingshotStudent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/UI/PopupManager.cs">
     <Files>
       <File FileName="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/SlingshotStudent.cs" Line="54" Column="1" />
+      <File FileName="Assets/Scripts/InGame/UI/InGameUIManager.cs" Line="98" Column="19" />
+      <File FileName="Assets/Scripts/InGame/UI/PopupManager.cs" Line="38" Column="35" />
       <File FileName="Assets/Scripts/InGame/Student/StudentParents/StudentParent.cs" Line="38" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="295" Column="37" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="295" Column="1" NotebookId="1" />
       <File FileName="Assets/Scripts/InGame/Student/StudentRange.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/Watergun.cs" Line="46" Column="66" NotebookId="1" />
       <File FileName="Assets/Scripts/InGame/Student/StudentParents/ProjectileParent.cs" Line="44" Column="45" NotebookId="1" />
@@ -18,12 +20,13 @@
                   <Node name="Student" expanded="True">
                     <Node name="Student Classes" expanded="True">
                       <Node name="NerdStudent" expanded="True" />
-                      <Node name="SlingshotStudent" expanded="True">
-                        <Node name="SlingshotStudent.cs" selected="True" />
-                      </Node>
+                      <Node name="SlingshotStudent" expanded="True" />
                       <Node name="SpitStudent" expanded="True" />
                     </Node>
                     <Node name="StudentParents" expanded="True" />
+                  </Node>
+                  <Node name="UI" expanded="True">
+                    <Node name="PopupManager.cs" selected="True" />
                   </Node>
                 </Node>
               </Node>

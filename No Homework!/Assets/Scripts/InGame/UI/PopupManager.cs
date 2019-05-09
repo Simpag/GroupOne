@@ -32,9 +32,10 @@ public class PopupManager : MonoBehaviour {
 
         popup.SetActive(false);
 
-        Invoke("ShowNextPopup", 5);
-        Invoke("ShowNextPopup", 9);
-        Invoke("ShowNextPopup", 50);
+        Invoke("ShowNextPopup", 5f);
+        Invoke("ShowNextPopup", 10f);
+        Invoke("ShowNextPopup", 20f);
+        Invoke("ShowNextPopup", 60f);
     }
 
     public void ShowNextPopup()

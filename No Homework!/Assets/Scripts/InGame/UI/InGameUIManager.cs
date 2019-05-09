@@ -105,9 +105,15 @@ public class InGameUIManager : MonoBehaviour {
     {
         /*Very bunk, change */
         if (studentInformationView.activeSelf == false && shopContainer.activeSelf == false)
+        {
             nextWave.SetActive(true);
+            pauseButton.SetActive(true);
+        }
         else
+        {
             nextWave.SetActive(false);
+            pauseButton.SetActive(false);
+        }
 
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !BuildManager.Instance.TowerIsSelected)
         {
@@ -181,7 +187,6 @@ public class InGameUIManager : MonoBehaviour {
         if (!_show) //Hide
         {
             shopAnim.SetTrigger("Hide");
-            pauseButton.SetActive(true);
             //shopOpen = !shopOpen;
         }
         else //Show
@@ -189,7 +194,6 @@ public class InGameUIManager : MonoBehaviour {
             shopAnim.SetTrigger("Show");
 
             HideTowerInfo();
-            pauseButton.SetActive(false);
             //shopOpen = !shopOpen;
         }
 
@@ -204,7 +208,6 @@ public class InGameUIManager : MonoBehaviour {
     public void StopBuyingStudent()
     {
         shopAnim.SetTrigger("HideBuying");
-        pauseButton.SetActive(true);
     }
 
     public void SellSelectedStudent()
