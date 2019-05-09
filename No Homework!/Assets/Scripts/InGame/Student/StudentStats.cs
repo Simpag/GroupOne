@@ -79,6 +79,10 @@ public class StudentStats : MonoBehaviour {
     }
     [SerializeField]
     private State currentState;
+    public State CurrentState
+    {
+        get { return currentState; }
+    }
 
     [Header("General Setup")]
 	[SerializeField]
@@ -347,6 +351,7 @@ public class StudentStats : MonoBehaviour {
         /*if (currentState == _state)
             return;
             */
+        Debug.Log("Updated state" + _state);
         currentState = _state;
 
         switch (_state)

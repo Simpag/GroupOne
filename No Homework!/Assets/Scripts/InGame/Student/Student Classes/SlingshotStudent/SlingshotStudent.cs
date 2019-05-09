@@ -32,13 +32,18 @@ public class SlingshotStudent : StudentParent {
 
     protected override void Update()
     {
+        stopTimer -= Time.deltaTime;
+
         if (stat.target == null || !stat.IsActive)
         {
-            stat.UpdateState(StudentStats.State.idle);
-            firing = false;
+            if (stopTimer <= 0 && firing)
+            {
+                stat.UpdateState(StudentStats.State.idle);
+                firing = false;
 
-            if (stat.Row2Level >= 3)
-                StopShooting();
+                if (stat.Row2Level >= 3)
+                    StopShooting();
+            }
             return;
         }
 
@@ -47,11 +52,13 @@ public class SlingshotStudent : StudentParent {
         {
             stat.UpdateState(StudentStats.State.fire);
             firing = true;
+            Shoot();
         }
 
         //Look onto target
         LockOn();
 
+        stopTimer = 0.1f;
         fireCountdown -= Time.deltaTime;
     }
 

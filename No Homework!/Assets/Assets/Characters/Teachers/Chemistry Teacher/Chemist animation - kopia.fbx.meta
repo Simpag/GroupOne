@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 508cef998963a43b09e174abf8174fb5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone.004
+    100002: Bone.004_end
+    100004: //RootNode
+    100006: Cube.033
+    100008: Cube.035
+    100010: hand.L
+    100012: hand.L_end
+    100014: hand.R
+    100016: hand.R_end
+    100018: lowerarm.L
+    100020: lowerarm.R
+    100022: Lowerfeet.L
+    100024: Lowerfeet.L_end
+    100026: Lowerfeet.R
+    100028: Lowerfeet.R_end
+    100030: Lowerleg.L
+    100032: Lowerleg.L.001
+    100034: Lowerleg.L_end
+    100036: Lowerleg.R
+    100038: Lowerleg.R.001
+    100040: Lowerleg.R_end
+    100042: Lowerspine
+    100044: Midspine
+    100046: neck
+    100048: Point
+    100050: Point.001
+    100052: Point.002
+    100054: Point.003
+    100056: Pole.L
+    100058: Pole.L_end
+    100060: Pull.R
+    100062: Pull.R_end
+    100064: Shoulder.L
+    100066: Shoulder.R
+    100068: Sphere
+    100070: Spine.004
+    100072: Upperarm.L
+    100074: Upperarm.R
+    100076: Upperfeet.L
+    100078: Upperfeet.R
+    100080: Upperleg.L
+    100082: Upperleg.R
+    100084: Upperspine
+    400000: Bone.004
+    400002: Bone.004_end
+    400004: //RootNode
+    400006: Cube.033
+    400008: Cube.035
+    400010: hand.L
+    400012: hand.L_end
+    400014: hand.R
+    400016: hand.R_end
+    400018: lowerarm.L
+    400020: lowerarm.R
+    400022: Lowerfeet.L
+    400024: Lowerfeet.L_end
+    400026: Lowerfeet.R
+    400028: Lowerfeet.R_end
+    400030: Lowerleg.L
+    400032: Lowerleg.L.001
+    400034: Lowerleg.L_end
+    400036: Lowerleg.R
+    400038: Lowerleg.R.001
+    400040: Lowerleg.R_end
+    400042: Lowerspine
+    400044: Midspine
+    400046: neck
+    400048: Point
+    400050: Point.001
+    400052: Point.002
+    400054: Point.003
+    400056: Pole.L
+    400058: Pole.L_end
+    400060: Pull.R
+    400062: Pull.R_end
+    400064: Shoulder.L
+    400066: Shoulder.R
+    400068: Sphere
+    400070: Spine.004
+    400072: Upperarm.L
+    400074: Upperarm.R
+    400076: Upperfeet.L
+    400078: Upperfeet.R
+    400080: Upperleg.L
+    400082: Upperleg.R
+    400084: Upperspine
+    2100000: mask
+    2100002: coat
+    2100004: pants
+    2100006: shoes
+    2100008: skin
+    2100010: glasses
+    2300000: Sphere
+    3300000: Sphere
+    4300000: Sphere
+    4300002: Cube.033
+    4300004: Cube.035
+    7400000: Spine.004|Walking.001
+    9500000: //RootNode
+    10800000: Point
+    10800002: Point.001
+    10800004: Point.002
+    10800006: Point.003
+    13700000: Cube.033
+    13700002: Cube.035
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Spine.004|Walking.001
+      takeName: Spine.004|Walking.001
+      firstFrame: 0
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.9
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.009
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

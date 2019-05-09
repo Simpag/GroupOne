@@ -403,5 +403,10 @@ public class InGameUIManager : MonoBehaviour {
         winAnim.SetTrigger("hide");
         GameFunctions.ResumeGame();
     }
+
+    public void Stacks(float _amount)
+    {
+        PlayerStats.AddCandyCurrency(_amount);
+    }
 }
 

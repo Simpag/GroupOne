@@ -1,70 +1,14 @@
 Base path: /Applications/Unity/Hub/Editor/2018.3.14f1/Unity.app/Contents
 Cmd: initializeCompiler
-Cmd: compileComputeKernel
-  api=14 insize=5473 outsize=3713 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=3713 outsize=5629 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=6625 outsize=3697 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=3697 outsize=6129 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=6124 outsize=2729 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=3557 outsize=6117 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=2449 outsize=4685 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=2889 outsize=4793 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=6546 outsize=10689 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=10689 outsize=21257 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=6090 outsize=3313 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=4174 outsize=2357 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=2357 outsize=4501 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=6778 outsize=5289 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4932 outsize=52885 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=4309 outsize=7073 ok=1
-Cmd: compileComputeKernel
-  error: 1 plat 14 at Congratz.vfx(77): comma expression used where a vector constructor may have been intended
-  api=14 insize=7812 outsize=11217 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=5608 outsize=2297 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=3125 outsize=5049 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=4844 outsize=2773 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=5726 outsize=3461 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=5018 outsize=21093 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=3381 outsize=5365 ok=1
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=1 insize=5359 outsize=57522 kw=DECALS_3RT SHADOW_LOW USE_CLUSTERED_LIGHTLIST pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5359 outsize=57150 kw=DIRLIGHTMAP_COMBINED INSTANCING_ON DECALS_3RT SHADOW_LOW USE_FPTL_LIGHTLIST pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5359 outsize=57522 kw=DIRLIGHTMAP_COMBINED DECALS_3RT SHADOW_LOW USE_CLUSTERED_LIGHTLIST _TERRAIN_INSTANCED_PERPIXEL_NORMAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5359 outsize=88126 kw=DEBUG_DISPLAY DECALS_3RT SHADOW_LOW USE_FPTL_LIGHTLIST _TERRAIN_INSTANCED_PERPIXEL_NORMAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+Unhandled exception: Failed writing data to socket
+
+Quitting shader compiler process

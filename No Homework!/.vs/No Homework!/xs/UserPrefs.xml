@@ -1,15 +1,20 @@
 ﻿<Properties StartupConfiguration="{2ADE49D6-4EB6-E11B-90B9-E9ED40653014}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Utillities/GameConstants.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InGame/UI/InGameUIManager.cs">
     <Files>
       <File FileName="Assets/Scripts/InGame/Student/Student Classes/PaperplaneStudent/MultiPaperplaneProjectile.cs" Line="10" Column="20" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="249" Column="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentStats.cs" Line="354" Column="45" />
       <File FileName="Assets/Scripts/InGame/Student/StudentRange.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentParents/StudentParent.cs" Line="60" Column="76" />
-      <File FileName="Assets/Scripts/Utillities/GameConstants.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/InGame/WaveSpawner/WaveSpawner.cs" Line="48" Column="59" NotebookId="1" />
-      <File FileName="Assets/Scripts/InGame/Student/StudentParents/ProjectileParent.cs" Line="68" Column="36" NotebookId="1" />
+      <File FileName="Assets/Scripts/Utillities/GameConstants.cs" Line="26" Column="52" />
+      <File FileName="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/SlingshotStudent.cs" Line="46" Column="14" />
+      <File FileName="Assets/Scripts/InGame/Student/Student Classes/SlingshotStudent/Watergun.cs" Line="23" Column="63" />
+      <File FileName="Assets/Scripts/InGame/WaveSpawner/WaveSpawner.cs" Line="37" Column="35" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentParents/ProjectileParent.cs" Line="30" Column="1" NotebookId="1" />
       <File FileName="Assets/Scripts/InGame/GameManager.cs" Line="90" Column="53" NotebookId="1" />
-      <File FileName="Assets/Scripts/InGame/Mulitplayer/MultiplayerManager.cs" Line="490" Column="12" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Mulitplayer/MultiplayerManager.cs" Line="479" Column="36" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/StudentParents/StudentParent.cs" Line="28" Column="14" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/Student/Student Classes/SpitStudent/GumBallProjectile.cs" Line="58" Column="22" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/PlayerStats.cs" Line="57" Column="6" NotebookId="1" />
+      <File FileName="Assets/Scripts/InGame/UI/InGameUIManager.cs" Line="409" Column="47" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,19 +28,22 @@
                   <Node name="Student" expanded="True">
                     <Node name="Student Classes" expanded="True">
                       <Node name="PaperplaneStudent" expanded="True" />
+                      <Node name="SlingshotStudent" expanded="True" />
+                      <Node name="SpitStudent" expanded="True" />
                     </Node>
                     <Node name="StudentParents" expanded="True" />
                   </Node>
                   <Node name="Teachers" expanded="True">
                     <Node name="TeacherParents" expanded="True" />
                   </Node>
-                  <Node name="UI" expanded="True" />
+                  <Node name="UI" expanded="True">
+                    <Node name="InGameUIManager.cs" selected="True" />
+                  </Node>
                   <Node name="WaveSpawner" expanded="True" />
                 </Node>
                 <Node name="MainMenu" expanded="True" />
-                <Node name="Utillities" expanded="True">
-                  <Node name="GameConstants.cs" selected="True" />
-                </Node>
+                <Node name="PreGame" expanded="True" />
+                <Node name="Utillities" expanded="True" />
               </Node>
             </Node>
           </Node>

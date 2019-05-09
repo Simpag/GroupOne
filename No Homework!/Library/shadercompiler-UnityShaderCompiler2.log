@@ -1,61 +1,14 @@
 Base path: /Applications/Unity/Hub/Editor/2018.3.14f1/Unity.app/Contents
 Cmd: initializeCompiler
-Cmd: compileComputeKernel
-  api=4 insize=3973 outsize=1485 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=6625 outsize=2801 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=3961 outsize=1461 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=6124 outsize=3557 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=4308 outsize=2449 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=5210 outsize=2889 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=6546 outsize=21921 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4174 outsize=1461 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=6778 outsize=4253 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=4932 outsize=9181 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=7072 outsize=4309 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=11217 outsize=25257 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=5726 outsize=2633 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=5018 outsize=9685 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=9685 outsize=19097 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=1623 outsize=2449 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=2449 outsize=3433 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=6107 outsize=3381 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=3894 outsize=1433 ok=1
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=1 insize=5359 outsize=57558 kw=INSTANCING_ON DECALS_3RT SHADOW_LOW USE_CLUSTERED_LIGHTLIST pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5359 outsize=57114 kw=DIRLIGHTMAP_COMBINED DECALS_3RT SHADOW_LOW USE_FPTL_LIGHTLIST pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5359 outsize=57522 kw=DIRLIGHTMAP_COMBINED DECALS_3RT SHADOW_LOW USE_CLUSTERED_LIGHTLIST pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5359 outsize=88126 kw=DEBUG_DISPLAY DECALS_3RT SHADOW_LOW USE_FPTL_LIGHTLIST pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+Unhandled exception: Failed writing data to socket
+
+Quitting shader compiler process

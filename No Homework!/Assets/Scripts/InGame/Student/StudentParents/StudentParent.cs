@@ -8,6 +8,7 @@ public class StudentParent : MonoBehaviour {
     protected StudentStats stat;
     protected float fireCountdown = 0;
     protected bool firing = false;
+    protected float stopTimer = 0f;
 
     protected virtual void Awake()
     {
@@ -16,10 +17,15 @@ public class StudentParent : MonoBehaviour {
 
     protected virtual void Update()
     {
+        stopTimer -= Time.deltaTime;
+
         if (stat.target == null || !stat.IsActive)
         {
-            stat.UpdateState(StudentStats.State.idle);
-            firing = false;
+            if (stopTimer <= 0 && firing)
+            {
+                stat.UpdateState(StudentStats.State.idle);
+                firing = false;
+            }
             return;
         }
 
@@ -33,6 +39,7 @@ public class StudentParent : MonoBehaviour {
         //Look onto target
         LockOn();
 
+        stopTimer = 0.1f;
         fireCountdown -= Time.deltaTime;
     }
 

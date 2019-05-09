@@ -11,6 +11,9 @@ public class Watergun : MonoBehaviour
     private void Update()
     {
         timer -= Time.deltaTime;
+
+        if (stat.CurrentState == StudentStats.State.idle)
+            inside.Clear();
     }
 
     private void OnTriggerEnter(Collider other)
