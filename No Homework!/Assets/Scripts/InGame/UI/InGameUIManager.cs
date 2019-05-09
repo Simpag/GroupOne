@@ -28,6 +28,8 @@ public class InGameUIManager : MonoBehaviour {
     [SerializeField]
     private GameObject studentInformationView;
     [SerializeField]
+    private Image studentIcon;
+    [SerializeField]
     private Text studentInformationName;
     [SerializeField]
     private Text studentInformationDescription;
@@ -255,7 +257,10 @@ public class InGameUIManager : MonoBehaviour {
 
         }
 
-        //Show image
+        //Update icon
+        instance.studentIcon.sprite = _tower.shopStats.StudentIcon;
+
+        //Show range
         instance.currentStudentStats.rangeView.GetComponent<MeshRenderer>().enabled = true; //Show the range of the tower
     }
 

@@ -43,6 +43,8 @@ public class TeacherParent : MonoBehaviour {
         }
 
         WaveSpawner.Instance.TeachersOnScreen--;
+        if (WaveSpawner.Instance.TeacherStatsOnScreen.Contains(stats))
+            WaveSpawner.Instance.TeacherStatsOnScreen.Remove(stats);
         Destroy(stats.gameObject);
     }
 }

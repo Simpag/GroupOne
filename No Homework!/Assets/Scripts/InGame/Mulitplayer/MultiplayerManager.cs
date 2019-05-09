@@ -1,4 +1,5 @@
-﻿using GameSparks.Api.Responses;
+﻿using GameSparks.Api.Requests;
+using GameSparks.Api.Responses;
 using GameSparks.Core;
 using GameSparks.RT;
 using System.Collections;
@@ -113,7 +114,6 @@ public class MultiplayerManager : MonoBehaviour {
             });
     }
     #endregion
-
 
     #region Callbacks
 
@@ -470,4 +470,16 @@ public class MultiplayerManager : MonoBehaviour {
     }
 
     #endregion
+
+    public void CompletedMap()
+    {
+        new LogEventRequest()
+        .SetEventKey(GameConstants.COMPLETED_MAP)
+        .Send((response) => {
+            if (response.HasErrors)
+            {
+                Debug.LogError(response.Errors.GetInt("ERROR"));
+            }
+        });
+    }
 }

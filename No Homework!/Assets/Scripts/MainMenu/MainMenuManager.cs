@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour {
 
@@ -28,6 +29,8 @@ public class MainMenuManager : MonoBehaviour {
     private GameObject mainMenu;
     [SerializeField]
     private GameObject storeMenu;
+    [SerializeField]
+    private Text coins;
 
     private void Awake()
     {
@@ -39,7 +42,7 @@ public class MainMenuManager : MonoBehaviour {
         {
             Destroy(this);
         }
-        info = FindObjectOfType<AccountInfo>();
+        info = AccountInfo.Instance;
     }
 
     private void Start()
@@ -63,6 +66,7 @@ public class MainMenuManager : MonoBehaviour {
                 anim.SetTrigger("FlipBoardBack");
 
                 StoreManager.ShowStore();
+                coins.text = AccountInfo.Instance.Currency.ToString();
                 break;
         }
     }

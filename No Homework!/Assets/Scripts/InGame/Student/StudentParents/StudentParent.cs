@@ -57,6 +57,9 @@ public class StudentParent : MonoBehaviour {
 
     protected virtual void LockOn()
     {
+        if (System.Math.Abs(stat.CurrentStat.rotationSpeed) < Mathf.Epsilon)
+            return;
+
         Vector3 dir = stat.target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(stat.PivotPoint.rotation, lookRotation, Time.deltaTime * stat.CurrentStat.rotationSpeed).eulerAngles;

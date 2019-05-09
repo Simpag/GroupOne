@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour {
         if (_won)
         {
             InGameUIManager.Instance.ShowWinScreen();
+            MultiplayerManager.Instance.CompletedMap();
             //GameFunctions.PauseGame();
         } 
         else

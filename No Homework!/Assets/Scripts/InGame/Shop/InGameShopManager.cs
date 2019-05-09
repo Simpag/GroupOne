@@ -30,7 +30,8 @@ public class InGameShopManager : MonoBehaviour {
         SpitStudent,
         SlingshotStudent,
         NerdStudent,
-        FootballStudent
+        FootballStudent,
+        PaperplaneStudent
     }
 
     private void Awake()

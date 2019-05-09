@@ -11,13 +11,9 @@ public class GumBallProjectile : ProjectileParent {
     private GameObject gumballGroundMesh;
     [SerializeField]
     private float duration;
+    [SerializeField]
+    private bool isOnGround = false;
 
-    private bool isOnGround;
-
-    private void Awake()
-    {
-        isOnGround = false;
-    }
 
     protected override void Update()
     {
@@ -34,9 +30,10 @@ public class GumBallProjectile : ProjectileParent {
 
         //Spawn gumball on the ground
         flyingMesh.SetActive(false);
-        Vector3 _spawnPoint = Vector3.zero;
-        _spawnPoint.y -= transform.position.y;
-        Instantiate(gumballGroundMesh, _spawnPoint, Quaternion.identity, this.transform);
+        Vector3 _spawnPoint = transform.position;
+        GameObject _ground = Instantiate(gumballGroundMesh, this.transform, true);
+        _spawnPoint.y = _ground.transform.position.y;
+        _ground.transform.position = _spawnPoint;
         isOnGround = true;
         Destroy(this, duration);
     }
@@ -63,9 +60,14 @@ public class GumBallProjectile : ProjectileParent {
 
     protected override void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(GameConstants.TEACHER_TAG))
+        if (isOnGround)
         {
-            SlowTeacher(other.GetComponent<TeacherStats>());
+            if (other.CompareTag(GameConstants.TEACHER_TAG))
+                SlowTeacher(other.GetComponent<TeacherStats>());
+        }
+        else
+        {
+            base.OnTriggerEnter(other);
         }
     }
 }

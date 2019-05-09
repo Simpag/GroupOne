@@ -1,0 +1,340 @@
+fileFormatVersion: 2
+guid: c19b5c9e37b154ea587212dd78b62dc7
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone_004
+    100002: Cube_001
+    100004: Cube_002
+    100006: Cube_003
+    100008: Cube_058
+    100010: Cube_059
+    100012: Cylinder_010
+    100014: Cylinder_011
+    100016: Cylinder_012
+    100018: hand_L
+    100020: hand_R
+    100022: lowerarm_L
+    100024: lowerarm_R
+    100026: Lowerfeet_L
+    100028: Lowerfeet_R
+    100030: Lowerleg_L
+    100032: Lowerleg_L_001
+    100034: Lowerleg_R
+    100036: Lowerleg_R_001
+    100038: Lowerspine
+    100040: Midspine
+    100042: neck
+    100044: //RootNode
+    100046: Plane
+    100048: Plane_005
+    100050: Pole_L
+    100052: Pull_R
+    100054: Shoulder_L
+    100056: Shoulder_R
+    100058: Spine_002
+    100060: Upperarm_L
+    100062: Upperarm_R
+    100064: Upperfeet_L
+    100066: Upperfeet_R
+    100068: Upperleg_L
+    100070: Upperleg_R
+    100072: Upperspine
+    400000: Bone_004
+    400002: Cube_001
+    400004: Cube_002
+    400006: Cube_003
+    400008: Cube_058
+    400010: Cube_059
+    400012: Cylinder_010
+    400014: Cylinder_011
+    400016: Cylinder_012
+    400018: hand_L
+    400020: hand_R
+    400022: lowerarm_L
+    400024: lowerarm_R
+    400026: Lowerfeet_L
+    400028: Lowerfeet_R
+    400030: Lowerleg_L
+    400032: Lowerleg_L_001
+    400034: Lowerleg_R
+    400036: Lowerleg_R_001
+    400038: Lowerspine
+    400040: Midspine
+    400042: neck
+    400044: //RootNode
+    400046: Plane
+    400048: Plane_005
+    400050: Pole_L
+    400052: Pull_R
+    400054: Shoulder_L
+    400056: Shoulder_R
+    400058: Spine_002
+    400060: Upperarm_L
+    400062: Upperarm_R
+    400064: Upperfeet_L
+    400066: Upperfeet_R
+    400068: Upperleg_L
+    400070: Upperleg_R
+    400072: Upperspine
+    2100000: unnamed
+    2100002: Material_001
+    2300000: Cube_058
+    2300002: Cube_059
+    2300004: Cylinder_010
+    2300006: Cylinder_011
+    2300008: Cylinder_012
+    2300010: Plane
+    2300012: Plane_005
+    3300000: Cube_058
+    3300002: Cube_059
+    3300004: Cylinder_010
+    3300006: Cylinder_011
+    3300008: Cylinder_012
+    3300010: Plane
+    3300012: Plane_005
+    4300000: Cube_058
+    4300002: Cube_059
+    4300004: Cylinder_010
+    4300006: Cylinder_011
+    4300008: Cylinder_012
+    4300010: Plane
+    4300012: Plane_005
+    4300014: Cube_001
+    4300016: Cube_002
+    4300018: Cube_003
+    7400000: Default Take
+    7400002: Planethrow
+    7400004: Spit_002
+    7400006: Walking_000
+    7400008: Planethrow (1)
+    9500000: //RootNode
+    13700000: Cube_001
+    13700002: Cube_002
+    13700004: Cube_003
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 249
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Planethrow
+      takeName: Planethrow
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Spit_002
+      takeName: Spit_002
+      firstFrame: 0
+      lastFrame: 54
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walking_000
+      takeName: Walking_000
+      firstFrame: 0
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Planethrow (1)
+      takeName: Planethrow
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.5
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -94,14 +94,17 @@ public class TeacherStats : MonoBehaviour {
 
     public void SlowTeacher(float _amount, float _time)
     {
-        normalSpeed = speed;
-        speed *= 1 - _amount;
-        slowTimer = _time;
+        if (System.Math.Abs(normalSpeed) < Mathf.Epsilon)
+        {
+            normalSpeed = speed;
+            speed *= 1 - _amount;
+            slowTimer = _time;
+        }
     }
 
     private void ReturnToNormalSpeed()
     {
-        if (normalSpeed != 0)
+        if (System.Math.Abs(normalSpeed) > Mathf.Epsilon)
         {
             speed = normalSpeed;
             normalSpeed = 0;

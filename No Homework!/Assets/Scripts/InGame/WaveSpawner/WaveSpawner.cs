@@ -33,6 +33,8 @@ public class WaveSpawner : MonoBehaviour {
     private Transform spawnPoint;
     [SerializeField]
     private Transform teacherContainer;
+    [SerializeField]
+    private int mapCompletion = 20;
 
     [SerializeField]
     private WaveStats[] waves;
@@ -45,6 +47,11 @@ public class WaveSpawner : MonoBehaviour {
     private int totalTeachersSpawned;
     private int teachersOnScreen;
     private int ticketSum;
+    private List<TeacherStats> teacherStatsOnScreen = new List<TeacherStats>();
+    public List<TeacherStats> TeacherStatsOnScreen
+    {
+        get { return teacherStatsOnScreen; }
+    }
 
     public int WaveIndex
     {
@@ -89,7 +96,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update()
     {
-        if (waveIndex >= waves.Length && !noWaves && !isSpawning && teachersOnScreen <= 0)
+        if (waveIndex >= mapCompletion && !noWaves && !isSpawning && teachersOnScreen <= 0)
         {
             GameManager.EndGame(true);
             noWaves = true;
@@ -226,5 +233,6 @@ public class WaveSpawner : MonoBehaviour {
         _spawned.name = totalTeachersSpawned.ToString();
         totalTeachersSpawned++;
         teachersOnScreen++;
+        teacherStatsOnScreen.Add(_spawned.GetComponent<TeacherStats>());
     }
 }

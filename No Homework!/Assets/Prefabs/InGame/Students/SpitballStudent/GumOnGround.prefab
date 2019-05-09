@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6781008874592752635}
   - component: {fileID: 1104746389796730131}
   - component: {fileID: 861499502113747765}
+  - component: {fileID: 5930265906492227225}
   m_Layer: 0
   m_Name: GumOnGround
   m_TagString: Untagged
@@ -91,3 +92,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5930265906492227225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5529341302016957504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0145603bf1139de44a4fe42064ee44f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TeacherLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  impactEffect: {fileID: 1383500702451552, guid: 94087bf8a1d1d0b458495dae4a95bd4b,
+    type: 3}
+  target: {fileID: 0}
+  flyingMesh: {fileID: 0}
+  gumballGroundMesh: {fileID: 0}
+  duration: 5
+  isOnGround: 1
