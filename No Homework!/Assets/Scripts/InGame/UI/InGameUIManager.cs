@@ -105,6 +105,9 @@ public class InGameUIManager : MonoBehaviour {
 
     private void Update()
     {
+        if (Input.GetKeyUp(KeyCode.Escape))
+            PauseOrResumeGame();
+
         /*Very bunk, change */
         if (studentInformationView.activeSelf == false && shopContainer.activeSelf == false)
         {
@@ -340,7 +343,7 @@ public class InGameUIManager : MonoBehaviour {
     public void ReturnToMainMenu()
     {
         GameFunctions.ResumeGame();
-        GameManager.EndGame(false);
+        GameManager.EndGame(false, true);
     }
 
     public void ExitGame()

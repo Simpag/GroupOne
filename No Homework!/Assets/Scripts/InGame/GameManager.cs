@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(GameConstants.GAME_SCENE);
     }
 
-    public static void EndGame(bool _won)
+    public static void EndGame(bool _won, bool _quit)
     {
         if (_won)
         {
@@ -95,7 +95,10 @@ public class GameManager : MonoBehaviour {
             instance.isGameActive = false;
             instance.startmethod = Startmethod.notset;
             //SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
-            InGameUIManager.Instance.ShowGameOverScreen();
+            if (!_quit)
+                InGameUIManager.Instance.ShowGameOverScreen();
+
+            SceneManager.LoadScene(GameConstants.MAIN_MENU_SCENE);
         }
     }
 

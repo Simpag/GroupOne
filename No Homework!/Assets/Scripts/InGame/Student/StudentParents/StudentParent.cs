@@ -5,6 +5,20 @@ using UnityEngine;
 [RequireComponent(typeof(StudentStats))]
 public class StudentParent : MonoBehaviour {
 
+    /*Quick fix*/
+    [SerializeField]
+    private GameObject fireEffect;
+
+    private GameObject fireEffectInstance;
+    private Vector3 farAway = new Vector3(10000f, 10000f, 10000f);
+    private Transform followTransform;
+
+    private void Start()
+    {
+        fireEffectInstance = Instantiate(fireEffect, farAway, Quaternion.identity, transform);
+    }
+    /*Quick Fix*/
+
     protected StudentStats stat;
     protected float fireCountdown = 0;
     protected bool firing = false;
@@ -18,6 +32,15 @@ public class StudentParent : MonoBehaviour {
     protected virtual void Update()
     {
         stopTimer -= Time.deltaTime;
+        if (followTransform != null)
+        {
+            fireEffectInstance.transform.position = followTransform.position;
+            fireEffectInstance.transform.rotation = followTransform.rotation;
+        }
+        else
+        {
+            fireEffectInstance.transform.position = farAway;
+        }
 
         if (stat.target == null || !stat.IsActive)
         {
@@ -78,4 +101,8 @@ public class StudentParent : MonoBehaviour {
         return;
     }
 
+    public virtual void FireFollow(Transform _follow)
+    {
+        followTransform = _follow;
+    }
 }

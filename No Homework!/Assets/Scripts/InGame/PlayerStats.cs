@@ -79,7 +79,7 @@ public class PlayerStats : MonoBehaviour {
 
         if (Instance.homework >= HomeworkBar.Instance.maxHomework)
         {
-            GameManager.EndGame(false);
+            GameManager.EndGame(false, false);
         }
     }
 
@@ -90,7 +90,7 @@ public class PlayerStats : MonoBehaviour {
 
         if (Instance.homework >= HomeworkBar.Instance.maxHomework)
         {
-            GameManager.EndGame(false);
+            GameManager.EndGame(false, false);
         }
     }
 }

@@ -244,7 +244,7 @@ public class MultiplayerManager : MonoBehaviour {
     public static void Disconnect()
     {
         Instance.GetRTSession.Disconnect();
-        GameManager.EndGame(false);
+        GameManager.EndGame(false, true);
     }
 
     public static void SendTowerToPartner(StudentStats _tower, Vector3 _position)

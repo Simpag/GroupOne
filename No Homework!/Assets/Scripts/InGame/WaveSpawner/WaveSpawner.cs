@@ -98,7 +98,7 @@ public class WaveSpawner : MonoBehaviour {
     {
         if (waveIndex >= mapCompletion && !noWaves && !isSpawning && teachersOnScreen <= 0)
         {
-            GameManager.EndGame(true);
+            GameManager.EndGame(true, false);
             noWaves = true;
         }
     }

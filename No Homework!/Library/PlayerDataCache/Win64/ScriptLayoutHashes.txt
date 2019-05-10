@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-/Users/SimonsDator/Desktop/NoHomework/2019-05-09/No Homework!.exe
+C:/Users/simon/Documents/Github/GroupOneBuilds/2019-05-10/No Homework!.exe
 SceneListBegin?
 Assets/Scenes/LoginScene.unity
 Assets/Scenes/MainScene.unity
