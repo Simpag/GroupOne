@@ -2,7 +2,7 @@
   "Modalname": "GroupOneModal",
   "ProjectName" : "No Homework!",
   "ProjectTopic" : "Unity Game",
-  "ProjectDescription" : "This game was created during the 3rd year at Klara Södra gymnasium.",
+  "ProjectDescription" : "Dethär är slutprojektet som jag och fem andra har utvecklat under tredje året på Klara Södra gymnasium. Det är ett towerdefence spel där man ska skydda sig från lärares hämska läxor.",
   "Date" : "25/04-2019",
   "Image" : "https://www.wikihow.com/images/thumb/c/c3/Do-Homework-Step-1-Version-3.jpg/aid7267-v4-728px-Do-Homework-Step-1-Version-3.jpg"
 }
