@@ -1,0 +1,359 @@
+fileFormatVersion: 2
+guid: 3fae04b55ea31ec489bfcc48979bd293
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Camera
+    100002: //RootNode
+    100004: Cube.001
+    100006: Cube.008
+    100008: Cube.009
+    100010: Cube.010
+    100012: Cube.012
+    100014: Cube.019
+    100016: Cube.021
+    100018: Cube.022
+    100020: Cube.023
+    100022: Cube.024
+    100024: Cube.028
+    100026: Cube.034
+    100028: Cube.035
+    100030: Cube.036
+    100032: Cylinder
+    100034: Cylinder.001
+    100036: Cylinder.003
+    100038: Cylinder.006
+    100040: Cylinder.007
+    100042: Cylinder.008
+    100044: Cylinder.010
+    100046: Cylinder.011
+    100048: Cylinder.012
+    100050: Lamp
+    100052: Plane
+    100054: Plane.001
+    100056: Sphere
+    100058: Sphere.001
+    100060: Sphere.002
+    400000: Camera
+    400002: //RootNode
+    400004: Cube.001
+    400006: Cube.008
+    400008: Cube.009
+    400010: Cube.010
+    400012: Cube.012
+    400014: Cube.019
+    400016: Cube.021
+    400018: Cube.022
+    400020: Cube.023
+    400022: Cube.024
+    400024: Cube.028
+    400026: Cube.034
+    400028: Cube.035
+    400030: Cube.036
+    400032: Cylinder
+    400034: Cylinder.001
+    400036: Cylinder.003
+    400038: Cylinder.006
+    400040: Cylinder.007
+    400042: Cylinder.008
+    400044: Cylinder.010
+    400046: Cylinder.011
+    400048: Cylinder.012
+    400050: Lamp
+    400052: Plane
+    400054: Plane.001
+    400056: Sphere
+    400058: Sphere.001
+    400060: Sphere.002
+    2000000: Camera
+    2100000: glass
+    2100002: Material
+    2100004: No Name
+    2100006: walls
+    2100008: floor
+    2100010: metalRim.001
+    2100012: vent
+    2100014: viewIndoors
+    2100016: metalRim
+    2100018: whiteBoard
+    2100020: door
+    2100022: lamp
+    2100024: outdoors
+    2100026: table board
+    2100028: table legs
+    2100030: board
+    2100032: frame.001
+    2100034: frame
+    2100036: chairWood
+    2100038: chairFrame
+    2300000: Cube.001
+    2300002: Cube.008
+    2300004: Cube.009
+    2300006: Cube.010
+    2300008: Cube.012
+    2300010: Cube.019
+    2300012: Cube.021
+    2300014: Cube.022
+    2300016: Cube.023
+    2300018: Cube.024
+    2300020: Cube.028
+    2300022: Cube.034
+    2300024: Cube.035
+    2300026: Cube.036
+    2300028: Cylinder
+    2300030: Cylinder.001
+    2300032: Cylinder.003
+    2300034: Cylinder.006
+    2300036: Cylinder.007
+    2300038: Cylinder.008
+    2300040: Cylinder.010
+    2300042: Cylinder.011
+    2300044: Cylinder.012
+    2300046: Plane
+    2300048: Plane.001
+    2300050: Sphere
+    2300052: Sphere.001
+    2300054: Sphere.002
+    3300000: Cube.001
+    3300002: Cube.008
+    3300004: Cube.009
+    3300006: Cube.010
+    3300008: Cube.012
+    3300010: Cube.019
+    3300012: Cube.021
+    3300014: Cube.022
+    3300016: Cube.023
+    3300018: Cube.024
+    3300020: Cube.028
+    3300022: Cube.034
+    3300024: Cube.035
+    3300026: Cube.036
+    3300028: Cylinder
+    3300030: Cylinder.001
+    3300032: Cylinder.003
+    3300034: Cylinder.006
+    3300036: Cylinder.007
+    3300038: Cylinder.008
+    3300040: Cylinder.010
+    3300042: Cylinder.011
+    3300044: Cylinder.012
+    3300046: Plane
+    3300048: Plane.001
+    3300050: Sphere
+    3300052: Sphere.001
+    3300054: Sphere.002
+    4300000: Cube.024
+    4300002: Cube.023
+    4300004: Cylinder.008
+    4300006: Cube.022
+    4300008: Cylinder.007
+    4300010: Cube.021
+    4300012: Cylinder.006
+    4300014: Cylinder.003
+    4300016: Cube.001
+    4300018: Plane
+    4300020: Cylinder
+    4300022: Cube.009
+    4300024: Cube.008
+    4300026: Cylinder.001
+    4300028: Cube.010
+    4300030: Cube.019
+    4300032: Plane.001
+    4300034: Cube.028
+    4300036: Cube.036
+    4300038: Cube.035
+    4300040: Cube.034
+    4300042: Cylinder.012
+    4300044: Cylinder.011
+    4300046: Cylinder.010
+    4300048: Sphere
+    4300050: Sphere.001
+    4300052: Sphere.002
+    4300054: Cube.012
+    10800000: Lamp
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 59bd5ae84ad97f547994522ff906fd93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 73c9683cc03995447ab92252b497efb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: board
+    second: {fileID: 2100000, guid: 86896b33c39c3c045970de81705a47c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chairFrame
+    second: {fileID: 2100000, guid: 4f0faf8fcd3ec244c86e93825e4ff050, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chairWood
+    second: {fileID: 2100000, guid: 574db2844b5cfca4ba13515dd7c64a81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door
+    second: {fileID: 2100000, guid: 6aec45041f0f6ac44b80966ada80d18f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor
+    second: {fileID: 2100000, guid: c2a5d8a76add3cb47bbff38dd8fc1a3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frame
+    second: {fileID: 2100000, guid: 953cb2f57bfb6894389654e8351db690, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frame.001
+    second: {fileID: 2100000, guid: ae098f9be0fb4dc43b19459c7cee8672, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 7e3ac8e6788af8546a1e66fea2c26481, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp
+    second: {fileID: 2100000, guid: e1fb6d441fec8d740acd6061b474b61d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metalRim
+    second: {fileID: 2100000, guid: 32b78568d8c559e4e9ff3238faa8b23b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metalRim.001
+    second: {fileID: 2100000, guid: 3c18600386de0cc45a9579c822ab345f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: outdoors
+    second: {fileID: 2100000, guid: 817f54e2584c70d4b82eee3cd8797030, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table board
+    second: {fileID: 2100000, guid: 4330d2e6a65511e4b940142f7e070a3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table legs
+    second: {fileID: 2100000, guid: 2c53dcd96dbdd6d49ac5b0bbe7ade397, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vent
+    second: {fileID: 2100000, guid: 5ca7bb0b92c7cb849848396ad0b1fa29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: viewIndoors
+    second: {fileID: 2100000, guid: fb6c0f5ffd3a10040a437bc2d2bd4497, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: walls
+    second: {fileID: 2100000, guid: e9cfe614c00eac44ea0ca4419313f5f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: whiteBoard
+    second: {fileID: 2100000, guid: 08775487ed4bad14f8deb9ab088f0ff7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

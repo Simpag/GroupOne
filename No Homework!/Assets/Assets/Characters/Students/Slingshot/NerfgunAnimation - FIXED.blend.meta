@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: d277dbbcb3829b347930adc26e6eb89c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone_004
+    100002: Cube_001
+    100004: Cube_061
+    100006: hand_L
+    100008: hand_R
+    100010: Handle
+    100012: lowerarm_L
+    100014: lowerarm_R
+    100016: Lowerfeet_L
+    100018: Lowerfeet_R
+    100020: Lowerleg_L
+    100022: Lowerleg_R
+    100024: Lowerspine
+    100026: mag_002
+    100028: Midspine
+    100030: neck
+    100032: Nerfgun
+    100034: //RootNode
+    100036: Pole_L
+    100038: projectileNerfGun_001
+    100040: Pull_R
+    100042: Shoulder_L
+    100044: Shoulder_R
+    100046: Spine_000
+    100048: Supportleg_L
+    100050: Supportleg_R
+    100052: Upperarm_L
+    100054: Upperarm_R
+    100056: Upperfeet_L
+    100058: Upperfeet_R
+    100060: Upperleg_L
+    100062: Upperleg_R
+    100064: Upperspine
+    400000: Bone_004
+    400002: Cube_001
+    400004: Cube_061
+    400006: hand_L
+    400008: hand_R
+    400010: Handle
+    400012: lowerarm_L
+    400014: lowerarm_R
+    400016: Lowerfeet_L
+    400018: Lowerfeet_R
+    400020: Lowerleg_L
+    400022: Lowerleg_R
+    400024: Lowerspine
+    400026: mag_002
+    400028: Midspine
+    400030: neck
+    400032: Nerfgun
+    400034: //RootNode
+    400036: Pole_L
+    400038: projectileNerfGun_001
+    400040: Pull_R
+    400042: Shoulder_L
+    400044: Shoulder_R
+    400046: Spine_000
+    400048: Supportleg_L
+    400050: Supportleg_R
+    400052: Upperarm_L
+    400054: Upperarm_R
+    400056: Upperfeet_L
+    400058: Upperfeet_R
+    400060: Upperleg_L
+    400062: Upperleg_R
+    400064: Upperspine
+    2100000: shirt__blueGear_jpg
+    2100002: vest__vest_jpg
+    2100004: skin__skin_jpg
+    2100006: vest
+    2100008: pants__jeansFabric_jpg
+    2100010: shoes__shoes_jpg
+    2100012: skin
+    2100014: orangePlastic_001__orangePlastic_jpg_001
+    2100016: bulletBlue__plasticBlue_jpg
+    2100018: bulletOrange__orangeBullet_jpg
+    2100020: bulletBlue_002__plasticBlue_jpg_002
+    2100022: bulletOrange_002__orangeBullet_jpg_001
+    2100024: unnamed
+    4300000: Cube_061
+    4300002: mag_002
+    4300004: projectileNerfGun_001
+    4300006: Cube_001
+    7400000: Default Take
+    7400002: NerfGun
+    7400004: Planethrow_004
+    7400006: Spit_001
+    7400008: Walking_002
+    9500000: //RootNode
+    13700000: Cube_001
+    13700002: Cube_061
+    13700004: mag_002
+    13700006: projectileNerfGun_001
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
